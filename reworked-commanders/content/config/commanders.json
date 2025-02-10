@@ -25,35 +25,34 @@
 		//no combos: attack + def [0, 1] / def + magic [1, 5] / health + sp [2, 4] / dam + magic [3, 5]
 
 		//attack + attack
-		{"ability": ["NO_MELEE_PENALTY", 0, 0, 0 ], "skills": [0,0]},
+		{"ability": ["NO_MELEE_PENALTY", 0, null, 0 ], "skills": [0,0]},
 		//attack + health
-		{"ability": ["FEAR", 0, 0, 0 ], "skills": [0, 2]},
+		{"ability": ["FEAR", 0, "null", 0 ], "skills": [0, 2]},
 		//attack + damage
 		{"ability": ["ENCHANTED", 1, "reworked-commanders:spell.attackEnchant", 0 ], "skills": [0, 3]},
 		//attack + speed
 		{"ability": ["ENCHANTED", 1, "reworked-commanders:spell.preemptiveEnchant", 0 ], "skills": [0, 4]},
 		//attack + magic
-		{"ability": ["BLOCKS_RETALIATION", 0, 1, 0 ], "skills": [0,5]},
+		{"ability": ["BLOCKS_RETALIATION", null, 0 ], "skills": [0,5]},
 		
 		//def + health
 		{"ability": ["ENCHANTED", 1, "reworked-commanders:spell.abilityEnchant", 0 ], "skills": [1, 2]}, 
 		//def + damage
-		{"ability": ["ENEMY_DEFENCE_REDUCTION", 50, 0, 0 ], "skills": [1, 3]}, 
+		{"ability": ["ENEMY_DEFENCE_REDUCTION", 50, null, 0 ], "skills": [1, 3]}, 
 		//def + magic
-		{"ability": ["FIRE_SHIELD", 30, 0, 0 ], "skills": [1, 4]},
-
+		{"ability": ["FIRE_SHIELD", 30, null, 0 ], "skills": [1, 4]},
 		//health + health
-		{"ability": ["HP_REGENERATION", 100, 0, 0 ], "skills": [2, 2]},
+		{"ability": ["HP_REGENERATION", 100, null, 0 ], "skills": [2, 2]},
 		//health + damage
-		{"ability": ["FREE_SHOOTING", 0, 0, 0 ], "skills": [2, 3]},
+		{"ability": ["FREE_SHOOTING", 0, null, 0 ], "skills": [2, 3]},
 		//health + magic
-		{"ability": ["DEATH_STARE", 1, 1, 0 ], "skills": [2, 5]},
+		{"ability": ["DEATH_STARE", 1, "deathStareCommander", 0 ], "skills": [2, 5]},
 
 		//damage + speed
 		{"ability": ["ENCHANTED", 1, "reworked-commanders:spell.shootingEnchant", 0 ], "skills": [3, 4]}, 
 
 		//speed + speed
-		{"ability": ["FLYING", 0, 0, 0 ], "skills": [4,4]},
+		{"ability": ["FLYING", 0, "movementFlying", 0 ], "skills": [4,4]},
 		//speed + magic
 		{"ability": ["ENCHANTED", 4, "reworked-commanders:spell.speedEnchant", 0 ], "skills": [4, 5]},
 		
