@@ -67,7 +67,7 @@
 			{
 				"type" : "MANUAL_CONTROL",
 				"propagator": "HERO",
-				"subtype" : "core:creature.ballista",
+				"subtype" : "core:creature.ballista", //check without core
 				"val" : 100
 			},	
 			"ballistaProvider" :
@@ -122,7 +122,7 @@
 			{
 				"type" : "ENCHANTED",
 				"subtype" : "spell.machinePriority",
-				"addInfo" : 0,
+//				"addInfo" : 0,
 				"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	} ]
 			},				
         		"shooter" :
@@ -183,7 +183,7 @@
 					  "type" : "ENCHANTED",
 					  "subtype" : "spell.siegeLimiter1",
 					  "propagator" : "BATTLE_WIDE",
-					  "addInfo" : 0,
+//					  "addInfo" : 0,
 					  "limiters": [
 						  [ "noneOf", 
 											  {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff"]	} ],

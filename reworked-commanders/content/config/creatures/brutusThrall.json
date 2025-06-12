@@ -28,13 +28,13 @@
 			"blindImmunity" : 
 			{
 				"type" : "SPELL_IMMUNITY",
-				"subtype" : "spell.blind",
-				"addInfo" : 1
+				"subtype" : "spell.blind"
+				"addInfo" : 1 //absolute
 			},
 			"petrifyImmunity" : 
 			{
 				"type" : "SPELL_IMMUNITY",
-				"subtype" : "spell.stoneGaze",
+				"subtype" : "spell.stoneGaze"
 				"addInfo" : 1
 			}	
 		},

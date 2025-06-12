@@ -6,7 +6,7 @@
 		"school": {"air":false, "earth":false, "fire":false, "water":false},
 		"level": 1, "power": 1, "defaultGainChance": 0, 		
 		"gainChance":{},"counters": {},		
-		"graphics":	{"iconEffect": "spells/spellEnchant"},	
+		"graphics":	{"iconEffect": "spells/spellEnchant"},
 		"animation":{},
 		"sounds": {},
 		"levels" : {
@@ -236,7 +236,7 @@
 				"targetModifier":{"smart":true},
 				"effects" : {
 					"stacksSpeed" : {
-						"addInfo" : 0,
+//						"addInfo" : 0,
 						"type" : "STACKS_SPEED",
 						"val" : 5,
 						"duration" : "N_TURNS"
@@ -335,7 +335,7 @@
 						"type":"core:timed",
 						"bonus":{
 							"levelSpellImmunity":{
-								"addInfo" : 1, //absolute
+//								"addInfo" : 1, //absolute
 								"val" : 3,
 								"type" : "LEVEL_SPELL_IMMUNITY",
 								"valueType" : "INDEPENDENT_MAX",
@@ -437,7 +437,7 @@
 						"duration" : "N_TURNS"
 					},
 					"stacksSpeed" : {
-						"addInfo" : 0,
+//						"addInfo" : 0,
 						"type" : "STACKS_SPEED",
 						"val" : 2,
 						"duration" : "N_TURNS"
@@ -488,7 +488,7 @@
 						"duration" : "N_TURNS"
 					},
 					"stacksSpeed" : {
-						"addInfo" : 0,
+//						"addInfo" : 0,
 						"type" : "STACKS_SPEED",
 						"val" : 2,
 						"duration" : "N_TURNS"

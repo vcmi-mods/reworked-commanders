@@ -20,7 +20,7 @@
 				"targetModifier":{"smart":false},
 				"effects" : {
 					"curseEffect" : {
-						"addInfo" : 0,
+//						"addInfo" : 0,
 						"val" : 0,
 						"type" : "ALWAYS_MINIMUM_DAMAGE",
 						"valueType" : "INDEPENDENT_MAX",	

@@ -190,7 +190,7 @@
 				"type" : "ENCHANTED",
 				"subtype" : "spell.siegeLimiter1",
 				"propagator" : "BATTLE_WIDE",
-				"addInfo" : 0,
+//				"addInfo" : 0,
 				"limiters": [
 					[ "noneOf", 
 										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff"]	} ],
@@ -207,7 +207,7 @@
 			{
 				"type" : "ENCHANTED",
 				"subtype" : "spell.soulPriority",
-				"addInfo" : 0,
+//				"addInfo" : 0,
 				"limiters": [
 					[ "noneOf", 
 										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted"]	} ],

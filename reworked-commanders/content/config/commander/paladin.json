@@ -186,7 +186,7 @@
 					  "type" : "SUMMON_GUARDIANS",
 					  "subtype" : "creature.expSoul1",
 					  "val" : 100,
-					  "addInfo" : 0,
+//					  "addInfo" : 0,
 					  "limiters": [ {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant"]	}]
 				  },
 				  

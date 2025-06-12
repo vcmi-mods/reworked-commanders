@@ -294,7 +294,7 @@
 				"targetModifier":{"smart":true},
 				"effects" : {
 					"stacksSpeed" : {
-						"addInfo" : 0,
+//						"addInfo" : 0,
 						"type" : "STACKS_SPEED",
 						"val" : 999,
 						"duration" : "STACK_GETS_TURN",
@@ -930,7 +930,7 @@
 						"bonus":{
 
 							"movementLimiter" : {
-								"addInfo" : 0,
+//								"addInfo" : 0,
 								"type" : "STACKS_SPEED",
 								"valueType" : "ADDITIVE_VALUE",
 								"val" : -111,
@@ -1046,7 +1046,7 @@
 					
 
 					"stacksSpeed" : {
-						"addInfo" : 0,
+//						"addInfo" : 0,
 						"type" : "STACKS_SPEED",
 						"val" : 999,
 						"duration" : "STACK_GETS_TURN",	
