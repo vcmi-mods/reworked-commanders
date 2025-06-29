@@ -18,7 +18,7 @@
 			{
 				"description": "{Summon Ballista}\r\n\r\nWarmongers always make sure there's at least one ballista in any army they command.",
 				"power": 1,
-				"aiValue": 0,
+//				"aiValue": 0,
 				"cost": 5,
 				"range": "X",
 				"targetModifier":{"smart":true},
@@ -38,7 +38,7 @@
 							"subtype" : "spell.summonBallista",
 							"duration" : "ONE_BATTLE",		
 							"limiters": [
-								[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	} ],
+								[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	} ],
 								[ "allOf", {"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "warmonger", true]	} ]
 										]	
 						},
@@ -49,7 +49,7 @@
 							"limiters": [
 									"noneOf",
 										
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	},
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	},
 										//{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "soulEater", true ]	},
 										{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "necromancySoul1", true ]	},
 										{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "expSoul1", true ]	},
@@ -68,7 +68,7 @@
 							"type" : "BLOCK_ALL_MAGIC",
 							"propagator": "HERO",
 							"limiters": [ "noneOf", 
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	}
+							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	}
 						],
 						"duration" : "N_TURNS",
 						"turns": 1	
@@ -112,7 +112,7 @@
 			{
 				"description": "{Summon Basic Totem}\r\n\r\nShamans channel land's primal magic through totems.",
 				"power": 1,
-				"aiValue": 0,
+//				"aiValue": 0,
 				"cost": 5,
 				"range": "X",
 				"targetModifier":{"smart":true},
@@ -132,7 +132,7 @@
 							"subtype" : "spell.summonTotem",
 							"duration" : "ONE_BATTLE",		
 							"limiters": [
-								[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	} ],
+								[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	} ],
 								[ "allOf", {"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "gnollShaman", true]	} ]
 										]	
 						},
@@ -143,7 +143,7 @@
 							"limiters": [
 									"noneOf",
 										
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	},
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	},
 										{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "necromancySoul1", true ]	},
 										{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "expSoul1", true ]	},
 										{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "gnollShaman", true ]	},
@@ -160,7 +160,7 @@
 							"type" : "BLOCK_ALL_MAGIC",
 							"propagator": "HERO",
 							"limiters": [ "noneOf", 
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	}
+							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	}
 						],
 						"duration" : "N_TURNS",
 						"turns": 1	
@@ -202,7 +202,7 @@
 			{
 				"description": "{Summon First Aid Tent}\r\n\r\nHierophants always insist on at least one first aid tent for any army they command.",
 				"power": 1,
-				"aiValue": 0,
+//				"aiValue": 0,
 				"cost": 5,
 				"range": "X",
 				"targetModifier":{"smart":true},
@@ -222,7 +222,7 @@
 							"subtype" : "spell.summonTent",
 							"duration" : "ONE_BATTLE",	
 							"limiters": [
-								[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	} ],
+								[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	} ],
 								[ "allOf", {"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "hierophant", true]	} ]
 										]
 						},
@@ -233,7 +233,7 @@
 							"limiters": [
 									"noneOf",
 										
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	},
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	},
 										{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "necromancySoul1", true ]	},
 										{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "expSoul1", true ]	},
 										{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "gnollShaman", true ]	},
@@ -249,7 +249,7 @@
 							"type" : "BLOCK_ALL_MAGIC",
 							"propagator": "HERO",
 							"limiters": [ "noneOf", 
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	}
+							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	}
 						],
 						"duration" : "N_TURNS",
 						"turns": 1	
@@ -289,7 +289,8 @@
 			"base":{
 
 				"description": "{Machine Provider}\r\n\r\nThe weapon of war has been provided.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -298,20 +299,20 @@
 						"type" : "STACKS_SPEED",
 						"val" : 999,
 						"duration" : "STACK_GETS_TURN",
-						"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	} ]
+						"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	} ]
 					},
 
 					"speedRevert" : {
 //						"addInfo" : 0,
 						"type" : "ENCHANTED",
 						"subtype" : "spell.machineSummoned",
-						"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	} ]
+						"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	} ]
 					},
 
 					"shootingOff2" : {
 						"val" : 3,
 						"type" : "FORGETFULL",
-						"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	} ]
+						"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	} ]
 					},
 
 					"shootingOff" :
@@ -320,10 +321,10 @@
 				"val" : 0,
 				"valueType" : "INDEPENDENT_MIN",
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	} ],
-					[ "anyOf", 	{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.summonTent"]	},
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.summonTotem"]	},
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.summonBallista"]	} ]
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	} ],
+					[ "anyOf", 	{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.summonTent", null]	},
+								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.summonTotem", null]	},
+								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.summonBallista", null ]	} ]
 							]
 			},	
 					
@@ -333,10 +334,10 @@
 				"val" : 0,
 				"valueType" : "INDEPENDENT_MIN",
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	} ],
-					[ "anyOf", 	{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.summonTent"]	},
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.summonTotem"]	},
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.summonBallista"]	} ]
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	} ],
+					[ "anyOf", 	{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.summonTent", null ]	},
+								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.summonTotem", null ]	},
+								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.summonBallista", null ]	} ]
 							]
 			},	
 
@@ -347,10 +348,10 @@
 				"val" : 0,
 				"valueType" : "INDEPENDENT_MIN",
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	} ],
-					[ "anyOf", 	{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.summonTent"]	},
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.summonTotem"]	},
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.summonBallista"]	} ]
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	} ],
+					[ "anyOf", 	{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.summonTent", null ]	},
+								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.summonTotem", null ]	},
+								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.summonBallista", null ]	} ]
 							]
 			}
 					
@@ -388,7 +389,8 @@
 			"base":{
 
 				"description": "{Machine Provider}\r\n\r\nThe weapon of war has been provided.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -426,13 +428,11 @@
 			"base":{
 
 				"description": "{Siege Limiter}\r\n\r\nStops catapult and towers from shooting in 1st turn.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
-
-					
-
 					"siegetimestop" : {
 						"type" : "NOT_ACTIVE",
 						"propagator" : "BATTLE_WIDE",
@@ -442,12 +442,12 @@
 								{"type" : "CREATURE_TYPE_LIMITER", 
 									"parameters" : [ "arrowTower", true]},
 								{"type" : "HAS_ANOTHER_BONUS_LIMITER", 
-									"parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiter1"]}
+									"parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiter1", null ]}
 							],
 							[
 								"noneOf",
 								{"type" : "HAS_ANOTHER_BONUS_LIMITER", 
-									"parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff"]}
+									"parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff", null ]}
 							]
 						]
 					},
@@ -460,12 +460,12 @@
 								{"type" : "CREATURE_TYPE_LIMITER", 
 									"parameters" : [ "catapult", true]},
 									{"type" : "HAS_ANOTHER_BONUS_LIMITER", 
-										"parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiter1"]}
+										"parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiter1", null ]}
 							],
 							[
 								"noneOf",
 								{"type" : "HAS_ANOTHER_BONUS_LIMITER", 
-									"parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff"]}
+									"parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff", null ]}
 							]
 						]
 					},
@@ -485,7 +485,7 @@
 							[
 								"noneOf",
 								{"type" : "HAS_ANOTHER_BONUS_LIMITER", 
-									"parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff"]}
+									"parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff", null ]}
 							]
 						]
 					}
@@ -524,7 +524,8 @@
 			"base":{
 
 				"description": "{Siege Limiter}\r\n\r\nStops catapult and towers from shooting in 1st turn.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -561,7 +562,8 @@
 			"base":{
 
 				"description": "{Soul Provider}\r\n\r\nThe warring souls have been extracted.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -571,7 +573,7 @@
 						"type" : "CASTS",
 						"val" : 1,
 						"limiters": [ "noneOf", 
-						{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted"]	}
+						{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted", null ]	}
 					]		
 					},
 					
@@ -581,20 +583,20 @@
 						"val" : 999,
 						"duration" : "STACK_GETS_TURN",	
 						"limiters": [ "noneOf", 
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted"]	}
+							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted", null ]	}
 							 ]
 					},
 					"shootingOff2" : {
 						"val" : 3,
 						"type" : "FORGETFULL",
-						"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted"]	} ]
+						"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted", null ]	} ]
 					},
 
 					"speedRevert" : {
 						"type" : "ENCHANTED",
 						"subtype" : "spell.soulExtracted",	
 						"limiters": [ "noneOf", 
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted"]	}
+							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted", null ]	}
 							 ]
 					},
 					
@@ -606,7 +608,7 @@
 				"val" : 100,
 				"limiters": [
 					[ "noneOf", 
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff"]	} ],
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff", null ]	} ],
 					[ "anyOf", 
 						{"type" : "CREATURE_TYPE_LIMITER", 
 							"parameters" : [ "catapult", true]},
@@ -657,7 +659,7 @@
 			{
 				"description": "{Extract Basic Soul}\r\n\r\nThe soul is ripe for the reaping.",
 				"power": 1,
-				"aiValue": 0,
+//				"aiValue": 0,
 				"cost": 5,
 				"range": "X",
 				"targetModifier":{"smart":false},
@@ -678,7 +680,7 @@
 								"limiters": [
 										"noneOf",
 											
-											{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted"]	},
+											{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted", null ]	},
 											{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "necromancySoul1", true ]	},
 											{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "expSoul1", true ]	},
 											{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "gnollShaman", true ]	},
@@ -696,12 +698,12 @@
 								"subtype" : "spell.bannerOfDeath",
 								"limiters": [
 									[ "noneOf", 
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted" ]	},
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted", null ]	},
 										{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "soulEater", true ]	}
 
 									],
 									[ "allOf", 
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.bannerOfDeath"]	} ]
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.bannerOfDeath", null ]	} ]
 									]
 							}
 						}
@@ -743,7 +745,8 @@
 			"base":{
 
 				"description": "{Essence Extracted}\r\n\r\nThe essence of the soul has been extracted.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":false},
 				"effects" : {
@@ -780,7 +783,8 @@
 			"base":{
 
 				"description": "{Banner of Death}\r\n\r\nSun Seeker's quest is more inspiring.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -825,7 +829,8 @@
 			"base":{
 
 				"description": "{Banner of Death}\r\n\r\nSoul Eater's dreadful presence is stronger.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -838,7 +843,7 @@
 				"allOf",
 				{
 					"type" : "HAS_ANOTHER_BONUS_LIMITER",
-					"parameters": [ "MORE_DAMAGE_FROM_SPELL", "spell.bannerOfDeath" ]
+					"parameters": [ "MORE_DAMAGE_FROM_SPELL", "spell.bannerOfDeath", null ]
 				}
 				]
 					},
@@ -852,13 +857,12 @@
 				"allOf",
 				{
 					"type" : "HAS_ANOTHER_BONUS_LIMITER",
-					"parameters": [ "MORE_DAMAGE_FROM_SPELL", "spell.bannerOfDeath" ]
+					"parameters": [ "MORE_DAMAGE_FROM_SPELL", "spell.bannerOfDeath", null ]
 				}
 				]
-		}
-				}
-
-					},
+			}
+			}
+		},
 			"none":{},"basic":{},"advanced":{},"expert":{}
 		},
 		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {} },	
@@ -884,7 +888,8 @@
 			"base":{
 
 				"description": "{Essence Extracted}\r\n\r\nThe essence of the soul has been extracted.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -920,7 +925,8 @@
 			"base":{
 
 				"description": "{Only Three Rays can move}\r\n\r\nOnly Three Rays can move.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "X",
 				"targetModifier":{"smart":true},
 				"battleEffects":{
@@ -969,7 +975,7 @@
 			{
 				"description": "{Extract Experience Shards}\r\n\r\nThe warriors' experience saturates on the battlefield.",
 				"power": 1,
-				"aiValue": 0,
+//				"aiValue": 0,
 				"cost": 5,
 				"range": "X",
 				"targetModifier":{"smart":true},
@@ -986,7 +992,7 @@
 								"limiters": [
 										"noneOf",
 											
-											{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.expExtracted"]	},
+											{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.expExtracted", null ]	},
 											{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "necromancySoul1", true ]	},
 											{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "expSoul1", true ]	},
 											{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "gnollShaman", true ]	},
@@ -1030,7 +1036,8 @@
 			"base":{
 
 				"description": "{Slave Provider}\r\n\r\nSlaves for arduous labour have been captured.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -1040,7 +1047,7 @@
 						"type" : "CASTS",
 						"val" : 1,
 						"limiters": [ "noneOf", 
-						{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority"]	}
+						{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority", null ]	}
 					]		
 					},
 					
@@ -1051,20 +1058,20 @@
 						"val" : 999,
 						"duration" : "STACK_GETS_TURN",	
 						"limiters": [ "noneOf", 
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority"]	}
+							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority", null ]	}
 							 ]
 					},
 					"shootingOff2" : {
 						"val" : 3,
 						"type" : "FORGETFULL",
-						"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority"]	} ]
+						"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority", null ]	} ]
 					},
 
 					"speedRevert" : {
 						"type" : "ENCHANTED",
 						"subtype" : "spell.slaveSummoned",	
 						"limiters": [ "noneOf", 
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority"]	}
+							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority", null ]	}
 							 ]
 					},
 					
@@ -1076,7 +1083,7 @@
 				"val" : 100,
 				"limiters": [
 					[ "noneOf", 
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff"]	} ],
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff", null ]	} ],
 					[ "anyOf", 
 						{"type" : "CREATURE_TYPE_LIMITER", 
 							"parameters" : [ "catapult", true]},
@@ -1115,7 +1122,7 @@
 			{
 				"description": "{Summon Abyssal Peon}\r\n\r\nBrutes capture peons to toil in their armies.",
 				"power": 1,
-				"aiValue": 0,
+//				"aiValue": 0,
 				"cost": 5,
 				"range": "X",
 				"targetModifier":{"smart":true},
@@ -1137,7 +1144,7 @@
 							"limiters": [
 									"noneOf",
 										
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority"]	},
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority", null ]	},
 										{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "necromancySoul1", true ]	},
 										{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "expSoul1", true ]	},
 										{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "gnollShaman", true ]	},
@@ -1154,7 +1161,7 @@
 							"type" : "BLOCK_ALL_MAGIC",
 							"propagator": "HERO",
 							"limiters": [ "noneOf", 
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority"]	}
+							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority", null ]	}
 						],
 						"duration" : "N_TURNS",
 						"turns": 1	
@@ -1166,7 +1173,7 @@
 							"valueType" : "INDEPENDENT_MIN",
 							"limiters": [
 								[ "noneOf", 
-									{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority" ]	}
+									{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority", null ]	}
 								],
 								[ "allOf", 
 									{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "brutus", true ]	} ]
@@ -1182,7 +1189,7 @@
 						"valueType" : "INDEPENDENT_MIN",
 						"limiters": [
 							[ "noneOf", 
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority" ]	}
+								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority", null ]	}
 							],
 							[ "allOf", 
 								{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "brutus", true ]	} ]
@@ -1197,7 +1204,7 @@
 						"valueType" : "INDEPENDENT_MIN",
 						"limiters": [
 							[ "noneOf", 
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority" ]	}
+								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority", null ]	}
 							],
 							[ "allOf", 
 								{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "brutus", true ]	} ]
@@ -1236,7 +1243,8 @@
 			"base":{
 
 				"description": "{Slave Provider}\r\n\r\nSlaves for arduous labour have been captured.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -1272,7 +1280,8 @@
 			"base":{
 
 				"description": "{No Melee}\r\n\r\nIt's a siege machine, so it can't attack in melee, duh...",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -1331,7 +1340,8 @@
 			"base":{
 
 				"description": "{Power Provider}\r\n\r\nHero's Spell power has been augmented.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -1340,8 +1350,9 @@
 						"type" : "PRIMARY_SKILL",
 						"subtype" : "spellpower", 
 						"updater" : {
-							"parameters" : [ 5 ],
-							"type" : "GROWS_WITH_LEVEL"
+							"type" : "GROWS_WITH_LEVEL",
+							"valPer20" : 5,
+							"stepSize" : 1
 						},
 						"propagator" : "HERO",
 						"duration" : "COMMANDER_KILLED"

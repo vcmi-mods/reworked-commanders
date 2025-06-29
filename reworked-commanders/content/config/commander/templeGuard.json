@@ -71,7 +71,7 @@
 				"halved shots" :
 			{
 				"type" : "SHOTS","val" : -50,"valueType" : "PERCENT_TO_ALL",
-				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.shootingEnchant" ]}]
+				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.shootingEnchant", null ]}]
 			},
 
 			"manaSaver" :
@@ -80,8 +80,9 @@
 				"val" : 1,
 				"propagator" : "HERO",
 				"updater" : {
-					"parameters" : [ 10 ],
-					"type" : "GROWS_WITH_LEVEL"
+					"type" : "GROWS_WITH_LEVEL",
+					"valPer20" : 10,
+					"stepSize" : 1
 				}
 				//"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.abitiyEnchant"]	} ]
 			},
@@ -89,7 +90,7 @@
 			{
 				"type" : "CHANGES_SPELL_COST_FOR_ENEMY",
 				"val" : 2,
-				"limiters": ["allOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.abilityEnchant" ]}]
+				"limiters": ["allOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.abilityEnchant", null ]}]
 			},
 
 			"manaUpgrade" :
@@ -98,8 +99,9 @@
 				"subtype" : "primarySkill.knowledge",
 				"propagator" : "HERO",
 				"updater" : {
-					"parameters" : [ 5 ],
-					"type" : "GROWS_WITH_LEVEL"
+					"type" : "GROWS_WITH_LEVEL",
+					"valPer20" : 5,
+					"stepSize" : 1
 				}
 				//"valueType" : "PERCENT_TO_ALL"
 				//"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.abitiyEnchant"]	} ]
@@ -109,7 +111,7 @@
 			{
 				"type" : "ENCHANTED",
 				"subtype" : "spell.powerSummoned",
-				"limiters": ["allOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.abilityEnchant" ]}]
+				"limiters": ["allOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.abilityEnchant", null ]}]
 			},
 
 			"magicResistance" :
@@ -137,7 +139,7 @@
 					"noneOf",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant" ]
+						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
 					}
 					]
 				  },
@@ -150,7 +152,7 @@
 					"allOf",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant" ]
+						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
 					}
 					]
 				  },
@@ -158,7 +160,7 @@
 					"lightningChain" :{
 						"type" : "ENCHANTED",
 						"subtype": "spell.lightningSpearEnchant",
-						"limiters": [ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.shootingEnchant"]	} ]
+						"limiters": [ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.shootingEnchant", null ]	} ]
 				}
 
 				//doesnt work

@@ -16,7 +16,8 @@
 			"base":{
 
 				"description": "{Imp Breeding}\r\n\r\nMore imps.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"battleEffects":{
@@ -55,7 +56,8 @@
 			"base":{
 
 				"description": "{Gog Breeding}\r\n\r\nMore imps or gogs.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"battleEffects":{
@@ -95,7 +97,8 @@
 			"base":{
 
 				"description": "{Necromancy Boost}\r\n\r\nBoosts Resurrection, Sacrifice and Animate Dead spells.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -152,7 +155,8 @@
 			"base":{
 
 				"description": "{Serenity}\r\n\r\nImmobilises enemies.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -204,7 +208,8 @@
 			"base":{
 
 				"description": "{Serenity}\r\n\r\nImmobilises enemies.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -259,7 +264,8 @@
 			"base":{
 
 				"description": "{Troublemaker}\r\n\r\nMakes enemies go berserk.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -299,7 +305,8 @@
 			"base":{
 
 				"description": "{Emergency Cure}\r\n\r\nCures whole army.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "X",
 				"targetModifier":{"smart":true},
 				"battleEffects":{

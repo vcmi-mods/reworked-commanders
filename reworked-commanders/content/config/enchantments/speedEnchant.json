@@ -13,7 +13,8 @@
 			"base":{
 
 				"description": "{Leading Initiative}\r\n\r\nCommander and their troops will start their turn with 75% of their speed, moving before opponents with similar speed, but their movement range will remain the same.",
-				"cost": 0, "power": 0, "aiValue": 0,
+				"cost": 0, "power": 0, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {

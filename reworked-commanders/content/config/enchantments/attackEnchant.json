@@ -13,7 +13,8 @@
 			"base":{
 
 				"description": "{Attack Enchantment}\r\n\r\nCommander's melee attacks have additional effects (default is maximum damage in melee).",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -41,7 +42,7 @@
 						},
 						{
 							"type" : "HAS_ANOTHER_BONUS_LIMITER",
-							"parameters": [ "MORE_DAMAGE_FROM_SPELL", "spell.attackEnchant" ]
+							"parameters": [ "MORE_DAMAGE_FROM_SPELL", "spell.attackEnchant", null ]
 						}
 						]
 					},		

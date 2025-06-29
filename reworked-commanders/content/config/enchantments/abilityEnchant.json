@@ -13,7 +13,8 @@
 			"base":{
 
 				"description": "{Ability Enchantment}\r\n\r\nCommander's unique ability is upgraded (default is unlimited retaliation).",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+				//"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {	

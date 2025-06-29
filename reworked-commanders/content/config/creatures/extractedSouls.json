@@ -79,7 +79,7 @@
 				"val" : -1,
 				"valueType" : "INDEPENDENT_MIN",
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted"]	} ],
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted", null ]	} ],
 					[ "anyOf", 	{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "soulEater", true ]	}	]
 							]
 			},	
@@ -90,7 +90,7 @@
 				"val" : 0,
 				"valueType" : "INDEPENDENT_MIN",
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted"]	} ],
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted", null ]	} ],
 					[ "anyOf", 	{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "soulEater", true ]	}	]
 							]
 			},	
@@ -102,7 +102,7 @@
 				"val" : 0,
 				"valueType" : "INDEPENDENT_MIN",
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted"]	} ],
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted", null ]	} ],
 					[ "anyOf", 	{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "soulEater", true ]	}	]
 							]
 			},	
@@ -115,7 +115,7 @@
 				"val" : 0,
 				"valueType" : "INDEPENDENT_MIN",
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted"]	} ],
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted", null ]	} ],
 					[ "anyOf", 	{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "soulEater", true ]	}	]
 							]
 			},	
@@ -125,7 +125,7 @@
 				"type" : "BLOCK_ALL_MAGIC",
 				"propagator": "HERO",
 				"limiters": [ "noneOf", 
-				{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted"]	}
+				{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted", null ]	}
 			]		
 			}
 
@@ -190,7 +190,7 @@
 //					  "addInfo" : 0,
 					  "limiters": [
 						  [ "noneOf", 
-											  {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff"]	} ],
+											  {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff", null ]	} ],
 						  [ "anyOf", 
 							  {"type" : "CREATURE_TYPE_LIMITER", 
 								  "parameters" : [ "catapult", true]},
@@ -218,7 +218,7 @@
 					"type" : "CASTS",
 					"val" : 1,
 					"limiters": [ "noneOf", 
-					{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.expExtracted"]	}
+					{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.expExtracted", null ]	}
 				]		
 				},
 
@@ -248,7 +248,7 @@
 					"type" : "BLOCK_ALL_MAGIC",
 					"propagator": "HERO",
 					"limiters": [ "noneOf", 
-					{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.expExtracted"]	}
+					{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.expExtracted", null ]	}
 				]		
 				}
 			//"attackOff" :

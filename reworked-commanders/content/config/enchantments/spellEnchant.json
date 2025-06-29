@@ -13,7 +13,8 @@
 			"base":{
 
 				"description": "{Spell Enchantment}\r\n\r\nCommander's spellcasting is upgraded (default +1 cast and +5 spellpower).",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {	
@@ -62,7 +63,7 @@
 							},
 							{
 								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"parameters": [ "MORE_DAMAGE_FROM_SPELL", "spell.spellEnchant" ]
+								"parameters": [ "MORE_DAMAGE_FROM_SPELL", "spell.spellEnchant", null ]
 							}
 							]
 					},
@@ -111,7 +112,7 @@
 							},
 							{
 								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"parameters": [ "MORE_DAMAGE_FROM_SPELL", "spell.spellEnchant" ]
+								"parameters": [ "MORE_DAMAGE_FROM_SPELL", "spell.spellEnchant", null ]
 							}
 							]
 						  }
@@ -143,7 +144,8 @@
 			"base":{
 
 				"description": "{Elemental Agility}\r\n\r\nTwo countrattacks and additional attack.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -185,7 +187,8 @@
 			"base":{
 
 				"description": "{Battle Forged}\r\n\r\nHigher attack and regeneration.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -231,7 +234,8 @@
 			"base":{
 
 				"description": "{Spiritual Wind}\r\n\r\nHigher speed and morale.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -274,7 +278,8 @@
 			"base":{
 
 				"description": "{Nature's Embrace}\r\n\r\nMaximum damage and protection from melee and ranged attacks.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -320,7 +325,8 @@
 			"base":{
 
 				"description": "{Dragon Skin}\r\n\r\nIncreases the selected unit's defense strength and protects it from level 1-3 spells.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"battleEffects":{
@@ -377,7 +383,8 @@
 			"base":{
 
 				"description": "{Huntress' Aim}\r\n\r\nMaximum damage and protection.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -420,7 +427,8 @@
 			"base":{
 
 				"description": "{Prayer}\r\n\r\nBestows a bonus to the attack strength, defense strength and speed of the selected unit.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -471,7 +479,8 @@
 			"base":{
 
 				"description": "{Saint's Prayer}\r\n\r\nSaintly damage and protection.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -529,7 +538,8 @@
 			"base":{
 
 				"description": "{Undead Brand}\r\n\r\nThou who art undead, art chosen.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1,
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"battleEffects":{

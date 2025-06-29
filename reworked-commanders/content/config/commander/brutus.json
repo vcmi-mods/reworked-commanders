@@ -81,9 +81,9 @@
 				"subtype" : "spell.summonThrall",
 				"addInfo" : 0,
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority"]	}
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority", null ]	}
 				],
-					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant"]	} ]
+					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant", null]	} ]
 							]
 			},
 
@@ -94,9 +94,9 @@
 				"subtype" : "spell.slavePriority",
 //				"addInfo" : 0,
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority"]	}
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority", null ]	}
 				],
-					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant"]	} ]
+					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant", null ]	} ]
 							]
 			},
 
@@ -109,9 +109,9 @@
 				"updater" : "TIMES_HERO_LEVEL",
 				"valueType" : "INDEPENDENT_MAX",
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority"]	}
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority", null]	}
 				],
-					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant"]	} ]
+					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant", null ]	} ]
 							]
 			},
 
@@ -122,7 +122,7 @@
 				"halved shots" :
 			{
 				"type" : "SHOTS","val" : -50,"valueType" : "PERCENT_TO_ALL",
-				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.shootingEnchant" ]}]
+				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.shootingEnchant", null ]}]
 			},
 
 			"magicResistance" :
@@ -150,7 +150,7 @@
 					"noneOf",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant" ]
+						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
 					}
 					]
 				  },
@@ -163,7 +163,7 @@
 					"allOf",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant" ]
+						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
 					}
 					]
 				  },
@@ -175,7 +175,7 @@
 					"subtype" : "spell.machinePriority",
 					"limiters": 
 							{"type" : "HAS_ANOTHER_BONUS_LIMITER", 
-								"parameters" : [ "ENCHANTED", "spell.abilityEnchant"]}
+								"parameters" : [ "ENCHANTED", "spell.abilityEnchant", null]}
 					
 					},
 				  
@@ -187,7 +187,7 @@
 					"addInfo" : [0,1],	
 					"limiters": 
 							{"type" : "HAS_ANOTHER_BONUS_LIMITER", 
-								"parameters" : [ "ENCHANTED", "spell.shootingEnchant"]}
+								"parameters" : [ "ENCHANTED", "spell.shootingEnchant", null]}
 					
 					},
 
@@ -201,7 +201,7 @@
 //				"addInfo" : 0,
 				"limiters": [
 					[ "noneOf", 
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff"]	} ],
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff", null ] } ],
 					[ "anyOf", 
 						{"type" : "CREATURE_TYPE_LIMITER", 
 							"parameters" : [ "catapult", true]},
@@ -209,9 +209,6 @@
 								"parameters" : [ "arrowTower", true]} ]
 							]
 			}
-					
-					
-
 		}
 	}
 }

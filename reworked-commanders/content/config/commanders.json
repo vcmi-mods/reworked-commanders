@@ -27,7 +27,7 @@
 		//attack + attack
 		{"ability": ["NO_MELEE_PENALTY", null, null, null ], "skills": [0,0]},
 		//attack + health
-		{"ability": ["FEAR", null, null, null ], "skills": [0, 2]},
+		{"ability": ["FEARFUL", null, 10, null ], "skills": [0, 2]},
 		//attack + damage
 		{"ability": ["ENCHANTED", 1, "reworked-commanders:spell.attackEnchant", null ], "skills": [0, 3]},
 		//attack + speed

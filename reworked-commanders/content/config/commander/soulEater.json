@@ -71,7 +71,7 @@
 				"halved shots" :
 			{
 			"type" : "SHOTS","val" : -50,"valueType" : "PERCENT_TO_ALL",
-			"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.shootingEnchant" ]}]
+			"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.shootingEnchant", null ]}]
 			},
 
 
@@ -94,9 +94,9 @@
 			"stacking" : "Banner of Death",
 			"limiters": [
 				[ "noneOf", 
-									{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted"]	} ],
+									{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted", null ]	} ],
 				[ "allOf", 
-									{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.bannerOfDeath"]	} ]
+									{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.bannerOfDeath", null ]	} ]
 						]
 			},
 
@@ -117,7 +117,7 @@
 		"subtype" : "spell.machinePriority",
 		"limiters": 
 				{"type" : "HAS_ANOTHER_BONUS_LIMITER", 
-					"parameters" : [ "ENCHANTED", "spell.abilityEnchant"]}
+					"parameters" : [ "ENCHANTED", "spell.abilityEnchant", null ]}
 		},
 
 			"magicResistance" :
@@ -147,7 +147,7 @@
 					"noneOf",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant" ]
+						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
 					}
 					]
                   },
@@ -160,7 +160,7 @@
 					"allOf",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant" ]
+						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
 					}
 					]
                   },
@@ -178,9 +178,9 @@
 				"addInfo" : 0,
 				"limiters": [
 					[ "noneOf", 
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted"]	} ],
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted", null ]	} ],
 					[ "allOf", 
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant"]	} ]
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant", null ]	} ]
 							]
 			},
 
@@ -193,7 +193,7 @@
 //				"addInfo" : 0,
 				"limiters": [
 					[ "noneOf", 
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff"]	} ],
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff", null ]	} ],
 					[ "anyOf", 
 						{"type" : "CREATURE_TYPE_LIMITER", 
 							"parameters" : [ "catapult", true]},
@@ -210,9 +210,9 @@
 //				"addInfo" : 0,
 				"limiters": [
 					[ "noneOf", 
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted"]	} ],
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted", null ]	} ],
 					[ "allOf", 
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant"]	} ]
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant", null ]	} ]
 							]
 			},
 
@@ -227,16 +227,11 @@
 				"valueType" : "INDEPENDENT_MAX",
 				"limiters": [
 					[ "noneOf", 
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted"]	}
+								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted", null ]	}
 				],
-					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant"]	} ]
+					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant", null ]	} ]
 							]
 			}
-
-
-			}
-			
-												
 		}
-	
+	}
 }

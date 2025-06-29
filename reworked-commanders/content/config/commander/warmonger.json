@@ -77,9 +77,9 @@
 				"subtype" : "spell.summonBallista",
 				"addInfo" : 0,
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned"]	},
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	},
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant"]	} ]
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned", null ]	},
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	},
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant", null ]	} ]
 							]
 			},	
 			"ballistaProvider2" :
@@ -89,9 +89,9 @@
 				"subtype" : "spell.summonBallista",
 				"addInfo" : 0,
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned"]	},
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	} ],
-					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant"]	} ]
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned", null ]	},
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	} ],
+					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant", null ]	} ]
 							]
 			},				
 
@@ -102,8 +102,8 @@
 				"val" : 100,
 				"propagator" : "HERO",
 				"valueType" : "INDEPENDENT_MAX",
-				"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned"]	},
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	} ]
+				"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned", null ]	},
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	} ]
 			},
 			
 			//moc rzucania = 1/4 poziomu bohatera, zeby przyzwac tyle machin
@@ -114,8 +114,8 @@
 				"propagator" : "HERO",
 				"updater" : "TIMES_HERO_LEVEL",
 				"valueType" : "ADDITIVE_VALUE",
-				"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned"]	},
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	} ]
+				"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned", null ]	},
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	} ]
 			},
 
 			"firstTurnSummon" :
@@ -123,7 +123,7 @@
 				"type" : "ENCHANTED",
 				"subtype" : "spell.machinePriority",
 //				"addInfo" : 0,
-				"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	} ]
+				"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	} ]
 			},				
         		"shooter" :
 			{
@@ -132,7 +132,7 @@
 				"halved shots" :
 			{
 				"type" : "SHOTS","val" : -50,"valueType" : "PERCENT_TO_ALL",
-				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.shootingEnchant" ]}]
+				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.shootingEnchant", null ]}]
 			},
 
 			"magicResistance" :
@@ -160,7 +160,7 @@
 					"noneOf",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant" ]
+						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
 					}
 					]
 				  },
@@ -172,7 +172,7 @@
 				"limiters":  
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant" ]
+						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
 					}
 					
 				  },
@@ -186,7 +186,7 @@
 //					  "addInfo" : 0,
 					  "limiters": [
 						  [ "noneOf", 
-											  {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff"]	} ],
+											  {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff", null ]	} ],
 						  [ "anyOf", 
 							  {"type" : "CREATURE_TYPE_LIMITER", 
 								  "parameters" : [ "catapult", true]},

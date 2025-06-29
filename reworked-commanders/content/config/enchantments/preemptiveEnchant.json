@@ -13,7 +13,8 @@
 			"base":{
 
 				"description": "{First Strike Enchantment}\r\n\r\nCommander strikes before their opponent has a chance to attack.",
-				"cost": 0, "power": 0, "aiValue": 0,
+				"cost": 0, "power": 0, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {	

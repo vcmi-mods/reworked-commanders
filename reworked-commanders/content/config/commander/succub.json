@@ -71,7 +71,7 @@
 				"halved shots" :
 			{
 				"type" : "SHOTS","val" : -50,"valueType" : "PERCENT_TO_ALL",
-				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.shootingEnchant" ]}]
+				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.shootingEnchant", null ]}]
 			},
 			
 		"troubleArrow100" :
@@ -84,7 +84,7 @@
 			"allOf",
 			{
 				"type" : "HAS_ANOTHER_BONUS_LIMITER",
-				"parameters": [ "ENCHANTED", "spell.shootingEnchant" ]
+				"parameters": [ "ENCHANTED", "spell.shootingEnchant", null ]
 			}
 			]
 		},		
@@ -98,7 +98,7 @@
 			"noneOf",
 			{
 				"type" : "HAS_ANOTHER_BONUS_LIMITER",
-				"parameters": [ "ENCHANTED", "spell.shootingEnchant" ]
+				"parameters": [ "ENCHANTED", "spell.shootingEnchant", null ]
 			}
 			]
 		},
@@ -112,7 +112,7 @@
 				"noneOf",
 				{
 					"type" : "HAS_ANOTHER_BONUS_LIMITER",
-					"parameters": [ "ENCHANTED", "spell.abilityEnchant" ]
+					"parameters": [ "ENCHANTED", "spell.abilityEnchant", null ]
 				}
 				]
 		},
@@ -126,7 +126,7 @@
 				"allOf",
 				{
 					"type" : "HAS_ANOTHER_BONUS_LIMITER",
-					"parameters": [ "ENCHANTED", "spell.abilityEnchant" ]
+					"parameters": [ "ENCHANTED", "spell.abilityEnchant", null ]
 				}
 				]
 		},
@@ -172,7 +172,7 @@
 					"noneOf",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant" ]
+						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
 					}
 					]
 				  },
@@ -185,7 +185,7 @@
 					"allOf",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant" ]
+						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
 					}
 					]
                   }

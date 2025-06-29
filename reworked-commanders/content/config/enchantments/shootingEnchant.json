@@ -13,7 +13,8 @@
 			"base":{
 
 				"description": "{Shooting Enchantment}\r\n\r\nCommander's ranged attacks have additional effects (default is double shot).",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {	
@@ -58,7 +59,7 @@
 						},
 						{
 							"type" : "HAS_ANOTHER_BONUS_LIMITER",
-							"parameters": [ "MORE_DAMAGE_FROM_SPELL", "spell.shootingEnchantEffect" ]
+							"parameters": [ "MORE_DAMAGE_FROM_SPELL", "spell.shootingEnchantEffect", null ]
 						}
 						]
 					},	
@@ -69,8 +70,8 @@
 						"subtype": "spell.shootingEnchant",
 						"limiters": [ 
 							"noneOf",
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.lightningSpearEnchant"]	},
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.naturesWrathEnchant"]	}
+							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.lightningSpearEnchant", null]	},
+							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.naturesWrathEnchant", null]	}
 							]
 				},
 
@@ -116,7 +117,8 @@
 			"base":{
 
 				"description": "{Lightning Spear}\r\n\r\nCommander's shots are imbued with lightning.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -162,7 +164,8 @@
 			"base":{
 
 				"description": "{Lightning Spear}\r\n\r\nCommander's shots are imbued with lightning.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"battleEffects" : {
@@ -210,7 +213,8 @@
 			"base":{
 
 				"description": "{Chaos Flame}\r\n\r\nCommander's shots are imbued with chaos flame.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{
 					"clearAffected": false},
@@ -243,7 +247,7 @@
 		},
 		"targetCondition" : {
 		"allOf" : {},	
-		"noneOf" : {"bonus.DIRECT_DAMAGE_IMMUNITY" : "normal"},
+//		"noneOf" : {"bonus.DIRECT_DAMAGE_IMMUNITY" : "normal"},
 		"anyOf" : {}
 		},		
 		"flags" : {
@@ -269,7 +273,8 @@
 			"base":{
 
 				"description": "{Nature's Wrath}\r\n\r\nCommander's shots are imbued with nature's wrath.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {
@@ -312,7 +317,8 @@
 			"base":{
 
 				"description": "{Nature's Wrath}\r\n\r\nCommander's shots are imbued with nature's wrath.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0-1",
 				"targetModifier":{"smart":true},
 				"battleEffects":{
@@ -349,7 +355,8 @@
 			"base":{
 				//for blocking default effect for modded commanders
 				"description": "{Shooting Enchantment}\r\n\r\nCommander's ranged attacks have additional effects.",
-				"cost": 0, "power": 1, "aiValue": 0,
+				"cost": 0, "power": 1, 
+//				"aiValue": 0,
 				"range" : "0",
 				"targetModifier":{"smart":true},
 				"effects" : {	

@@ -33,7 +33,7 @@
 				"cost": 0,
 				"range": "0",
 				"power": 100, //base dmg
-				"aiValue": 0,
+//				"aiValue": 0,
 				"targetModifier":
 				{
 					"smart": false
@@ -101,7 +101,7 @@
 				"cost": 0,
 				"range": "X",
 				"power": 100, //base dmg
-				"aiValue": 0,
+//				"aiValue": 0,
 				"targetModifier":
 				{
 					"smart": true
@@ -121,7 +121,7 @@
 				"val" : -1,
 				"valueType" : "INDEPENDENT_MIN",
                 "limiters": [
-                    {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.dazzleTarget"]	}
+                    {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.dazzleTarget", null ]	}
                             ],
 							"duration" : [
 								"UNTIL_BEING_ATTACKED",
@@ -138,7 +138,7 @@
 				"val" : 0,
 				"valueType" : "INDEPENDENT_MIN",
                 "limiters": [
-                    {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.dazzleTarget"]	}
+                    {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.dazzleTarget", null ]	}
                             ],
 							"duration" : [
 								"UNTIL_BEING_ATTACKED",
@@ -154,18 +154,17 @@
 				"val" : 0,
 				"valueType" : "INDEPENDENT_MIN",
                 "limiters": [
-                    {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.dazzleTarget"]	}
+                    {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.dazzleTarget", null ]	}
                             ],
 							"duration" : [
 								"UNTIL_BEING_ATTACKED",
 								"STACK_GETS_TURN"
 							]
-			}
-			
-		}}
-
+						}
+					}
 				}
-			},
+			}
+		},
 
 			"none":{},"basic":{},"advanced":{},"expert":{}
 		}

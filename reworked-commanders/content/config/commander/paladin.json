@@ -75,7 +75,7 @@
 				"halved shots" :
 			{
 				"type" : "SHOTS","val" : -50,"valueType" : "PERCENT_TO_ALL",
-				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.shootingEnchant" ]}]
+				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.shootingEnchant", null ]}]
 			},
 			
 
@@ -97,7 +97,7 @@
 				"allOf",
 				{
 					"type" : "HAS_ANOTHER_BONUS_LIMITER",
-					"parameters": [ "ENCHANTED", "spell.abilityEnchant" ]
+					"parameters": [ "ENCHANTED", "spell.abilityEnchant", null ]
 				}
 				]
 		},	
@@ -111,7 +111,7 @@
 				"allOf",
 				{
 					"type" : "HAS_ANOTHER_BONUS_LIMITER",
-					"parameters": [ "ENCHANTED", "spell.abilityEnchant" ]
+					"parameters": [ "ENCHANTED", "spell.abilityEnchant", null ]
 				}
 				]
 		},	
@@ -160,7 +160,7 @@
 					"noneOf",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant" ]
+						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
 					}
 					]
 				  },
@@ -175,7 +175,7 @@
 					"allOf",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant" ]
+						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
 					}
 					]
 				  },
@@ -187,15 +187,14 @@
 					  "subtype" : "creature.expSoul1",
 					  "val" : 100,
 //					  "addInfo" : 0,
-					  "limiters": [ {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant"]	}]
+					  "limiters": [ {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant", null ]	}]
 				  },
 				  
 					"lightningChain" :{
 						"type" : "ENCHANTED",
 						"subtype": "spell.lightningSpearEnchant",
-						"limiters": [ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.shootingEnchant"]	} ]
+						"limiters": [ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.shootingEnchant", null ]	} ]
 				}
-		
 		}
 	}
 }

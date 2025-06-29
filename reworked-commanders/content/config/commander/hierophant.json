@@ -71,7 +71,7 @@
 				"halved shots" :
 			{
 				"type" : "SHOTS","val" : -50,"valueType" : "PERCENT_TO_ALL",
-				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.shootingEnchant" ]}]
+				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.shootingEnchant", null ]}]
 			},
 
 			//przyzwanie machiny
@@ -82,9 +82,9 @@
 				"subtype" : "spell.summonTent",
 				"addInfo" : 0,
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned"]	},
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	},
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant"]	} ]
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned", null ] },
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ] },
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant", null ]	} ]
 							]
 			},
 
@@ -96,9 +96,9 @@
 				"subtype" : "spell.summonTent",
 				"addInfo" : 0,
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned"]	},
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	} ],
-					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant"]	} ]
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned", null ]	},
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	} ],
+					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant", null ]	} ]
 							]
 			},
 
@@ -108,7 +108,7 @@
 				"type" : "ENCHANTED",
 				"subtype" : "spell.machinePriority",
 //				"addInfo" : 0,
-				"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	} ]
+				"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	} ]
 			},
 
 			//moc rzucania ustawiona na poziom bohatera, zeby przyzwac tyle machin
@@ -119,16 +119,16 @@
 				"propagator" : "HERO",
 				"updater" : "TIMES_HERO_LEVEL",
 				"valueType" : "INDEPENDENT_MAX",
-				"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned"]	},
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	} ]
+				"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned", null ]	},
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	} ]
 			},
 
 			"spellpower" :
 			{
 				"type" : "CREATURE_SPELL_POWER",
 				"val" : 100,
-				"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned"]	},
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority"]	} ]
+				"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned", null ]	},
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]	} ]
 			},
 			"magicResistance" :
 			{
@@ -150,7 +150,7 @@
 					"noneOf",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant" ]
+						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
 					}
 					]
                   },
@@ -163,7 +163,7 @@
 						  "allOf",
 						  {
 							  "type" : "HAS_ANOTHER_BONUS_LIMITER",
-							  "parameters": [ "ENCHANTED", "spell.spellEnchant" ]
+							  "parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
 						  }
 						  ]
 						},	
@@ -171,7 +171,7 @@
 						{
 							"type" : "ENCHANTED",
 							"subtype" : "spell.naturesWrathEnchant",
-							"limiters": [ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.shootingEnchant"]	} ]
+							"limiters": [ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.shootingEnchant", null ]	} ]
 							
 						},
 						//zeby zatrzymac wiezyczki/katapulte przed przyzwaniem duszka
@@ -183,7 +183,7 @@
 //							"addInfo" : 0,
 							"limiters": [
 								[ "noneOf", 
-													{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff"]	} ],
+													{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff", null ] } ],
 								[ "anyOf", 
 									{"type" : "CREATURE_TYPE_LIMITER", 
 										"parameters" : [ "catapult", true]},
