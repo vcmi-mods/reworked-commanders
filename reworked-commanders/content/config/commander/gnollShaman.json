@@ -12,6 +12,10 @@
 		"special" : true,
 		"attack" : 5,
 		"defense" : 5,
+		"cost" :
+		{
+			"gold" : 2000
+		},		
 		"damage" :
 		{
 			"min" : 8,
@@ -71,20 +75,20 @@
 				"halved shots" :
 			{
 				"type" : "SHOTS","val" : -50,"valueType" : "PERCENT_TO_ALL",
-				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.shootingEnchant", null ]}]
+				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "shootingEnchant"}]
 			},
 
 			//przyzwanie machiny
 			"totemSummoner" :
 			{
 				"type" : "ENCHANTER",
-				"subtype" : "spell.summonTotem",
+				"subtype" : "summonTotem",
 				"val" : 0,
 				"addInfo" : 0,
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned", null ] },
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ] },
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant", null] } ]
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machineSummoned" },
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machinePriority" },
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"} ]
 							]
 			},
 
@@ -92,23 +96,23 @@
 			"totemSummoner2" :
 			{
 				"type" : "ENCHANTER",
-				"subtype" : "spell.summonTotem",
+				"subtype" : "summonTotem",
 				"val" : 3,
 				"addInfo" : 0,
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned", null ] },
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ]} ],
-					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant", null ] } ]
-							]
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machineSummoned" },
+								{ "type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machinePriority"} ],
+					[ "allOf", 	{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"} ]
+				]
 			},
 
 			//zeby machina zostala przyzwana na samym poczatku walki
 			"firstTurnSummon" :
 			{
 				"type" : "ENCHANTED",
-				"subtype" : "spell.machinePriority",
+				"subtype" : "machinePriority",
 //				"addInfo" : 0,
-				"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ] } ]
+				"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machinePriority" } ]
 			},
 
 			//moc rzucania ograniczona do 1, zeby przyzwac tylko jedna machine
@@ -117,13 +121,13 @@
 				"type" : "CREATURE_SPELL_POWER",
 				"val" : 100,
 				"valueType" : "INDEPENDENT_MIN",
-				"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machineSummoned", null ] },
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.machinePriority", null ] } ]
+				"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machineSummoned" },
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machinePriority" } ]
 			},	
-
 			"magicResistance" :
 			{
-				"type" : "MAGIC_RESISTANCE",
+				"type" : "SPELL_DAMAGE_REDUCTION",
+				"subtype" : "any",
 				"val" : 5
 			},
 			"castsAmount" :
@@ -142,7 +146,7 @@
 			"retaliativeCurse" :
 			{
 				"type" : "SPELL_AFTER_ATTACK",
-				"subtype" : "spell.totemsCurseTrigger",
+				"subtype" : "totemsCurseTrigger",
 				"val" : 100,
 				"addInfo" : [0,2],
 				"propagator": "BATTLE_WIDE",
@@ -154,7 +158,7 @@
             "totemsCurseTargets" : {
                 "val" : 100,
                     "type" : "MORE_DAMAGE_FROM_SPELL",
-                    "subtype" : "spell.totemsCurseTrigger",            
+                    "subtype" : "totemsCurseTrigger",            
 					"propagator": "BATTLE_WIDE",
 					"propagationUpdater" : "BONUS_OWNER_UPDATER",
 					"limiters" : [ "OPPOSITE_SIDE" ]
@@ -163,33 +167,31 @@
 			"noAttacking" : 
 			{
 				"type" : "ENCHANTED",
-				"subtype" : "spell.machineNoAttack",
+				"subtype" : "machineNoAttack",
 				"val" : 4
 			},	
 			
 			"canCast" :
 			{
 				"type" : "SPELLCASTER",
-				"subtype" : "spell.haste",
+				"subtype" : "haste",
 				"val" : 3,		
 				"limiters": [ 
 					"noneOf",
 					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
+						"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "spellEnchant"
 					}
 					]
 				  },			
 				  "canCast+" :
 				  {
 					  "type" : "SPELLCASTER",
-					  "subtype" : "spell.windOfAgitation",
+					  "subtype" : "windOfAgitation",
 					  "val" : 3,		
 					  "limiters": [ 
 						  "allOf",
 						  {
-							  "type" : "HAS_ANOTHER_BONUS_LIMITER",
-							  "parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
+							  "type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "spellEnchant"
 						  }
 						  ]
 						},
@@ -198,33 +200,37 @@
 						"stopSiegeMachines" :
 						{
 							"type" : "ENCHANTED",
-							"subtype" : "spell.siegeLimiter1",
+							"subtype" : "siegeLimiter1",
 							"propagator" : "BATTLE_WIDE",
 //							"addInfo" : 0,
 							"limiters": [
 								[ "noneOf", 
-													{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff", null ] } ],
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "siegeLimiterOff"} ],
 								[ "anyOf", 
 									{"type" : "CREATURE_TYPE_LIMITER", 
-										"parameters" : [ "catapult", true]},
+										"creature" :  "catapult", 
+										"includeUpgrades" : true
+										},
 										{"type" : "CREATURE_TYPE_LIMITER", 
-											"parameters" : [ "arrowTower", true]} ]
-										]
+											"creature" :  "arrowTower", 
+											"includeUpgrades" : true
+										} 
+								]
+							]
 						},
 							"siegeMachinesTargets" :
 							{
 								"type" : "MORE_DAMAGE_FROM_SPELL",
-								"subtype" : "spell.siegeLimiter1",
+								"subtype" : "siegeLimiter1",
 								"propagator" : "BATTLE_WIDE",
 								"val" : 100
 							},
-
 						
 		"aoeShots" :
 		{
 			"type" : "ENCHANTED",
-			"subtype" : "spell.naturesWrathEnchant",
-			"limiters": [ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.shootingEnchant", null ]	} ]
+			"subtype" : "naturesWrathEnchant",
+			"limiters": [ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "shootingEnchant"} ]
 		}
 		}
 	}

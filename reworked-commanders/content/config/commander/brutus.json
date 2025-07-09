@@ -12,6 +12,10 @@
 		"special" : true,
 		"attack" : 5,
 		"defense" : 5,
+		"cost" :
+		{
+			"gold" : 2000
+		},
 		"damage" :
 		{
 			"min" : 8,
@@ -78,12 +82,12 @@
 			{
 				"type" : "ENCHANTER",
 				"val" : 3,
-				"subtype" : "spell.summonThrall",
+				"subtype" : "summonThrall",
 				"addInfo" : 0,
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority", null ]	}
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "slavePriority"	}
 				],
-					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant", null]	} ]
+					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"} ]
 							]
 			},
 
@@ -91,12 +95,12 @@
 			"firstTurnSummon" :
 			{
 				"type" : "ENCHANTED",
-				"subtype" : "spell.slavePriority",
+				"subtype" : "slavePriority",
 //				"addInfo" : 0,
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority", null ]	}
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "slavePriority"	}
 				],
-					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant", null ]	} ]
+					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"} ]
 							]
 			},
 
@@ -109,9 +113,9 @@
 				"updater" : "TIMES_HERO_LEVEL",
 				"valueType" : "INDEPENDENT_MAX",
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.slavePriority", null]	}
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "slavePriority"	}
 				],
-					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant", null ]	} ]
+					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"} ]
 							]
 			},
 
@@ -122,12 +126,12 @@
 				"halved shots" :
 			{
 				"type" : "SHOTS","val" : -50,"valueType" : "PERCENT_TO_ALL",
-				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.shootingEnchant", null ]}]
+				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "shootingEnchant"}]
 			},
-
 			"magicResistance" :
 			{
-				"type" : "MAGIC_RESISTANCE",
+				"type" : "SPELL_DAMAGE_REDUCTION",
+				"subtype" : "any",
 				"val" : 5
 			},
 			"castsAmount" :
@@ -144,26 +148,24 @@
 			"canCast" :
 			{
 				"type" : "SPELLCASTER",
-				"subtype" : "spell.bloodlust",
+				"subtype" : "bloodlust",
 				"val" : 3,		
 				"limiters": [ 
 					"noneOf",
 					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
+						"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "spellEnchant"
 					}
 					]
 				  },
 			"canCast+" :
 			{
 				"type" : "SPELLCASTER",
-				"subtype" : "spell.battleForged",
+				"subtype" : "battleForged",
 				"val" : 3,		
 				"limiters": [ 
 					"allOf",
 					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
+						"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "spellEnchant"
 					}
 					]
 				  },
@@ -172,10 +174,9 @@
 					{
 					"type" : "MORE_DAMAGE_FROM_SPELL",
 					"val" : 100,
-					"subtype" : "spell.machinePriority",
+					"subtype" : "machinePriority",
 					"limiters": 
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", 
-								"parameters" : [ "ENCHANTED", "spell.abilityEnchant", null]}
+							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"}
 					
 					},
 				  
@@ -183,11 +184,10 @@
 					{
 					"type" : "SPELL_BEFORE_ATTACK",
 					"val" : 100,
-					"subtype" : "spell.chaosFlameEnchant",
+					"subtype" : "chaosFlameEnchant",
 					"addInfo" : [0,1],	
 					"limiters": 
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", 
-								"parameters" : [ "ENCHANTED", "spell.shootingEnchant", null]}
+							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "shootingEnchant"}
 					
 					},
 
@@ -196,18 +196,23 @@
 			"stopSiegeMachines" :
 			{
 				"type" : "ENCHANTED",
-				"subtype" : "spell.siegeLimiter1",
+				"subtype" : "siegeLimiter1",
 				"propagator" : "BATTLE_WIDE",
 //				"addInfo" : 0,
 				"limiters": [
 					[ "noneOf", 
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff", null ] } ],
+										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "siegeLimiterOff" } ],
 					[ "anyOf", 
 						{"type" : "CREATURE_TYPE_LIMITER", 
-							"parameters" : [ "catapult", true]},
-							{"type" : "CREATURE_TYPE_LIMITER", 
-								"parameters" : [ "arrowTower", true]} ]
+							"creature" :  "catapult", 
+							"includeUpgrades" : true
+						},
+						{"type" : "CREATURE_TYPE_LIMITER", 
+								"creature" :  "arrowTower",
+								"includeUpgrades" : true
+						}
 							]
+				]
 			}
 		}
 	}

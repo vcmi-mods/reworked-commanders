@@ -57,7 +57,7 @@
 			{
 				"type" : "SPELL_BEFORE_ATTACK",
 				"val" : 50,
-				"subtype" : "spell.dazzleEffect",
+				"subtype" : "dazzleEffect",
 				"duration" : "ONE_BATTLE"
 			},
                             
@@ -65,7 +65,7 @@
 			"razzleDazzleTargets" :
 			{
 				"type" : "MORE_DAMAGE_FROM_SPELL",
-				"subtype" : "spell.dazzleTarget",
+				"subtype" : "dazzleTarget",
 				"val" : 100,
 				"duration" : "ONE_BATTLE"
 			}
@@ -121,7 +121,7 @@
 				"val" : -1,
 				"valueType" : "INDEPENDENT_MIN",
                 "limiters": [
-                    {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.dazzleTarget", null ]	}
+                    {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "dazzleTarget"	}
                             ],
 							"duration" : [
 								"UNTIL_BEING_ATTACKED",
@@ -138,7 +138,7 @@
 				"val" : 0,
 				"valueType" : "INDEPENDENT_MIN",
                 "limiters": [
-                    {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.dazzleTarget", null ]	}
+                    {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "dazzleTarget"	}
                             ],
 							"duration" : [
 								"UNTIL_BEING_ATTACKED",
@@ -154,7 +154,7 @@
 				"val" : 0,
 				"valueType" : "INDEPENDENT_MIN",
                 "limiters": [
-                    {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.dazzleTarget", null ]	}
+                    {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "dazzleTarget"	}
                             ],
 							"duration" : [
 								"UNTIL_BEING_ATTACKED",

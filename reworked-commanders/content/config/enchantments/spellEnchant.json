@@ -27,45 +27,55 @@
 							"noneOf",
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"parameters": [ "astralSpirit", "true" ]
+								"creature": "astralSpirit", 
+								"includeUpgrades" : true
 							},	
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"parameters": [ "brutus", "true" ]
+								"creature": "brutus", 
+								"includeUpgrades" : true
 							},			
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"parameters": [ "gnollShaman", "true" ]
+								"creature": "gnollShaman", 
+								"includeUpgrades" : true
 							},		
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"parameters": [ "hierophant", "true" ]
+								"creature": "hierophant", 
+								"includeUpgrades" : true
 							},									
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"parameters": [ "paladin", "true" ]
+								"creature": "paladin", 
+								"includeUpgrades" : true
 							},
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"parameters": [ "soulEater", "true" ]
+								"creature": "soulEater", 
+								"includeUpgrades" : true
 							},		
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"parameters": [ "succub", "true" ]
+								"creature": "succub", 
+								"includeUpgrades" : true
 							},
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"parameters": [ "templeGuard", "true" ]
+								"creature": "templeGuard", 
+								"includeUpgrades" : true
 							},
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"parameters": [ "warmonger", "true" ]
+								"creature": "warmonger", 
+								"includeUpgrades" : true
 							},
 							{
 								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"parameters": [ "MORE_DAMAGE_FROM_SPELL", "spell.spellEnchant", null ]
+								"bonusType": "MORE_DAMAGE_FROM_SPELL", 
+								"bonusSubtype" : "spellEnchant"
 							}
-							]
+						]
 					},
 					"cast+" :
 					{
@@ -76,49 +86,58 @@
 							"noneOf",
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"parameters": [ "astralSpirit", "true" ]
+								"creature": "astralSpirit", 
+								"includeUpgrades" : true
 							},	
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"parameters": [ "brutus", "true" ]
+								"creature": "brutus", 
+								"includeUpgrades" : true
 							},			
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"parameters": [ "gnollShaman", "true" ]
+								"creature": "gnollShaman", 
+								"includeUpgrades" : true
 							},		
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"parameters": [ "hierophant", "true" ]
+								"creature": "hierophant", 
+								"includeUpgrades" : true
 							},									
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"parameters": [ "paladin", "true" ]
+								"creature": "paladin", 
+								"includeUpgrades" : true
+							},
+							{	
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature": "soulEater", 
+								"includeUpgrades" : true
+							},	
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature": "succub", 
+								"includeUpgrades" : true
 							},
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"parameters": [ "soulEater", "true" ]
-							},		
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"parameters": [ "succub", "true" ]
+								"creature": "templeGuard", 
+								"includeUpgrades" : true
 							},
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"parameters": [ "templeGuard", "true" ]
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"parameters": [ "warmonger", "true" ]
+								"creature": "warmonger", 
+								"includeUpgrades" : true
 							},
 							{
 								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"parameters": [ "MORE_DAMAGE_FROM_SPELL", "spell.spellEnchant", null ]
+								"bonusType": "MORE_DAMAGE_FROM_SPELL", 
+								"bonusSubtype" : "spellEnchant"
 							}
-							]
-						  }
+						]
 					}
-
-					},
+				}
+			},
 			"none":{},"basic":{},"advanced":{},"expert":{}
 		},
 		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {	}},		
@@ -177,7 +196,7 @@
 		"name" : "Battle Forged",
 		"school": {"air":false, "earth":false, "fire":true, "water":false},
 		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {"spell.weakness": true},		
+		"gainChance":{},"counters": {"weakness": true},		
 		"graphics":	{"iconEffect": "spells/battleforgedIcon"},		
 		"animation":{
 			"affect":["SP12_"]},
@@ -224,7 +243,7 @@
 		"name" : "Spiritual Wind",
 		"school": {"air":true, "earth":false, "fire":false, "water":false},
 		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {"spell.weakness": true},		
+		"gainChance":{},"counters": {"weakness": true},		
 		"graphics":	{"iconEffect": "spells/astralwindIcon"},		
 		"animation":{
 			"affect":["C15SPA0"]},
@@ -268,7 +287,7 @@
 		"name" : "Nature's Embrace",
 		"school": {"air":false, "earth":false, "fire":false, "water":true},
 		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {"spell.curse": true},		
+		"gainChance":{},"counters": {"curse": true},		
 		"graphics":	{"iconEffect": "spells/masterblessIcon"},		
 		"animation":{
 			"affect":["C01SPW"]},
@@ -417,7 +436,7 @@
 		"name" : "Prayer",
 		"school": {"air":false, "earth":false, "fire":false, "water":true},
 		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {"spell.weakness": true},		
+		"gainChance":{},"counters": {"weakness": true},		
 		"graphics":	{"iconEffect": "spells/Si49Pray"},		
 		"animation":{
 			"affect":[{"defName":"C10SPW", "verticalPosition":"bottom"}]},
@@ -469,7 +488,7 @@
 		"name" : "Saint's Prayer",
 		"school": {"air":false, "earth":false, "fire":false, "water":true},
 		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {"spell.weakness": true},		
+		"gainChance":{},"counters": {"weakness": true},		
 		"graphics":	{"iconEffect": "spells/pureprayerIcon"},		
 		"animation":{
 			"affect":[{"defName":"C10SPW", "verticalPosition":"bottom"}]},
@@ -528,7 +547,7 @@
 		"name" : "Undead Brand",
 		"school": {"air":false, "earth":false, "fire":true, "water":false},
 		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {"spell.weakness": true},		
+		"gainChance":{},"counters": {"weakness": true},		
 		"graphics":	{"iconEffect": "spells/plagueshieldIcon.bmp"},		
 		"animation":{
 			"affect":["C05SPF0"]},
@@ -580,5 +599,4 @@
 			"positive": true
 		}
 	}
-
 }

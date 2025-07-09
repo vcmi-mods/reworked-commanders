@@ -31,20 +31,22 @@
 							"limiters": [
 							//"allOf",  rzekomo opcjonalny
 							[
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", 
-									"parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.totemsCurseTrigger", null ]}
+								{ "type" : "HAS_ANOTHER_BONUS_LIMITER", 
+									"bonusType" : "MORE_DAMAGE_FROM_SPELL", 
+									"bonusSubtype" : "totemsCurseTrigger"
+								}
 							],
 							[
 								"noneOf",
-								{"type" : "CREATURE_TYPE_LIMITER", 
-									"parameters" : [ "gnollShaman", true]}
+								{ "type" : "CREATURE_TYPE_LIMITER", 
+									"creature" :  "gnollShaman", 
+									"includeUpgrades" : true	
+								}
 							]
 						]
-
 					}
 				}
-
-					},
+			},
 			"none":{},"basic":{},"advanced":{},"expert":{}
 		},
 		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {		

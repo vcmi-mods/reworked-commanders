@@ -21,20 +21,20 @@
 			"troglodyteKin" : 
 			{
 				"type" : "SPECIAL_UPGRADE",
-				"subtype" : "creature.abyssalThrall1",
-				"addInfo" : "creature.troglodyte",
+				"subtype" : "abyssalThrall1",
+				"addInfo" : "troglodyte",
 				"propagator" : "HERO"
 			},
 			"blindImmunity" : 
 			{
 				"type" : "SPELL_IMMUNITY",
-				"subtype" : "spell.blind",
+				"subtype" : "blind",
 				"addInfo" : 1 //absolute
 			},
 			"petrifyImmunity" : 
 			{
 				"type" : "SPELL_IMMUNITY",
-				"subtype" : "spell.stoneGaze",
+				"subtype" : "stoneGaze",
 				"addInfo" : 1
 			}	
 		},

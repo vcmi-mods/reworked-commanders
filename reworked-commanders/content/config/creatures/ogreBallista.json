@@ -42,7 +42,7 @@
 			"noAttacking" : 
 			{
 				"type" : "ENCHANTED",
-				"subtype" : "spell.machineNoAttack"
+				"subtype" : "machineNoAttack"
 			}					
 		},
 		"graphics" :
@@ -123,7 +123,7 @@
 			"noAttacking" : 
 			{
 				"type" : "ENCHANTED",
-				"subtype" : "spell.machineNoAttack"
+				"subtype" : "machineNoAttack"
 			}					
 		},
 		"graphics" :

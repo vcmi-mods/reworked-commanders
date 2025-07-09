@@ -21,7 +21,7 @@
 			"ephemeral" :
 				{
 					"type" : "ENCHANTED",
-					"subtype" : "spell.ephemeralExtract",
+					"subtype" : "ephemeralExtract",
 					"val" : 3
 				},
 
@@ -48,7 +48,7 @@
 				"type" : "TRANSMUTATION",
 				"subtype" : "transmutationPerUnit",
 				"val" : 100,
-				"addInfo" : "creature.lycanthrope"
+				"addInfo" : "lycanthrope"
 			},
 			
 			//lycantrophy wont work on tier7 units and commanders
@@ -56,7 +56,7 @@
 			{
 				"type" : "SPELL_BEFORE_ATTACK",
 				"val" : 100,
-				"subtype" : "spell.lycanthropeOff"
+				"subtype" : "lycanthropeOff"
 			},
 
 			//get dunked on lol
@@ -79,9 +79,9 @@
 				"val" : -1,
 				"valueType" : "INDEPENDENT_MIN",
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted", null ]	} ],
-					[ "anyOf", 	{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "soulEater", true ]	}	]
-							]
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "soulExtracted"	} ],
+					[ "anyOf", 	{"type" : "CREATURE_TYPE_LIMITER", "creature" : "soulEater", "includeUpgrades" : true	}	]
+				]
 			},	
 			"shootingOff" :
 			{	
@@ -90,9 +90,9 @@
 				"val" : 0,
 				"valueType" : "INDEPENDENT_MIN",
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted", null ]	} ],
-					[ "anyOf", 	{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "soulEater", true ]	}	]
-							]
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "soulExtracted"	} ],
+					[ "anyOf", 	{"type" : "CREATURE_TYPE_LIMITER", "creature" : "soulEater", "includeUpgrades" : true	}	]
+				]
 			},	
 					
 			"movementOff" :
@@ -102,9 +102,9 @@
 				"val" : 0,
 				"valueType" : "INDEPENDENT_MIN",
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted", null ]	} ],
-					[ "anyOf", 	{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "soulEater", true ]	}	]
-							]
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "soulExtracted"	} ],
+					[ "anyOf", 	{"type" : "CREATURE_TYPE_LIMITER", "creature" : "soulEater", "includeUpgrades" : true	}	]
+				]
 			},	
 
 			
@@ -115,9 +115,9 @@
 				"val" : 0,
 				"valueType" : "INDEPENDENT_MIN",
 				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted", null ]	} ],
-					[ "anyOf", 	{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "soulEater", true ]	}	]
-							]
+					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "soulExtracted"	} ],
+					[ "anyOf", 	{"type" : "CREATURE_TYPE_LIMITER", "creature" : "soulEater", "includeUpgrades" : true	}	]
+				]
 			},	
 					
 			"spellsOff" :
@@ -125,13 +125,10 @@
 				"type" : "BLOCK_ALL_MAGIC",
 				"propagator": "HERO",
 				"limiters": [ "noneOf", 
-				{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.soulExtracted", null ]	}
-			]		
+					{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "soulExtracted"	}
+				]		
 			}
-
-				
-
-				},
+		},
 		"graphics" :
 		{
 			"animation": "battle/commander/soulghost.def",
@@ -171,7 +168,7 @@
 			"ephemeral" :
 				{
 					"type" : "ENCHANTED",
-					"subtype" : "spell.ephemeralExtract",
+					"subtype" : "ephemeralExtract",
 					"val" : 3
 				},
 				"flier" :
@@ -185,23 +182,28 @@
 				  "stopSiegeMachines" :
 				  {
 					  "type" : "ENCHANTED",
-					  "subtype" : "spell.siegeLimiter1",
+					  "subtype" : "siegeLimiter1",
 					  "propagator" : "BATTLE_WIDE",
 //					  "addInfo" : 0,
 					  "limiters": [
 						  [ "noneOf", 
-											  {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.siegeLimiterOff", null ]	} ],
-						  [ "anyOf", 
-							  {"type" : "CREATURE_TYPE_LIMITER", 
-								  "parameters" : [ "catapult", true]},
-								  {"type" : "CREATURE_TYPE_LIMITER", 
-									  "parameters" : [ "arrowTower", true]} ]
-								  ]
+								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "siegeLimiterOff" } ],
+							[ "anyOf", 
+								{"type" : "CREATURE_TYPE_LIMITER", 
+									"creature" :  "catapult", 
+									"includeUpgrades" : true
+								},
+								{"type" : "CREATURE_TYPE_LIMITER", 
+									"creature" :  "arrowTower", 
+									"includeUpgrades" : true
+								}	 
+							]
+						]
 				  },
 					  "siegeMachinesTargets" :
 					  {
 						  "type" : "MORE_DAMAGE_FROM_SPELL",
-						  "subtype" : "spell.siegeLimiter1",
+						  "subtype" : "siegeLimiter1",
 						  "propagator" : "BATTLE_WIDE",
 						  "val" : 100
 					  },
@@ -210,7 +212,7 @@
 			{
 				"type" : "SPELL_AFTER_ATTACK",
 				"val" : 100,
-				"subtype" : "spell.dazzleTarget"
+				"subtype" : "dazzleTarget"
 			},
 
 				"spellcastAmount" :
@@ -218,7 +220,7 @@
 					"type" : "CASTS",
 					"val" : 1,
 					"limiters": [ "noneOf", 
-					{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.expExtracted", null ]	}
+					{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "expExtracted" 	}
 				]		
 				},
 
@@ -227,13 +229,13 @@
 			{
 				"type" : "SPELL_AFTER_ATTACK",
 				"val" : 100,
-				"subtype" : "spell.expStop"
+				"subtype" : "expStop"
 			},	
 				//timestop
 				"soulExtractor2" :
 				{
 					"type" : "ENCHANTER",
-					"subtype" : "spell.summonExperience",
+					"subtype" : "summonExperience",
 					"val" : 0,
 					"addInfo" : 1
 				},				
@@ -248,7 +250,7 @@
 					"type" : "BLOCK_ALL_MAGIC",
 					"propagator": "HERO",
 					"limiters": [ "noneOf", 
-					{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.expExtracted", null ]	}
+					{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "expExtracted" 	}
 				]		
 				}
 			//"attackOff" :

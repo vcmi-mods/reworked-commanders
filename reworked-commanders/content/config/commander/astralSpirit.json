@@ -12,6 +12,10 @@
 		"special" : true,
 		"attack" : 5,
 		"defense" : 5,
+		"cost" :
+		{
+			"gold" : 2000
+		},		
 		"damage" :
 		{
 			 "min" : 8,
@@ -82,7 +86,7 @@
 			"halved shots" :
 		{
 			"type" : "SHOTS","val" : -50,"valueType" : "PERCENT_TO_ALL",
-			"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.shootingEnchant", null ]}]
+			"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "shootingEnchant"}]
 		},
 	
 
@@ -90,13 +94,12 @@
 		{
 		"type" : "SPELL_BEFORE_ATTACK",
 		"val" : 50,
-		"subtype" : "spell.astralSerenity2",
+		"subtype" : "astralSerenity2",
 		"addInfo" : [0,1],	
 		"limiters": [ 
 			"noneOf",
 			{
-				"type" : "HAS_ANOTHER_BONUS_LIMITER",
-				"parameters": [ "ENCHANTED", "spell.shootingEnchant", null ]
+				"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "shootingEnchant"
 			}
 			]
 		},
@@ -105,13 +108,12 @@
 		{
 		"type" : "SPELL_BEFORE_ATTACK",
 		"val" : 50,
-		"subtype" : "spell.astralSerenity2",
+		"subtype" : "astralSerenity2",
 		"addInfo" : [2,1],	
 		"limiters": [ 
 			"allOf",
 			{
-				"type" : "HAS_ANOTHER_BONUS_LIMITER",
-				"parameters": [ "ENCHANTED", "spell.shootingEnchant", null ]
+				"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "shootingEnchant"
 			}
 			]
 		},
@@ -119,13 +121,12 @@
 		{
 			"type" : "SPELL_AFTER_ATTACK",
 			"val" : 50,
-			"subtype" : "spell.astralSerenity",
+			"subtype" : "astralSerenity",
 			"addInfo" : [0,2],		
 			"limiters": [ 
 				"noneOf",
 				{
-					"type" : "HAS_ANOTHER_BONUS_LIMITER",
-					"parameters": [ "ENCHANTED", "spell.abilityEnchant", null ]
+					"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"
 				}
 				]
 		},
@@ -133,13 +134,12 @@
 		{
 			"type" : "SPELL_AFTER_ATTACK",
 			"val" : 100,
-			"subtype" : "spell.astralSerenity",
+			"subtype" : "astralSerenity",
 			"addInfo" : [0,2],
 			"limiters": [ 
 				"allOf",
 				{
-					"type" : "HAS_ANOTHER_BONUS_LIMITER",
-					"parameters": [ "ENCHANTED", "spell.abilityEnchant", null ]
+					"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"
 				}
 				]
 		},
@@ -148,11 +148,12 @@
 			{
 				"type" : "SPECIFIC_SPELL_POWER",
 				"val" : 1,
-				"subtype" : "spell.astralSerenity"
+				"subtype" : "astralSerenity"
 			},
 			"magicResistance" :
 			{
-				"type" : "MAGIC_RESISTANCE",
+				"type" : "SPELL_DAMAGE_REDUCTION",
+				"subtype" : "any",
 				"val" : 5
 			},
 			"castsAmount" :
@@ -169,26 +170,24 @@
 			"canCast" :
 			{
 				"type" : "SPELLCASTER",
-				"subtype" : "spell.counterstrike",
+				"subtype" : "counterstrike",
 				"val" : 3,		
 				"limiters": [ 
 					"noneOf",
 					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
+						"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "spellEnchant"
 					}
 					]
 				  },
 			"canCast+" :
 			{
 				"type" : "SPELLCASTER",
-				"subtype" : "spell.astralAgility",
+				"subtype" : "astralAgility",
 				"val" : 3,		
 				"limiters": [ 
 					"allOf",
 					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
+						"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "spellEnchant"
 					}
 				]
             }

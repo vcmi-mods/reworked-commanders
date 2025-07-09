@@ -23,14 +23,14 @@
 			"castsUnfortune" :
 			{
 				"type" : "ENCHANTER",
-				"subtype" : "spell.misfortune",
+				"subtype" : "misfortune",
 				"val" : 2,
 				"addInfo" : 3
 			},			
 			"castsFortune" :
 			{
 				"type" : "ENCHANTER",
-				"subtype" : "spell.fortune",
+				"subtype" : "fortune",
 				"val" : 2,
 				"addInfo" : 3
 			},		
@@ -39,16 +39,16 @@
 				"type" : "CASTS",
 				"val" : 99
 			},
-							"enchantStranger" :
-							{
-								"type" : "CREATURE_ENCHANT_POWER",
-								"val" : 3
-							},
-				"protectiveAura" :
-				{
-					"type" : "SPELL_RESISTANCE_AURA",
-					"val" : 50
-				},	
+			"enchantStranger" :
+			{
+				"type" : "CREATURE_ENCHANT_POWER",
+				"val" : 3
+			},
+			"protectiveAura" :
+			{
+				"type" : "SPELL_RESISTANCE_AURA",
+				"val" : 50
+			},	
 			"warMachine" :
 			{
 				"type" : "SIEGE_WEAPON"
@@ -95,14 +95,14 @@
 			"grantsFortune" :
 			{
 				"type" : "ENCHANTED",
-				"subtype" : "spell.fortune",
+				"subtype" : "fortune",
 				"val" : 6
 			},	
 
 			"castsUnfortune" :
 			{
 				"type" : "ENCHANTER",
-				"subtype" : "spell.misfortune",
+				"subtype" : "misfortune",
 				"val" : 2,
 				"addInfo" : 3
 			},	

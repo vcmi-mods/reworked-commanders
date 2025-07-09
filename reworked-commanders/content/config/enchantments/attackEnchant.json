@@ -26,27 +26,32 @@
 						"noneOf",
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "gnollShaman", "true" ]
+							"creature" :  "gnollShaman", 
+							"includeUpgrades" : true
 						},									
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "paladin", "true" ]
+							"creature" :  "paladin", 
+							"includeUpgrades" : true
 						},
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "astralSpirit", "true" ]
+							"creature" :  "astralSpirit", 
+							"includeUpgrades" : true
 						},
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "soulEater", "true" ]
+							"creature" :  "soulEater", 
+							"includeUpgrades" : true
 						},
 						{
 							"type" : "HAS_ANOTHER_BONUS_LIMITER",
-							"parameters": [ "MORE_DAMAGE_FROM_SPELL", "spell.attackEnchant", null ]
+							"bonusType": "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "attackEnchant"
 						}
-						]
-					},		
-					"dualBlade" :
+					]
+				},		
+				
+				"dualBlade" :
 					{
 					"type" : "ADDITIONAL_ATTACK",
 					"val" : 1,
@@ -55,33 +60,36 @@
 						"allOf",
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "soulEater", "true" ]
+							"creature" :  "soulEater", 
+							"includeUpgrades" : true
 						},							
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "paladin", "true" ]
+							"creature" :  "paladin", 
+							"includeUpgrades" : true
 						}
-						]
-					},	
-					"piercingStrike" :
+					]
+				},	
+				
+				"piercingStrike" :
 					{
 						"type" : "TWO_HEX_ATTACK_BREATH",
 						"limiters": [ 
 							"anyOf",
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"parameters": [ "gnollShaman", "true" ]
+								"creature" :  "gnollShaman", 
+								"includeUpgrades" : true
 							},
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"parameters": [ "astralSpirit", "true" ]
+								"creature" :  "astralSpirit", 
+								"includeUpgrades" : true
 							}
-							]
+						]
 					}					
-
-					}
-
-					},
+				}
+			},
 			"none":{},"basic":{},"advanced":{},"expert":{}
 		},
 		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {	}},		

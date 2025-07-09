@@ -19,11 +19,12 @@
 				"targetModifier":{"smart":true},
 				"effects" : {	
 					"preemptiveRetal" : {
-						"type" : "FIRST_STRIKE"
+						"type" : "FIRST_STRIKE",
+						"subtype" : "damageTypeAll"
 					}
-					}
+				}
 
-					},
+			},
 			"none":{},"basic":{},"advanced":{},"expert":{}
 		},
 		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {	}},		

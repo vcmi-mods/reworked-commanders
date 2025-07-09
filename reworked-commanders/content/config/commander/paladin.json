@@ -12,6 +12,10 @@
 		"special" : true,
 		"attack" : 5,
 		"defense" : 5,
+		"cost" :
+		{
+			"gold" : 2000
+		},		
 		"damage" :
 		{
 			"min" : 8,
@@ -75,7 +79,7 @@
 				"halved shots" :
 			{
 				"type" : "SHOTS","val" : -50,"valueType" : "PERCENT_TO_ALL",
-				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.shootingEnchant", null ]}]
+				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "shootingEnchant"}]
 			},
 			
 
@@ -96,8 +100,7 @@
 			"limiters": [ 
 				"allOf",
 				{
-					"type" : "HAS_ANOTHER_BONUS_LIMITER",
-					"parameters": [ "ENCHANTED", "spell.abilityEnchant", null ]
+					"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"
 				}
 				]
 		},	
@@ -106,12 +109,11 @@
 		{
 			"type" : "ENCHANTED",
 			"val" : 0,
-			"subtype" : "spell.bannerOfLight",
+			"subtype" : "bannerOfLight",
 			"limiters": [
 				"allOf",
 				{
-					"type" : "HAS_ANOTHER_BONUS_LIMITER",
-					"parameters": [ "ENCHANTED", "spell.abilityEnchant", null ]
+					"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"
 				}
 				]
 		},	
@@ -134,10 +136,10 @@
 			"propagator": "HERO",
 			"updater": "TIMES_HERO_LEVEL"
 		},
-
 			"magicResistance" :
 			{
-				"type" : "MAGIC_RESISTANCE",
+				"type" : "SPELL_DAMAGE_REDUCTION",
+				"subtype" : "any",
 				"val" : 5
 			},
 			"castsAmount" :
@@ -154,13 +156,12 @@
 			"canCast" :
 			{
 				"type" : "SPELLCASTER",
-				"subtype" : "spell.lifePrayer",
+				"subtype" : "lifePrayer",
 				"val" : 0,		
 				"limiters": [ 
 					"noneOf",
 					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
+						"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "spellEnchant"
 					}
 					]
 				  },
@@ -169,13 +170,12 @@
 			"canCast+" :
 			{
 				"type" : "SPELLCASTER",
-				"subtype" : "spell.purePrayer",
+				"subtype" : "purePrayer",
 				"val" : 0,		
 				"limiters": [ 
 					"allOf",
 					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
+						"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "spellEnchant"
 					}
 					]
 				  },
@@ -187,13 +187,13 @@
 					  "subtype" : "creature.expSoul1",
 					  "val" : 100,
 //					  "addInfo" : 0,
-					  "limiters": [ {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.abilityEnchant", null ]	}]
+					  "limiters": [ {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"	}]
 				  },
 				  
 					"lightningChain" :{
 						"type" : "ENCHANTED",
-						"subtype": "spell.lightningSpearEnchant",
-						"limiters": [ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.shootingEnchant", null ]	} ]
+						"subtype": "lightningSpearEnchant",
+						"limiters": [ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "shootingEnchant"} ]
 				}
 		}
 	}

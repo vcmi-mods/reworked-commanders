@@ -60,22 +60,20 @@
 											"turns": 1,
 								"limiters": [
 					 				"anyOf", 
-					 				{"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "KING" ]},
-									{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "soulEater", true ]	},
-									{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "paladin", true ]	},
-									{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "gnollShaman", true ]	},
-									{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "hierophant", true ]	},
-									{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "warmonger", true ]	},
-									{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "brutus", true ]	},
-									{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "templeGuard", true ]	},
-									{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "astralSpirit", true ]	},
-									{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "succub", true ]	}
-							]
+					 				{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "KING" },
+									{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "soulEater", "includeUpgrades" : true	},
+									{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "paladin", "includeUpgrades" : true	},
+									{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "gnollShaman", "includeUpgrades" : true	},
+									{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "hierophant", "includeUpgrades" : true	},
+									{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "warmonger", "includeUpgrades" : true	},
+									{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "brutus", "includeUpgrades" : true	},
+									{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "templeGuard", "includeUpgrades" : true	},
+									{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "astralSpirit", "includeUpgrades" : true	},
+									{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "succub", "includeUpgrades" : true	}
+								]
 							}
-					
-			
-		}}
-
+						}
+					}
 				}
 			},
 			"none":{},"basic":{},"advanced":{},"expert":{}

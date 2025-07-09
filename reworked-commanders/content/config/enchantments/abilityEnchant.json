@@ -20,48 +20,57 @@
 				"effects" : {	
 					"unlimitedRiposte" :
 					{
-						"type": "UNLIMITED_RETALIATIONS",
+					"type": "UNLIMITED_RETALIATIONS",
 					"limiters": [ 
 						"noneOf",
 						//{
 						//	"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						//	"parameters": [ "MORE_DAMAGE_FROM_SPELL", "spell.abilityEnchant" ]
+						//	"parameters": [ "MORE_DAMAGE_FROM_SPELL", "abilityEnchant" ]
 						//},	why?
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "astralSpirit", "true" ]
+							"creature" : "astralSpirit",
+							"includeUpgrades" : true
 						},
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "brutus", "true" ]
+							"creature" : "brutus",
+							"includeUpgrades" : true
 						},			
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "gnollShaman", "true" ]
+							"creature" : "gnollShaman",
+							"includeUpgrades" : true
 						},		
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "hierophant", "true" ]
+							"creature" : "hierophant",
+							"includeUpgrades" : true
 						},									
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "paladin", "true" ]
+							"creature" : "paladin",
+							"includeUpgrades" : true
 						},
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "soulEater", "true" ]
+							"creature" : "soulEater",
+							"includeUpgrades" : true
 						},		
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "succub", "true" ]
+							"creature" : "succub",
+							"includeUpgrades" : true
 						},
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "templeGuard", "true" ]
+							"creature" : "templeGuard",
+							"includeUpgrades" : true
 						},
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "warmonger", "true" ]
+							"creature" : "warmonger",
+							"includeUpgrades" : true
 						}
 						]
 					},
@@ -72,39 +81,48 @@
 						"noneOf",
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "astralSpirit", "true" ]
+							"creature" : "astralSpirit",
+							"includeUpgrades" : true
 						},
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "brutus", "true" ]
+							"creature" : "brutus",
+							"includeUpgrades" : true
 						},			
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "gnollShaman", "true" ]
+							"creature" : "gnollShaman",
+							"includeUpgrades" : true
 						},		
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "hierophant", "true" ]
+							"creature" : "hierophant",
+							"includeUpgrades" : true
 						},									
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "paladin", "true" ]
+							"creature" : "paladin",
+							"includeUpgrades" : true
 						},
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "soulEater", "true" ]
+							"creature" : "soulEater",
+							"includeUpgrades" : true
 						},		
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "succub", "true" ]
+							"creature" : "succub",
+							"includeUpgrades" : true
 						},
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "templeGuard", "true" ]
+							"creature" : "templeGuard",
+							"includeUpgrades" : true
 						},
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters": [ "warmonger", "true" ]
+							"creature" : "warmonger",
+							"includeUpgrades" : true
 						}
 						]
 					}

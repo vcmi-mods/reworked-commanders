@@ -12,6 +12,10 @@
 		"special" : true,
 		"attack" : 5,
 		"defense" : 5,
+		"cost" :
+		{
+			"gold" : 2000
+		},
 		"damage" :
 		{
 			"min" : 8,
@@ -71,7 +75,7 @@
 				"halved shots" :
 			{
 				"type" : "SHOTS","val" : -50,"valueType" : "PERCENT_TO_ALL",
-				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.shootingEnchant", null ]}]
+				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "shootingEnchant"}]
 			},
 
 			"manaSaver" :
@@ -84,13 +88,13 @@
 					"valPer20" : 10,
 					"stepSize" : 1
 				}
-				//"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.abitiyEnchant"]	} ]
+				//"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "abitiyEnchant"]	} ]
 			},
 			"manaStrainer" :
 			{
 				"type" : "CHANGES_SPELL_COST_FOR_ENEMY",
 				"val" : 2,
-				"limiters": ["allOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.abilityEnchant", null ]}]
+				"limiters": ["allOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"}]
 			},
 
 			"manaUpgrade" :
@@ -104,19 +108,19 @@
 					"stepSize" : 1
 				}
 				//"valueType" : "PERCENT_TO_ALL"
-				//"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "spell.abitiyEnchant"]	} ]
+				//"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "abitiyEnchant"]	} ]
 			},
 
 			"powerUpgrade" :
 			{
 				"type" : "ENCHANTED",
-				"subtype" : "spell.powerSummoned",
-				"limiters": ["allOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER","parameters": [ "ENCHANTED", "spell.abilityEnchant", null ]}]
+				"subtype" : "powerSummoned",
+				"limiters": ["allOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"}]
 			},
-
 			"magicResistance" :
 			{
-				"type" : "MAGIC_RESISTANCE",
+				"type" : "SPELL_DAMAGE_REDUCTION",
+				"subtype" : "any",
 				"val" : 5
 			},
 			"castsAmount" :
@@ -133,34 +137,32 @@
 			"canCast" :
 			{
 				"type" : "SPELLCASTER",
-				"subtype" : "spell.precision",
+				"subtype" : "precision",
 				"val" : 2,		
 				"limiters": [ 
 					"noneOf",
 					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
+						"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "spellEnchant"
 					}
 					]
 				  },
 			"canCast+" :
 			{
 				"type" : "SPELLCASTER",
-				"subtype" : "spell.huntressAim",
+				"subtype" : "huntressAim",
 				"val" : 0,		
 				"limiters": [ 
 					"allOf",
 					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters": [ "ENCHANTED", "spell.spellEnchant", null ]
+						"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "spellEnchant"
 					}
 					]
 				  },
 				  
 					"lightningChain" :{
 						"type" : "ENCHANTED",
-						"subtype": "spell.lightningSpearEnchant",
-						"limiters": [ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "ENCHANTED", "spell.shootingEnchant", null ]	} ]
+						"subtype": "lightningSpearEnchant",
+						"limiters": [ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "shootingEnchant"} ]
 				}
 
 				//doesnt work
@@ -168,7 +170,7 @@
 		//{
 		//"type" : "MORE_DAMAGE_FROM_SPELL",
 		//"val" : 100,
-		//"subtype" : "spell.powerSummoned",
+		//"subtype" : "powerSummoned",
 		//"propagator" : "BATTLE_WIDE",
 		//"limiters": 
 		//["noneOf", 

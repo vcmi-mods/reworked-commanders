@@ -22,7 +22,7 @@
 			"castsCure" :
 			{
 				"type" : "SPELLCASTER",
-				"subtype" : "spell.cure",
+				"subtype" : "cure",
 				"val" : 2
 			},		
 
@@ -35,7 +35,7 @@
 			"noAttacking" : 
 			{
 				"type" : "ENCHANTED",
-				"subtype" : "spell.machineNoAttack"
+				"subtype" : "machineNoAttack"
 			},
 
 			"castsAmount" :
@@ -88,7 +88,7 @@
 			"castsCure" :
 			{
 				"type" : "SPELLCASTER",
-				"subtype" : "spell.cure",
+				"subtype" : "cure",
 				"val" : 3
 			},	
 			"curePower" :
@@ -100,15 +100,15 @@
 			"noAttacking" : 
 			{
 				"type" : "ENCHANTED",
-				"subtype" : "spell.machineNoAttack"
+				"subtype" : "machineNoAttack"
 			},
 
-							"castsAmount" :
-							{
-								"type" : "CASTS",
-								"val" : 1,
-								"valueType" : "INDEPENDENT_MIN"
-							},
+			"castsAmount" :
+			{
+				"type" : "CASTS",
+				"val" : 1,
+				"valueType" : "INDEPENDENT_MIN"
+			},
 			"warMachine" :
 			{
 				"type" : "SIEGE_WEAPON"
