@@ -1,46 +1,64 @@
 {
-	"speedEnchant" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"speedEnchant" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Leading Initiative",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 1, "power": 0, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},		
-		"graphics":	{"iconEffect": "spells/initiativeEnchant"},	
-		"animation":{},
-		"sounds": {},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 1,
+		"power" : 0,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconEffect" : "spells/initiativeEnchant"
+		},
+		"animation" : {},
+		"sounds" : {},
 		"levels" : {
-			"base":{
-
-				"description": "{Leading Initiative}\r\n\r\nCommander and their troops will start their turn with 75% of their speed, moving before opponents with similar speed, but their movement range will remain the same.",
-				"cost": 0, "power": 0, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Leading Initiative}\r\n\r\nCommander and their troops will start their turn with 75% of their speed, moving before opponents with similar speed, but their movement range will remain the same.",
+				"cost" : 0,
+				"power" : 0,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
 					"initiativeBoost" : {
-//						"addInfo" : 0,
+						//						"addInfo" : 0,
 						"val" : 49,
 						"valueType" : "PERCENT_TO_ALL",
 						"type" : "STACKS_SPEED",
 						"duration" : "STACK_GETS_TURN"
 					},
 					"initiativeFlat" : {
-//						"addInfo" : 0,
+						//						"addInfo" : 0,
 						"val" : 1,
 						"valueType" : "BASE_NUMBER",
 						"type" : "STACKS_SPEED",
 						"duration" : "STACK_GETS_TURN"
-					}			
 					}
-
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+				}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {	}},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true,
-			"special": true
+			"positive" : true,
+			"special" : true
 		}
 	}
 }

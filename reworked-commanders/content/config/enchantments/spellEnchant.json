@@ -1,172 +1,205 @@
 {
-	"spellEnchant" : 
-	{
-		"type": "combat",	"targetType" : "CREATURE",
+	"spellEnchant" : {
+		"type" : "combat",
+		"targetType" : "CREATURE",
 		"name" : "Spell Enchantment",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},		
-		"graphics":	{"iconEffect": "spells/spellEnchant"},
-		"animation":{},
-		"sounds": {},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconEffect" : "spells/spellEnchant"
+		},
+		"animation" : {},
+		"sounds" : {},
 		"levels" : {
-			"base":{
-
-				"description": "{Spell Enchantment}\r\n\r\nCommander's spellcasting is upgraded (default +1 cast and +5 spellpower).",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Spell Enchantment}\r\n\r\nCommander's spellcasting is upgraded (default +1 cast and +5 spellpower).",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
-				"effects" : {	
-					"spellpower+" :
-					{
+				"targetModifier" : {
+					"smart" : true
+				},
+				"effects" : {
+					"spellpower+" : {
 						"type" : "CREATURE_SPELL_POWER",
 						"val" : 500,
 						"valueType" : "ADDITIVE_VALUE",
-						"limiters": [ 
+						"limiters" : [
 							"noneOf",
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"creature": "astralSpirit", 
-								"includeUpgrades" : true
-							},	
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature": "brutus", 
-								"includeUpgrades" : true
-							},			
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature": "gnollShaman", 
-								"includeUpgrades" : true
-							},		
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature": "hierophant", 
-								"includeUpgrades" : true
-							},									
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature": "paladin", 
+								"creature" : "astralSpirit",
 								"includeUpgrades" : true
 							},
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"creature": "soulEater", 
-								"includeUpgrades" : true
-							},		
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature": "succub", 
+								"creature" : "brutus",
 								"includeUpgrades" : true
 							},
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"creature": "templeGuard", 
+								"creature" : "gnollShaman",
 								"includeUpgrades" : true
 							},
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"creature": "warmonger", 
+								"creature" : "hierophant",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "paladin",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "soulEater",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "succub",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "templeGuard",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "warmonger",
 								"includeUpgrades" : true
 							},
 							{
 								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"bonusType": "MORE_DAMAGE_FROM_SPELL", 
+								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
 								"bonusSubtype" : "spellEnchant"
 							}
 						]
 					},
-					"cast+" :
-					{
+					"cast+" : {
 						"type" : "CASTS",
 						"val" : 1,
 						"valueType" : "ADDITIVE_VALUE",
-						"limiters": [ 
+						"limiters" : [
 							"noneOf",
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"creature": "astralSpirit", 
-								"includeUpgrades" : true
-							},	
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature": "brutus", 
-								"includeUpgrades" : true
-							},			
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature": "gnollShaman", 
-								"includeUpgrades" : true
-							},		
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature": "hierophant", 
-								"includeUpgrades" : true
-							},									
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature": "paladin", 
-								"includeUpgrades" : true
-							},
-							{	
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature": "soulEater", 
-								"includeUpgrades" : true
-							},	
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature": "succub", 
+								"creature" : "astralSpirit",
 								"includeUpgrades" : true
 							},
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"creature": "templeGuard", 
+								"creature" : "brutus",
 								"includeUpgrades" : true
 							},
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"creature": "warmonger", 
+								"creature" : "gnollShaman",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "hierophant",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "paladin",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "soulEater",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "succub",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "templeGuard",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "warmonger",
 								"includeUpgrades" : true
 							},
 							{
 								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"bonusType": "MORE_DAMAGE_FROM_SPELL", 
+								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
 								"bonusSubtype" : "spellEnchant"
 							}
 						]
 					}
 				}
 			},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {	}},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true,
-			"special": true
+			"positive" : true,
+			"special" : true
 		}
 	},
 
-	"astralAgility" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"astralAgility" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Elemental Agility",
-		"school": {"air":true, "earth":false, "fire":false, "water":false},
-		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},		
-		"graphics":	{"iconEffect": "spells/celerityIcon"},		
-		"animation":{
-			"affect":["C04SPA0"]},
-		"sounds": {
-			"cast": "CNTRSTRK"},
+		"school" : {
+			"air" : true,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconEffect" : "spells/celerityIcon"
+		},
+		"animation" : {
+			"affect" : [
+				"C04SPA0"
+			]
+		},
+		"sounds" : {
+			"cast" : "CNTRSTRK"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Elemental Agility}\r\n\r\nTwo countrattacks and additional attack.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Elemental Agility}\r\n\r\nTwo countrattacks and additional attack.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
 					"primaryCounter" : {
 						"type" : "ADDITIONAL_RETALIATION",
@@ -179,37 +212,63 @@
 						"duration" : "N_TURNS"
 					}
 				}
-					},
-			"none":{},"basic":{},"advanced":{
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {
 				"range" : "X"
-			},"expert":{}
+			},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {"bonus.SIEGE_WEAPON" : "absolute"},"anyOf" : {}
-		},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {
+				"bonus.SIEGE_WEAPON" : "absolute"
+			},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true
+			"positive" : true
 		}
 	},
-	"battleForged" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"battleForged" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Battle Forged",
-		"school": {"air":false, "earth":false, "fire":true, "water":false},
-		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {"weakness": true},		
-		"graphics":	{"iconEffect": "spells/battleforgedIcon"},		
-		"animation":{
-			"affect":["SP12_"]},
-		"sounds": {
-			"cast": "BLOODLUS"},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : true,
+			"water" : false
+		},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {
+			"weakness" : true
+		},
+		"graphics" : {
+			"iconEffect" : "spells/battleforgedIcon"
+		},
+		"animation" : {
+			"affect" : [
+				"SP12_"
+			]
+		},
+		"sounds" : {
+			"cast" : "BLOODLUS"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Battle Forged}\r\n\r\nHigher attack and regeneration.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Battle Forged}\r\n\r\nHigher attack and regeneration.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
 					"primaryBloodlust" : {
 						"val" : 6,
@@ -218,48 +277,73 @@
 						"effectRange" : "ONLY_MELEE_FIGHT",
 						"duration" : "N_TURNS"
 					},
-					"lifeDrain":
-					{
-						"type": "LIFE_DRAIN",
+					"lifeDrain" : {
+						"type" : "LIFE_DRAIN",
 						"val" : 10,
-						"duration": "N_TURNS"
+						"duration" : "N_TURNS"
 					}
 				}
-					},
-			"none":{},"basic":{},"advanced":{
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {
 				"range" : "X"
-			},"expert":{}
+			},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {"bonus.SIEGE_WEAPON" : "absolute"},"anyOf" : {}
-		},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {
+				"bonus.SIEGE_WEAPON" : "absolute"
+			},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true
+			"positive" : true
 		}
 	},
 
-	"windOfAgitation" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"windOfAgitation" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Spiritual Wind",
-		"school": {"air":true, "earth":false, "fire":false, "water":false},
-		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {"weakness": true},		
-		"graphics":	{"iconEffect": "spells/astralwindIcon"},		
-		"animation":{
-			"affect":["C15SPA0"]},
-		"sounds": {
-			"cast": "TAILWIND"},
+		"school" : {
+			"air" : true,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {
+			"weakness" : true
+		},
+		"graphics" : {
+			"iconEffect" : "spells/astralwindIcon"
+		},
+		"animation" : {
+			"affect" : [
+				"C15SPA0"
+			]
+		},
+		"sounds" : {
+			"cast" : "TAILWIND"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Spiritual Wind}\r\n\r\nHigher speed and morale.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Spiritual Wind}\r\n\r\nHigher speed and morale.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
 					"stacksSpeed" : {
-//						"addInfo" : 0,
+						//						"addInfo" : 0,
 						"type" : "STACKS_SPEED",
 						"val" : 5,
 						"duration" : "N_TURNS"
@@ -270,43 +354,70 @@
 						"duration" : "N_TURNS"
 					}
 				}
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{
-				"range" : "X"}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {
+				"range" : "X"
+			}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {"bonus.SIEGE_WEAPON" : "absolute"},"anyOf" : {}
-		},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {
+				"bonus.SIEGE_WEAPON" : "absolute"
+			},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true
+			"positive" : true
 		}
 	},
 
-	"naturesEmbrace" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"naturesEmbrace" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Nature's Embrace",
-		"school": {"air":false, "earth":false, "fire":false, "water":true},
-		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {"curse": true},		
-		"graphics":	{"iconEffect": "spells/masterblessIcon"},		
-		"animation":{
-			"affect":["C01SPW"]},
-		"sounds": {
-			"cast": "BLESS"},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : true
+		},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {
+			"curse" : true
+		},
+		"graphics" : {
+			"iconEffect" : "spells/masterblessIcon"
+		},
+		"animation" : {
+			"affect" : [
+				"C01SPW"
+			]
+		},
+		"sounds" : {
+			"cast" : "BLESS"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Nature's Embrace}\r\n\r\nMaximum damage and protection from melee and ranged attacks.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Nature's Embrace}\r\n\r\nMaximum damage and protection from melee and ranged attacks.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
 					"primaryBless" : {
-							"val" : 0,
-							"type" : "ALWAYS_MAXIMUM_DAMAGE",
-							"valueType" : "INDEPENDENT_MAX",
-							"duration" : "N_TURNS"
+						"val" : 0,
+						"type" : "ALWAYS_MAXIMUM_DAMAGE",
+						"valueType" : "INDEPENDENT_MAX",
+						"duration" : "N_TURNS"
 					},
 					"shieldMelee" : {
 						"val" : 30,
@@ -316,51 +427,76 @@
 					}
 					//"shieldRanged" : {"val" : 50,"type" : "GENERAL_DAMAGE_REDUCTION","subtype" : "damageTypeRanged","duration" : "N_TURNS"}
 				}
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{
-				"range" : "X"}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {
+				"range" : "X"
+			}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {"bonus.SIEGE_WEAPON" : "absolute",
-			"bonus.UNDEAD" : "absolute"},"anyOf" : {}
-		},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {
+				"bonus.SIEGE_WEAPON" : "absolute",
+				"bonus.UNDEAD" : "absolute"
+			},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true
+			"positive" : true
 		}
 	},
 
-	"dragonSkin" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"dragonSkin" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Dragon Skin",
-		"school": {"air":false, "earth":true, "fire":false, "water":false},
-		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},		
-		"graphics":	{"iconEffect": "spells/dragonskinIcon"},		
-		"animation":{
-			"affect":["C16SPE"]},
-		"sounds": {
-			"cast": "TUFFSKIN"},
+		"school" : {
+			"air" : false,
+			"earth" : true,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconEffect" : "spells/dragonskinIcon"
+		},
+		"animation" : {
+			"affect" : [
+				"C16SPE"
+			]
+		},
+		"sounds" : {
+			"cast" : "TUFFSKIN"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Dragon Skin}\r\n\r\nIncreases the selected unit's defense strength and protects it from level 1-3 spells.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Dragon Skin}\r\n\r\nIncreases the selected unit's defense strength and protects it from level 1-3 spells.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
-				"battleEffects":{
-					"dispel":{
-						"type":"core:dispel",
-						"optional":true,
-						"dispelNegative":true,
-						"dispelNeutral":true,
-						"dispelPositive":false
+				"targetModifier" : {
+					"smart" : true
+				},
+				"battleEffects" : {
+					"dispel" : {
+						"type" : "core:dispel",
+						"optional" : true,
+						"dispelNegative" : true,
+						"dispelNeutral" : true,
+						"dispelPositive" : false
 					},
 					"otherEffects" : {
-						"type":"core:timed",
-						"bonus":{
-							"levelSpellImmunity":{
-//								"addInfo" : 1, //absolute
+						"type" : "core:timed",
+						"bonus" : {
+							"levelSpellImmunity" : {
+								//								"addInfo" : 1, //absolute
 								"val" : 3,
 								"type" : "LEVEL_SPELL_IMMUNITY",
 								"valueType" : "INDEPENDENT_MAX",
@@ -374,38 +510,61 @@
 							}
 						}
 					}
-				}	
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{
-				"range" : "X"}
+				}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {
+				"range" : "X"
+			}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {}
-		},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true
+			"positive" : true
 		}
 	},
 
-	"huntressAim" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"huntressAim" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Huntress' Aim",
-		"school": {"air":true, "earth":false, "fire":false, "water":false},
-		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},		
-		"graphics":	{"iconEffect": "spells/godsaimIcon.bmp"},		
-		"animation":{
-			"affect":["C12SPA0"]},
-		"sounds": {
-			"cast": "PRECISON"},
+		"school" : {
+			"air" : true,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconEffect" : "spells/godsaimIcon.bmp"
+		},
+		"animation" : {
+			"affect" : [
+				"C12SPA0"
+			]
+		},
+		"sounds" : {
+			"cast" : "PRECISON"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Huntress' Aim}\r\n\r\nMaximum damage and protection.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Huntress' Aim}\r\n\r\nMaximum damage and protection.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
 					"primaryPrec" : {
 						"type" : "PRIMARY_SKILL",
@@ -420,36 +579,67 @@
 						"duration" : "N_TURNS"
 					}
 				}
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{"range" : "X"}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {
+				"range" : "X"
+			}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {"bonus.SIEGE_WEAPON" : "absolute"},"anyOf" : {}
-		},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {
+				"bonus.SIEGE_WEAPON" : "absolute"
+			},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true
+			"positive" : true
 		}
 	},
 
-	"lifePrayer" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"lifePrayer" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Prayer",
-		"school": {"air":false, "earth":false, "fire":false, "water":true},
-		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {"weakness": true},		
-		"graphics":	{"iconEffect": "spells/Si49Pray"},		
-		"animation":{
-			"affect":[{"defName":"C10SPW", "verticalPosition":"bottom"}]},
-		"sounds": {
-			"cast": "PRAYER"},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : true
+		},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {
+			"weakness" : true
+		},
+		"graphics" : {
+			"iconEffect" : "spells/Si49Pray"
+		},
+		"animation" : {
+			"affect" : [
+				{
+					"defName" : "C10SPW",
+					"verticalPosition" : "bottom"
+				}
+			]
+		},
+		"sounds" : {
+			"cast" : "PRAYER"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Prayer}\r\n\r\nBestows a bonus to the attack strength, defense strength and speed of the selected unit.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Prayer}\r\n\r\nBestows a bonus to the attack strength, defense strength and speed of the selected unit.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
 					"attack" : {
 						"type" : "PRIMARY_SKILL",
@@ -464,44 +654,73 @@
 						"duration" : "N_TURNS"
 					},
 					"stacksSpeed" : {
-//						"addInfo" : 0,
+						//						"addInfo" : 0,
 						"type" : "STACKS_SPEED",
 						"val" : 2,
 						"duration" : "N_TURNS"
 					}
 				}
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{"range" : "X"}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {
+				"range" : "X"
+			}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {
-			"bonus.UNDEAD":"absolute"
-			},"anyOf" : {}
-		},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {
+				"bonus.UNDEAD" : "absolute"
+			},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true
+			"positive" : true
 		}
 	},
 
-	"purePrayer" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"purePrayer" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Saint's Prayer",
-		"school": {"air":false, "earth":false, "fire":false, "water":true},
-		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {"weakness": true},		
-		"graphics":	{"iconEffect": "spells/pureprayerIcon"},		
-		"animation":{
-			"affect":[{"defName":"C10SPW", "verticalPosition":"bottom"}]},
-		"sounds": {
-			"cast": "PRAYER"},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : true
+		},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {
+			"weakness" : true
+		},
+		"graphics" : {
+			"iconEffect" : "spells/pureprayerIcon"
+		},
+		"animation" : {
+			"affect" : [
+				{
+					"defName" : "C10SPW",
+					"verticalPosition" : "bottom"
+				}
+			]
+		},
+		"sounds" : {
+			"cast" : "PRAYER"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Saint's Prayer}\r\n\r\nSaintly damage and protection.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Saint's Prayer}\r\n\r\nSaintly damage and protection.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
 					"attack" : {
 						"type" : "PRIMARY_SKILL",
@@ -516,64 +735,90 @@
 						"duration" : "N_TURNS"
 					},
 					"stacksSpeed" : {
-//						"addInfo" : 0,
+						//						"addInfo" : 0,
 						"type" : "STACKS_SPEED",
 						"val" : 2,
 						"duration" : "N_TURNS"
 					},
-					"regeneration" :
-					{
+					"regeneration" : {
 						"type" : "HP_REGENERATION",
 						"val" : 15,
 						"duration" : "N_TURNS"
 					}
 				}
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{"range" : "X"}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {
+				"range" : "X"
+			}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {
-			"bonus.UNDEAD":"absolute"
-		},"anyOf" : {}
-		},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {
+				"bonus.UNDEAD" : "absolute"
+			},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true
+			"positive" : true
 		}
 	},
 
-
-	"undeadRestoration" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"undeadRestoration" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Undead Brand",
-		"school": {"air":false, "earth":false, "fire":true, "water":false},
-		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {"weakness": true},		
-		"graphics":	{"iconEffect": "spells/plagueshieldIcon.bmp"},		
-		"animation":{
-			"affect":["C05SPF0"]},
-		"sounds": {
-			"cast": "FIRESHIE"},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : true,
+			"water" : false
+		},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {
+			"weakness" : true
+		},
+		"graphics" : {
+			"iconEffect" : "spells/plagueshieldIcon.bmp"
+		},
+		"animation" : {
+			"affect" : [
+				"C05SPF0"
+			]
+		},
+		"sounds" : {
+			"cast" : "FIRESHIE"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Undead Brand}\r\n\r\nThou who art undead, art chosen.",
-				"cost": 0, "power": 1,
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Undead Brand}\r\n\r\nThou who art undead, art chosen.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
-				"battleEffects":{
-					"healEffects":{
-						"type":"core:heal",
-						"healLevel":"resurrect",
-						"healPower":"permanent",
+				"targetModifier" : {
+					"smart" : true
+				},
+				"battleEffects" : {
+					"healEffects" : {
+						"type" : "core:heal",
+						"healLevel" : "resurrect",
+						"healPower" : "permanent",
 						"minFullUnits" : 1,
-						"optional":true,
+						"optional" : true,
 						"val" : 60,
-						"limiters": [ "IS_UNDEAD" ]
+						"limiters" : [
+							"IS_UNDEAD"
+						]
 					},
 					"otherEffects" : {
-						"type":"core:timed",
-						"bonus":{
+						"type" : "core:timed",
+						"bonus" : {
 							"fireShield" : {
 								"type" : "FIRE_SHIELD",
 								"val" : 25,
@@ -585,18 +830,26 @@
 								"val" : 15,
 								"duration" : "N_TURNS",
 								//"valueType" : "PERCENT_TO_ALL",
-								"limiters": [ "IS_UNDEAD" ]
+								"limiters" : [
+									"IS_UNDEAD"
+								]
 							}
 						}
 					}
-				}				
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+				}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {}
-		},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true
+			"positive" : true
 		}
 	}
 }

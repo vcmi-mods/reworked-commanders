@@ -1,45 +1,37 @@
 {
-	"templeGuard":
-	{
-		"name" :
-		{
+	"templeGuard" : {
+		"name" : {
 			"plural" : "Pleiades",
 			"singular" : "Pleiad"
 		},
 		"faction" : "tower",
-		"level": 0,
+		"level" : 0,
 		"aiValue" : 5931,
 		"special" : true,
 		"attack" : 5,
 		"defense" : 5,
-		"cost" :
-		{
+		"cost" : {
 			"gold" : 2000
 		},
-		"damage" :
-		{
+		"damage" : {
 			"min" : 8,
 			"max" : 16
 		},
 		"fightValue" : 5272,
-		"graphics" :
-		{
+		"graphics" : {
 			"animation" : "battle/commander/TempleGuard.def",
 			"iconSmall" : "iconsSmall/TempleGuardS.bmp",
 			"iconLarge" : "iconsBig/TempleGuardB.bmp",
 			"timeBetweenFidgets" : 1,
-			"animationTime" :
-			{
-				"walk" : 1.00,
-				"idle" : 10.00,
-				"attack" : 1.00
+			"animationTime" : {
+				"walk" : 1.0,
+				"idle" : 10.0,
+				"attack" : 1.0
 			},
-			"missile" :
-			{
+			"missile" : {
 				"projectile" : "battle/commander/projectile/sunspear.def",
 				"attackClimaxFrame" : 9,
-				"offset" :
-				{
+				"offset" : {
 					"upperX" : 48,
 					"upperY" : -99,
 					"middleX" : 49,
@@ -47,39 +39,54 @@
 					"lowerX" : 25,
 					"lowerY" : -59
 				},
-				"frameAngles" : [90, 72, 45, 27, 0, -27, -45, -72, -90, 0, 0, 0]
-
+				"frameAngles" : [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				]
 			}
 		},
 		"doubleWide" : false,
 		"growth" : 1,
 		"hitPoints" : 50,
 		"speed" : 5,
-            "shots" : 0,
-		"sound" :
-		{
-			"attack": "WHWTATTK.wav",
-			"defend": "WHWTDFND.wav",
-			"killed": "WHWTKILL.wav",
-			"move": "WHWTMOVE.wav",
-                  "shoot" : "zapelectro2",
-			"wince": "WHWTWNCE.wav"
+		"shots" : 0,
+		"sound" : {
+			"attack" : "WHWTATTK.wav",
+			"defend" : "WHWTDFND.wav",
+			"killed" : "WHWTKILL.wav",
+			"move" : "WHWTMOVE.wav",
+			"shoot" : "zapelectro2",
+			"wince" : "WHWTWNCE.wav"
 		},
-		"abilities" :
-		{
-
-        		"shooter" :
-			{
+		"abilities" : {
+			"shooter" : {
 				"type" : "SHOOTER"
 			},
-				"halved shots" :
-			{
-				"type" : "SHOTS","val" : -50,"valueType" : "PERCENT_TO_ALL",
-				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "shootingEnchant"}]
+			"halved shots" : {
+				"type" : "SHOTS",
+				"val" : -50,
+				"valueType" : "PERCENT_TO_ALL",
+				"limiters" : [
+					"noneOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "shootingEnchant"
+					}
+				]
 			},
 
-			"manaSaver" :
-			{
+			"manaSaver" : {
 				"type" : "MANA_REGENERATION",
 				"val" : 1,
 				"propagator" : "HERO",
@@ -90,15 +97,20 @@
 				}
 				//"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "abitiyEnchant"]	} ]
 			},
-			"manaStrainer" :
-			{
+			"manaStrainer" : {
 				"type" : "CHANGES_SPELL_COST_FOR_ENEMY",
 				"val" : 2,
-				"limiters": ["allOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"}]
+				"limiters" : [
+					"allOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "abilityEnchant"
+					}
+				]
 			},
 
-			"manaUpgrade" :
-			{
+			"manaUpgrade" : {
 				"type" : "PRIMARY_SKILL",
 				"subtype" : "primarySkill.knowledge",
 				"propagator" : "HERO",
@@ -111,73 +123,84 @@
 				//"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "MORE_DAMAGE_FROM_SPELL", "abitiyEnchant"]	} ]
 			},
 
-			"powerUpgrade" :
-			{
+			"powerUpgrade" : {
 				"type" : "ENCHANTED",
 				"subtype" : "powerSummoned",
-				"limiters": ["allOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"}]
+				"limiters" : [
+					"allOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "abilityEnchant"
+					}
+				]
 			},
-			"magicResistance" :
-			{
+			"magicResistance" : {
 				"type" : "SPELL_DAMAGE_REDUCTION",
 				"subtype" : "any",
 				"val" : 5
 			},
-			"castsAmount" :
-			{
+			"castsAmount" : {
 				"type" : "CASTS",
 				"val" : 2
 			},
 			//"enchant" :{"type" : "CREATURE_ENCHANT_POWER","val" : 2	}, //needless?
-			"spellpower" :
-			{
+			"spellpower" : {
 				"type" : "CREATURE_SPELL_POWER",
 				"val" : 100
 			},
-			"canCast" :
-			{
+			"canCast" : {
 				"type" : "SPELLCASTER",
 				"subtype" : "precision",
-				"val" : 2,		
-				"limiters": [ 
+				"val" : 2,
+				"limiters" : [
 					"noneOf",
 					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "spellEnchant"
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "spellEnchant"
 					}
-					]
-				  },
-			"canCast+" :
-			{
+				]
+			},
+			"canCast+" : {
 				"type" : "SPELLCASTER",
 				"subtype" : "huntressAim",
-				"val" : 0,		
-				"limiters": [ 
+				"val" : 0,
+				"limiters" : [
 					"allOf",
 					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "spellEnchant"
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "spellEnchant"
 					}
-					]
-				  },
-				  
-					"lightningChain" :{
-						"type" : "ENCHANTED",
-						"subtype": "lightningSpearEnchant",
-						"limiters": [ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "shootingEnchant"} ]
-				}
+				]
+			},
 
-				//doesnt work
-		//"powerIconSelf" :
-		//{
-		//"type" : "MORE_DAMAGE_FROM_SPELL",
-		//"val" : 100,
-		//"subtype" : "powerSummoned",
-		//"propagator" : "BATTLE_WIDE",
-		//"limiters": 
-		//["noneOf", 
-		//		{"type" : "CREATURE_TYPE_LIMITER", 
-		//			"parameters" : [ "templeGuard"]}]
-		//}
-		
+			"lightningChain" : {
+				"type" : "ENCHANTED",
+				"subtype" : "lightningSpearEnchant",
+				"limiters" : [
+					"allOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "shootingEnchant"
+					}
+				]
+			}
+
+			//doesnt work
+			//"powerIconSelf" :
+			//{
+			//"type" : "MORE_DAMAGE_FROM_SPELL",
+			//"val" : 100,
+			//"subtype" : "powerSummoned",
+			//"propagator" : "BATTLE_WIDE",
+			//"limiters":
+			//["noneOf",
+			//		{"type" : "CREATURE_TYPE_LIMITER",
+			//			"parameters" : [ "templeGuard"]}]
+			//}
 		}
 	}
 }

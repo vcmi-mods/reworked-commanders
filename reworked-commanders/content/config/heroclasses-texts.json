@@ -1,92 +1,74 @@
 {
-	"core:knight":
-	{
-            "faction" : "castle",          
+	"core:knight" : {
+		"faction" : "castle",
 		"commander" : "paladin"
 	},
-	"core:cleric" :
-	{
-            "faction" : "castle",
+	"core:cleric" : {
+		"faction" : "castle",
 		"commander" : "paladin"
 	},
-	"core:ranger" :
-	{
-            "faction" : "rampart",
+	"core:ranger" : {
+		"faction" : "rampart",
 		"commander" : "hierophant"
 	},
-	"core:druid" :
-	{
-            "faction" : "rampart",
+	"core:druid" : {
+		"faction" : "rampart",
 		"commander" : "hierophant"
 	},
-	"core:alchemist" :
-	{
-            "faction" : "tower",
+	"core:alchemist" : {
+		"faction" : "tower",
 		"commander" : "templeGuard"
 	},
-	"core:wizard" :
-	{
-            "faction" : "tower",
+	"core:wizard" : {
+		"faction" : "tower",
 		"commander" : "templeGuard"
 	},
-	"core:demoniac" :
-	{
-            "faction" : "inferno",
+	"core:demoniac" : {
+		"faction" : "inferno",
 		"commander" : "succub"
 	},
-	"core:heretic" :
-	{
-            "faction" : "inferno",
+	"core:heretic" : {
+		"faction" : "inferno",
 		"commander" : "succub"
 	},
-	"core:deathknight" :
-	{
-            "faction" : "necropolis",
+	"core:deathknight" : {
+		"faction" : "necropolis",
 		"commander" : "soulEater"
 	},
-	"core:necromancer" :
-	{
-            "faction" : "necropolis",
+	"core:necromancer" : {
+		"faction" : "necropolis",
 		"commander" : "soulEater"
 	},
-	"core:warlock" :
-	{
-            "faction" : "dungeon",
+	"core:warlock" : {
+		"faction" : "dungeon",
 		"commander" : "brutus"
 	},
-	"core:overlord" :
-	{
-            "faction" : "dungeon",
+	"core:overlord" : {
+		"faction" : "dungeon",
 		"commander" : "brutus"
 	},
-	"core:barbarian" :
-	{
-            "faction" : "stronghold",
+	"core:barbarian" : {
+		"faction" : "stronghold",
 		"commander" : "warmonger"
 	},
-	"core:battlemage" :
-	{
-            "faction" : "stronghold",
+	"core:battlemage" : {
+		"faction" : "stronghold",
 		"commander" : "warmonger"
 	},
-	"core:beastmaster" :
-	{
-            "faction" : "fortress",
+	"core:beastmaster" : {
+		"faction" : "fortress",
 		"commander" : "gnollShaman"
 	},
-	"core:witch" :
-	{
-            "faction" : "fortress",
+	"core:witch" : {
+		"faction" : "fortress",
 		"commander" : "gnollShaman"
 	},
-	"core:planeswalker" :
-	{
-            "faction" : "conflux",
+	"core:planeswalker" : {
+		"faction" : "conflux",
 		"commander" : "astralSpirit"
 	},
-	"core:elementalist" :
-	{
-            "faction" : "conflux",
+	"core:elementalist" : {
+		"faction" : "conflux",
 		"commander" : "astralSpirit"
 	}
 }

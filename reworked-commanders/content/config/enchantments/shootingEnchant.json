@@ -1,174 +1,234 @@
 {
-	"shootingEnchant" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"shootingEnchant" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Shooting Enchantment",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},	
-		"graphics":	{"iconEffect": "spells/shootEnchant"},
-		"animation":{},
-		"sounds": {},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconEffect" : "spells/shootEnchant"
+		},
+		"animation" : {},
+		"sounds" : {},
 		"levels" : {
-			"base":{
-
-				"description": "{Shooting Enchantment}\r\n\r\nCommander's ranged attacks have additional effects (default is double shot).",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Shooting Enchantment}\r\n\r\nCommander's ranged attacks have additional effects (default is double shot).",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
-				"effects" : {	
-					"doubleShot" :
-					{
-						"type": "ADDITIONAL_ATTACK",
-						"val" : 1,
-						"effectRange": "ONLY_DISTANCE_FIGHT",
-					"limiters": [ 
-						"noneOf",
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" :  "astralSpirit", "includeUpgrades" : true
-						},
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" :  "brutus", "includeUpgrades" : true
-						},		
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" :  "gnollShaman", "includeUpgrades" : true
-						},		
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" :  "hierophant", "includeUpgrades" : true
-						},									
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" :  "paladin", "includeUpgrades" : true
-						},
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" :  "succub", "includeUpgrades" : true
-						},
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" :  "templeGuard", "includeUpgrades" : true
-						},
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" :  "warmonger", "includeUpgrades" : true
-						},
-						{
-							"type" : "HAS_ANOTHER_BONUS_LIMITER",
-							"bonusType": "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "shootingEnchantEffect"
-						}
-						]
-					},	
-					
-					"generalBonus1" :{
-						"type" : "MORE_DAMAGE_FROM_SPELL",
-						"val" : 100,
-						"subtype": "shootingEnchant",
-						"limiters": [ 
-							"noneOf",
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "ENCHANTED", "bonusSubtype" : "lightningSpearEnchant" },
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "ENCHANTED", "bonusSubtype" : "naturesWrathEnchant" }
-							]
+				"targetModifier" : {
+					"smart" : true
 				},
-
-					
-
-					
-					"chosenOfWar" :{
-							"type" : "ADDITIONAL_ATTACK",
-							"val" : 1,
-							"effectRange": "ONLY_DISTANCE_FIGHT",
-							"propagator": "HERO",
-							"limiters": [ 
-								"allOf", 
+				"effects" : {
+					"doubleShot" : {
+						"type" : "ADDITIONAL_ATTACK",
+						"val" : 1,
+						"effectRange" : "ONLY_DISTANCE_FIGHT",
+						"limiters" : [
+							"noneOf",
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" :  "ogreBallista1", "includeUpgrades" : true 
+								"creature" : "astralSpirit",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "brutus",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "gnollShaman",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "hierophant",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "paladin",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "succub",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "templeGuard",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "warmonger",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "HAS_ANOTHER_BONUS_LIMITER",
+								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+								"bonusSubtype" : "shootingEnchantEffect"
+							}
+						]
+					},
+
+					"generalBonus1" : {
+						"type" : "MORE_DAMAGE_FROM_SPELL",
+						"val" : 100,
+						"subtype" : "shootingEnchant",
+						"limiters" : [
+							"noneOf",
+							{
+								"type" : "HAS_ANOTHER_BONUS_LIMITER",
+								"bonusType" : "ENCHANTED",
+								"bonusSubtype" : "lightningSpearEnchant"
+							},
+							{
+								"type" : "HAS_ANOTHER_BONUS_LIMITER",
+								"bonusType" : "ENCHANTED",
+								"bonusSubtype" : "naturesWrathEnchant"
+							}
+						]
+					},
+
+					"chosenOfWar" : {
+						"type" : "ADDITIONAL_ATTACK",
+						"val" : 1,
+						"effectRange" : "ONLY_DISTANCE_FIGHT",
+						"propagator" : "HERO",
+						"limiters" : [
+							"allOf",
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "ogreBallista1",
+								"includeUpgrades" : true
 							}
 						]
 					}
-
-					}
-
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+				}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {	}},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true,
-			"special": true
+			"positive" : true,
+			"special" : true
 		}
 	},
 
-	"lightningSpearEnchant" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"lightningSpearEnchant" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Lightning Spear",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 0, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},	
-		"graphics":	{"iconEffect": "spells/shootEnchant"},
-		"animation":{},
-		"sounds": {},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconEffect" : "spells/shootEnchant"
+		},
+		"animation" : {},
+		"sounds" : {},
 		"levels" : {
-			"base":{
-
-				"description": "{Lightning Spear}\r\n\r\nCommander's shots are imbued with lightning.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Lightning Spear}\r\n\r\nCommander's shots are imbued with lightning.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
-					
-			"lightningShots" :
-			{
-				"type" : "SPELL_LIKE_ATTACK",
-				"val" : 1,
-				"subtype" : "lightningSpear"
-			}
+					"lightningShots" : {
+						"type" : "SPELL_LIKE_ATTACK",
+						"val" : 1,
+						"subtype" : "lightningSpear"
+					}
 				}
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{
-
-
-			}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
 		"targetCondition" : {
-		"allOf" : {},	
-		"noneOf" : {},
-		"anyOf" : {}
-		},		
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true,
-			"special": true
+			"positive" : true,
+			"special" : true
 		}
-	},	
+	},
 
-	"lightningSpear" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"lightningSpear" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Lightning Spear",
-		"school": {"air":true, "earth":false, "fire":false, "water":false},
-		"level": 0, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},		
-		"graphics":	{"iconImmune":"spells/placeholder.bmp","iconScenarioBonus": "spells/placeholderBonus.bmp","iconBook": "spells/placeholder.bmp","iconScroll": "spells/placeholderScroll.bmp",
-		"iconEffect": "spells/placeholderEffect.bmp"},		
-		"animation":{
-			"affect":["battle/commander/projectile/sunimpact.def"]},
-		"sounds": {
-			"cast": "zapelectro2"},
+		"school" : {
+			"air" : true,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconImmune" : "spells/placeholder.bmp",
+			"iconScenarioBonus" : "spells/placeholderBonus.bmp",
+			"iconBook" : "spells/placeholder.bmp",
+			"iconScroll" : "spells/placeholderScroll.bmp",
+			"iconEffect" : "spells/placeholderEffect.bmp"
+		},
+		"animation" : {
+			"affect" : [
+				"battle/commander/projectile/sunimpact.def"
+			]
+		},
+		"sounds" : {
+			"cast" : "zapelectro2"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Lightning Spear}\r\n\r\nCommander's shots are imbued with lightning.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Lightning Spear}\r\n\r\nCommander's shots are imbued with lightning.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"battleEffects" : {
 					"electroBolt" : {
 						"type" : "core:damage",
@@ -176,207 +236,289 @@
 						"chainLength" : 3
 					}
 				}
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {
 				"battleEffects" : {
 					"electroBolt" : {
 						"chainLength" : 3
 					}
 				}
-
-
 			}
 		},
 		"targetCondition" : {
-		"allOf" : {},	
-		"noneOf" : {},
-		"anyOf" : {}
-		},		
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"damage": true,
-			"negative": true,
-			"special": true
+			"damage" : true,
+			"negative" : true,
+			"special" : true
 		}
 	},
-	"chaosFlameEnchant" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"chaosFlameEnchant" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Chaos Flame",
-		"school": {"air":false, "earth":false, "fire":true, "water":false},
-		"level": 0, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},		
-		"graphics":	{"iconImmune":"spells/placeholder.bmp","iconScenarioBonus": "spells/placeholderBonus.bmp","iconBook": "spells/placeholder.bmp","iconScroll": "spells/placeholderScroll.bmp",
-		"iconEffect": "spells/placeholderEffect.bmp"},		
-		"animation":{},
-		"sounds": {
-			"cast": "FIREWALL"},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : true,
+			"water" : false
+		},
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconImmune" : "spells/placeholder.bmp",
+			"iconScenarioBonus" : "spells/placeholderBonus.bmp",
+			"iconBook" : "spells/placeholder.bmp",
+			"iconScroll" : "spells/placeholderScroll.bmp",
+			"iconEffect" : "spells/placeholderEffect.bmp"
+		},
+		"animation" : {},
+		"sounds" : {
+			"cast" : "FIREWALL"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Chaos Flame}\r\n\r\nCommander's shots are imbued with chaos flame.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Chaos Flame}\r\n\r\nCommander's shots are imbued with chaos flame.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{
-					"clearAffected": false},
-				"battleEffects":{
-					"obstacle1":{
-						"type":"core:obstacle",
+				"targetModifier" : {
+					"clearAffected" : false
+				},
+				"battleEffects" : {
+					"obstacle1" : {
+						"type" : "core:obstacle",
 						"hidden" : false,
 						"passable" : true,
 						"trap" : false,
 						"trigger" : true,
 						"patchCount" : 1,
 						"turnsRemaining" : 2,
-						"attacker" :{
-							"shape" : [[""]],
+						"attacker" : {
+							"shape" : [
+								[
+									""
+								]
+							],
 							//"range" : [["BL"], ["BR"], ["L"], ["R"], ["TL"], ["TR"]],
-							"range" : [[""]],
+							"range" : [
+								[
+									""
+								]
+							],
 							"animation" : "C07SPF61",
 							"appearAnimation" : "C07SPF60"
 						}
-						},
-					
-					"damage":{
-						"type":"core:damage",
-						"optional":false,
-						"indirect":true
+					},
+
+					"damage" : {
+						"type" : "core:damage",
+						"optional" : false,
+						"indirect" : true
 					}
 				}
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
 		"targetCondition" : {
-		"allOf" : {},	
-//		"noneOf" : {"bonus.DIRECT_DAMAGE_IMMUNITY" : "normal"},
-		"anyOf" : {}
-		},		
+			"allOf" : {},
+			//		"noneOf" : {"bonus.DIRECT_DAMAGE_IMMUNITY" : "normal"},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"damage": true,
-			"indifferent": true,
-			"special": true
+			"damage" : true,
+			"indifferent" : true,
+			"special" : true
 		}
 	},
-	"naturesWrathEnchant" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"naturesWrathEnchant" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Nature's Wrath",
-		"school": {"air":false, "earth":true, "fire":false, "water":false},
-		"level": 0, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},		
-		"graphics":	{
-		"iconEffect": "spells/shootEnchant"},		
-		"animation":{
-			"hit":["SP04_"]},
-		"sounds": {
-			"cast": "DEATHCLD"},
+		"school" : {
+			"air" : false,
+			"earth" : true,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconEffect" : "spells/shootEnchant"
+		},
+		"animation" : {
+			"hit" : [
+				"SP04_"
+			]
+		},
+		"sounds" : {
+			"cast" : "DEATHCLD"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Nature's Wrath}\r\n\r\nCommander's shots are imbued with nature's wrath.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Nature's Wrath}\r\n\r\nCommander's shots are imbued with nature's wrath.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
-					
-			"aoeShots" :
-			{
-				"type" : "SPELL_LIKE_ATTACK",
-				"val" : 1,
-				"subtype" : "naturesWrath"
-			}
-				}
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{}
-		},
-		"targetCondition" : {
-		"allOf" : {},	
-		"noneOf" : {},
-		"anyOf" : {}
-		},		
-		"flags" : {
-			"positive": true,
-			"special": true
-		}
-	},
-	
-	"naturesWrath" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
-		"name" : "Nature's Wrath",
-		"school": {"air":false, "earth":true, "fire":false, "water":false},
-		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},		
-		"graphics":	{"iconImmune":"spells/placeholder.bmp","iconScenarioBonus": "spells/placeholderBonus.bmp","iconBook": "spells/placeholder.bmp","iconScroll": "spells/placeholderScroll.bmp",
-		"iconEffect": "spells/placeholderEffect.bmp"},		
-		"animation":{
-			"hit":["SP04_"]},
-		"sounds": {
-			"cast": "DEATHCLD"},
-		"levels" : {
-			"base":{
-
-				"description": "{Nature's Wrath}\r\n\r\nCommander's shots are imbued with nature's wrath.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
-				"range" : "0-1",
-				"targetModifier":{"smart":true},
-				"battleEffects":{
-					"damage":{
-						"type":"core:damage"
+					"aoeShots" : {
+						"type" : "SPELL_LIKE_ATTACK",
+						"val" : 1,
+						"subtype" : "naturesWrath"
 					}
 				}
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
 		"targetCondition" : {
-		"allOf" : {},	
-		"noneOf" : {},
-		"anyOf" : {}
-		},		
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"damage": true,
-			"indifferent": true,
-			"special": true
+			"positive" : true,
+			"special" : true
 		}
 	},
 
-	"shootingEnchantEffect" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
-		"name" : "Shooting Enchantment",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},	
-		"graphics":	{"iconEffect": "spells/shootEnchant"},
-		"animation":{},
-		"sounds": {},
+	"naturesWrath" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
+		"name" : "Nature's Wrath",
+		"school" : {
+			"air" : false,
+			"earth" : true,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconImmune" : "spells/placeholder.bmp",
+			"iconScenarioBonus" : "spells/placeholderBonus.bmp",
+			"iconBook" : "spells/placeholder.bmp",
+			"iconScroll" : "spells/placeholderScroll.bmp",
+			"iconEffect" : "spells/placeholderEffect.bmp"
+		},
+		"animation" : {
+			"hit" : [
+				"SP04_"
+			]
+		},
+		"sounds" : {
+			"cast" : "DEATHCLD"
+		},
 		"levels" : {
-			"base":{
+			"base" : {
+				"description" : "{Nature's Wrath}\r\n\r\nCommander's shots are imbued with nature's wrath.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
+				"range" : "0-1",
+				"targetModifier" : {
+					"smart" : true
+				},
+				"battleEffects" : {
+					"damage" : {
+						"type" : "core:damage"
+					}
+				}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
+		},
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
+		"flags" : {
+			"damage" : true,
+			"indifferent" : true,
+			"special" : true
+		}
+	},
+
+	"shootingEnchantEffect" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
+		"name" : "Shooting Enchantment",
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconEffect" : "spells/shootEnchant"
+		},
+		"animation" : {},
+		"sounds" : {},
+		"levels" : {
+			"base" : {
 				//for blocking default effect for modded commanders
-				"description": "{Shooting Enchantment}\r\n\r\nCommander's ranged attacks have additional effects.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+				"description" : "{Shooting Enchantment}\r\n\r\nCommander's ranged attacks have additional effects.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
-				"effects" : {	
-					
+				"targetModifier" : {
+					"smart" : true
+				},
+				"effects" : {
 					//"generalBonus" :{
 					//		"type" : "MORE_DAMAGE_FROM_SPELL",
 					//		"val" : 100,
 					//		"subtype": "shootingEnchantEffect"
 					//}
-
-					}
-
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+				}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {	}},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true,
-			"special": true
+			"positive" : true,
+			"special" : true
 		}
 	}
 }

@@ -1,53 +1,49 @@
 {
-    "basepath" : "battle/commander/beamanim/",
-    "sequences" :
-    [
-        {
-            "group" : 40,
-            "frames" :
-            [             
-                "beam 0a",                
-                "beam 0b",                
-                "beam 0c",               
-                "beam up1",
-                "beam up2",
-                "beam up3",
-                "beam up4",
-                "beam up5",
-                "beam up6"
-            ]
-        },
-        
-        {
-            "group" : 41,
-            "frames" :
-            [  
-                "beam 0a",                
-                "beam 0b",                
-                "beam 0c",            
-                "beam str1",
-                "beam str2",
-                "beam str3",
-                "beam str4",
-                "beam str5",
-                "beam str6"
-            ]
-        },
-        
-        {
-            "group" : 42,
-            "frames" :
-            [  
-                "beam 0a",                
-                "beam 0b",                
-                "beam 0c",                
-                "beam down1",
-                "beam down2",
-                "beam down3",
-                "beam down4",
-                "beam down5",
-                "beam down6"
-            ]
-        }				
-    ]
+	"basepath" : "battle/commander/beamanim/",
+	"sequences" : [
+		{
+			"group" : 40,
+			"frames" : [
+				"beam 0a",
+				"beam 0b",
+				"beam 0c",
+				"beam up1",
+				"beam up2",
+				"beam up3",
+				"beam up4",
+				"beam up5",
+				"beam up6"
+			]
+		},
+
+		{
+			"group" : 41,
+			"frames" : [
+				"beam 0a",
+				"beam 0b",
+				"beam 0c",
+				"beam str1",
+				"beam str2",
+				"beam str3",
+				"beam str4",
+				"beam str5",
+				"beam str6"
+			]
+		},
+
+		{
+			"group" : 42,
+			"frames" : [
+				"beam 0a",
+				"beam 0b",
+				"beam 0c",
+				"beam down1",
+				"beam down2",
+				"beam down3",
+				"beam down4",
+				"beam down5",
+				"beam down6"
+			]
+		}
+	]
 }

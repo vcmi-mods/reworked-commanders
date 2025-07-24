@@ -1,129 +1,197 @@
 {
-	
-	"lycanthropeOff":
-	{
-		"type": "ability",	"targetType" : "CREATURE",
-		"name": "Lycantropy Resistance",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 0, "power": 1, "defaultGainChance": 0, 
-		"gainChance":{},"counters": {},		
- 		
-		"graphics":	{
-			"iconEffect": "spells/tempNoEffect"},		
-			"animation":{
-				"affect":["Sp09_"]},
-			"sounds": {
-				"cast": "MAGICRES"},
- 
-		//"flags" : { "offensive": true, "damage": true, "negative" : true, "special" : true },
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {
-			"core:bonus.KING":"absolute",
-			"reworked-commanders:creature.brutus":"absolute",	
-			"reworked-commanders:creature.soulEater":"absolute",	
-			"reworked-commanders:creature.paladin":"absolute",	
-			"reworked-commanders:creature.gnollShaman":"absolute",	
-			"reworked-commanders:creature.warmonger":"absolute",	
-			"reworked-commanders:creature.hierophant":"absolute",	
-			"reworked-commanders:creature.astralSpirit":"absolute",	
-			"reworked-commanders:creature.templeGuard":"absolute",	
-			"reworked-commanders:creature.succub":"absolute"
-		} },	
-		"flags" : {
-			"indifferent": true
+	"lycanthropeOff" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
+		"name" : "Lycantropy Resistance",
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
 		},
- 
-		"levels":
-		{
-			"base":
-			{
-				"cost": 0,
-				"range": "0",
-				"power": 100, //base dmg
-//				"aiValue": 0,
-				"targetModifier":
-				{
-					"smart": false
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+
+		"graphics" : {
+			"iconEffect" : "spells/tempNoEffect"
+		},
+		"animation" : {
+			"affect" : [
+				"Sp09_"
+			]
+		},
+		"sounds" : {
+			"cast" : "MAGICRES"
+		},
+
+		//"flags" : { "offensive": true, "damage": true, "negative" : true, "special" : true },
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {
+				"core:bonus.KING" : "absolute",
+				"reworked-commanders:creature.brutus" : "absolute",
+				"reworked-commanders:creature.soulEater" : "absolute",
+				"reworked-commanders:creature.paladin" : "absolute",
+				"reworked-commanders:creature.gnollShaman" : "absolute",
+				"reworked-commanders:creature.warmonger" : "absolute",
+				"reworked-commanders:creature.hierophant" : "absolute",
+				"reworked-commanders:creature.astralSpirit" : "absolute",
+				"reworked-commanders:creature.templeGuard" : "absolute",
+				"reworked-commanders:creature.succub" : "absolute"
+			}
+		},
+		"flags" : {
+			"indifferent" : true
+		},
+
+		"levels" : {
+			"base" : {
+				"cost" : 0,
+				"range" : "0",
+				"power" : 100, //base dmg
+				//				"aiValue": 0,
+				"targetModifier" : {
+					"smart" : false
 				},
-				"description": "Tier 7 units and Commanders are resistant to Lycantropy",
-	 
+				"description" : "Tier 7 units and Commanders are resistant to Lycantropy",
+
 				"battleEffects" : {
 					"summonOnce" : {
-						"type":"core:timed",
-						"bonus":{	
-							"attackOff" :
-							{	
+						"type" : "core:timed",
+						"bonus" : {
+							"attackOff" : {
 								"type" : "TRANSMUTATION",
-								"propagator": "BATTLE_WIDE",
+								"propagator" : "BATTLE_WIDE",
 								"val" : 0,
 								"valueType" : "INDEPENDENT_MIN",
-											"duration" : "N_TURNS",
-											"turns": 1,
-								"limiters": [
-					 				"anyOf", 
-					 				{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "KING" },
-									{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "soulEater", "includeUpgrades" : true	},
-									{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "paladin", "includeUpgrades" : true	},
-									{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "gnollShaman", "includeUpgrades" : true	},
-									{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "hierophant", "includeUpgrades" : true	},
-									{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "warmonger", "includeUpgrades" : true	},
-									{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "brutus", "includeUpgrades" : true	},
-									{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "templeGuard", "includeUpgrades" : true	},
-									{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "astralSpirit", "includeUpgrades" : true	},
-									{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "succub", "includeUpgrades" : true	}
+								"duration" : "N_TURNS",
+								"turns" : 1,
+								"limiters" : [
+									"anyOf",
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "KING"
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "soulEater",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "paladin",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "gnollShaman",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "hierophant",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "warmonger",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "brutus",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "templeGuard",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "astralSpirit",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "succub",
+										"includeUpgrades" : true
+									}
 								]
 							}
 						}
 					}
 				}
 			},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		}
 	},
 
+	"ephemeralExtract" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
+		"name" : "Ephemeral",
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
 
-	
-	"ephemeralExtract":
-	{
-		"type": "ability",	"targetType" : "CREATURE",
-		"name": "Ephemeral",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 0, "power": 1, "defaultGainChance": 0, 
-		"gainChance":{},"counters": {},		
- 		
-		"graphics":	{
-			"iconEffect": "spells/tempNoEffect"},		
-			"animation":{
-				"affect":["C04SPW"]},
-			"sounds": {
-				"cast": "CURSE"},
- 
-		"flags" : { "damage": true, "negative" : true, "special" : true },
- 
-		"levels":
-		{
-			"base":
-			{
-				"cost": 0,
-				"range": "0",
-				"power": 100, //base dmg
-//				"aiValue": 0,
-				"targetModifier":
-				{
-					"smart": true
+		"graphics" : {
+			"iconEffect" : "spells/tempNoEffect"
+		},
+		"animation" : {
+			"affect" : [
+				"C04SPW"
+			]
+		},
+		"sounds" : {
+			"cast" : "CURSE"
+		},
+
+		"flags" : {
+			"damage" : true,
+			"negative" : true,
+			"special" : true
+		},
+
+		"levels" : {
+			"base" : {
+				"cost" : 0,
+				"range" : "0",
+				"power" : 100, //base dmg
+				//				"aiValue": 0,
+				"targetModifier" : {
+					"smart" : true
 				},
-				"description": "IMMOLATION DAMAGE",
-	 
-				"battleEffects" : {
+				"description" : "IMMOLATION DAMAGE",
 
-					"directDamage" : 
-						{
-							"type":"core:damage", "killByCount" : true,  "killByPercentage" : true 
-						}
+				"battleEffects" : {
+					"directDamage" : {
+						"type" : "core:damage",
+						"killByCount" : true,
+						"killByPercentage" : true
+					}
 				}
 			},
 
-			"none":{},"basic":{},"advanced":{},"expert":{}
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		}
 	}
-
 }

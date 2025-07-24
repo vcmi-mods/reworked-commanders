@@ -1,168 +1,182 @@
 {
-	"abilityEnchant" : 
-	{
-		"type": "combat",	"targetType" : "CREATURE",
+	"abilityEnchant" : {
+		"type" : "combat",
+		"targetType" : "CREATURE",
 		"name" : "Ability Enchantment",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},	
-		"graphics":	{"iconEffect": "spells/abilityEnchant"},
-		"animation":{},
-		"sounds": {},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconEffect" : "spells/abilityEnchant"
+		},
+		"animation" : {},
+		"sounds" : {},
 		"levels" : {
-			"base":{
-
-				"description": "{Ability Enchantment}\r\n\r\nCommander's unique ability is upgraded (default is unlimited retaliation).",
-				"cost": 0, "power": 1, 
+			"base" : {
+				"description" : "{Ability Enchantment}\r\n\r\nCommander's unique ability is upgraded (default is unlimited retaliation).",
+				"cost" : 0,
+				"power" : 1,
 				//"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
-				"effects" : {	
-					"unlimitedRiposte" :
-					{
-					"type": "UNLIMITED_RETALIATIONS",
-					"limiters": [ 
-						"noneOf",
-						//{
-						//	"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						//	"parameters": [ "MORE_DAMAGE_FROM_SPELL", "abilityEnchant" ]
-						//},	why?
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" : "astralSpirit",
-							"includeUpgrades" : true
-						},
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" : "brutus",
-							"includeUpgrades" : true
-						},			
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" : "gnollShaman",
-							"includeUpgrades" : true
-						},		
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" : "hierophant",
-							"includeUpgrades" : true
-						},									
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" : "paladin",
-							"includeUpgrades" : true
-						},
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" : "soulEater",
-							"includeUpgrades" : true
-						},		
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" : "succub",
-							"includeUpgrades" : true
-						},
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" : "templeGuard",
-							"includeUpgrades" : true
-						},
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" : "warmonger",
-							"includeUpgrades" : true
-						}
+				"targetModifier" : {
+					"smart" : true
+				},
+				"effects" : {
+					"unlimitedRiposte" : {
+						"type" : "UNLIMITED_RETALIATIONS",
+						"limiters" : [
+							"noneOf",
+							//{
+							//	"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							//	"parameters": [ "MORE_DAMAGE_FROM_SPELL", "abilityEnchant" ]
+							//},	why?
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "astralSpirit",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "brutus",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "gnollShaman",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "hierophant",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "paladin",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "soulEater",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "succub",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "templeGuard",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "warmonger",
+								"includeUpgrades" : true
+							}
 						]
 					},
-					"rangedRiposte" :
-					{
-						"type": "RANGED_RETALIATION",
-					"limiters": [ 
-						"noneOf",
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" : "astralSpirit",
-							"includeUpgrades" : true
-						},
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" : "brutus",
-							"includeUpgrades" : true
-						},			
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" : "gnollShaman",
-							"includeUpgrades" : true
-						},		
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" : "hierophant",
-							"includeUpgrades" : true
-						},									
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" : "paladin",
-							"includeUpgrades" : true
-						},
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" : "soulEater",
-							"includeUpgrades" : true
-						},		
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" : "succub",
-							"includeUpgrades" : true
-						},
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" : "templeGuard",
-							"includeUpgrades" : true
-						},
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" : "warmonger",
-							"includeUpgrades" : true
-						}
+					"rangedRiposte" : {
+						"type" : "RANGED_RETALIATION",
+						"limiters" : [
+							"noneOf",
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "astralSpirit",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "brutus",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "gnollShaman",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "hierophant",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "paladin",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "soulEater",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "succub",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "templeGuard",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "warmonger",
+								"includeUpgrades" : true
+							}
 						]
 					}
-					//"chosenOfCosmos" :	{},	
+					//"chosenOfCosmos" :	{},
 					//spirit's ability is in his .json
 
-					//"chosenOfAbyss" : {},	
+					//"chosenOfAbyss" : {},
 					//brute's ability is in his .json
-					
-					//"chosenOfSpirits" :{},	
+
+					//"chosenOfSpirits" :{},
 					//shamans's ability is in his .json
-					
-					//"chosenOfNature" :{},	
+
+					//"chosenOfNature" :{},
 					//hierophant's ability is in his .json
-									
-					//"chosenOfSun" :	{},	
+
+					//"chosenOfSun" :	{},
 					//paladin's ability is in his .json
 
-					//"chosenOfDead" : {},			
+					//"chosenOfDead" : {},
 					//souleater's ability is in her .json
 
-					//"chosenOfDamned" :{},	
+					//"chosenOfDamned" :{},
 					//succ's ability is in her .json
 
-					//"chosenOfWar" :{},	
+					//"chosenOfWar" :{},
 					//warmong's ability is in his .json
-					
-					//"chosenOfTemple" :{},	
+
+					//"chosenOfTemple" :{},
 					//pleiads's ability is in her .json
-
-
-					}
-
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+				}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {	}},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true,
-			"special": true
+			"positive" : true,
+			"special" : true
 		}
 	}
 }

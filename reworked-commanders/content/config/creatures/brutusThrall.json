@@ -1,58 +1,66 @@
 {
-	"abyssalThrall1" :
-	{
+	"abyssalThrall1" : {
 		"special" : true,
-		"advMapAmount" : {"max" : 1, "min" : 1},
+		"advMapAmount" : {
+			"max" : 1,
+			"min" : 1
+		},
 		"aiValue" : 623,
 		"attack" : 4,
-		"cost" : { "gold" : 100 },
-		"damage" : {"max" : 3, "min" : 1},
+		"cost" : {
+			"gold" : 100
+		},
+		"damage" : {
+			"max" : 3,
+			"min" : 1
+		},
 		"defense" : 3,
 		"faction" : "dungeon",
 		"fightValue" : 600,
 		"growth" : 0,
 		"hitPoints" : 5,
-        "doubleWide" : false,
+		"doubleWide" : false,
 		"level" : 1,
 		"speed" : 4,
-		"name" : { "plural" : "Abyssal Peons", "singular" : "Abyssal Peon" },
-		"abilities":
-		{	
-			"troglodyteKin" : 
-			{
+		"name" : {
+			"plural" : "Abyssal Peons",
+			"singular" : "Abyssal Peon"
+		},
+		"abilities" : {
+			"troglodyteKin" : {
 				"type" : "SPECIAL_UPGRADE",
 				"subtype" : "abyssalThrall1",
 				"addInfo" : "troglodyte",
 				"propagator" : "HERO"
 			},
-			"blindImmunity" : 
-			{
+			"blindImmunity" : {
 				"type" : "SPELL_IMMUNITY",
 				"subtype" : "blind",
 				"addInfo" : 1 //absolute
 			},
-			"petrifyImmunity" : 
-			{
+			"petrifyImmunity" : {
 				"type" : "SPELL_IMMUNITY",
 				"subtype" : "stoneGaze",
 				"addInfo" : 1
-			}	
+			}
 		},
-		"graphics" :
-		{
-			"animation": "battle/commander/m145.def",
-			"animationTime" : { "attack" : 1, "idle" : 10, "walk" : 0.8 },
+		"graphics" : {
+			"animation" : "battle/commander/m145.def",
+			"animationTime" : {
+				"attack" : 1,
+				"idle" : 10,
+				"walk" : 0.8
+			},
 			"iconLarge" : "iconsBig/thrallBACK",
 			"iconSmall" : "iconsSmall/m145sma",
 			"timeBetweenFidgets" : 1
 		},
-		"sound" :
-		{
-			"attack": "TROGATTK.wav",
-			"defend": "TROGDFND.wav",
-			"killed": "TROGKILL.wav",
-			"move": "TROGMOVE.wav",
-			"wince": "TROGWNCE.wav"
+		"sound" : {
+			"attack" : "TROGATTK.wav",
+			"defend" : "TROGDFND.wav",
+			"killed" : "TROGKILL.wav",
+			"move" : "TROGMOVE.wav",
+			"wince" : "TROGWNCE.wav"
 		}
 	}
 }

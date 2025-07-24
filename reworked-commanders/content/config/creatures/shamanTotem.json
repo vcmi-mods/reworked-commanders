@@ -1,147 +1,155 @@
 {
-	"shamanTotem1" :
-	{
+	"shamanTotem1" : {
 		"special" : true,
-		"advMapAmount" : {"max" : 1, "min" : 1},
+		"advMapAmount" : {
+			"max" : 1,
+			"min" : 1
+		},
 		"aiValue" : 623,
 		"attack" : 0,
-		"cost" : { "gold" : 2500 },
-		"damage" : {"max" : 0, "min" : 0},
+		"cost" : {
+			"gold" : 2500
+		},
+		"damage" : {
+			"max" : 0,
+			"min" : 0
+		},
 		"defense" : 15,
 		"faction" : "neutral",
 		"fightValue" : 600,
 		"growth" : 0,
 		"hitPoints" : 150,
-        "doubleWide" : false,
+		"doubleWide" : false,
 		"level" : 4,
 		"shots" : 12,
 		"speed" : 8,
-		"name" : { "plural" : "Totems", "singular" : "Totem" },
-		"abilities":
-		{		
-				
-			"castsUnfortune" :
-			{
+		"name" : {
+			"plural" : "Totems",
+			"singular" : "Totem"
+		},
+		"abilities" : {
+			"castsUnfortune" : {
 				"type" : "ENCHANTER",
 				"subtype" : "misfortune",
 				"val" : 2,
 				"addInfo" : 3
-			},			
-			"castsFortune" :
-			{
+			},
+			"castsFortune" : {
 				"type" : "ENCHANTER",
 				"subtype" : "fortune",
 				"val" : 2,
 				"addInfo" : 3
-			},		
-			"castsAmount" :
-			{
+			},
+			"castsAmount" : {
 				"type" : "CASTS",
 				"val" : 99
 			},
-			"enchantStranger" :
-			{
+			"enchantStranger" : {
 				"type" : "CREATURE_ENCHANT_POWER",
 				"val" : 3
 			},
-			"protectiveAura" :
-			{
+			"protectiveAura" : {
 				"type" : "SPELL_RESISTANCE_AURA",
 				"val" : 50
-			},	
-			"warMachine" :
-			{
+			},
+			"warMachine" : {
 				"type" : "SIEGE_WEAPON"
 			}
 		},
-		"graphics" :
-		{
-			"animation": "battle/commander/wendigoTotem.def",
-			"animationTime" : { "attack" : 1, "idle" : 10, "walk" : 0.8 },
+		"graphics" : {
+			"animation" : "battle/commander/wendigoTotem.def",
+			"animationTime" : {
+				"attack" : 1,
+				"idle" : 10,
+				"walk" : 0.8
+			},
 			"iconLarge" : "iconsBig/totemBACK",
 			"iconSmall" : "iconsSmall/smolTotem",
 			"timeBetweenFidgets" : 1
 		},
-		"sound" :
-		{
-			"attack": "stonedoor.wav",
-			"defend": "stonedoor.wav",
-			"killed": "BALLKILL.wav",
-			"move": "stonedoor.wav",
-			"wince": "stonedoor.wav"
+		"sound" : {
+			"attack" : "stonedoor.wav",
+			"defend" : "stonedoor.wav",
+			"killed" : "BALLKILL.wav",
+			"move" : "stonedoor.wav",
+			"wince" : "stonedoor.wav"
 		}
 	},
-	"shamanTotem2" :
-	{
+	"shamanTotem2" : {
 		"special" : true,
-		"advMapAmount" : {"max" : 1, "min" : 1},
+		"advMapAmount" : {
+			"max" : 1,
+			"min" : 1
+		},
 		"aiValue" : 623,
 		"attack" : 0,
-		"cost" : { "gold" : 2500 },
-		"damage" : {"max" : 0, "min" : 0},
+		"cost" : {
+			"gold" : 2500
+		},
+		"damage" : {
+			"max" : 0,
+			"min" : 0
+		},
 		"defense" : 25,
 		"faction" : "neutral",
 		"fightValue" : 600,
 		"growth" : 0,
 		"hitPoints" : 250,
-        "doubleWide" : false,
+		"doubleWide" : false,
 		"level" : 6,
 		"shots" : 12,
 		"speed" : 10,
-		"name" : { "plural" : "Ancestral Totems", "singular" : "Ancestral Totem" },
-		"abilities":
-		{		
-				
-			"grantsFortune" :
-			{
+		"name" : {
+			"plural" : "Ancestral Totems",
+			"singular" : "Ancestral Totem"
+		},
+		"abilities" : {
+			"grantsFortune" : {
 				"type" : "ENCHANTED",
 				"subtype" : "fortune",
 				"val" : 6
-			},	
+			},
 
-			"castsUnfortune" :
-			{
+			"castsUnfortune" : {
 				"type" : "ENCHANTER",
 				"subtype" : "misfortune",
 				"val" : 2,
 				"addInfo" : 3
-			},	
+			},
 
-							"castsAmount" :
-							{
-								"type" : "CASTS",
-								"val" : 99
-							},
-							"enchantStranger" :
-							{
-								"type" : "CREATURE_ENCHANT_POWER",
-								"val" : 3
-							},
-				"protectiveAura" :
-				{
-					"type" : "SPELL_RESISTANCE_AURA",
-					"val" : 75
-				},	
-			"warMachine" :
-			{
+			"castsAmount" : {
+				"type" : "CASTS",
+				"val" : 99
+			},
+			"enchantStranger" : {
+				"type" : "CREATURE_ENCHANT_POWER",
+				"val" : 3
+			},
+			"protectiveAura" : {
+				"type" : "SPELL_RESISTANCE_AURA",
+				"val" : 75
+			},
+			"warMachine" : {
 				"type" : "SIEGE_WEAPON"
 			}
 		},
-		"graphics" :
-		{
-			"animation": "battle/commander/wendigoTotem.def",
-			"animationTime" : { "attack" : 1, "idle" : 10, "walk" : 0.8 },
+		"graphics" : {
+			"animation" : "battle/commander/wendigoTotem.def",
+			"animationTime" : {
+				"attack" : 1,
+				"idle" : 10,
+				"walk" : 0.8
+			},
 			"iconLarge" : "iconsBig/totemBACK",
 			"iconSmall" : "iconsSmall/smolTotem",
 			"timeBetweenFidgets" : 1
 		},
-		"sound" :
-		{
-			"attack": "stonedoor.wav",
-			"defend": "stonedoor.wav",
-			"killed": "BALLKILL.wav",
-			"move": "stonedoor.wav",
-			"wince": "stonedoor.wav"
+		"sound" : {
+			"attack" : "stonedoor.wav",
+			"defend" : "stonedoor.wav",
+			"killed" : "BALLKILL.wav",
+			"move" : "stonedoor.wav",
+			"wince" : "stonedoor.wav"
 		}
 	}
 }

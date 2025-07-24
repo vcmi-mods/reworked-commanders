@@ -1,45 +1,37 @@
 {
-	"brutus":
-	{
-		"name" :
-		{
+	"brutus" : {
+		"name" : {
 			"plural" : "Brutes",
 			"singular" : "Brute"
 		},
 		"faction" : "dungeon",
-		"level": 0,
+		"level" : 0,
 		"aiValue" : 5931,
 		"special" : true,
 		"attack" : 5,
 		"defense" : 5,
-		"cost" :
-		{
+		"cost" : {
 			"gold" : 2000
 		},
-		"damage" :
-		{
+		"damage" : {
 			"min" : 8,
 			"max" : 16
 		},
 		"fightValue" : 5272,
-		"graphics" :
-		{
+		"graphics" : {
 			"animation" : "battle/commander/Brutus.def",
 			"iconSmall" : "iconsSmall/brutusS.bmp",
 			"iconLarge" : "iconsBig/BrutusB.bmp",
 			"timeBetweenFidgets" : 1,
-			"animationTime" :
-			{
-				"walk" : 1.00,
-				"idle" : 10.00,
-				"attack" : 1.00
+			"animationTime" : {
+				"walk" : 1.0,
+				"idle" : 10.0,
+				"attack" : 1.0
 			},
-			"missile" :
-			{
+			"missile" : {
 				"projectile" : "battle/commander/projectile/WarlShot.def",
 				"attackClimaxFrame" : 4,
-				"offset" :
-				{
+				"offset" : {
 					"upperX" : 52,
 					"upperY" : -66,
 					"middleX" : 52,
@@ -47,171 +39,234 @@
 					"lowerX" : 52,
 					"lowerY" : -22
 				},
-				"frameAngles" : [90, 72, 45, 27, 0, -27, -45, -72, -90, 0, 0, 0]
-
+				"frameAngles" : [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				]
 			}
 		},
 		"doubleWide" : false,
 		"growth" : 1,
 		"hitPoints" : 50,
 		"speed" : 5,
-            "shots" : 0,
-		"sound" :
-		{
-			"attack": "WRLCATTK.wav",
-			"defend": "WRLCDFND.wav",
-			"killed": "WRLCKILL.wav",
-			"move": "WRLCMOVE.wav",
-                  "shoot" : "WRLCSHOT.wav",
-			"wince": "WRLCWNCE.wav"
+		"shots" : 0,
+		"sound" : {
+			"attack" : "WRLCATTK.wav",
+			"defend" : "WRLCDFND.wav",
+			"killed" : "WRLCKILL.wav",
+			"move" : "WRLCMOVE.wav",
+			"shoot" : "WRLCSHOT.wav",
+			"wince" : "WRLCWNCE.wav"
 		},
-		"abilities" :
-		{
-				  "blessingOfGold1" :
-				  {					
-					  "type" : "GENERATE_RESOURCE",
-					  "val" : 25,
-					  "subtype" : "resource.gold",
-					  "propagator" : "HERO",
-					  "updater" : "TIMES_HERO_LEVEL",
-					  "stacking" : "goldCommStack"
-						},
-				
+		"abilities" : {
+			"blessingOfGold1" : {
+				"type" : "GENERATE_RESOURCE",
+				"val" : 25,
+				"subtype" : "resource.gold",
+				"propagator" : "HERO",
+				"updater" : "TIMES_HERO_LEVEL",
+				"stacking" : "goldCommStack"
+			},
+
 			//silniejsze przyzwanie machiny
-			"summonThrall" :
-			{
+			"summonThrall" : {
 				"type" : "ENCHANTER",
 				"val" : 3,
 				"subtype" : "summonThrall",
 				"addInfo" : 0,
-				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "slavePriority"	}
-				],
-					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"} ]
-							]
+				"limiters" : [
+					[
+						"noneOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+							"bonusSubtype" : "slavePriority"
+						}
+					],
+					[
+						"allOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "ENCHANTED",
+							"bonusSubtype" : "abilityEnchant"
+						}
+					]
+				]
 			},
 
 			//zeby machina zostala przyzwana na samym poczatku walki
-			"firstTurnSummon" :
-			{
+			"firstTurnSummon" : {
 				"type" : "ENCHANTED",
 				"subtype" : "slavePriority",
-//				"addInfo" : 0,
-				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "slavePriority"	}
-				],
-					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"} ]
-							]
+				//				"addInfo" : 0,
+				"limiters" : [
+					[
+						"noneOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+							"bonusSubtype" : "slavePriority"
+						}
+					],
+					[
+						"allOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "ENCHANTED",
+							"bonusSubtype" : "abilityEnchant"
+						}
+					]
+				]
 			},
 
 			//moc rzucania ustawiona na poziom bohatera, zeby przyzwac tyle machin
-			"spellpowerLimit" :
-			{
+			"spellpowerLimit" : {
 				"type" : "CREATURE_SPELL_POWER",
 				"val" : 400,
 				"propagator" : "HERO",
 				"updater" : "TIMES_HERO_LEVEL",
 				"valueType" : "INDEPENDENT_MAX",
-				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "slavePriority"	}
-				],
-					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"} ]
-							]
+				"limiters" : [
+					[
+						"noneOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+							"bonusSubtype" : "slavePriority"
+						}
+					],
+					[
+						"allOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "ENCHANTED",
+							"bonusSubtype" : "abilityEnchant"
+						}
+					]
+				]
 			},
 
-        		"shooter" :
-			{
+			"shooter" : {
 				"type" : "SHOOTER"
-			},	
-				"halved shots" :
-			{
-				"type" : "SHOTS","val" : -50,"valueType" : "PERCENT_TO_ALL",
-				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "shootingEnchant"}]
 			},
-			"magicResistance" :
-			{
+			"halved shots" : {
+				"type" : "SHOTS",
+				"val" : -50,
+				"valueType" : "PERCENT_TO_ALL",
+				"limiters" : [
+					"noneOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "shootingEnchant"
+					}
+				]
+			},
+			"magicResistance" : {
 				"type" : "SPELL_DAMAGE_REDUCTION",
 				"subtype" : "any",
 				"val" : 5
 			},
-			"castsAmount" :
-			{
+			"castsAmount" : {
 				"type" : "CASTS",
 				"val" : 1
 			},
 			//"enchant" :{"type" : "CREATURE_ENCHANT_POWER","val" : 2	}, //needless?
-			"spellpower" :
-			{
+			"spellpower" : {
 				"type" : "CREATURE_SPELL_POWER",
 				"val" : 100
 			},
-			"canCast" :
-			{
+			"canCast" : {
 				"type" : "SPELLCASTER",
 				"subtype" : "bloodlust",
-				"val" : 3,		
-				"limiters": [ 
+				"val" : 3,
+				"limiters" : [
 					"noneOf",
 					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "spellEnchant"
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "spellEnchant"
 					}
-					]
-				  },
-			"canCast+" :
-			{
+				]
+			},
+			"canCast+" : {
 				"type" : "SPELLCASTER",
 				"subtype" : "battleForged",
-				"val" : 3,		
-				"limiters": [ 
+				"val" : 3,
+				"limiters" : [
 					"allOf",
 					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "spellEnchant"
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "spellEnchant"
 					}
-					]
-				  },
-				  
-					"timeskipSelfStop" :
-					{
-					"type" : "MORE_DAMAGE_FROM_SPELL",
-					"val" : 100,
-					"subtype" : "machinePriority",
-					"limiters": 
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"}
-					
-					},
-				  
-					"chaosFlame" :
-					{
-					"type" : "SPELL_BEFORE_ATTACK",
-					"val" : 100,
-					"subtype" : "chaosFlameEnchant",
-					"addInfo" : [0,1],	
-					"limiters": 
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "shootingEnchant"}
-					
-					},
+				]
+			},
 
-					
+			"timeskipSelfStop" : {
+				"type" : "MORE_DAMAGE_FROM_SPELL",
+				"val" : 100,
+				"subtype" : "machinePriority",
+				"limiters" : {
+					"type" : "HAS_ANOTHER_BONUS_LIMITER",
+					"bonusType" : "ENCHANTED",
+					"bonusSubtype" : "abilityEnchant"
+				}
+			},
+
+			"chaosFlame" : {
+				"type" : "SPELL_BEFORE_ATTACK",
+				"val" : 100,
+				"subtype" : "chaosFlameEnchant",
+				"addInfo" : [
+					0,
+					1
+				],
+				"limiters" : {
+					"type" : "HAS_ANOTHER_BONUS_LIMITER",
+					"bonusType" : "ENCHANTED",
+					"bonusSubtype" : "shootingEnchant"
+				}
+			},
+
 			//zeby zatrzymac wiezyczki/katapulte przed przyzwaniem duszka
-			"stopSiegeMachines" :
-			{
+			"stopSiegeMachines" : {
 				"type" : "ENCHANTED",
 				"subtype" : "siegeLimiter1",
 				"propagator" : "BATTLE_WIDE",
-//				"addInfo" : 0,
-				"limiters": [
-					[ "noneOf", 
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "siegeLimiterOff" } ],
-					[ "anyOf", 
-						{"type" : "CREATURE_TYPE_LIMITER", 
-							"creature" :  "catapult", 
+				//				"addInfo" : 0,
+				"limiters" : [
+					[
+						"noneOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+							"bonusSubtype" : "siegeLimiterOff"
+						}
+					],
+					[
+						"anyOf",
+						{
+							"type" : "CREATURE_TYPE_LIMITER",
+							"creature" : "catapult",
 							"includeUpgrades" : true
 						},
-						{"type" : "CREATURE_TYPE_LIMITER", 
-								"creature" :  "arrowTower",
-								"includeUpgrades" : true
+						{
+							"type" : "CREATURE_TYPE_LIMITER",
+							"creature" : "arrowTower",
+							"includeUpgrades" : true
 						}
-							]
+					]
 				]
 			}
 		}

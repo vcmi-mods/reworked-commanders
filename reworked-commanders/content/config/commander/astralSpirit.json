@@ -1,46 +1,38 @@
 {
-	"astralSpirit":
-	{
-		"name" :
-		{
+	"astralSpirit" : {
+		"name" : {
 			"plural" : "Astral Spirits",
 			"singular" : "Astral Spirit"
 		},
 		"faction" : "conflux",
-		"level": 0,
+		"level" : 0,
 		"aiValue" : 5931,
 		"special" : true,
 		"attack" : 5,
 		"defense" : 5,
-		"cost" :
-		{
+		"cost" : {
 			"gold" : 2000
-		},		
-		"damage" :
-		{
-			 "min" : 8,
-			 "max" : 16
+		},
+		"damage" : {
+			"min" : 8,
+			"max" : 16
 		},
 		"fightValue" : 5272,
-		"graphics" :
-		{
+		"graphics" : {
 			"animation" : "battle/commander/astralSpirit.def",
 			"iconSmall" : "iconsSmall/astralSpiritS.bmp",
 			"iconLarge" : "iconsBig/astralSpiritB.bmp",
 			"timeBetweenFidgets" : 1,
-			"animationTime" :
-			{
-				"walk" : 1.00,
-				"idle" : 10.00,
-				"attack" : 1.00
+			"animationTime" : {
+				"walk" : 1.0,
+				"idle" : 10.0,
+				"attack" : 1.0
 			},
-			"missile" :
-			{
+			"missile" : {
 				"projectile" : "battle/commander/projectile/AspShot.def",
 				"attackClimaxFrame" : 10,
-				
-				"offset" :
-				{
+
+				"offset" : {
 					"upperX" : 45,
 					"upperY" : -86,
 					"middleX" : 45,
@@ -58,139 +50,168 @@
 				//	"upperX" : 62,
 				//	"upperY" : -60
 				//},
-				"frameAngles" : [90, 72, 45, 27, 0, -27, -45, -72, -90, 0, 0, 0]
-
+				"frameAngles" : [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				]
 			}
 		},
 		"doubleWide" : false,
 		"growth" : 1,
 		"hitPoints" : 50,
 		"speed" : 5,
-            "shots" : 1,
-		"sound" :
-		{
-			"attack": "ATSPATTK.wav",
-			"defend": "ATSPDFND.wav",
-			"killed": "ATSPKILL.wav",
-			"move": "ATSPMOVE.wav",
-                  "shoot" : "ATSPSHOT.wav",
-			"wince": "ATSPWNCE.wav"
+		"shots" : 1,
+		"sound" : {
+			"attack" : "ATSPATTK.wav",
+			"defend" : "ATSPDFND.wav",
+			"killed" : "ATSPKILL.wav",
+			"move" : "ATSPMOVE.wav",
+			"shoot" : "ATSPSHOT.wav",
+			"wince" : "ATSPWNCE.wav"
 		},
-		"abilities" :
-		{			
-
-        		"shooter" :
-			{
+		"abilities" : {
+			"shooter" : {
 				"type" : "SHOOTER"
 			},
-			"halved shots" :
-		{
-			"type" : "SHOTS","val" : -50,"valueType" : "PERCENT_TO_ALL",
-			"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "shootingEnchant"}]
-		},
-	
-
-		"pacifistArrowWeak" :
-		{
-		"type" : "SPELL_BEFORE_ATTACK",
-		"val" : 50,
-		"subtype" : "astralSerenity2",
-		"addInfo" : [0,1],	
-		"limiters": [ 
-			"noneOf",
-			{
-				"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "shootingEnchant"
-			}
-			]
-		},
-
-		"pacifistArrowStrong" :
-		{
-		"type" : "SPELL_BEFORE_ATTACK",
-		"val" : 50,
-		"subtype" : "astralSerenity2",
-		"addInfo" : [2,1],	
-		"limiters": [ 
-			"allOf",
-			{
-				"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "shootingEnchant"
-			}
-			]
-		},
-		"pacifistTouch50" :
-		{
-			"type" : "SPELL_AFTER_ATTACK",
-			"val" : 50,
-			"subtype" : "astralSerenity",
-			"addInfo" : [0,2],		
-			"limiters": [ 
-				"noneOf",
-				{
-					"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"
-				}
+			"halved shots" : {
+				"type" : "SHOTS",
+				"val" : -50,
+				"valueType" : "PERCENT_TO_ALL",
+				"limiters" : [
+					"noneOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "shootingEnchant"
+					}
 				]
-		},
-		"pacifistTouch100" :
-		{
-			"type" : "SPELL_AFTER_ATTACK",
-			"val" : 100,
-			"subtype" : "astralSerenity",
-			"addInfo" : [0,2],
-			"limiters": [ 
-				"allOf",
-				{
-					"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"
-				}
-				]
-		},
+			},
 
-			"pacifistPower" :
-			{
+			"pacifistArrowWeak" : {
+				"type" : "SPELL_BEFORE_ATTACK",
+				"val" : 50,
+				"subtype" : "astralSerenity2",
+				"addInfo" : [
+					0,
+					1
+				],
+				"limiters" : [
+					"noneOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "shootingEnchant"
+					}
+				]
+			},
+
+			"pacifistArrowStrong" : {
+				"type" : "SPELL_BEFORE_ATTACK",
+				"val" : 50,
+				"subtype" : "astralSerenity2",
+				"addInfo" : [
+					2,
+					1
+				],
+				"limiters" : [
+					"allOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "shootingEnchant"
+					}
+				]
+			},
+			"pacifistTouch50" : {
+				"type" : "SPELL_AFTER_ATTACK",
+				"val" : 50,
+				"subtype" : "astralSerenity",
+				"addInfo" : [
+					0,
+					2
+				],
+				"limiters" : [
+					"noneOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "abilityEnchant"
+					}
+				]
+			},
+			"pacifistTouch100" : {
+				"type" : "SPELL_AFTER_ATTACK",
+				"val" : 100,
+				"subtype" : "astralSerenity",
+				"addInfo" : [
+					0,
+					2
+				],
+				"limiters" : [
+					"allOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "abilityEnchant"
+					}
+				]
+			},
+
+			"pacifistPower" : {
 				"type" : "SPECIFIC_SPELL_POWER",
 				"val" : 1,
 				"subtype" : "astralSerenity"
 			},
-			"magicResistance" :
-			{
+			"magicResistance" : {
 				"type" : "SPELL_DAMAGE_REDUCTION",
 				"subtype" : "any",
 				"val" : 5
 			},
-			"castsAmount" :
-			{
+			"castsAmount" : {
 				"type" : "CASTS",
 				"val" : 1
 			},
 			//"enchant" :{"type" : "CREATURE_ENCHANT_POWER","val" : 2	}, //needless?
-			"spellpower" :
-			{
+			"spellpower" : {
 				"type" : "CREATURE_SPELL_POWER",
 				"val" : 100
 			},
-			"canCast" :
-			{
+			"canCast" : {
 				"type" : "SPELLCASTER",
 				"subtype" : "counterstrike",
-				"val" : 3,		
-				"limiters": [ 
+				"val" : 3,
+				"limiters" : [
 					"noneOf",
 					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "spellEnchant"
-					}
-					]
-				  },
-			"canCast+" :
-			{
-				"type" : "SPELLCASTER",
-				"subtype" : "astralAgility",
-				"val" : 3,		
-				"limiters": [ 
-					"allOf",
-					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "spellEnchant"
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "spellEnchant"
 					}
 				]
-            }
+			},
+			"canCast+" : {
+				"type" : "SPELLCASTER",
+				"subtype" : "astralAgility",
+				"val" : 3,
+				"limiters" : [
+					"allOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "spellEnchant"
+					}
+				]
+			}
 		}
 	}
 }

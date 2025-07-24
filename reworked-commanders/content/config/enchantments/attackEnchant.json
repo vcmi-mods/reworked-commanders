@@ -1,101 +1,119 @@
 {
-	"attackEnchant" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"attackEnchant" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Attack Enchantment",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},	
-		"graphics":	{"iconEffect": "spells/attackEnchant"},
-		"animation":{},
-		"sounds": {},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconEffect" : "spells/attackEnchant"
+		},
+		"animation" : {},
+		"sounds" : {},
 		"levels" : {
-			"base":{
-
-				"description": "{Attack Enchantment}\r\n\r\nCommander's melee attacks have additional effects (default is maximum damage in melee).",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Attack Enchantment}\r\n\r\nCommander's melee attacks have additional effects (default is maximum damage in melee).",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
 					"alwaysMaximumDamage" : {
 						"val" : 0,
 						"type" : "ALWAYS_MAXIMUM_DAMAGE",
 						"valueType" : "INDEPENDENT_MAX",
-					"limiters": [ 
-						"noneOf",
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" :  "gnollShaman", 
-							"includeUpgrades" : true
-						},									
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" :  "paladin", 
-							"includeUpgrades" : true
-						},
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" :  "astralSpirit", 
-							"includeUpgrades" : true
-						},
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" :  "soulEater", 
-							"includeUpgrades" : true
-						},
-						{
-							"type" : "HAS_ANOTHER_BONUS_LIMITER",
-							"bonusType": "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "attackEnchant"
-						}
-					]
-				},		
-				
-				"dualBlade" :
-					{
-					"type" : "ADDITIONAL_ATTACK",
-					"val" : 1,
-					"effectRange": "ONLY_MELEE_FIGHT",
-					"limiters": [ 
-						"allOf",
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" :  "soulEater", 
-							"includeUpgrades" : true
-						},							
-						{
-							"type" : "CREATURE_TYPE_LIMITER",
-							"creature" :  "paladin", 
-							"includeUpgrades" : true
-						}
-					]
-				},	
-				
-				"piercingStrike" :
-					{
-						"type" : "TWO_HEX_ATTACK_BREATH",
-						"limiters": [ 
-							"anyOf",
+						"limiters" : [
+							"noneOf",
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" :  "gnollShaman", 
+								"creature" : "gnollShaman",
 								"includeUpgrades" : true
 							},
 							{
 								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" :  "astralSpirit", 
+								"creature" : "paladin",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "astralSpirit",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "soulEater",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "HAS_ANOTHER_BONUS_LIMITER",
+								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+								"bonusSubtype" : "attackEnchant"
+							}
+						]
+					},
+
+					"dualBlade" : {
+						"type" : "ADDITIONAL_ATTACK",
+						"val" : 1,
+						"effectRange" : "ONLY_MELEE_FIGHT",
+						"limiters" : [
+							"allOf",
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "soulEater",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "paladin",
 								"includeUpgrades" : true
 							}
 						]
-					}					
+					},
+
+					"piercingStrike" : {
+						"type" : "TWO_HEX_ATTACK_BREATH",
+						"limiters" : [
+							"anyOf",
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "gnollShaman",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "astralSpirit",
+								"includeUpgrades" : true
+							}
+						]
+					}
 				}
 			},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {	}},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true,
-			"special": true
+			"positive" : true,
+			"special" : true
 		}
 	}
 }

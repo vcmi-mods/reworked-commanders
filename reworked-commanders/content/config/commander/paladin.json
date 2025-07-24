@@ -1,47 +1,45 @@
 {
-	"paladin":
-	{
-		"name" :
-		{
+	"paladin" : {
+		"name" : {
 			"plural" : "Sun Seekers",
 			"singular" : "Sun Seeker"
 		},
 		"faction" : "castle",
-		"level": 0,
+		"level" : 0,
 		"aiValue" : 5931,
 		"special" : true,
 		"attack" : 5,
 		"defense" : 5,
-		"cost" :
-		{
+		"cost" : {
 			"gold" : 2000
-		},		
-		"damage" :
-		{
+		},
+		"damage" : {
 			"min" : 8,
 			"max" : 16
 		},
 		"fightValue" : 5272,
-		"graphics" :
-		{
+		"graphics" : {
 			"animation" : "battle/commander/sunseeker1.def",
 			"iconSmall" : "iconsSmall/solaireS.bmp",
 			"iconLarge" : "iconsBig/solaireIcoB.bmp",
 			"timeBetweenFidgets" : 1,
-			"animationTime" :
-			{
-				"walk" : 1.00,
-				"idle" : 10.00,
-				"attack" : 1.00
+			"animationTime" : {
+				"walk" : 1.0,
+				"idle" : 10.0,
+				"attack" : 1.0
 			},
-			"missile" :
-			{
+			"missile" : {
 				"projectile" : "battle/commander/projectile/sunspear.def",
 				"attackClimaxFrame" : 12,
 
-				"offset" :{	"lowerX" : -22,"lowerY" : 0,
-							"middleX" : 32,"middleY" : -70,
-							"upperX" : 42,"upperY" : -83},
+				"offset" : {
+					"lowerX" : -22,
+					"lowerY" : 0,
+					"middleX" : 32,
+					"middleY" : -70,
+					"upperX" : 42,
+					"upperY" : -83
+				},
 				//"offset" :
 				//{
 				//	"lowerX" : 8,
@@ -51,150 +49,173 @@
 				//	"upperX" : 9,
 				//	"upperY" : 76
 				//},
-				"frameAngles" : [90, 72, 45, 27, 0, -27, -45, -72, -90, 0, 0, 0]
-
+				"frameAngles" : [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				]
 			}
 		},
 		"doubleWide" : false,
 		"growth" : 1,
 		"hitPoints" : 50,
 		"speed" : 5,
-            "shots" : 0,
-		"sound" :
-		{
-			"attack": "PLDNATTK.wav",
-			"defend": "PLDNDFND.wav",
-			"killed": "PLDNKILL.wav",
-			"move": "PLDNMOVE.wav",
-            "shoot" : "zapelectro2",
-			"wince": "PLDNWNCE.wav"
+		"shots" : 0,
+		"sound" : {
+			"attack" : "PLDNATTK.wav",
+			"defend" : "PLDNDFND.wav",
+			"killed" : "PLDNKILL.wav",
+			"move" : "PLDNMOVE.wav",
+			"shoot" : "zapelectro2",
+			"wince" : "PLDNWNCE.wav"
 		},
-		"abilities" :
-		{
-
-        		"shooter" :
-			{
+		"abilities" : {
+			"shooter" : {
 				"type" : "SHOOTER"
 			},
-				"halved shots" :
-			{
-				"type" : "SHOTS","val" : -50,"valueType" : "PERCENT_TO_ALL",
-				"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "shootingEnchant"}]
+			"halved shots" : {
+				"type" : "SHOTS",
+				"val" : -50,
+				"valueType" : "PERCENT_TO_ALL",
+				"limiters" : [
+					"noneOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "shootingEnchant"
+					}
+				]
 			},
-			
 
-		"bannerOfLight" :
-		{
-			"type" : "MORALE",
-			"val" : 1,
-			"propagator": "HERO",
-			"stacking" : "Banner of Light"
-		},
+			"bannerOfLight" : {
+				"type" : "MORALE",
+				"val" : 1,
+				"propagator" : "HERO",
+				"stacking" : "Banner of Light"
+			},
 
-		"bannerOfLight2" :
-		{
-			"type" : "MORALE",
-			"val" : 2,
-			"propagator": "HERO",
-			"stacking" : "Banner of Light",
-			"limiters": [ 
-				"allOf",
-				{
-					"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"
-				}
+			"bannerOfLight2" : {
+				"type" : "MORALE",
+				"val" : 2,
+				"propagator" : "HERO",
+				"stacking" : "Banner of Light",
+				"limiters" : [
+					"allOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "abilityEnchant"
+					}
 				]
-		},	
-		
-		"bannerOfLight3" :
-		{
-			"type" : "ENCHANTED",
-			"val" : 0,
-			"subtype" : "bannerOfLight",
-			"limiters": [
-				"allOf",
-				{
-					"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"
-				}
+			},
+
+			"bannerOfLight3" : {
+				"type" : "ENCHANTED",
+				"val" : 0,
+				"subtype" : "bannerOfLight",
+				"limiters" : [
+					"allOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "abilityEnchant"
+					}
 				]
-		},	
+			},
 
+			"theRadiant" : {
+				"type" : "SIGHT_RADIUS",
+				"val" : 1,
+				"valueType" : "ADDITIVE_VALUE",
+				"propagator" : "HERO"
+			},
 
-		"theRadiant" :
-		{
-			"type" : "SIGHT_RADIUS",
-			"val" : 1,
-			"valueType" : "ADDITIVE_VALUE",
-			"propagator": "HERO"
-		},
-			
-		"mentor" :
-		{
-			"targetSourceType" : "SECONDARY_SKILL",
-			"type" : "HERO_EXPERIENCE_GAIN_PERCENT",
-			"val" : 5,
-			"valueType" : "PERCENT_TO_BASE",
-			"propagator": "HERO",
-			"updater": "TIMES_HERO_LEVEL"
-		},
-			"magicResistance" :
-			{
+			"mentor" : {
+				"targetSourceType" : "SECONDARY_SKILL",
+				"type" : "HERO_EXPERIENCE_GAIN_PERCENT",
+				"val" : 5,
+				"valueType" : "PERCENT_TO_BASE",
+				"propagator" : "HERO",
+				"updater" : "TIMES_HERO_LEVEL"
+			},
+			"magicResistance" : {
 				"type" : "SPELL_DAMAGE_REDUCTION",
 				"subtype" : "any",
 				"val" : 5
 			},
-			"castsAmount" :
-			{
+			"castsAmount" : {
 				"type" : "CASTS",
 				"val" : 1
 			},
 			//"enchant" :{"type" : "CREATURE_ENCHANT_POWER","val" : 2	}, //needless?
-			"spellpower" :
-			{
+			"spellpower" : {
 				"type" : "CREATURE_SPELL_POWER",
 				"val" : 100
 			},
-			"canCast" :
-			{
+			"canCast" : {
 				"type" : "SPELLCASTER",
 				"subtype" : "lifePrayer",
-				"val" : 0,		
-				"limiters": [ 
+				"val" : 0,
+				"limiters" : [
 					"noneOf",
 					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "spellEnchant"
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "spellEnchant"
 					}
-					]
-				  },
-				  
-				  
-			"canCast+" :
-			{
+				]
+			},
+
+			"canCast+" : {
 				"type" : "SPELLCASTER",
 				"subtype" : "purePrayer",
-				"val" : 0,		
-				"limiters": [ 
+				"val" : 0,
+				"limiters" : [
 					"allOf",
 					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "spellEnchant"
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "spellEnchant"
 					}
-					]
-				  },
+				]
+			},
 
-				  //przyzwanie doswiadczenia
-				  "soulExtractorGuards" :
-				  {
-					  "type" : "SUMMON_GUARDIANS",
-					  "subtype" : "creature.expSoul1",
-					  "val" : 100,
-//					  "addInfo" : 0,
-					  "limiters": [ {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"	}]
-				  },
-				  
-					"lightningChain" :{
-						"type" : "ENCHANTED",
-						"subtype": "lightningSpearEnchant",
-						"limiters": [ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "shootingEnchant"} ]
-				}
+			//przyzwanie doswiadczenia
+			"soulExtractorGuards" : {
+				"type" : "SUMMON_GUARDIANS",
+				"subtype" : "creature.expSoul1",
+				"val" : 100,
+				//					  "addInfo" : 0,
+				"limiters" : [
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "abilityEnchant"
+					}
+				]
+			},
+
+			"lightningChain" : {
+				"type" : "ENCHANTED",
+				"subtype" : "lightningSpearEnchant",
+				"limiters" : [
+					"allOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "shootingEnchant"
+					}
+				]
+			}
 		}
 	}
 }

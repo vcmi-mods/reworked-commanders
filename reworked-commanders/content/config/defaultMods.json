@@ -1,13 +1,11 @@
 {
-	"hardcodedFeatures" :
-	{
+	"hardcodedFeatures" : {
 		"NEGATIVE_LUCK" : true
 	},
 
-	"modules":
-	{
+	"modules" : {
 		//"STACK_EXPERIENCE": false,
 		//"STACK_ARTIFACTS": false,
-		"COMMANDERS": true
+		"COMMANDERS" : true
 	}
 }

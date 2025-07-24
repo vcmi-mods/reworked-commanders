@@ -1,45 +1,37 @@
 {
-	"soulEater":
-	{
-		"name" :
-		{
+	"soulEater" : {
+		"name" : {
 			"plural" : "Soul Eaters",
 			"singular" : "Soul Eater"
 		},
 		"faction" : "necropolis",
-		"level": 0,
+		"level" : 0,
 		"aiValue" : 5931,
 		"special" : true,
 		"attack" : 5,
 		"defense" : 5,
-		"cost" :
-		{
+		"cost" : {
 			"gold" : 2000
-		},		
-		"damage" :
-		{
+		},
+		"damage" : {
 			"min" : 8,
 			"max" : 16
 		},
 		"fightValue" : 5272,
-		"graphics" :
-		{
+		"graphics" : {
 			"animation" : "battle/commander/SoulEater.def",
 			"iconSmall" : "iconsSmall/SouldEaterS.bmp",
 			"iconLarge" : "iconsBig/SoulEaterB.bmp",
 			"timeBetweenFidgets" : 1,
-			"animationTime" :
-			{
-				"walk" : 1.00,
-				"idle" : 10.00,
-				"attack" : 1.00
+			"animationTime" : {
+				"walk" : 1.0,
+				"idle" : 10.0,
+				"attack" : 1.0
 			},
-			"missile" :
-			{
+			"missile" : {
 				"projectile" : "battle/commander/projectile/DrWShot.def",
 				"attackClimaxFrame" : 10,
-				"offset" :
-				{
+				"offset" : {
 					"upperX" : 48,
 					"upperY" : -70,
 					"middleX" : 48,
@@ -47,196 +39,260 @@
 					"lowerX" : 48,
 					"lowerY" : -70
 				},
-				"frameAngles" : [90, 72, 45, 27, 0, -27, -45, -72, -90, 0, 0, 0]
-
+				"frameAngles" : [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				]
 			}
 		},
 		"doubleWide" : false,
 		"growth" : 1,
 		"hitPoints" : 50,
 		"speed" : 5,
-            "shots" : 0,
-		"sound" :
-		{
-			"attack": "DARWATTK.wav",
-			"defend": "DARWDFND.wav",
-			"killed": "DARWKILL.wav",
-			"move": "DARWMOVE.wav",
-                  "shoot" : "DARWSHOT.wav",
-			"wince": "DARWWNCE.wav"
+		"shots" : 0,
+		"sound" : {
+			"attack" : "DARWATTK.wav",
+			"defend" : "DARWDFND.wav",
+			"killed" : "DARWKILL.wav",
+			"move" : "DARWMOVE.wav",
+			"shoot" : "DARWSHOT.wav",
+			"wince" : "DARWWNCE.wav"
 		},
-		"abilities" :
-		{
-
-        		"shooter" :
-			{
+		"abilities" : {
+			"shooter" : {
 				"type" : "SHOOTER"
 			},
-				"halved shots" :
-			{
-			"type" : "SHOTS","val" : -50,"valueType" : "PERCENT_TO_ALL",
-			"limiters": ["noneOf",{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "shootingEnchant"}]
+			"halved shots" : {
+				"type" : "SHOTS",
+				"val" : -50,
+				"valueType" : "PERCENT_TO_ALL",
+				"limiters" : [
+					"noneOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "shootingEnchant"
+					}
+				]
 			},
 
-
-		"necromanter" :
-		{
-			"targetSourceType" : "SECONDARY_SKILL",
-			"type" : "UNDEAD_RAISE_PERCENTAGE",
-			"val" : 2,
-			"valueType" : "PERCENT_TO_BASE",
-			"updater": "TIMES_HERO_LEVEL"
-		},
-
-
-
-		"bannerOfDread" :
-		{
-			"type" : "MORALE",
-			"propagator": "BATTLE_WIDE",
-			"val" : -1,
-			"stacking" : "Banner of Death",
-			"limiters": [
-				[ "noneOf", 
-									{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "soulExtracted"	} ],
-				[ "allOf", 
-									{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "bannerOfDeath"	} ]
-						]
+			"necromanter" : {
+				"targetSourceType" : "SECONDARY_SKILL",
+				"type" : "UNDEAD_RAISE_PERCENTAGE",
+				"val" : 2,
+				"valueType" : "PERCENT_TO_BASE",
+				"updater" : "TIMES_HERO_LEVEL"
 			},
 
-			"bannerOfDread2Targets" :
-		{
-			"type" : "MORE_DAMAGE_FROM_SPELL",
-			"subtype" : "bannerOfDeath",
-			"propagator": "BATTLE_WIDE",
-			"propagationUpdater" : "BONUS_OWNER_UPDATER",
-			"limiters" : [ "OPPOSITE_SIDE" ],
-			"val" : 100
-		},
-		
-		"timeskipSelfStop" :
-		{
-		"type" : "MORE_DAMAGE_FROM_SPELL",
-		"val" : 100,
-		"subtype" : "machinePriority",
-		"limiters": 
-				{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"}
-		},
-			"magicResistance" :
-			{
+			"bannerOfDread" : {
+				"type" : "MORALE",
+				"propagator" : "BATTLE_WIDE",
+				"val" : -1,
+				"stacking" : "Banner of Death",
+				"limiters" : [
+					[
+						"noneOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+							"bonusSubtype" : "soulExtracted"
+						}
+					],
+					[
+						"allOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+							"bonusSubtype" : "bannerOfDeath"
+						}
+					]
+				]
+			},
+
+			"bannerOfDread2Targets" : {
+				"type" : "MORE_DAMAGE_FROM_SPELL",
+				"subtype" : "bannerOfDeath",
+				"propagator" : "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : [
+					"OPPOSITE_SIDE"
+				],
+				"val" : 100
+			},
+
+			"timeskipSelfStop" : {
+				"type" : "MORE_DAMAGE_FROM_SPELL",
+				"val" : 100,
+				"subtype" : "machinePriority",
+				"limiters" : {
+					"type" : "HAS_ANOTHER_BONUS_LIMITER",
+					"bonusType" : "ENCHANTED",
+					"bonusSubtype" : "abilityEnchant"
+				}
+			},
+			"magicResistance" : {
 				"type" : "SPELL_DAMAGE_REDUCTION",
 				"subtype" : "any",
 				"val" : 5
 			},
-			"castsAmount" :
-			{
+			"castsAmount" : {
 				"type" : "CASTS",
 				"val" : 2
 			},
 
 			//"enchant" :{"type" : "CREATURE_ENCHANT_POWER","val" : 2	}, //needless?
 
-			"spellpower" :
-			{
+			"spellpower" : {
 				"type" : "CREATURE_SPELL_POWER",
 				"val" : 100
 			},
-			"canCast" :
-			{
+			"canCast" : {
 				"type" : "SPELLCASTER",
 				"subtype" : "fireShield",
-				"val" : 2,		
-				"limiters": [
+				"val" : 2,
+				"limiters" : [
 					"noneOf",
 					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "spellEnchant"
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "spellEnchant"
 					}
-					]
-                  },
-			"canCast+" :
-			{
+				]
+			},
+			"canCast+" : {
 				"type" : "SPELLCASTER",
 				"subtype" : "undeadRestoration",
-				"val" : 3,		
-				"limiters": [ 
+				"val" : 3,
+				"limiters" : [
 					"allOf",
 					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "spellEnchant"
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "ENCHANTED",
+						"bonusSubtype" : "spellEnchant"
 					}
-					]
-                  },
-                  "undead":
-                  {
-                   "type": "UNDEAD"
-			},	
-			
+				]
+			},
+			"undead" : {
+				"type" : "UNDEAD"
+			},
+
 			//przyzwanie dusz do odblokowaniu perka
-			"soulExtractor2" :
-			{
+			"soulExtractor2" : {
 				"type" : "ENCHANTER",
 				"subtype" : "summonNecroSouls",
 				"val" : 1,
 				"addInfo" : 0,
-				"limiters": [
-					[ "noneOf", 
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "soulExtracted"} ],
-					[ "allOf", 
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"} ]
-							]
+				"limiters" : [
+					[
+						"noneOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+							"bonusSubtype" : "soulExtracted"
+						}
+					],
+					[
+						"allOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "ENCHANTED",
+							"bonusSubtype" : "abilityEnchant"
+						}
+					]
+				]
 			},
 
 			//zeby zatrzymac wiezyczki/katapulte przed przyzwaniem duszka
-			"stopSiegeMachines" :
-			{
+			"stopSiegeMachines" : {
 				"type" : "ENCHANTED",
 				"subtype" : "siegeLimiter1",
 				"propagator" : "BATTLE_WIDE",
-//				"addInfo" : 0,
-				"limiters": [
-					[ "noneOf", 
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "siegeLimiterOff"} ],
-					[ "anyOf", 
-						{"type" : "CREATURE_TYPE_LIMITER", 
-							"creature" :  "catapult", 
+				//				"addInfo" : 0,
+				"limiters" : [
+					[
+						"noneOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+							"bonusSubtype" : "siegeLimiterOff"
+						}
+					],
+					[
+						"anyOf",
+						{
+							"type" : "CREATURE_TYPE_LIMITER",
+							"creature" : "catapult",
 							"includeUpgrades" : true
 						},
-						{"type" : "CREATURE_TYPE_LIMITER", 
-							"creature" :  "arrowTower", 
+						{
+							"type" : "CREATURE_TYPE_LIMITER",
+							"creature" : "arrowTower",
 							"includeUpgrades" : true
-						} 
+						}
 					]
 				]
 			},
 
 			//zeby machina zostala przyzwana na samym poczatku walki - i, WAZNE, zeby bonus utrzymal sie do nastepnej tury, dlatego potrzebny jest inny limiter
-			"firstTurnSummon" :
-			{
+			"firstTurnSummon" : {
 				"type" : "ENCHANTED",
 				"subtype" : "soulPriority",
-//				"addInfo" : 0,
-				"limiters": [
-					[ "noneOf", 
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "soulExtracted"} ],
-					[ "allOf", 
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"} ]
-							]
+				//				"addInfo" : 0,
+				"limiters" : [
+					[
+						"noneOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+							"bonusSubtype" : "soulExtracted"
+						}
+					],
+					[
+						"allOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "ENCHANTED",
+							"bonusSubtype" : "abilityEnchant"
+						}
+					]
+				]
 			},
 
-
 			//only 1 curse summoned
-			"spellpowerLimit2" :
-			{
+			"spellpowerLimit2" : {
 				"type" : "CREATURE_SPELL_POWER",
 				"val" : 100,
 				"propagator" : "HERO",
 				//"updater" : "TIMES_HERO_LEVEL",
 				"valueType" : "INDEPENDENT_MAX",
-				"limiters": [
-					[ "noneOf", 
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "soulExtracted"	}
-				],
-					[ "allOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType": "ENCHANTED", "bonusSubtype" : "abilityEnchant"} ]
-							]
+				"limiters" : [
+					[
+						"noneOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+							"bonusSubtype" : "soulExtracted"
+						}
+					],
+					[
+						"allOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "ENCHANTED",
+							"bonusSubtype" : "abilityEnchant"
+						}
+					]
+				]
 			}
 		}
 	}

@@ -1,59 +1,61 @@
 {
-	"necromancySoul1" :
-	{
+	"necromancySoul1" : {
 		"special" : true,
-		"advMapAmount" : {"max" : 0, "min" : 0},
+		"advMapAmount" : {
+			"max" : 0,
+			"min" : 0
+		},
 		"aiValue" : 0,
 		"attack" : 0,
-		"cost" : { "gold" : 0 },
-		"damage" : {"max" : 0, "min" : 0},
+		"cost" : {
+			"gold" : 0
+		},
+		"damage" : {
+			"max" : 0,
+			"min" : 0
+		},
 		"defense" : 0,
 		"faction" : "neutral",
 		"fightValue" : 0,
 		"growth" : 0,
 		"hitPoints" : 0,
-        "doubleWide" : false,
+		"doubleWide" : false,
 		"level" : 0,
 		"speed" : 9999,
-		"name" : { "plural" : "Lycan Curse", "singular" : "Lycan Curse" },
-		"abilities":
-		{
-			"ephemeral" :
-				{
-					"type" : "ENCHANTED",
-					"subtype" : "ephemeralExtract",
-					"val" : 3
-				},
+		"name" : {
+			"plural" : "Lycan Curse",
+			"singular" : "Lycan Curse"
+		},
+		"abilities" : {
+			"ephemeral" : {
+				"type" : "ENCHANTED",
+				"subtype" : "ephemeralExtract",
+				"val" : 3
+			},
 
-				"king1" :
-				{
-					"type" : "KING",
-					"val" : 0,
-					"valueType" : "ADDITIVE_VALUE"
-				},
-					"flier" :
-					{
-						"type" : "FLYING",
-						"subtype" : "movementFlying"
-					},			
-					
-					"noCounter" :
-					{
-						"type" : "BLOCKS_RETALIATION"
-					},	
+			"king1" : {
+				"type" : "KING",
+				"val" : 0,
+				"valueType" : "ADDITIVE_VALUE"
+			},
+			"flier" : {
+				"type" : "FLYING",
+				"subtype" : "movementFlying"
+			},
 
-				
-			"lycanthroper" :
-			{
+			"noCounter" : {
+				"type" : "BLOCKS_RETALIATION"
+			},
+
+			"lycanthroper" : {
 				"type" : "TRANSMUTATION",
 				"subtype" : "transmutationPerUnit",
 				"val" : 100,
 				"addInfo" : "lycanthrope"
 			},
-			
+
 			//lycantrophy wont work on tier7 units and commanders
-			"lycanthropeOff2" :
-			{
+			"lycanthropeOff2" : {
 				"type" : "SPELL_BEFORE_ATTACK",
 				"val" : 100,
 				"subtype" : "lycanthropeOff"
@@ -65,218 +67,294 @@
 			//	"type" : "FIRST_STRIKE",
 			//	"propagator": "BATTLE_WIDE",
 			//	"limiters": [
-			//		 "anyOf", 
+			//		 "anyOf",
 			//		 {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "KING1"]	},
 			//		 {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "KING2"]	},
 			//		 {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "KING3"]	}
 			//				]
 			//},
-					
-			"attackOff" :
-			{	
+
+			"attackOff" : {
 				"type" : "ADDITIONAL_ATTACK",
-				"propagator": "BATTLE_WIDE",
+				"propagator" : "BATTLE_WIDE",
 				"val" : -1,
 				"valueType" : "INDEPENDENT_MIN",
-				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "soulExtracted"	} ],
-					[ "anyOf", 	{"type" : "CREATURE_TYPE_LIMITER", "creature" : "soulEater", "includeUpgrades" : true	}	]
+				"limiters" : [
+					[
+						"noneOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+							"bonusSubtype" : "soulExtracted"
+						}
+					],
+					[
+						"anyOf",
+						{
+							"type" : "CREATURE_TYPE_LIMITER",
+							"creature" : "soulEater",
+							"includeUpgrades" : true
+						}
+					]
 				]
-			},	
-			"shootingOff" :
-			{	
+			},
+			"shootingOff" : {
 				"type" : "SHOTS",
-				"propagator": "BATTLE_WIDE",
+				"propagator" : "BATTLE_WIDE",
 				"val" : 0,
 				"valueType" : "INDEPENDENT_MIN",
-				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "soulExtracted"	} ],
-					[ "anyOf", 	{"type" : "CREATURE_TYPE_LIMITER", "creature" : "soulEater", "includeUpgrades" : true	}	]
+				"limiters" : [
+					[
+						"noneOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+							"bonusSubtype" : "soulExtracted"
+						}
+					],
+					[
+						"anyOf",
+						{
+							"type" : "CREATURE_TYPE_LIMITER",
+							"creature" : "soulEater",
+							"includeUpgrades" : true
+						}
+					]
 				]
-			},	
-					
-			"movementOff" :
-			{	
-				"type" : "STACKS_SPEED",
-				"propagator": "BATTLE_WIDE",
-				"val" : 0,
-				"valueType" : "INDEPENDENT_MIN",
-				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "soulExtracted"	} ],
-					[ "anyOf", 	{"type" : "CREATURE_TYPE_LIMITER", "creature" : "soulEater", "includeUpgrades" : true	}	]
-				]
-			},	
+			},
 
-			
-			"buffsOff" :
-			{	
-				"type" : "CASTS",
-				"propagator": "BATTLE_WIDE",
+			"movementOff" : {
+				"type" : "STACKS_SPEED",
+				"propagator" : "BATTLE_WIDE",
 				"val" : 0,
 				"valueType" : "INDEPENDENT_MIN",
-				"limiters": [
-					[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "soulExtracted"	} ],
-					[ "anyOf", 	{"type" : "CREATURE_TYPE_LIMITER", "creature" : "soulEater", "includeUpgrades" : true	}	]
+				"limiters" : [
+					[
+						"noneOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+							"bonusSubtype" : "soulExtracted"
+						}
+					],
+					[
+						"anyOf",
+						{
+							"type" : "CREATURE_TYPE_LIMITER",
+							"creature" : "soulEater",
+							"includeUpgrades" : true
+						}
+					]
 				]
-			},	
-					
-			"spellsOff" :
-			{	
+			},
+
+			"buffsOff" : {
+				"type" : "CASTS",
+				"propagator" : "BATTLE_WIDE",
+				"val" : 0,
+				"valueType" : "INDEPENDENT_MIN",
+				"limiters" : [
+					[
+						"noneOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+							"bonusSubtype" : "soulExtracted"
+						}
+					],
+					[
+						"anyOf",
+						{
+							"type" : "CREATURE_TYPE_LIMITER",
+							"creature" : "soulEater",
+							"includeUpgrades" : true
+						}
+					]
+				]
+			},
+
+			"spellsOff" : {
 				"type" : "BLOCK_ALL_MAGIC",
-				"propagator": "HERO",
-				"limiters": [ "noneOf", 
-					{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "soulExtracted"	}
-				]		
+				"propagator" : "HERO",
+				"limiters" : [
+					"noneOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+						"bonusSubtype" : "soulExtracted"
+					}
+				]
 			}
 		},
-		"graphics" :
-		{
-			"animation": "battle/commander/soulghost.def",
-			"animationTime" : { "attack" : 1, "idle" : 10, "walk" : 0.8 },
+		"graphics" : {
+			"animation" : "battle/commander/soulghost.def",
+			"animationTime" : {
+				"attack" : 1,
+				"idle" : 10,
+				"walk" : 0.8
+			},
 			"iconLarge" : "iconsBig/soulBACK",
 			"iconSmall" : "iconsSmall/smolsoul",
 			"timeBetweenFidgets" : 1
 		},
-		"sound" :
-		{
-			"attack": "stonedoor.wav",
-			"defend": "stonedoor.wav",
-			"killed": "BALLKILL.wav",
-			"move": "stonedoor.wav",
-			"wince": "stonedoor.wav"
+		"sound" : {
+			"attack" : "stonedoor.wav",
+			"defend" : "stonedoor.wav",
+			"killed" : "BALLKILL.wav",
+			"move" : "stonedoor.wav",
+			"wince" : "stonedoor.wav"
 		}
 	},
-	"expSoul1" :
-	{
+	"expSoul1" : {
 		"special" : true,
-		"advMapAmount" : {"max" : 0, "min" : 0},
+		"advMapAmount" : {
+			"max" : 0,
+			"min" : 0
+		},
 		"aiValue" : 0,
 		"attack" : 0,
-		"cost" : { "gold" : 0 },
-		"damage" : {"max" : 0, "min" : 0},
+		"cost" : {
+			"gold" : 0
+		},
+		"damage" : {
+			"max" : 0,
+			"min" : 0
+		},
 		"defense" : 0,
 		"faction" : "neutral",
 		"fightValue" : 0,
 		"growth" : 0,
 		"hitPoints" : 1,
-        "doubleWide" : true,
+		"doubleWide" : true,
 		"level" : 0,
 		"speed" : 333,
-		"name" : { "plural" : "Sun Rays", "singular" : "Sun Ray" },
-		"abilities":
-		{
-			"ephemeral" :
-				{
-					"type" : "ENCHANTED",
-					"subtype" : "ephemeralExtract",
-					"val" : 3
-				},
-				"flier" :
-				{
-					"type" : "FLYING",
-					"subtype" : "movementFlying"
-				},
+		"name" : {
+			"plural" : "Sun Rays",
+			"singular" : "Sun Ray"
+		},
+		"abilities" : {
+			"ephemeral" : {
+				"type" : "ENCHANTED",
+				"subtype" : "ephemeralExtract",
+				"val" : 3
+			},
+			"flier" : {
+				"type" : "FLYING",
+				"subtype" : "movementFlying"
+			},
 
-					
-				  //zeby zatrzymac wiezyczki/katapulte przed przyzwaniem duszka
-				  "stopSiegeMachines" :
-				  {
-					  "type" : "ENCHANTED",
-					  "subtype" : "siegeLimiter1",
-					  "propagator" : "BATTLE_WIDE",
-//					  "addInfo" : 0,
-					  "limiters": [
-						  [ "noneOf", 
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "siegeLimiterOff" } ],
-							[ "anyOf", 
-								{"type" : "CREATURE_TYPE_LIMITER", 
-									"creature" :  "catapult", 
-									"includeUpgrades" : true
-								},
-								{"type" : "CREATURE_TYPE_LIMITER", 
-									"creature" :  "arrowTower", 
-									"includeUpgrades" : true
-								}	 
-							]
-						]
-				  },
-					  "siegeMachinesTargets" :
-					  {
-						  "type" : "MORE_DAMAGE_FROM_SPELL",
-						  "subtype" : "siegeLimiter1",
-						  "propagator" : "BATTLE_WIDE",
-						  "val" : 100
-					  },
+			//zeby zatrzymac wiezyczki/katapulte przed przyzwaniem duszka
+			"stopSiegeMachines" : {
+				"type" : "ENCHANTED",
+				"subtype" : "siegeLimiter1",
+				"propagator" : "BATTLE_WIDE",
+				//					  "addInfo" : 0,
+				"limiters" : [
+					[
+						"noneOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+							"bonusSubtype" : "siegeLimiterOff"
+						}
+					],
+					[
+						"anyOf",
+						{
+							"type" : "CREATURE_TYPE_LIMITER",
+							"creature" : "catapult",
+							"includeUpgrades" : true
+						},
+						{
+							"type" : "CREATURE_TYPE_LIMITER",
+							"creature" : "arrowTower",
+							"includeUpgrades" : true
+						}
+					]
+				]
+			},
+			"siegeMachinesTargets" : {
+				"type" : "MORE_DAMAGE_FROM_SPELL",
+				"subtype" : "siegeLimiter1",
+				"propagator" : "BATTLE_WIDE",
+				"val" : 100
+			},
 
-			"razzleDazzleThem" :
-			{
+			"razzleDazzleThem" : {
 				"type" : "SPELL_AFTER_ATTACK",
 				"val" : 100,
 				"subtype" : "dazzleTarget"
 			},
 
-				"spellcastAmount" :
-				{
-					"type" : "CASTS",
-					"val" : 1,
-					"limiters": [ "noneOf", 
-					{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "expExtracted" 	}
-				]		
-				},
+			"spellcastAmount" : {
+				"type" : "CASTS",
+				"val" : 1,
+				"limiters" : [
+					"noneOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+						"bonusSubtype" : "expExtracted"
+					}
+				]
+			},
 
 			//get dunked on lol
-			"only3RaysMove" :
-			{
+			"only3RaysMove" : {
 				"type" : "SPELL_AFTER_ATTACK",
 				"val" : 100,
 				"subtype" : "expStop"
-			},	
-				//timestop
-				"soulExtractor2" :
-				{
-					"type" : "ENCHANTER",
-					"subtype" : "summonExperience",
-					"val" : 0,
-					"addInfo" : 1
-				},				
-					
-				"noCounter" :
-				{
-					"type" : "BLOCKS_RETALIATION"
-				},	
-					
-				"spellsOff" :
-				{	
-					"type" : "BLOCK_ALL_MAGIC",
-					"propagator": "HERO",
-					"limiters": [ "noneOf", 
-					{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "expExtracted" 	}
-				]		
-				}
+			},
+			//timestop
+			"soulExtractor2" : {
+				"type" : "ENCHANTER",
+				"subtype" : "summonExperience",
+				"val" : 0,
+				"addInfo" : 1
+			},
+
+			"noCounter" : {
+				"type" : "BLOCKS_RETALIATION"
+			},
+
+			"spellsOff" : {
+				"type" : "BLOCK_ALL_MAGIC",
+				"propagator" : "HERO",
+				"limiters" : [
+					"noneOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+						"bonusSubtype" : "expExtracted"
+					}
+				]
+			}
 			//"attackOff" :
-			//{	
+			//{
 			//	"type" : "NOT_ACTIVE",
 			//	"propagator": "BATTLE_WIDE",
 			//	"limiters": [
-			//		 "noneOf", 	{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "expSoul1", true ]	}	
+			//		 "noneOf", 	{"type" : "CREATURE_TYPE_LIMITER", "parameters" : [ "expSoul1", true ]	}
 			//				]
-			//}	
-				},
-		"graphics" :
-		{
-			"animation": "battle/commander/expghost.def",
-			"animationTime" : { "attack" : 1, "idle" : 10, "walk" : 0.8 },
+			//}
+		},
+		"graphics" : {
+			"animation" : "battle/commander/expghost.def",
+			"animationTime" : {
+				"attack" : 1,
+				"idle" : 10,
+				"walk" : 0.8
+			},
 			"iconLarge" : "iconsBig/expBACK",
 			"iconSmall" : "iconsSmall/smolexp",
 			"timeBetweenFidgets" : 1
 		},
-		"sound" :
-		{
-			"attack": "stonedoor.wav",
-			"defend": "stonedoor.wav",
-			"killed": "BALLKILL.wav",
-			"move": "stonedoor.wav",
-			"wince": "stonedoor.wav"
+		"sound" : {
+			"attack" : "stonedoor.wav",
+			"defend" : "stonedoor.wav",
+			"killed" : "BALLKILL.wav",
+			"move" : "stonedoor.wav",
+			"wince" : "stonedoor.wav"
 		}
 	}
 }

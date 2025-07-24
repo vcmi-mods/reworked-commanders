@@ -1,61 +1,85 @@
 {
-	"totemsCurseTrigger" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"totemsCurseTrigger" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Totem's Anger",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},		
-		"graphics":	{"iconEffect": "spells/TotCurs.bmp"},		
-		"animation":{
-			"affect":["C04SPW"]},
-		"sounds": {
-			"cast": "CURSE"},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconEffect" : "spells/TotCurs.bmp"
+		},
+		"animation" : {
+			"affect" : [
+				"C04SPW"
+			]
+		},
+		"sounds" : {
+			"cast" : "CURSE"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Totem's Anger}\r\n\r\nTotem has been angered and curse all the aggressors.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Totem's Anger}\r\n\r\nTotem has been angered and curse all the aggressors.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":false},
+				"targetModifier" : {
+					"smart" : false
+				},
 				"effects" : {
 					"curseEffect" : {
-//						"addInfo" : 0,
+						//						"addInfo" : 0,
 						"val" : 0,
 						"type" : "ALWAYS_MINIMUM_DAMAGE",
-						"valueType" : "INDEPENDENT_MAX",	
-						"propagator": "BATTLE_WIDE",
+						"valueType" : "INDEPENDENT_MAX",
+						"propagator" : "BATTLE_WIDE",
 
 						//klatwa powinna działać tylko wtedy, kiedy został nalozony bonus widoczny w limiterze
-							"limiters": [
+						"limiters" : [
 							//"allOf",  rzekomo opcjonalny
 							[
-								{ "type" : "HAS_ANOTHER_BONUS_LIMITER", 
-									"bonusType" : "MORE_DAMAGE_FROM_SPELL", 
+								{
+									"type" : "HAS_ANOTHER_BONUS_LIMITER",
+									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
 									"bonusSubtype" : "totemsCurseTrigger"
 								}
 							],
 							[
 								"noneOf",
-								{ "type" : "CREATURE_TYPE_LIMITER", 
-									"creature" :  "gnollShaman", 
-									"includeUpgrades" : true	
+								{
+									"type" : "CREATURE_TYPE_LIMITER",
+									"creature" : "gnollShaman",
+									"includeUpgrades" : true
 								}
 							]
 						]
 					}
 				}
 			},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {		
-			"reworked-commanders:creature.shamanTotem1":"absolute",	
-			"reworked-commanders:creature.shamanTotem2":"absolute"
-		}
-		},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {
+				"reworked-commanders:creature.shamanTotem1" : "absolute",
+				"reworked-commanders:creature.shamanTotem2" : "absolute"
+			}
+		},
 		"flags" : {
-			"negative": true
+			"negative" : true
 		}
 	}
 }

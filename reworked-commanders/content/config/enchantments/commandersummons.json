@@ -1,748 +1,1248 @@
 {
-	"summonBallista" : 
-	{
-		"type": "combat",	
+	"summonBallista" : {
+		"type" : "combat",
 		"targetType" : "NO_TARGET",
 		"name" : "Summon Ballista",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 0, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},		
-		"graphics":	{"iconEffect": "spells/tempNoEffect"},		
-		"animation":{
-			"cast":[2]
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
 		},
-		"sounds": {
-			"cast": "BALLWNCE"},
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconEffect" : "spells/tempNoEffect"
+		},
+		"animation" : {
+			"cast" : [
+				2
+			]
+		},
+		"sounds" : {
+			"cast" : "BALLWNCE"
+		},
 		"levels" : {
-			"base":
-			{
-				"description": "{Summon Ballista}\r\n\r\nWarmongers always make sure there's at least one ballista in any army they command.",
-				"power": 1,
-//				"aiValue": 0,
-				"cost": 5,
-				"range": "X",
-				"targetModifier":{"smart":true},
-				"battleEffects":{
-					"summon":{
-						"exclusive":false,
-						"id":"reworked-commanders:ogreBallista1",
-						"permanent":false,
-						"type":"core:summon"
-					},						
+			"base" : {
+				"description" : "{Summon Ballista}\r\n\r\nWarmongers always make sure there's at least one ballista in any army they command.",
+				"power" : 1,
+				//				"aiValue": 0,
+				"cost" : 5,
+				"range" : "X",
+				"targetModifier" : {
+					"smart" : true
+				},
+				"battleEffects" : {
+					"summon" : {
+						"exclusive" : false,
+						"id" : "reworked-commanders:ogreBallista1",
+						"permanent" : false,
+						"type" : "core:summon"
+					},
 					"summonOnce" : {
-						"type":"core:timed",
-						"bonus":{
-						"blockAnotherSummon" : {
-							"type" : "MORE_DAMAGE_FROM_SPELL",
-							"val" : 100,
-							"subtype" : "summonBallista",
-							"duration" : "ONE_BATTLE",		
-							"limiters": [
-								[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machinePriority"} ],
-								[ "allOf", {"type" : "CREATURE_TYPE_LIMITER", "creature" :  "warmonger", "includeUpgrades" : true	} ]
-							]	
-						},
-						"inactive" :
-						{
-							"type" : "NOT_ACTIVE",
-							"propagator": "BATTLE_WIDE",
-							"limiters": [
+						"type" : "core:timed",
+						"bonus" : {
+							"blockAnotherSummon" : {
+								"type" : "MORE_DAMAGE_FROM_SPELL",
+								"val" : 100,
+								"subtype" : "summonBallista",
+								"duration" : "ONE_BATTLE",
+								"limiters" : [
+									[
+										"noneOf",
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "machinePriority"
+										}
+									],
+									[
+										"allOf",
+										{
+											"type" : "CREATURE_TYPE_LIMITER",
+											"creature" : "warmonger",
+											"includeUpgrades" : true
+										}
+									]
+								]
+							},
+							"inactive" : {
+								"type" : "NOT_ACTIVE",
+								"propagator" : "BATTLE_WIDE",
+								"limiters" : [
 									"noneOf",
-										
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machinePriority"},
-										//{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "soulEater", "includeUpgrades" : true	},
-										{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "necromancySoul1", "includeUpgrades" : true	},
-										{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "expSoul1", "includeUpgrades" : true	},
-										//{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "paladin", "includeUpgrades" : true	},
-										{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "gnollShaman", "includeUpgrades" : true	},
-										{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "hierophant", "includeUpgrades" : true	},
-										{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "warmonger", "includeUpgrades" : true	},
-										{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "catapult", "includeUpgrades" : true	}
+
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "machinePriority"
+									},
+									//{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "soulEater", "includeUpgrades" : true	},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "necromancySoul1",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "expSoul1",
+										"includeUpgrades" : true
+									},
+									//{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "paladin", "includeUpgrades" : true	},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "gnollShaman",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "hierophant",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "warmonger",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "catapult",
+										"includeUpgrades" : true
+									}
 								],
 								"duration" : "N_TURNS",
-								"turns": 1
-						},	
-						"spellsOff" :
-						{	
-							"type" : "BLOCK_ALL_MAGIC",
-							"propagator": "HERO",
-							"limiters": [ 
-							"noneOf", 
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machinePriority"}
-							],
-						"duration" : "N_TURNS",
-						"turns": 1	
+								"turns" : 1
+							},
+							"spellsOff" : {
+								"type" : "BLOCK_ALL_MAGIC",
+								"propagator" : "HERO",
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "machinePriority"
+									}
+								],
+								"duration" : "N_TURNS",
+								"turns" : 1
+							}
 						}
 					}
-					}
-				}				
+				}
 			},
-			"none":{}, "basic":{}, "advanced":{}, "expert":{
-				"description": "{Summon Siege Ballista}\r\n\r\nWarmongers always make sure there's at least one ballista in any army they command.",
-				"battleEffects":{
-					"summon":{
-						"id":"reworked-commanders:ogreBallista2"
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {
+				"description" : "{Summon Siege Ballista}\r\n\r\nWarmongers always make sure there's at least one ballista in any army they command.",
+				"battleEffects" : {
+					"summon" : {
+						"id" : "reworked-commanders:ogreBallista2"
 					}
 				}
 				//"power": 2
 			}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {}},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"indifferent": true,
-			"special": true
+			"indifferent" : true,
+			"special" : true
 		}
 	},
-	"summonTotem" : 
-	{
-		"type": "combat",	
+	"summonTotem" : {
+		"type" : "combat",
 		"targetType" : "NO_TARGET",
 		"name" : "Summon Totem",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 0, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},		
-		"graphics":	{"iconEffect": "spells/tempNoEffect"},
-		"animation":{
-			"cast":[2]
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
 		},
-		"sounds": {
-			"cast": "SACRIF1"},
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconEffect" : "spells/tempNoEffect"
+		},
+		"animation" : {
+			"cast" : [
+				2
+			]
+		},
+		"sounds" : {
+			"cast" : "SACRIF1"
+		},
 		"levels" : {
-			"base":
-			{
-				"description": "{Summon Basic Totem}\r\n\r\nShamans channel land's primal magic through totems.",
-				"power": 1,
-//				"aiValue": 0,
-				"cost": 5,
-				"range": "X",
-				"targetModifier":{"smart":true},
-				"battleEffects":{
-					"summon":{
-						"exclusive":false,
-						"id":"reworked-commanders:shamanTotem1",
-						"permanent":false,
-						"type":"core:summon"
+			"base" : {
+				"description" : "{Summon Basic Totem}\r\n\r\nShamans channel land's primal magic through totems.",
+				"power" : 1,
+				//				"aiValue": 0,
+				"cost" : 5,
+				"range" : "X",
+				"targetModifier" : {
+					"smart" : true
+				},
+				"battleEffects" : {
+					"summon" : {
+						"exclusive" : false,
+						"id" : "reworked-commanders:shamanTotem1",
+						"permanent" : false,
+						"type" : "core:summon"
 					},
 					"summonOnce" : {
-						"type":"core:timed",
-						"bonus":{
-						"blockAnotherSummon" : {
-							"type" : "MORE_DAMAGE_FROM_SPELL",
-							"val" : 100,
-							"subtype" : "summonTotem",
-							"duration" : "ONE_BATTLE",		
-							"limiters": [
-								[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machinePriority"} ],
-								[ "allOf", {"type" : "CREATURE_TYPE_LIMITER", "creature" :  "gnollShaman", "includeUpgrades" : true	} ]
-										]	
-						},
-						"inactive" :
-						{
-							"type" : "NOT_ACTIVE",
-							"propagator": "BATTLE_WIDE",
-							"limiters": [
+						"type" : "core:timed",
+						"bonus" : {
+							"blockAnotherSummon" : {
+								"type" : "MORE_DAMAGE_FROM_SPELL",
+								"val" : 100,
+								"subtype" : "summonTotem",
+								"duration" : "ONE_BATTLE",
+								"limiters" : [
+									[
+										"noneOf",
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "machinePriority"
+										}
+									],
+									[
+										"allOf",
+										{
+											"type" : "CREATURE_TYPE_LIMITER",
+											"creature" : "gnollShaman",
+											"includeUpgrades" : true
+										}
+									]
+								]
+							},
+							"inactive" : {
+								"type" : "NOT_ACTIVE",
+								"propagator" : "BATTLE_WIDE",
+								"limiters" : [
 									"noneOf",
-										
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machinePriority"},
-										{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "necromancySoul1", "includeUpgrades" : true	},
-										{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "expSoul1", "includeUpgrades" : true	},
-										{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "gnollShaman", "includeUpgrades" : true	},
-										{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "hierophant", "includeUpgrades" : true	},
-										{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "warmonger", "includeUpgrades" : true	},
-										{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "catapult", "includeUpgrades" : true	}
-										
-								],
-								"duration" : "N_TURNS",
-								"turns": 1
-						},	
-						"spellsOff" :
-						{	
-							"type" : "BLOCK_ALL_MAGIC",
-							"propagator": "HERO",
-							"limiters": [ "noneOf", 
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machinePriority"}
-						],
-						"duration" : "N_TURNS",
-						"turns": 1	
-						}}
-					}
-				}				
-			},
-			"none":{}, "basic":{}, "advanced":{}, "expert":{	
-				"description": "{Summon Ancestral Totem}\r\n\r\nShamans channel land's primal magic through totems.",			
-				"battleEffects":{
-				"summon":{
-					"id":"reworked-commanders:shamanTotem2"
-				}
-			}}
-		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {}},		
-		"flags" : {
-			"positive": true,
-			"special": true
-		}
-	},
 
-	"summonTent" : 
-	{
-		"type": "combat",	
-		"targetType" : "NO_TARGET",
-		"name" : "Summon First Aid Tent",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 0, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},	
-		"graphics":	{"iconEffect": "spells/tempNoEffect"},
-		"animation":{
-			"cast":[2]
-		},
-		"sounds": {
-			"cast": "FAIDWNCE"},
-		"levels" : {
-			"base":
-			{
-				"description": "{Summon First Aid Tent}\r\n\r\nHierophants always insist on at least one first aid tent for any army they command.",
-				"power": 1,
-//				"aiValue": 0,
-				"cost": 5,
-				"range": "X",
-				"targetModifier":{"smart":true},
-				"battleEffects":{
-					"summon":{
-						"exclusive":false,
-						"id":"reworked-commanders:hierophantTent1",
-						"permanent":false,
-						"type":"core:summon"
-					},
-					"summonOnce" : {
-						"type":"core:timed",
-						"bonus":{
-						"blockAnotherSummon" : {
-							"type" : "MORE_DAMAGE_FROM_SPELL",
-							"val" : 100,
-							"subtype" : "summonTent",
-							"duration" : "ONE_BATTLE",	
-							"limiters": [
-								[ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machinePriority"} ],
-								[ "allOf", {"type" : "CREATURE_TYPE_LIMITER", "creature" :  "hierophant", "includeUpgrades" : true	} ]
-										]
-						},
-						"inactive" :
-						{
-							"type" : "NOT_ACTIVE",
-							"propagator": "BATTLE_WIDE",
-							"limiters": [
-									"noneOf",
-										
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machinePriority"},
-										{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "necromancySoul1", "includeUpgrades" : true	},
-										{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "expSoul1", "includeUpgrades" : true	},
-										{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "gnollShaman", "includeUpgrades" : true	},
-										{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "hierophant", "includeUpgrades" : true	},
-										{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "warmonger", "includeUpgrades" : true	}
-										
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "machinePriority"
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "necromancySoul1",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "expSoul1",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "gnollShaman",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "hierophant",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "warmonger",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "catapult",
+										"includeUpgrades" : true
+									}
 								],
 								"duration" : "N_TURNS",
-								"turns": 1
-						},	
-						"spellsOff" :
-						{	
-							"type" : "BLOCK_ALL_MAGIC",
-							"propagator": "HERO",
-							"limiters": [ "noneOf", 
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machinePriority"}
-						],
-						"duration" : "N_TURNS",
-						"turns": 1	
+								"turns" : 1
+							},
+							"spellsOff" : {
+								"type" : "BLOCK_ALL_MAGIC",
+								"propagator" : "HERO",
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "machinePriority"
+									}
+								],
+								"duration" : "N_TURNS",
+								"turns" : 1
+							}
 						}
 					}
-					}
-				}				
-			},
-			"none":{}, "basic":{}, "advanced":{}, "expert":{
-				
-				"description": "{Summon Emergency Tent}\r\n\r\nHierophants always insist on at least one first aid tent for any army they command.",				
-				"battleEffects":{
-				"summon":{
-					"id":"reworked-commanders:hierophantTent2"
 				}
-			}}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {
+				"description" : "{Summon Ancestral Totem}\r\n\r\nShamans channel land's primal magic through totems.",
+				"battleEffects" : {
+					"summon" : {
+						"id" : "reworked-commanders:shamanTotem2"
+					}
+				}
+			}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {}},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true,
-			"special": true
+			"positive" : true,
+			"special" : true
 		}
 	},
-	"machinePriority" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
-		"name" : "Machine Provider",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 0, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},	
-		"graphics":	{"iconEffect": "spells/machinedeployed"},
-		"animation":{
-			"affect":["C04SPW"]},
-		"sounds": {
-			"cast": "CURSE"},
-		"levels" : {
-			"base":{
 
-				"description": "{Machine Provider}\r\n\r\nThe weapon of war has been provided.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+	"summonTent" : {
+		"type" : "combat",
+		"targetType" : "NO_TARGET",
+		"name" : "Summon First Aid Tent",
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconEffect" : "spells/tempNoEffect"
+		},
+		"animation" : {
+			"cast" : [
+				2
+			]
+		},
+		"sounds" : {
+			"cast" : "FAIDWNCE"
+		},
+		"levels" : {
+			"base" : {
+				"description" : "{Summon First Aid Tent}\r\n\r\nHierophants always insist on at least one first aid tent for any army they command.",
+				"power" : 1,
+				//				"aiValue": 0,
+				"cost" : 5,
+				"range" : "X",
+				"targetModifier" : {
+					"smart" : true
+				},
+				"battleEffects" : {
+					"summon" : {
+						"exclusive" : false,
+						"id" : "reworked-commanders:hierophantTent1",
+						"permanent" : false,
+						"type" : "core:summon"
+					},
+					"summonOnce" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"blockAnotherSummon" : {
+								"type" : "MORE_DAMAGE_FROM_SPELL",
+								"val" : 100,
+								"subtype" : "summonTent",
+								"duration" : "ONE_BATTLE",
+								"limiters" : [
+									[
+										"noneOf",
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "machinePriority"
+										}
+									],
+									[
+										"allOf",
+										{
+											"type" : "CREATURE_TYPE_LIMITER",
+											"creature" : "hierophant",
+											"includeUpgrades" : true
+										}
+									]
+								]
+							},
+							"inactive" : {
+								"type" : "NOT_ACTIVE",
+								"propagator" : "BATTLE_WIDE",
+								"limiters" : [
+									"noneOf",
+
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "machinePriority"
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "necromancySoul1",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "expSoul1",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "gnollShaman",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "hierophant",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "warmonger",
+										"includeUpgrades" : true
+									}
+								],
+								"duration" : "N_TURNS",
+								"turns" : 1
+							},
+							"spellsOff" : {
+								"type" : "BLOCK_ALL_MAGIC",
+								"propagator" : "HERO",
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "machinePriority"
+									}
+								],
+								"duration" : "N_TURNS",
+								"turns" : 1
+							}
+						}
+					}
+				}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {
+				"description" : "{Summon Emergency Tent}\r\n\r\nHierophants always insist on at least one first aid tent for any army they command.",
+				"battleEffects" : {
+					"summon" : {
+						"id" : "reworked-commanders:hierophantTent2"
+					}
+				}
+			}
+		},
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
+		"flags" : {
+			"positive" : true,
+			"special" : true
+		}
+	},
+	"machinePriority" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
+		"name" : "Machine Provider",
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"graphics" : {
+			"iconEffect" : "spells/machinedeployed"
+		},
+		"animation" : {
+			"affect" : [
+				"C04SPW"
+			]
+		},
+		"sounds" : {
+			"cast" : "CURSE"
+		},
+		"levels" : {
+			"base" : {
+				"description" : "{Machine Provider}\r\n\r\nThe weapon of war has been provided.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
 					"stacksSpeed" : {
-//						"addInfo" : 0,
+						//						"addInfo" : 0,
 						"type" : "STACKS_SPEED",
 						"val" : 999,
 						"duration" : "STACK_GETS_TURN",
-						"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machinePriority"} ]
+						"limiters" : [
+							"noneOf",
+							{
+								"type" : "HAS_ANOTHER_BONUS_LIMITER",
+								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+								"bonusSubtype" : "machinePriority"
+							}
+						]
 					},
 
 					"speedRevert" : {
-//						"addInfo" : 0,
+						//						"addInfo" : 0,
 						"type" : "ENCHANTED",
 						"subtype" : "machineSummoned",
-						"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machinePriority"} ]
+						"limiters" : [
+							"noneOf",
+							{
+								"type" : "HAS_ANOTHER_BONUS_LIMITER",
+								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+								"bonusSubtype" : "machinePriority"
+							}
+						]
 					},
 
 					"shootingOff2" : {
 						"val" : 3,
 						"type" : "FORGETFULL",
-						"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machinePriority"} ]
+						"limiters" : [
+							"noneOf",
+							{
+								"type" : "HAS_ANOTHER_BONUS_LIMITER",
+								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+								"bonusSubtype" : "machinePriority"
+							}
+						]
 					},
 
-					"shootingOff" :
-					{	
+					"shootingOff" : {
 						"type" : "SHOTS",
 						"val" : 0,
 						"valueType" : "INDEPENDENT_MIN",
-						"limiters": [
-							[ 
-								"noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machinePriority"}
+						"limiters" : [
+							[
+								"noneOf",
+								{
+									"type" : "HAS_ANOTHER_BONUS_LIMITER",
+									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+									"bonusSubtype" : "machinePriority"
+								}
 							],
-							[ 
-								"anyOf", 	{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "summonTent"	},
-									{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "summonTotem"	},
-									{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" :"summonBallista"	} 
+							[
+								"anyOf",
+								{
+									"type" : "HAS_ANOTHER_BONUS_LIMITER",
+									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+									"bonusSubtype" : "summonTent"
+								},
+								{
+									"type" : "HAS_ANOTHER_BONUS_LIMITER",
+									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+									"bonusSubtype" : "summonTotem"
+								},
+								{
+									"type" : "HAS_ANOTHER_BONUS_LIMITER",
+									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+									"bonusSubtype" : "summonBallista"
+								}
 							]
 						]
-					},	
-					
-				"movementOff" :
-				{	
-					"type" : "STACKS_SPEED",
-					"val" : 0,
-					"valueType" : "INDEPENDENT_MIN",
-					"limiters": [
-						[ 
-							"noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machinePriority"}
-						],
-						[ 
-							"anyOf", 	{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "summonTent"},
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "summonTotem"},
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "summonBallista"} 
-						]
-					]
-				},
+					},
 
-				"buffsOff" :
-				{	
-					"type" : "CASTS",
-					"val" : 0,
-					"valueType" : "INDEPENDENT_MIN",
-					"limiters": [
-						[ 
-							"noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "machinePriority"}
-						],
-						[ 
-							"anyOf", 	{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "summonTent"},
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "summonTotem"},
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "summonBallista"}
+					"movementOff" : {
+						"type" : "STACKS_SPEED",
+						"val" : 0,
+						"valueType" : "INDEPENDENT_MIN",
+						"limiters" : [
+							[
+								"noneOf",
+								{
+									"type" : "HAS_ANOTHER_BONUS_LIMITER",
+									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+									"bonusSubtype" : "machinePriority"
+								}
+							],
+							[
+								"anyOf",
+								{
+									"type" : "HAS_ANOTHER_BONUS_LIMITER",
+									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+									"bonusSubtype" : "summonTent"
+								},
+								{
+									"type" : "HAS_ANOTHER_BONUS_LIMITER",
+									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+									"bonusSubtype" : "summonTotem"
+								},
+								{
+									"type" : "HAS_ANOTHER_BONUS_LIMITER",
+									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+									"bonusSubtype" : "summonBallista"
+								}
+							]
 						]
-					]
-					
-					//"timestop" : {
-					//	"type" : "NOT_ACTIVE",
-					//	"duration" : "N_TURNS",
-					//	"turns" : 1
-					//}
+					},
+
+					"buffsOff" : {
+						"type" : "CASTS",
+						"val" : 0,
+						"valueType" : "INDEPENDENT_MIN",
+						"limiters" : [
+							[
+								"noneOf",
+								{
+									"type" : "HAS_ANOTHER_BONUS_LIMITER",
+									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+									"bonusSubtype" : "machinePriority"
+								}
+							],
+							[
+								"anyOf",
+								{
+									"type" : "HAS_ANOTHER_BONUS_LIMITER",
+									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+									"bonusSubtype" : "summonTent"
+								},
+								{
+									"type" : "HAS_ANOTHER_BONUS_LIMITER",
+									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+									"bonusSubtype" : "summonTotem"
+								},
+								{
+									"type" : "HAS_ANOTHER_BONUS_LIMITER",
+									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+									"bonusSubtype" : "summonBallista"
+								}
+							]
+						]
+
+						//"timestop" : {
+						//	"type" : "NOT_ACTIVE",
+						//	"duration" : "N_TURNS",
+						//	"turns" : 1
+						//}
+					}
 				}
-			}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {} },	
 		"flags" : {
-			"positive": true
+			"positive" : true
 		}
 	},
 
-	
-	"machineSummoned" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"machineSummoned" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Machine Provider",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 0, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},	
-		"graphics":	{"iconEffect": "spells/machinedeployed"},
-		"animation":{
-			"affect":["C04SPW"]},
-		"sounds": {
-			"cast": "CURSE"},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"graphics" : {
+			"iconEffect" : "spells/machinedeployed"
+		},
+		"animation" : {
+			"affect" : [
+				"C04SPW"
+			]
+		},
+		"sounds" : {
+			"cast" : "CURSE"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Machine Provider}\r\n\r\nThe weapon of war has been provided.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Machine Provider}\r\n\r\nThe weapon of war has been provided.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
-					
 					"speedRevert" : {
 						"type" : "MORE_DAMAGE_FROM_SPELL",
 						"val" : 100,
 						"subtype" : "machinePriority"
 					}
 				}
-
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {} },	
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true
+			"positive" : true
 		}
 	},
 
-	
-	"siegeLimiter1" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"siegeLimiter1" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Siege Limited",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 0, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},	
-		"graphics":	{"iconEffect": "spells/tempNoEffect"},
-		"animation":{
-			"affect":["C04SPW"]},
-		"sounds": {
-			"cast": "CURSE"},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"graphics" : {
+			"iconEffect" : "spells/tempNoEffect"
+		},
+		"animation" : {
+			"affect" : [
+				"C04SPW"
+			]
+		},
+		"sounds" : {
+			"cast" : "CURSE"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Siege Limiter}\r\n\r\nStops catapult and towers from shooting in 1st turn.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Siege Limiter}\r\n\r\nStops catapult and towers from shooting in 1st turn.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
 					"siegetimestop" : {
 						"type" : "NOT_ACTIVE",
 						"propagator" : "BATTLE_WIDE",
-						"limiters": [
+						"limiters" : [
 							"allOf",
 							[
-								{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "arrowTower", "includeUpgrades" : true	},
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "siegeLimiter1"}
+								{
+									"type" : "CREATURE_TYPE_LIMITER",
+									"creature" : "arrowTower",
+									"includeUpgrades" : true
+								},
+								{
+									"type" : "HAS_ANOTHER_BONUS_LIMITER",
+									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+									"bonusSubtype" : "siegeLimiter1"
+								}
 							],
 							[
 								"noneOf",
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "siegeLimiterOff"}
+								{
+									"type" : "HAS_ANOTHER_BONUS_LIMITER",
+									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+									"bonusSubtype" : "siegeLimiterOff"
+								}
 							]
 						]
 					},
 					"siegetimestop2" : {
 						"type" : "NOT_ACTIVE",
 						"propagator" : "BATTLE_WIDE",
-						"limiters": [
+						"limiters" : [
 							"allOf",
 							[
-								{ "type" : "CREATURE_TYPE_LIMITER",  "creature" : "catapult", "includeUpgrades" : true	},
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "siegeLimiter1"}
+								{
+									"type" : "CREATURE_TYPE_LIMITER",
+									"creature" : "catapult",
+									"includeUpgrades" : true
+								},
+								{
+									"type" : "HAS_ANOTHER_BONUS_LIMITER",
+									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+									"bonusSubtype" : "siegeLimiter1"
+								}
 							],
 							[
 								"noneOf",
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "siegeLimiterOff"}
+								{
+									"type" : "HAS_ANOTHER_BONUS_LIMITER",
+									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+									"bonusSubtype" : "siegeLimiterOff"
+								}
 							]
 						]
 					},
-					
+
 					"timeRevert" : {
 						"type" : "ENCHANTED",
 						"subtype" : "siegeLimiterOff",
-						"limiters": [
+						"limiters" : [
 							"anyOf",
 							[
-								{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "catapult", "includeUpgrades" : true },	
-								{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "arrowTower", "includeUpgrades" : true	}
+								{
+									"type" : "CREATURE_TYPE_LIMITER",
+									"creature" : "catapult",
+									"includeUpgrades" : true
+								},
+								{
+									"type" : "CREATURE_TYPE_LIMITER",
+									"creature" : "arrowTower",
+									"includeUpgrades" : true
+								}
 							],
 							[
 								"noneOf",
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "siegeLimiterOff"}
+								{
+									"type" : "HAS_ANOTHER_BONUS_LIMITER",
+									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+									"bonusSubtype" : "siegeLimiterOff"
+								}
 							]
 						]
 					}
-					
-
 				}
-
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {
-			"core:creature.catapult":"absolute", 
-			"core:creature.arrowTower":"absolute"
-
-		} },	
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {
+				"core:creature.catapult" : "absolute",
+				"core:creature.arrowTower" : "absolute"
+			}
+		},
 		"flags" : {
-			"indifferent": true
+			"indifferent" : true
 		}
 	},
 
-	
-
-	"siegeLimiterOff" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"siegeLimiterOff" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Siege Limited",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 0, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},	
-		"graphics":	{"iconEffect": "spells/tempNoEffect"},
-		"animation":{
-			"affect":["C04SPW"]},
-		"sounds": {
-			"cast": "CURSE"},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"graphics" : {
+			"iconEffect" : "spells/tempNoEffect"
+		},
+		"animation" : {
+			"affect" : [
+				"C04SPW"
+			]
+		},
+		"sounds" : {
+			"cast" : "CURSE"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Siege Limiter}\r\n\r\nStops catapult and towers from shooting in 1st turn.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Siege Limiter}\r\n\r\nStops catapult and towers from shooting in 1st turn.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
-					
 					"siegeLimiter1" : {
 						"type" : "MORE_DAMAGE_FROM_SPELL",
 						"val" : 100,
 						"subtype" : "siegeLimiterOff"
 					}
 				}
-
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {} },	
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"indifferent": true
+			"indifferent" : true
 		}
 	},
 
-	"soulPriority" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"soulPriority" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Soul Provider",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 0, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},	
-		"graphics":	{"iconEffect": "spells/soulextracted"},
-		"animation":{
-			"affect":["C04SPW"]},
-		"sounds": {
-			"cast": "CURSE"},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"graphics" : {
+			"iconEffect" : "spells/soulextracted"
+		},
+		"animation" : {
+			"affect" : [
+				"C04SPW"
+			]
+		},
+		"sounds" : {
+			"cast" : "CURSE"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Soul Provider}\r\n\r\nThe warring souls have been extracted.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Soul Provider}\r\n\r\nThe warring souls have been extracted.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
-
-					"necroAmpcastsAmount" :
-					{
+					"necroAmpcastsAmount" : {
 						"type" : "CASTS",
 						"val" : 1,
-						"limiters": [ "noneOf", 
-						{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "soulExtracted"}
-					]		
+						"limiters" : [
+							"noneOf",
+							{
+								"type" : "HAS_ANOTHER_BONUS_LIMITER",
+								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+								"bonusSubtype" : "soulExtracted"
+							}
+						]
 					},
-					
 
 					"stacksSpeed" : {
 						"type" : "STACKS_SPEED",
 						"val" : 999,
-						"duration" : "STACK_GETS_TURN",	
-						"limiters": [ "noneOf", 
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "soulExtracted"}
-							 ]
+						"duration" : "STACK_GETS_TURN",
+						"limiters" : [
+							"noneOf",
+							{
+								"type" : "HAS_ANOTHER_BONUS_LIMITER",
+								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+								"bonusSubtype" : "soulExtracted"
+							}
+						]
 					},
 					"shootingOff2" : {
 						"val" : 3,
 						"type" : "FORGETFULL",
-						"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "soulExtracted"} ]
+						"limiters" : [
+							"noneOf",
+							{
+								"type" : "HAS_ANOTHER_BONUS_LIMITER",
+								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+								"bonusSubtype" : "soulExtracted"
+							}
+						]
 					},
 
 					"speedRevert" : {
 						"type" : "ENCHANTED",
-						"subtype" : "soulExtracted",	
-						"limiters": [ "noneOf", 
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "soulExtracted"}
-							 ]
+						"subtype" : "soulExtracted",
+						"limiters" : [
+							"noneOf",
+							{
+								"type" : "HAS_ANOTHER_BONUS_LIMITER",
+								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+								"bonusSubtype" : "soulExtracted"
+							}
+						]
 					},
-					
-			"siegeMachinesTargets" :
-			{
-				"type" : "MORE_DAMAGE_FROM_SPELL",
-				"subtype" : "siegeLimiter1",
-				"propagator" : "BATTLE_WIDE",
-				"val" : 100,
-				"limiters": [
-					[ "noneOf", 
-						{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "siegeLimiterOff"} ],
-					[ "anyOf", 
-						{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "catapult", "includeUpgrades" : true },
-							{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "arrowTower", "includeUpgrades" : true	} 
-					]
-				]
-			}
-					
+
+					"siegeMachinesTargets" : {
+						"type" : "MORE_DAMAGE_FROM_SPELL",
+						"subtype" : "siegeLimiter1",
+						"propagator" : "BATTLE_WIDE",
+						"val" : 100,
+						"limiters" : [
+							[
+								"noneOf",
+								{
+									"type" : "HAS_ANOTHER_BONUS_LIMITER",
+									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+									"bonusSubtype" : "siegeLimiterOff"
+								}
+							],
+							[
+								"anyOf",
+								{
+									"type" : "CREATURE_TYPE_LIMITER",
+									"creature" : "catapult",
+									"includeUpgrades" : true
+								},
+								{
+									"type" : "CREATURE_TYPE_LIMITER",
+									"creature" : "arrowTower",
+									"includeUpgrades" : true
+								}
+							]
+						]
+					}
 
 					//"morale-2" : {
 					//	"addInfo" : 0,
 					//	"type" : "ENCHANTED",
-					//	"subtype" : "soulExtracted",	
+					//	"subtype" : "soulExtracted",
 					//	"propagator" : "BATTLE_WIDE",
-					//	"limiters": [ "allOf", 
+					//	"limiters": [ "allOf",
 					//		{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : [ "MORE_DAMAGE_FROM_SPELL", "summonNecroSouls"]	}
 					//		 ]
 					//}
-			}
+				}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
 		},
-			"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {} },	
-			"flags" : {
-				"positive": true
+		"flags" : {
+			"positive" : true
 		}
 	},
 
-	"summonNecroSouls" : 
-	{
-		"type": "ability",	
+	"summonNecroSouls" : {
+		"type" : "ability",
 		"targetType" : "NO_TARGET",
 		"name" : "Summon Necromantic Souls",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 0, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},		
-		"graphics":	{"iconEffect": "spells/tempNoEffect"},
-		"animation":{
-			"cast":[2]
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
 		},
-		"sounds": {
-			"cast": "SUMNELM"},
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconEffect" : "spells/tempNoEffect"
+		},
+		"animation" : {
+			"cast" : [
+				2
+			]
+		},
+		"sounds" : {
+			"cast" : "SUMNELM"
+		},
 		"levels" : {
-			"base":
-			{
-				"description": "{Extract Basic Soul}\r\n\r\nThe soul is ripe for the reaping.",
-				"power": 1,
-//				"aiValue": 0,
-				"cost": 5,
-				"range": "X",
-				"targetModifier":{"smart":false},
-				"battleEffects":{
-					"summon":{
-						"exclusive":false,
-						"id":"reworked-commanders:necromancySoul1",
-						"permanent":false,
-						"type":"core:summon"
+			"base" : {
+				"description" : "{Extract Basic Soul}\r\n\r\nThe soul is ripe for the reaping.",
+				"power" : 1,
+				//				"aiValue": 0,
+				"cost" : 5,
+				"range" : "X",
+				"targetModifier" : {
+					"smart" : false
+				},
+				"battleEffects" : {
+					"summon" : {
+						"exclusive" : false,
+						"id" : "reworked-commanders:necromancySoul1",
+						"permanent" : false,
+						"type" : "core:summon"
 					},
 					"additionalEffect" : {
-						"type":"core:timed",
-						"bonus":{
-							"inactive" :
-							{
+						"type" : "core:timed",
+						"bonus" : {
+							"inactive" : {
 								"type" : "NOT_ACTIVE",
-								"propagator": "BATTLE_WIDE",
-								"limiters": [
-										"noneOf",
-											
-											{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "soulExtracted"},
-											{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "necromancySoul1", "includeUpgrades" : true	},
-											{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "expSoul1", "includeUpgrades" : true	},
-											{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "gnollShaman", "includeUpgrades" : true	},
-											{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "hierophant", "includeUpgrades" : true	},
-											{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "warmonger", "includeUpgrades" : true	},
-											{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "catapult", "includeUpgrades" : true	}
-									],
-									"duration" : "N_TURNS",
-									"turns": 1
+								"propagator" : "BATTLE_WIDE",
+								"limiters" : [
+									"noneOf",
+
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "soulExtracted"
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "necromancySoul1",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "expSoul1",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "gnollShaman",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "hierophant",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "warmonger",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "catapult",
+										"includeUpgrades" : true
+									}
+								],
+								"duration" : "N_TURNS",
+								"turns" : 1
 							},
 
 							"-2morale" : {
 								"type" : "ENCHANTED",
 								"subtype" : "bannerOfDeath",
-								"limiters": [
-									[ "noneOf", 
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "soulExtracted"},
-										{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "soulEater", "includeUpgrades" : true	}
-
+								"limiters" : [
+									[
+										"noneOf",
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "soulExtracted"
+										},
+										{
+											"type" : "CREATURE_TYPE_LIMITER",
+											"creature" : "soulEater",
+											"includeUpgrades" : true
+										}
 									],
-									[ "allOf", 
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "bannerOfDeath"} ]
+									[
+										"allOf",
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "bannerOfDeath"
+										}
 									]
+								]
 							}
 						}
 					}
-				}				
+				}
 			},
-			"none":{}, "basic":{
-				"battleEffects":{
-
+			"none" : {},
+			"basic" : {
+				"battleEffects" : {
 					"additionalEffect" : {
-						"type":"core:timed",
-						"bonus":{
+						"type" : "core:timed",
+						"bonus" : {}
 					}
-					}
-				}				
-			}, "advanced":{}, "expert":{
-		}
+				}
+			},
+			"advanced" : {},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},
-			"anyOf" : {}},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"indifferent": true,
-			"special": true
+			"indifferent" : true,
+			"special" : true
 		}
 	},
-	"soulExtracted" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"soulExtracted" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Essence Extracted",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 0, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},	
-		"graphics":	{"iconEffect": "spells/soulextracted"},
-		"animation":{
-			"affect":["C04SPW"]},
-		"sounds": {
-			"cast": "CURSE"},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"graphics" : {
+			"iconEffect" : "spells/soulextracted"
+		},
+		"animation" : {
+			"affect" : [
+				"C04SPW"
+			]
+		},
+		"sounds" : {
+			"cast" : "CURSE"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Essence Extracted}\r\n\r\nThe essence of the soul has been extracted.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Essence Extracted}\r\n\r\nThe essence of the soul has been extracted.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":false},
+				"targetModifier" : {
+					"smart" : false
+				},
 				"effects" : {
 					"commsLimiter" : {
 						"type" : "MORE_DAMAGE_FROM_SPELL",
@@ -752,131 +1252,202 @@
 						//"propagator": "BATTLE_WIDE"
 					}
 				}
-
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {} },	
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"indifferent": true
+			"indifferent" : true
 		}
 	},
-	"bannerOfLight" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"bannerOfLight" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Banner of Light",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 0, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},	
-		"graphics":	{"iconEffect": "spells/expextracted"},
-		"animation":{
-			"affect":["C04SPW"]},
-		"sounds": {
-			"cast": "CURSE"},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"graphics" : {
+			"iconEffect" : "spells/expextracted"
+		},
+		"animation" : {
+			"affect" : [
+				"C04SPW"
+			]
+		},
+		"sounds" : {
+			"cast" : "CURSE"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Banner of Death}\r\n\r\nSun Seeker's quest is more inspiring.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Banner of Death}\r\n\r\nSun Seeker's quest is more inspiring.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
-		"+2morale" :
-			{
-			"type" : "MORALE",
-			"val" : 2,
-			"stacking" : "Banner of Light",
-			"limiters": [
-				"noneOf",
-					{ "type" : "CREATURE_TYPE_LIMITER",  "creature" : "paladin", "includeUpgrades" : true }
-				]
-			}
-		}
-
+					"+2morale" : {
+						"type" : "MORALE",
+						"val" : 2,
+						"stacking" : "Banner of Light",
+						"limiters" : [
+							"noneOf",
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "paladin",
+								"includeUpgrades" : true
+							}
+						]
+					}
+				}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {} },	
 		"flags" : {
-			"positive": true
+			"positive" : true
 		}
 	},
 
-	
-	"bannerOfDeath" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"bannerOfDeath" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Banner of Death",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 0, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},	
-		"graphics":	{"iconEffect": "spells/soulextracted"},
-		"animation":{
-			"affect":["C04SPW"]},
-		"sounds": {
-			"cast": "CURSE"},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"graphics" : {
+			"iconEffect" : "spells/soulextracted"
+		},
+		"animation" : {
+			"affect" : [
+				"C04SPW"
+			]
+		},
+		"sounds" : {
+			"cast" : "CURSE"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Banner of Death}\r\n\r\nSoul Eater's dreadful presence is stronger.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Banner of Death}\r\n\r\nSoul Eater's dreadful presence is stronger.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
-					
 					"commsLimiter" : {
 						"type" : "MORE_DAMAGE_FROM_SPELL",
 						"val" : 100,
 						"subtype" : "soulExtracted",
-			"limiters": [ 
-				"allOf",
-					{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "bannerOfDeath"}
-				]
-			},
+						"limiters" : [
+							"allOf",
+							{
+								"type" : "HAS_ANOTHER_BONUS_LIMITER",
+								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+								"bonusSubtype" : "bannerOfDeath"
+							}
+						]
+					},
 
-		"-2morale" :
-		{
-			"type" : "MORALE",
-			"val" : -2,
-			//"stacking" : "Banner of Death",
-			"limiters": [ 
-				"allOf",
-				{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "bannerOfDeath"}
-			]
-			}
-			}
+					"-2morale" : {
+						"type" : "MORALE",
+						"val" : -2,
+						//"stacking" : "Banner of Death",
+						"limiters" : [
+							"allOf",
+							{
+								"type" : "HAS_ANOTHER_BONUS_LIMITER",
+								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+								"bonusSubtype" : "bannerOfDeath"
+							}
+						]
+					}
+				}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {} },	
 		"flags" : {
-			"negative": true
+			"negative" : true
 		}
 	},
-	
-	
-	"expExtracted" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
-		"name" : "Essence Extracted",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 0, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},	
-		"graphics":	{"iconEffect": "spells/tempNoEffect"},
-		"animation":{
-			"affect":["C04SPW"]},
-		"sounds": {
-			"cast": "CURSE"},
-		"levels" : {
-			"base":{
 
-				"description": "{Essence Extracted}\r\n\r\nThe essence of the soul has been extracted.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+	"expExtracted" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
+		"name" : "Essence Extracted",
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"graphics" : {
+			"iconEffect" : "spells/tempNoEffect"
+		},
+		"animation" : {
+			"affect" : [
+				"C04SPW"
+			]
+		},
+		"sounds" : {
+			"cast" : "CURSE"
+		},
+		"levels" : {
+			"base" : {
+				"description" : "{Essence Extracted}\r\n\r\nThe essence of the soul has been extracted.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
 					"commsLimiter" : {
 						"type" : "MORE_DAMAGE_FROM_SPELL",
@@ -886,449 +1457,753 @@
 						//"propagator": "BATTLE_WIDE"
 					}
 				}
-
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {} },	
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"indifferent": true
+			"indifferent" : true
 		}
 	},
 
-	"expStop" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"expStop" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Only Three Rays can move",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 0, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},	
-		"graphics":	{"iconEffect": "spells/tempNoEffect"},
-		"animation":{},
-		"sounds": {},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"graphics" : {
+			"iconEffect" : "spells/tempNoEffect"
+		},
+		"animation" : {},
+		"sounds" : {},
 		"levels" : {
-			"base":{
-
-				"description": "{Only Three Rays can move}\r\n\r\nOnly Three Rays can move.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Only Three Rays can move}\r\n\r\nOnly Three Rays can move.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "X",
-				"targetModifier":{"smart":true},
-				"battleEffects":{
+				"targetModifier" : {
+					"smart" : true
+				},
+				"battleEffects" : {
 					"cumulativeSpeedDebuff" : {
-						"type":"core:timed",
-						"cumulative": true,
-						"bonus":{
-
+						"type" : "core:timed",
+						"cumulative" : true,
+						"bonus" : {
 							"movementLimiter" : {
-//								"addInfo" : 0,
+								//								"addInfo" : 0,
 								"type" : "STACKS_SPEED",
 								"valueType" : "ADDITIVE_VALUE",
 								"val" : -111,
-								"limiters": [
-											{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "expSoul1", "includeUpgrades" : true	}
-									]
+								"limiters" : [
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "expSoul1",
+										"includeUpgrades" : true
+									}
+								]
 							}
 						}
 					}
-				}	
+				}
 			},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {} },	
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true
+			"positive" : true
 		}
 	},
 
-	"summonExperience" : 
-	{
-		"type": "combat",	
+	"summonExperience" : {
+		"type" : "combat",
 		"targetType" : "NO_TARGET",
 		"name" : "Summon Experience Fragments",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 0, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},		
-		"graphics":	{"iconEffect": "spells/tempNoEffect"},
-		"animation":{
-			"cast":[2]
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
 		},
-		"sounds": {
-			"cast": "SUMNELM"},
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconEffect" : "spells/tempNoEffect"
+		},
+		"animation" : {
+			"cast" : [
+				2
+			]
+		},
+		"sounds" : {
+			"cast" : "SUMNELM"
+		},
 		"levels" : {
-			"base":
-			{
-				"description": "{Extract Experience Shards}\r\n\r\nThe warriors' experience saturates on the battlefield.",
-				"power": 1,
-//				"aiValue": 0,
-				"cost": 5,
-				"range": "X",
-				"targetModifier":{"smart":true},
-				"battleEffects":{
-
+			"base" : {
+				"description" : "{Extract Experience Shards}\r\n\r\nThe warriors' experience saturates on the battlefield.",
+				"power" : 1,
+				//				"aiValue": 0,
+				"cost" : 5,
+				"range" : "X",
+				"targetModifier" : {
+					"smart" : true
+				},
+				"battleEffects" : {
 					"summonOnce" : {
-						"type":"core:timed",
-						"bonus":{
-							
-							"inactive" :
-							{
+						"type" : "core:timed",
+						"bonus" : {
+							"inactive" : {
 								"type" : "NOT_ACTIVE",
-								"propagator": "BATTLE_WIDE",
-								"limiters": [
-										"noneOf",
-											
-											{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "expExtracted" },
-											{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "necromancySoul1", "includeUpgrades" : true	},
-											{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "expSoul1", "includeUpgrades" : true	},
-											{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "gnollShaman", "includeUpgrades" : true	},
-											{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "hierophant", "includeUpgrades" : true	},
-											{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "warmonger", "includeUpgrades" : true	},
-											{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "catapult", "includeUpgrades" : true	}
-									],
-									"duration" : "N_TURNS",
-									"turns": 1
-							}
+								"propagator" : "BATTLE_WIDE",
+								"limiters" : [
+									"noneOf",
 
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "expExtracted"
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "necromancySoul1",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "expSoul1",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "gnollShaman",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "hierophant",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "warmonger",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "catapult",
+										"includeUpgrades" : true
+									}
+								],
+								"duration" : "N_TURNS",
+								"turns" : 1
+							}
 						}
 					}
-				}				
+				}
 			},
-			"none":{}, "basic":{}, "advanced":{}, "expert":{
-				
-		}
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {}},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"indifferent": true,
-			"special": true
+			"indifferent" : true,
+			"special" : true
 		}
-	},	
-	
-	"slavePriority" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	},
+
+	"slavePriority" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Slave Provider",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},	
-		"graphics":	{"iconEffect": "spells/thrallcaptured"},
-		"animation":{
-			"affect":["C04SPW"]},
-		"sounds": {
-			"cast": "CURSE"},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"graphics" : {
+			"iconEffect" : "spells/thrallcaptured"
+		},
+		"animation" : {
+			"affect" : [
+				"C04SPW"
+			]
+		},
+		"sounds" : {
+			"cast" : "CURSE"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Slave Provider}\r\n\r\nSlaves for arduous labour have been captured.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Slave Provider}\r\n\r\nSlaves for arduous labour have been captured.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
-
-					"necroAmpcastsAmount" :
-					{
+					"necroAmpcastsAmount" : {
 						"type" : "CASTS",
 						"val" : 1,
-						"limiters": [ "noneOf", 
-						{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "slavePriority" },
-					]		
+						"limiters" : [
+							"noneOf",
+							{
+								"type" : "HAS_ANOTHER_BONUS_LIMITER",
+								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+								"bonusSubtype" : "slavePriority"
+							}
+						]
 					},
-					
 
 					"stacksSpeed" : {
-//						"addInfo" : 0,
+						//						"addInfo" : 0,
 						"type" : "STACKS_SPEED",
 						"val" : 999,
-						"duration" : "STACK_GETS_TURN",	
-						"limiters": [ "noneOf", 
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "slavePriority" },
-							 ]
+						"duration" : "STACK_GETS_TURN",
+						"limiters" : [
+							"noneOf",
+							{
+								"type" : "HAS_ANOTHER_BONUS_LIMITER",
+								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+								"bonusSubtype" : "slavePriority"
+							}
+						]
 					},
 					"shootingOff2" : {
 						"val" : 3,
 						"type" : "FORGETFULL",
-						"limiters": [ "noneOf", {"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "slavePriority" }
+						"limiters" : [
+							"noneOf",
+							{
+								"type" : "HAS_ANOTHER_BONUS_LIMITER",
+								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+								"bonusSubtype" : "slavePriority"
+							}
 						]
 					},
 
 					"speedRevert" : {
 						"type" : "ENCHANTED",
-						"subtype" : "slaveSummoned",	
-						"limiters": [ "noneOf", 
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "slavePriority" }
-							 ]
+						"subtype" : "slaveSummoned",
+						"limiters" : [
+							"noneOf",
+							{
+								"type" : "HAS_ANOTHER_BONUS_LIMITER",
+								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+								"bonusSubtype" : "slavePriority"
+							}
+						]
 					},
-					
-			"siegeMachinesTargets" :
-			{
-				"type" : "MORE_DAMAGE_FROM_SPELL",
-				"subtype" : "siegeLimiter1",
-				"propagator" : "BATTLE_WIDE",
-				"val" : 100,
-				"limiters": [
-					[ "noneOf", 
-						{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "siegeLimiterOff" }, ],
-					[ "anyOf", { "type" : "CREATURE_TYPE_LIMITER",  "creature" : "catapult", "includeUpgrades" : true	},
-						{ "type" : "CREATURE_TYPE_LIMITER",  "creature" : "arrowTower", "includeUpgrades" : true } 
-					]
-				]
-			}
-			}
+
+					"siegeMachinesTargets" : {
+						"type" : "MORE_DAMAGE_FROM_SPELL",
+						"subtype" : "siegeLimiter1",
+						"propagator" : "BATTLE_WIDE",
+						"val" : 100,
+						"limiters" : [
+							[
+								"noneOf",
+								{
+									"type" : "HAS_ANOTHER_BONUS_LIMITER",
+									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+									"bonusSubtype" : "siegeLimiterOff"
+								}
+							],
+							[
+								"anyOf",
+								{
+									"type" : "CREATURE_TYPE_LIMITER",
+									"creature" : "catapult",
+									"includeUpgrades" : true
+								},
+								{
+									"type" : "CREATURE_TYPE_LIMITER",
+									"creature" : "arrowTower",
+									"includeUpgrades" : true
+								}
+							]
+						]
+					}
+				}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {} },	
 		"flags" : {
-			"positive": true
+			"positive" : true
 		}
 	},
 
-	"summonThrall" : 
-	{
-		"type": "combat",	
+	"summonThrall" : {
+		"type" : "combat",
 		"targetType" : "NO_TARGET",
 		"name" : "Summon Thrall",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},		
-		"graphics":	{"iconEffect": "spells/tempNoEffect"},
-		"animation":{
-			"cast":[2]
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
 		},
-		"sounds": {
-			"cast": "EVLIDFND"},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconEffect" : "spells/tempNoEffect"
+		},
+		"animation" : {
+			"cast" : [
+				2
+			]
+		},
+		"sounds" : {
+			"cast" : "EVLIDFND"
+		},
 		"levels" : {
-			"base":
-			{
-				"description": "{Summon Abyssal Peon}\r\n\r\nBrutes capture peons to toil in their armies.",
-				"power": 1,
-//				"aiValue": 0,
-				"cost": 5,
-				"range": "X",
-				"targetModifier":{"smart":true},
-				"battleEffects":{
-					"summon":{
-						"exclusive":false,
-						"id":"reworked-commanders:abyssalThrall1",
-						"permanent":true,
-						"type":"core:summon"
+			"base" : {
+				"description" : "{Summon Abyssal Peon}\r\n\r\nBrutes capture peons to toil in their armies.",
+				"power" : 1,
+				//				"aiValue": 0,
+				"cost" : 5,
+				"range" : "X",
+				"targetModifier" : {
+					"smart" : true
+				},
+				"battleEffects" : {
+					"summon" : {
+						"exclusive" : false,
+						"id" : "reworked-commanders:abyssalThrall1",
+						"permanent" : true,
+						"type" : "core:summon"
 					},
 					"summonOnce" : {
-						"type":"core:timed",
-						"bonus":{
-
-						"inactive" :
-						{
-							"type" : "NOT_ACTIVE",
-							"propagator": "BATTLE_WIDE",
-							"limiters": [
+						"type" : "core:timed",
+						"bonus" : {
+							"inactive" : {
+								"type" : "NOT_ACTIVE",
+								"propagator" : "BATTLE_WIDE",
+								"limiters" : [
 									"noneOf",
-										
-										{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "slavePriority" },
-										{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "necromancySoul1", "includeUpgrades" : true	},
-										{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "expSoul1", "includeUpgrades" : true	},
-										{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "gnollShaman", "includeUpgrades" : true	},
-										{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "hierophant", "includeUpgrades" : true	},
-										{"type" : "CREATURE_TYPE_LIMITER", "creature" :  "warmonger", "includeUpgrades" : true	},
-										{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "catapult", "includeUpgrades" : true	}
-										
+
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "slavePriority"
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "necromancySoul1",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "expSoul1",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "gnollShaman",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "hierophant",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "warmonger",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "catapult",
+										"includeUpgrades" : true
+									}
 								],
 								"duration" : "N_TURNS",
-								"turns": 1
-						},	
-						"spellsOff" :
-						{	
-							"type" : "BLOCK_ALL_MAGIC",
-							"propagator": "HERO",
-							"limiters": [ "noneOf", 
-							{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "slavePriority" }
-						],
-						"duration" : "N_TURNS",
-						"turns": 1	
-						},
-
-						"speedRevert" : {
-//							"addInfo" : 0,
-							"type" : "STACKS_SPEED",
-							"valueType" : "INDEPENDENT_MIN",
-							"limiters": [
-								[ "noneOf", 
-									{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "slavePriority" }
+								"turns" : 1
+							},
+							"spellsOff" : {
+								"type" : "BLOCK_ALL_MAGIC",
+								"propagator" : "HERO",
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "slavePriority"
+									}
 								],
-								[ "allOf", 
-									{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "brutus", "includeUpgrades" : true	} ]
-							],
-										"duration" : "N_TURNS",
-										"turns": 1	
-						},
-						
-					"castsBlock" :
-					{
-						"type" : "CASTS",
-						"val" : 0,
-						"valueType" : "INDEPENDENT_MIN",
-						"limiters": [
-							[ "noneOf", 
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "slavePriority" }
-							],
-							[ "allOf", 
-								{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "brutus", "includeUpgrades" : true	} ]
+								"duration" : "N_TURNS",
+								"turns" : 1
+							},
+
+							"speedRevert" : {
+								//							"addInfo" : 0,
+								"type" : "STACKS_SPEED",
+								"valueType" : "INDEPENDENT_MIN",
+								"limiters" : [
+									[
+										"noneOf",
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "slavePriority"
+										}
 									],
-									"duration" : "N_TURNS",
-									"turns": 1	
-					},
-					"shotsBlock" :
-					{
-						"type" : "SHOTS",
-						"val" : 0,
-						"valueType" : "INDEPENDENT_MIN",
-						"limiters": [
-							[ "noneOf", 
-								{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : "MORE_DAMAGE_FROM_SPELL", "bonusSubtype" : "slavePriority" }
-							],
-							[ "allOf", 
-								{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "brutus", "includeUpgrades" : true	} ]
+									[
+										"allOf",
+										{
+											"type" : "CREATURE_TYPE_LIMITER",
+											"creature" : "brutus",
+											"includeUpgrades" : true
+										}
+									]
+								],
+								"duration" : "N_TURNS",
+								"turns" : 1
+							},
+
+							"castsBlock" : {
+								"type" : "CASTS",
+								"val" : 0,
+								"valueType" : "INDEPENDENT_MIN",
+								"limiters" : [
+									[
+										"noneOf",
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "slavePriority"
+										}
 									],
-									"duration" : "N_TURNS",
-									"turns": 1	
+									[
+										"allOf",
+										{
+											"type" : "CREATURE_TYPE_LIMITER",
+											"creature" : "brutus",
+											"includeUpgrades" : true
+										}
+									]
+								],
+								"duration" : "N_TURNS",
+								"turns" : 1
+							},
+							"shotsBlock" : {
+								"type" : "SHOTS",
+								"val" : 0,
+								"valueType" : "INDEPENDENT_MIN",
+								"limiters" : [
+									[
+										"noneOf",
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "slavePriority"
+										}
+									],
+									[
+										"allOf",
+										{
+											"type" : "CREATURE_TYPE_LIMITER",
+											"creature" : "brutus",
+											"includeUpgrades" : true
+										}
+									]
+								],
+								"duration" : "N_TURNS",
+								"turns" : 1
+							}
+						}
 					}
-					
-					}
-					}
-				}				
+				}
 			},
-			"none":{}, "basic":{}, "advanced":{}, "expert":{}
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {}},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true,
-			"special": true
+			"positive" : true,
+			"special" : true
 		}
 	},
 
-	"slaveSummoned" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"slaveSummoned" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Slave Provider",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},	
-		"graphics":	{"iconEffect": "spells/thrallcaptured"},
-		"animation":{
-			"affect":["C04SPW"]},
-		"sounds": {
-			"cast": "CURSE"},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"graphics" : {
+			"iconEffect" : "spells/thrallcaptured"
+		},
+		"animation" : {
+			"affect" : [
+				"C04SPW"
+			]
+		},
+		"sounds" : {
+			"cast" : "CURSE"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Slave Provider}\r\n\r\nSlaves for arduous labour have been captured.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Slave Provider}\r\n\r\nSlaves for arduous labour have been captured.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
-					
 					"speedRevert" : {
 						"type" : "MORE_DAMAGE_FROM_SPELL",
 						"val" : 100,
 						"subtype" : "slavePriority"
 					}
 				}
-
 			},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {} },	
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true
+			"positive" : true
 		}
 	},
 
-	
-	"machineNoAttack" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"machineNoAttack" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "No Melee",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},"counters": {},	
-		"graphics":	{"iconEffect": "spells/machineNoAttack"},
-		"animation":{},
-		"sounds": {},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconEffect" : "spells/machineNoAttack"
+		},
+		"animation" : {},
+		"sounds" : {},
 		"levels" : {
-			"base":{
-
-				"description": "{No Melee}\r\n\r\nIt's a siege machine, so it can't attack in melee, duh...",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{No Melee}\r\n\r\nIt's a siege machine, so it can't attack in melee, duh...",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
 					"noAttack" : {
-                        "type" : "ADDITIONAL_ATTACK",
-                        "val": -99,
-						"effectRange": "ONLY_MELEE_FIGHT",
-						"limiters": [ "anyOf", 
-						{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "shamanTotem1", "includeUpgrades" : true	},
-						{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "shamanTotem2", "includeUpgrades" : true	},
-						{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "hierophantTent1", "includeUpgrades" : true	},
-						{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "hierophantTent2", "includeUpgrades" : true	},
-						{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "ogreBallista1", "includeUpgrades" : true	},
-						{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "ogreBallista2", "includeUpgrades" : true	} ]
+						"type" : "ADDITIONAL_ATTACK",
+						"val" : -99,
+						"effectRange" : "ONLY_MELEE_FIGHT",
+						"limiters" : [
+							"anyOf",
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "shamanTotem1",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "shamanTotem2",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "hierophantTent1",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "hierophantTent2",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "ogreBallista1",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "ogreBallista2",
+								"includeUpgrades" : true
+							}
+						]
 					},
-					
-			"castsAmount" :
-			{
-				"type" : "CASTS",
-				"val" : 99,
-				"valueType" : "INDEPENDENT_MAX",
-				"limiters": [ "anyOf", 
-						{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "shamanTotem1", "includeUpgrades" : true	},
-						{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "shamanTotem2", "includeUpgrades" : true	},
-						{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "hierophantTent1", "includeUpgrades" : true	},
-						{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "hierophantTent2", "includeUpgrades" : true	},
-						{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "ogreBallista1", "includeUpgrades" : true	},
-						{"type" : "CREATURE_TYPE_LIMITER",  "creature" : "ogreBallista2", "includeUpgrades" : true	} ]
-			}
-					}
 
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+					"castsAmount" : {
+						"type" : "CASTS",
+						"val" : 99,
+						"valueType" : "INDEPENDENT_MAX",
+						"limiters" : [
+							"anyOf",
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "shamanTotem1",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "shamanTotem2",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "hierophantTent1",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "hierophantTent2",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "ogreBallista1",
+								"includeUpgrades" : true
+							},
+							{
+								"type" : "CREATURE_TYPE_LIMITER",
+								"creature" : "ogreBallista2",
+								"includeUpgrades" : true
+							}
+						]
+					}
+				}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {	}},		
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"indifferent": true,
-			"special": true
+			"indifferent" : true,
+			"special" : true
 		}
 	},
 
-
-	"powerSummoned" : 
-	{
-		"type": "ability",	"targetType" : "CREATURE",
+	"powerSummoned" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
 		"name" : "Power Provider",
-		"school": {"air":false, "earth":false, "fire":false, "water":false},
-		"level": 1, "power": 1, "defaultGainChance": 0, 		
-		"gainChance":{},	
-		"graphics":	{"iconEffect": "spells/powerSource"},
-		"animation":{
-			"affect":["C04SPW"]},
-		"sounds": {
-			"cast": "CURSE"},
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"graphics" : {
+			"iconEffect" : "spells/powerSource"
+		},
+		"animation" : {
+			"affect" : [
+				"C04SPW"
+			]
+		},
+		"sounds" : {
+			"cast" : "CURSE"
+		},
 		"levels" : {
-			"base":{
-
-				"description": "{Power Provider}\r\n\r\nHero's Spell power has been augmented.",
-				"cost": 0, "power": 1, 
-//				"aiValue": 0,
+			"base" : {
+				"description" : "{Power Provider}\r\n\r\nHero's Spell power has been augmented.",
+				"cost" : 0,
+				"power" : 1,
+				//				"aiValue": 0,
 				"range" : "0",
-				"targetModifier":{"smart":true},
+				"targetModifier" : {
+					"smart" : true
+				},
 				"effects" : {
-					
 					"powerBoost" : {
 						"type" : "PRIMARY_SKILL",
-						"subtype" : "spellpower", 
+						"subtype" : "spellpower",
 						"updater" : {
 							"type" : "GROWS_WITH_LEVEL",
 							"valPer20" : 5,
@@ -1336,17 +2211,21 @@
 						},
 						"propagator" : "HERO",
 						"duration" : "COMMANDER_KILLED"
-						
 					}
 				}
-
-					},
-			"none":{},"basic":{},"advanced":{},"expert":{}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
 		},
-		"targetCondition" : {"allOf" : {},"noneOf" : {},"anyOf" : {} },	
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
 		"flags" : {
-			"positive": true
+			"positive" : true
 		}
 	}
-
 }

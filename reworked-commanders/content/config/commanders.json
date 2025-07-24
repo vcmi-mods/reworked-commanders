@@ -1,206 +1,333 @@
-
 {
 	//Commander receives these bonuses on level-up
-	"bonusPerLevel":
-	[
-		{ "type" : "CREATURE_DAMAGE", "val" : 2, "subtype" : "creatureDamageMin" }, //+2 minimum damage
-		{ "type" : "CREATURE_DAMAGE", "val" : 4, "subtype" : "creatureDamageMax" }, //+4 maximum damage
-		{ "type" : "STACK_HEALTH", "val" : 20 }, //+20 hp
-		{ "type" : "SHOTS", "val" : 1 } //+1 shot
+	"bonusPerLevel" : [
+		{
+			"type" : "CREATURE_DAMAGE",
+			"val" : 2,
+			"subtype" : "creatureDamageMin"
+		}, //+2 minimum damage
+		{
+			"type" : "CREATURE_DAMAGE",
+			"val" : 4,
+			"subtype" : "creatureDamageMax"
+		}, //+4 maximum damage
+		{
+			"type" : "STACK_HEALTH",
+			"val" : 20
+		}, //+20 hp
+		{
+			"type" : "SHOTS",
+			"val" : 1
+		} //+1 shot
 	],
 	//Value of bonuses given by each skill level
-	"skillLevels":
-	[
-		{"name": "ATTACK", "levels": [2, 5, 9, 15, 25]}, //0
-		{"name": "DEFENSE", "levels": [5, 10, 20, 35, 50]}, //1
-		{"name": "HEALTH", "levels": [25, 60, 100, 150, 250]}, //2
-		{"name": "DAMAGE", "levels": [25, 60, 100, 150, 250]}, //3
-		{"name": "SPEED", "levels": [1, 2, 3, 4, 6]}, //4
-		{"name": "SPELL_POWER", "levels": [1, 3, 6, 14, 29]}, //5
-		{"name": "CASTS", "levels": [1, 2, 3, 4, 5]},
-		{"name": "RESISTANCE", "levels": [5, 15, 35, 60, 90]}
+	"skillLevels" : [
+		{
+			"name" : "ATTACK",
+			"levels" : [
+				2,
+				5,
+				9,
+				15,
+				25
+			]
+		}, //0
+		{
+			"name" : "DEFENSE",
+			"levels" : [
+				5,
+				10,
+				20,
+				35,
+				50
+			]
+		}, //1
+		{
+			"name" : "HEALTH",
+			"levels" : [
+				25,
+				60,
+				100,
+				150,
+				250
+			]
+		}, //2
+		{
+			"name" : "DAMAGE",
+			"levels" : [
+				25,
+				60,
+				100,
+				150,
+				250
+			]
+		}, //3
+		{
+			"name" : "SPEED",
+			"levels" : [
+				1,
+				2,
+				3,
+				4,
+				6
+			]
+		}, //4
+		{
+			"name" : "SPELL_POWER",
+			"levels" : [
+				1,
+				3,
+				6,
+				14,
+				29
+			]
+		}, //5
+		{
+			"name" : "CASTS",
+			"levels" : [
+				1,
+				2,
+				3,
+				4,
+				5
+			]
+		},
+		{
+			"name" : "RESISTANCE",
+			"levels" : [
+				5,
+				15,
+				35,
+				60,
+				90
+			]
+		}
 	],
-	"abilityRequirements":
-	[
+	"abilityRequirements" : [
 		//no combos: attack + def [0, 1] / def + magic [1, 5] / health + sp [2, 4] / dam + magic [3, 5]
 
 		//attack + attack
 		{
-			"ability": [ 
+			"ability" : [
 				{
 					"type" : "NO_MELEE_PENALTY"
-				} 
-			], 
-			"skills": [0,0]
+				}
+			],
+			"skills" : [
+				0,
+				0
+			]
 		},
-		
+
 		//attack + health
 		{
-			"ability": [ 
+			"ability" : [
 				{
-					"type" :"FEARFUL",
+					"type" : "FEARFUL",
 					"val" : 10,
-					"propagator": "BATTLE_WIDE",
+					"propagator" : "BATTLE_WIDE",
 					"propagationUpdater" : "BONUS_OWNER_UPDATER",
 					"description" : "PLACEHOLDER",
-					"limiters" : [ 
-						"OPPOSITE_SIDE", 
+					"limiters" : [
+						"OPPOSITE_SIDE",
 						{
 							"type" : "HAS_ANOTHER_BONUS_LIMITER",
 							"bonusType" : "LIVING"
 						}
-					] 
+					]
 				}
-			], 
-			"skills": [0, 2]
+			],
+			"skills" : [
+				0,
+				2
+			]
 		},
-		
+
 		//attack + damage
 		{
-			"ability": [
+			"ability" : [
 				{
-					"type" : "ENCHANTED", 
-					"val" : 1, 
+					"type" : "ENCHANTED",
+					"val" : 1,
 					"subtype" : "reworked-commanders:attackEnchant"
 				}
 			],
-			"skills": [0, 3]
+			"skills" : [
+				0,
+				3
+			]
 		},
-		
+
 		//attack + speed
 		{
-			"ability": [
+			"ability" : [
 				{
-					"type" : "ENCHANTED", 
-					"val" : 1, 
+					"type" : "ENCHANTED",
+					"val" : 1,
 					"subtype" : "reworked-commanders:preemptiveEnchant"
 				}
 			],
-			"skills": [0, 4]
-		},		
+			"skills" : [
+				0,
+				4
+			]
+		},
 
 		//attack + magic
 		{
-			"ability": [
+			"ability" : [
 				{
 					"type" : "BLOCKS_RETALIATION"
 				}
 			],
-			"skills": [0, 5]
-		},			
-		
+			"skills" : [
+				0,
+				5
+			]
+		},
+
 		//def + health
 		{
-			"ability": [
+			"ability" : [
 				{
-					"type" : "ENCHANTED", 
-					"val" : 1, 
+					"type" : "ENCHANTED",
+					"val" : 1,
 					"subtype" : "reworked-commanders:abilityEnchant"
 				}
 			],
-			"skills": [1, 2]
-		},	
+			"skills" : [
+				1,
+				2
+			]
+		},
 
 		//def + damage
 		{
-			"ability": [
+			"ability" : [
 				{
 					"type" : "ENEMY_DEFENCE_REDUCTION",
 					"val" : 50
 				}
 			],
-			"skills": [1, 3]
-		},		
+			"skills" : [
+				1,
+				3
+			]
+		},
 
 		//def + magic
 		{
-			"ability": [
+			"ability" : [
 				{
 					"type" : "FIRE_SHIELD",
 					"val" : 30
 				}
 			],
-			"skills": [1, 4]
-		},		
+			"skills" : [
+				1,
+				4
+			]
+		},
 
 		//health + health
 		{
-			"ability": [
+			"ability" : [
 				{
 					"type" : "HP_REGENERATION",
 					"val" : 100
 				}
 			],
-			"skills": [2, 2]
-		},		
+			"skills" : [
+				2,
+				2
+			]
+		},
 
 		//health + damage
 		{
-			"ability": [
+			"ability" : [
 				{
 					"type" : "FREE_SHOOTING"
 				}
 			],
-			"skills": [2, 3]
+			"skills" : [
+				2,
+				3
+			]
 		},
-		
+
 		//health + magic
 		{
-			"ability": [
+			"ability" : [
 				{
-					"type" : "DEATH_STARE", 
-					"val" : 1, 
+					"type" : "DEATH_STARE",
+					"val" : 1,
 					"subtype" : "deathStareCommander"
 				}
 			],
-			"skills": [2, 5]
+			"skills" : [
+				2,
+				5
+			]
 		},
 
 		//damage + speed
 		{
-			"ability": [
+			"ability" : [
 				{
-					"type" : "ENCHANTED", 
-					"val" : 1, 
+					"type" : "ENCHANTED",
+					"val" : 1,
 					"subtype" : "reworked-commanders:shootingEnchant"
 				}
 			],
-			"skills": [3, 4]
-		},		
+			"skills" : [
+				3,
+				4
+			]
+		},
 
 		//speed + speed
 		{
-			"ability": [
+			"ability" : [
 				{
 					"type" : "FLYING",
 					"subtype" : "movementFlying"
 				}
 			],
-			"skills": [4, 4]
-		},		
+			"skills" : [
+				4,
+				4
+			]
+		},
 
 		//speed + magic
 		{
-			"ability": [
+			"ability" : [
 				{
-					"type" : "ENCHANTED", 
-					"val" : 1, 
+					"type" : "ENCHANTED",
+					"val" : 1,
 					"subtype" : "reworked-commanders:speedEnchant"
 				}
 			],
-			"skills": [4, 5]
-		},		
-		
-		//magic + magic		
+			"skills" : [
+				4,
+				5
+			]
+		},
+
+		//magic + magic
 		{
-			"ability": [
+			"ability" : [
 				{
-					"type" : "ENCHANTED", 
-					"val" : 1, 
+					"type" : "ENCHANTED",
+					"val" : 1,
 					"subtype" : "reworked-commanders:spellEnchant"
 				}
 			],
-			"skills": [5, 5]
+			"skills" : [
+				5,
+				5
+			]
 		}
 	]
 }

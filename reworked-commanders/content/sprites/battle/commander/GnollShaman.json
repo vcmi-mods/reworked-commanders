@@ -1,57 +1,52 @@
 {
-    "basepath" : "battle/commander/breathanim/",
-    "sequences" :
-    [
-        {
-            "group" : 40,
-            "frames" :
-            [
-                "breath 0a",                
-                "breath 0b",                
-                "breath up1",
-                "breath up2",
-                "breath up3",
-                "breath up4",
-                "breath up5",
-                "breath 6"
-            ]
-        },
-        
-        {
-            "group" : 41,
-            "frames" :
-            [
-                "breath 0a",                
-                "breath 0b",              
-                "breath str1",
-                "breath str2",
-                "breath str3",
-                "breath str4",
-                "breath str5",
-                "breath 6"
-            ]
-        },
-        
-        {
-            "group" : 42,
-            "frames" :
-            [
-                "breath 0a",                
-                "breath 0b",             
-                "breath down1",
-                "breath down2",
-                "breath down3",
-                "breath down4",
-                "breath down5",
-                "breath 6"
-            ]
-        }				
-    ],
- 
-    // Allow overriding individual frames in file
-    "images" :
-    [
-        //chyba nepotrzebne
-        //{ "group" : 0, "frame" : 0, "file" : "ice gate1" },
-    ]
+	"basepath" : "battle/commander/breathanim/",
+	"sequences" : [
+		{
+			"group" : 40,
+			"frames" : [
+				"breath 0a",
+				"breath 0b",
+				"breath up1",
+				"breath up2",
+				"breath up3",
+				"breath up4",
+				"breath up5",
+				"breath 6"
+			]
+		},
+
+		{
+			"group" : 41,
+			"frames" : [
+				"breath 0a",
+				"breath 0b",
+				"breath str1",
+				"breath str2",
+				"breath str3",
+				"breath str4",
+				"breath str5",
+				"breath 6"
+			]
+		},
+
+		{
+			"group" : 42,
+			"frames" : [
+				"breath 0a",
+				"breath 0b",
+				"breath down1",
+				"breath down2",
+				"breath down3",
+				"breath down4",
+				"breath down5",
+				"breath 6"
+			]
+		}
+	],
+
+	// Allow overriding individual frames in file
+	"images" : [
+		//chyba nepotrzebne
+		//{ "group" : 0, "frame" : 0, "file" : "ice gate1" },
+	]
 }

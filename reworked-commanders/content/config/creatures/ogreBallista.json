@@ -1,63 +1,67 @@
 {
-	"ogreBallista1" :
-	{
+	"ogreBallista1" : {
 		"special" : true,
-		"advMapAmount" : {"max" : 1, "min" : 1},
+		"advMapAmount" : {
+			"max" : 1,
+			"min" : 1
+		},
 		"aiValue" : 623,
 		"attack" : 10,
-		"cost" : { "gold" : 2500 },
-		"damage" : {"max" : 3, "min" : 2},
+		"cost" : {
+			"gold" : 2500
+		},
+		"damage" : {
+			"max" : 3,
+			"min" : 2
+		},
 		"defense" : 10,
 		"faction" : "neutral",
 		"fightValue" : 600,
 		"growth" : 0,
 		"hitPoints" : 250,
-        "doubleWide" : true,
+		"doubleWide" : true,
 		"level" : 5,
 		"shots" : 12,
 		"speed" : 0,
-		"name" : { "plural" : "Ballistas", "singular" : "Ballista" },
-		"abilities":
-		{
-
-			"shooter" :
-			{
+		"name" : {
+			"plural" : "Ballistas",
+			"singular" : "Ballista"
+		},
+		"abilities" : {
+			"shooter" : {
 				"type" : "SHOOTER"
-			},	
-			"unlimitedShooting" :
-			{	
+			},
+			"unlimitedShooting" : {
 				"type" : "SHOTS",
 				"val" : 12,
 				"valueType" : "INDEPENDENT_MIN"
-			},			
-			"freeShooting" :
-			{
+			},
+			"freeShooting" : {
 				"type" : "FREE_SHOOTING"
 			},
-			"warMachine" :
-			{
+			"warMachine" : {
 				"type" : "SIEGE_WEAPON"
 			},
 
-			"noAttacking" : 
-			{
+			"noAttacking" : {
 				"type" : "ENCHANTED",
 				"subtype" : "machineNoAttack"
-			}					
+			}
 		},
-		"graphics" :
-		{
-			"animation": "battle/commander/ballistaTurret.def",
-			"animationTime" : { "attack" : 1, "idle" : 10, "walk" : 0.8 },
+		"graphics" : {
+			"animation" : "battle/commander/ballistaTurret.def",
+			"animationTime" : {
+				"attack" : 1,
+				"idle" : 10,
+				"walk" : 0.8
+			},
 			"iconLarge" : "iconsBig/CPrL146M",
 			"iconSmall" : "iconsSmall/CPrS146M",
 			"timeBetweenFidgets" : 1,
-			"missile" :
-			{
-				"projectile": "SMBALX.DEF",
+			"missile" : {
+				"projectile" : "SMBALX.DEF",
 				"attackClimaxFrame" : 4,
-				"offset" :
-				{
+				"offset" : {
 					"lowerX" : 28,
 					"lowerY" : 3,
 					"middleX" : 62,
@@ -65,80 +69,95 @@
 					"upperX" : 37,
 					"upperY" : -98
 				},
-				"frameAngles" : [90, 72, 45, 27, 0, -27, -45, -72, -90, 0, 0, 0]
+				"frameAngles" : [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				]
 			}
 		},
-		"sound" :
-		{
-			"attack": "BALLWNCE.wav",
-			"shoot": "BALLSHOT.wav",
-			"defend": "BALLWNCE.wav",
-			"killed": "BALLKILL.wav",
-			"move": "BALLWNCE.wav",
-			"wince": "BALLWNCE.wav"
+		"sound" : {
+			"attack" : "BALLWNCE.wav",
+			"shoot" : "BALLSHOT.wav",
+			"defend" : "BALLWNCE.wav",
+			"killed" : "BALLKILL.wav",
+			"move" : "BALLWNCE.wav",
+			"wince" : "BALLWNCE.wav"
 		}
 	},
 
-	
-	"ogreBallista2" :
-	{
+	"ogreBallista2" : {
 		"special" : true,
-		"advMapAmount" : {"max" : 1, "min" : 1},
+		"advMapAmount" : {
+			"max" : 1,
+			"min" : 1
+		},
 		"aiValue" : 623,
 		"attack" : 10,
-		"cost" : { "gold" : 3500 },
-		"damage" : {"max" : 3, "min" : 3},
+		"cost" : {
+			"gold" : 3500
+		},
+		"damage" : {
+			"max" : 3,
+			"min" : 3
+		},
 		"defense" : 10,
 		"faction" : "neutral",
 		"fightValue" : 600,
 		"growth" : 0,
 		"hitPoints" : 500,
-        "doubleWide" : true,
+		"doubleWide" : true,
 		"level" : 5,
 		"shots" : 12,
 		"speed" : 0,
-		"name" : { "plural" : "Siege Ballistas", "singular" : "Siege Ballista" },
-		"abilities":
-		{
-
-			"shooter" :
-			{
+		"name" : {
+			"plural" : "Siege Ballistas",
+			"singular" : "Siege Ballista"
+		},
+		"abilities" : {
+			"shooter" : {
 				"type" : "SHOOTER"
 			},
-			"unlimitedShooting" :
-			{	
+			"unlimitedShooting" : {
 				"type" : "SHOTS",
 				"val" : 12,
 				"valueType" : "INDEPENDENT_MIN"
-			},				
-			"freeShooting" :
-			{
+			},
+			"freeShooting" : {
 				"type" : "FREE_SHOOTING"
 			},
-			"warMachine" :
-			{
+			"warMachine" : {
 				"type" : "SIEGE_WEAPON"
 			},
 
-			"noAttacking" : 
-			{
+			"noAttacking" : {
 				"type" : "ENCHANTED",
 				"subtype" : "machineNoAttack"
-			}					
+			}
 		},
-		"graphics" :
-		{
-			"animation": "battle/commander/ballistaTurret.def",
-			"animationTime" : { "attack" : 1, "idle" : 10, "walk" : 0.8 },
+		"graphics" : {
+			"animation" : "battle/commander/ballistaTurret.def",
+			"animationTime" : {
+				"attack" : 1,
+				"idle" : 10,
+				"walk" : 0.8
+			},
 			"iconLarge" : "iconsBig/CPrL146M",
 			"iconSmall" : "iconsSmall/CPrS146M",
 			"timeBetweenFidgets" : 1,
-			"missile" :
-			{
-				"projectile": "SMBALX.DEF",
+			"missile" : {
+				"projectile" : "SMBALX.DEF",
 				"attackClimaxFrame" : 4,
-				"offset" :
-				{
+				"offset" : {
 					"lowerX" : 28,
 					"lowerY" : 3,
 					"middleX" : 62,
@@ -146,17 +165,29 @@
 					"upperX" : 37,
 					"upperY" : -98
 				},
-				"frameAngles" : [90, 72, 45, 27, 0, -27, -45, -72, -90, 0, 0, 0]
+				"frameAngles" : [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				]
 			}
 		},
-		"sound" :
-		{
-			"attack": "BALLWNCE.wav",
-			"shoot": "BALLSHOT.wav",
-			"defend": "BALLWNCE.wav",
-			"killed": "BALLKILL.wav",
-			"move": "BALLWNCE.wav",
-			"wince": "BALLWNCE.wav"
+		"sound" : {
+			"attack" : "BALLWNCE.wav",
+			"shoot" : "BALLSHOT.wav",
+			"defend" : "BALLWNCE.wav",
+			"killed" : "BALLKILL.wav",
+			"move" : "BALLWNCE.wav",
+			"wince" : "BALLWNCE.wav"
 		}
 	}
 }

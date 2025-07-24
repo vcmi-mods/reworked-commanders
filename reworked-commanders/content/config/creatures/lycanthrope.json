@@ -1,31 +1,45 @@
 {
 	"lycanthrope" : {
 		"abilities" : {
-		
-			//"undead" : 
+			//"undead" :
 			//{"type" : "UNDEAD"}
-		},	
-		"advMapAmount" : {"max" : 20, "min" : 10},
+		},
+		"advMapAmount" : {
+			"max" : 20,
+			"min" : 10
+		},
 		"special" : true,
 		"aiValue" : 522,
 		"attack" : 10,
-		"cost" : { "gold" : 300 },
-		"damage" : {"max" : 9, "min" : 6},
+		"cost" : {
+			"gold" : 300
+		},
+		"damage" : {
+			"max" : 9,
+			"min" : 6
+		},
 		"defense" : 12,
 		"faction" : "neutral",
 		"fightValue" : 503,
 		"graphics" : {
-			"animation": "battle/commander/werewolf.def",
-			"animationTime" : { "attack" : 1, "idle" : 10, "walk" : 1.0 },
+			"animation" : "battle/commander/werewolf.def",
+			"animationTime" : {
+				"attack" : 1,
+				"idle" : 10,
+				"walk" : 1.0
+			},
 			"iconLarge" : "iconsBig/werewolf_big.png",
 			"iconSmall" : "iconsSmall/werewolf_small.png",
 			"timeBetweenFidgets" : 1
 		},
 		"growth" : 4,
 		"hitPoints" : 35,
-        "doubleWide" : false,
+		"doubleWide" : false,
 		"level" : 4,
-		"name" : { "plural" : "Lycanthropes", "singular" : "Lycanthrope" },
+		"name" : {
+			"plural" : "Lycanthropes",
+			"singular" : "Lycanthrope"
+		},
 		"sound" : {
 			"attack" : "wolfattk.wav",
 			"defend" : "wolfdfnd.wav",
