@@ -51,12 +51,12 @@
 		"name" : "Přepracovaní velitelé",
 		"description" : "Přepracovaní velitelé pro původní frakce. Volně založeno na schopnostech a designu velitelů z WoG.",
 		"translations" : [
-			"config/translation/reworked-commanders/czech.json"
+			"translation/czech.json"
 		]
 	},
 
 	"translations" : [
-		"config/translation/reworked-commanders/english.json"
+		"translation/english.json"
 	],
 
 	"settings" : {
