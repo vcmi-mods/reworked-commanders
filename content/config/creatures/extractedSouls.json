@@ -28,8 +28,9 @@
 		},
 		"abilities" : {
 			"ephemeral" : {
-				"type" : "ENCHANTED",
-				"subtype" : "ephemeralExtract",
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"subtype" : "enchanted",
+				"addInfo" : { "spell" : "ephemeralExtract" },
 				"val" : 3
 			},
 
@@ -48,10 +49,10 @@
 			},
 
 			"lycanthroper" : {
-				"type" : "TRANSMUTATION",
-				"subtype" : "transmutationPerUnit",
-				"val" : 100,
-				"addInfo" : "lycanthrope"
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"subtype" : "transmutation",
+				"addInfo" : { "transmuteBy" : "count", "creature" : "lycanthrope" },
+				"val" : 100
 			},
 
 			//lycantrophy wont work on tier7 units and commanders
@@ -234,8 +235,9 @@
 		},
 		"abilities" : {
 			"ephemeral" : {
-				"type" : "ENCHANTED",
-				"subtype" : "ephemeralExtract",
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"subtype" : "enchanted",
+				"addInfo" : { "spell" : "ephemeralExtract" },
 				"val" : 3
 			},
 			"flier" : {
@@ -245,8 +247,9 @@
 
 			//zeby zatrzymac wiezyczki/katapulte przed przyzwaniem duszka
 			"stopSiegeMachines" : {
-				"type" : "ENCHANTED",
-				"subtype" : "siegeLimiter1",
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"subtype" : "enchanted",
+				"addInfo" : { "spell" : "siegeLimiter1" },
 				"propagator" : "BATTLE_WIDE",
 				//					  "addInfo" : 0,
 				"limiters" : [

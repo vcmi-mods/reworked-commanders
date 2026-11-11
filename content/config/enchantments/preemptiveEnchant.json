@@ -29,10 +29,15 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"preemptiveRetal" : {
-						"type" : "FIRST_STRIKE",
-						"subtype" : "damageTypeAll"
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"preemptiveRetal" : {
+								"type" : "FIRST_STRIKE",
+								"subtype" : "damageTypeAll"
+							}
+						}
 					}
 				}
 			},

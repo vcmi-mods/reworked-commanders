@@ -165,30 +165,39 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"necroBoost1" : {
-						"type" : "MORE_DAMAGE_FROM_SPELL",
-						"valueType" : "PERCENT_TO_ALL",
-						"subtype" : "animateDead",
-						"duration" : "PERMANENT"
-					},
-					"necroBoost2" : {
-						"type" : "MORE_DAMAGE_FROM_SPELL",
-						"valueType" : "PERCENT_TO_ALL",
-						"subtype" : "resurrection",
-						"duration" : "PERMANENT"
-					},
-					"necroBoost3" : {
-						"type" : "MORE_DAMAGE_FROM_SPELL",
-						"valueType" : "PERCENT_TO_ALL",
-						"subtype" : "sacrifice",
-						"duration" : "PERMANENT"
-					},
-					"necroBoost4" : {
-						"type" : "MORE_DAMAGE_FROM_SPELL",
-						"valueType" : "PERCENT_TO_ALL",
-						"subtype" : "undeadRestoration",
-						"duration" : "PERMANENT"
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"necroBoost1" : {
+								"type" : "MORE_DAMAGE_FROM_SPELL",
+								"val" : 1,
+								"valueType" : "PERCENT_TO_ALL",
+								"subtype" : "animateDead",
+								"duration" : "PERMANENT"
+							},
+							"necroBoost2" : {
+								"type" : "MORE_DAMAGE_FROM_SPELL",
+								"val" : 1,
+								"valueType" : "PERCENT_TO_ALL",
+								"subtype" : "resurrection",
+								"duration" : "PERMANENT"
+							},
+							"necroBoost3" : {
+								"type" : "MORE_DAMAGE_FROM_SPELL",
+								"val" : 1,
+								"valueType" : "PERCENT_TO_ALL",
+								"subtype" : "sacrifice",
+								"duration" : "PERMANENT"
+							},
+							"necroBoost4" : {
+								"type" : "MORE_DAMAGE_FROM_SPELL",
+								"val" : 1,
+								"valueType" : "PERCENT_TO_ALL",
+								"subtype" : "undeadRestoration",
+								"duration" : "PERMANENT"
+							}
+						}
 					}
 				}
 			},
@@ -245,23 +254,28 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"notActive" : {
-						"val" : 0,
-						"type" : "NOT_ACTIVE",
-						"subtype" : "paralyze",
-						"duration" : [
-							"UNTIL_BEING_ATTACKED",
-							"N_TURNS"
-						]
-					},
-					"noRetaliation" : {
-						"val" : 0,
-						"type" : "NO_RETALIATION",
-						"duration" : [
-							"UNTIL_BEING_ATTACKED",
-							"N_TURNS"
-						]
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"notActive" : {
+								"val" : 0,
+								"type" : "NOT_ACTIVE",
+								"subtype" : "paralyze",
+								"duration" : [
+									"UNTIL_BEING_ATTACKED",
+									"N_TURNS"
+								]
+							},
+							"noRetaliation" : {
+								"val" : 0,
+								"type" : "NO_RETALIATION",
+								"duration" : [
+									"UNTIL_BEING_ATTACKED",
+									"N_TURNS"
+								]
+							}
+						}
 					}
 				}
 			},
@@ -321,23 +335,28 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"notActive" : {
-						"val" : 0,
-						"type" : "NOT_ACTIVE",
-						"subtype" : "paralyze",
-						"duration" : [
-							"UNTIL_BEING_ATTACKED",
-							"N_TURNS"
-						]
-					},
-					"noRetaliation" : {
-						"val" : 0,
-						"type" : "NO_RETALIATION",
-						"duration" : [
-							"UNTIL_BEING_ATTACKED",
-							"N_TURNS"
-						]
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"notActive" : {
+								"val" : 0,
+								"type" : "NOT_ACTIVE",
+								"subtype" : "paralyze",
+								"duration" : [
+									"UNTIL_BEING_ATTACKED",
+									"N_TURNS"
+								]
+							},
+							"noRetaliation" : {
+								"val" : 0,
+								"type" : "NO_RETALIATION",
+								"duration" : [
+									"UNTIL_BEING_ATTACKED",
+									"N_TURNS"
+								]
+							}
+						}
 					}
 				}
 			},
@@ -399,10 +418,15 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"attacksNearestCreature" : {
-						"type" : "ATTACKS_NEAREST_CREATURE",
-						"duration" : "STACK_GETS_TURN"
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"attacksNearestCreature" : {
+								"type" : "ATTACKS_NEAREST_CREATURE",
+								"duration" : "STACK_GETS_TURN"
+							}
+						}
 					}
 				}
 			},

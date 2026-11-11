@@ -29,122 +29,127 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"spellpower+" : {
-						"type" : "CREATURE_SPELL_POWER",
-						"val" : 500,
-						"valueType" : "ADDITIVE_VALUE",
-						"limiters" : [
-							"noneOf",
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "astralSpirit",
-								"includeUpgrades" : true
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"spellpower+" : {
+								"type" : "CREATURE_SPELL_POWER",
+								"val" : 500,
+								"valueType" : "ADDITIVE_VALUE",
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "astralSpirit",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "brutus",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "gnollShaman",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "hierophant",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "paladin",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "soulEater",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "succub",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "templeGuard",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "warmonger",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "spellEnchant"
+									}
+								]
 							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "brutus",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "gnollShaman",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "hierophant",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "paladin",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "soulEater",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "succub",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "templeGuard",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "warmonger",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-								"bonusSubtype" : "spellEnchant"
+							"cast+" : {
+								"type" : "CASTS",
+								"val" : 1,
+								"valueType" : "ADDITIVE_VALUE",
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "astralSpirit",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "brutus",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "gnollShaman",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "hierophant",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "paladin",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "soulEater",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "succub",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "templeGuard",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "warmonger",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "spellEnchant"
+									}
+								]
 							}
-						]
-					},
-					"cast+" : {
-						"type" : "CASTS",
-						"val" : 1,
-						"valueType" : "ADDITIVE_VALUE",
-						"limiters" : [
-							"noneOf",
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "astralSpirit",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "brutus",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "gnollShaman",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "hierophant",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "paladin",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "soulEater",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "succub",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "templeGuard",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "warmonger",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-								"bonusSubtype" : "spellEnchant"
-							}
-						]
+						}
 					}
 				}
 			},
@@ -200,16 +205,21 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"primaryCounter" : {
-						"type" : "ADDITIONAL_RETALIATION",
-						"val" : 2,
-						"duration" : "N_TURNS"
-					},
-					"addAttack" : {
-						"type" : "ADDITIONAL_ATTACK",
-						"val" : 1,
-						"duration" : "N_TURNS"
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"primaryCounter" : {
+								"type" : "ADDITIONAL_RETALIATION",
+								"val" : 2,
+								"duration" : "N_TURNS"
+							},
+							"addAttack" : {
+								"type" : "ADDITIONAL_ATTACK",
+								"val" : 1,
+								"duration" : "N_TURNS"
+							}
+						}
 					}
 				}
 			},
@@ -269,18 +279,24 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"primaryBloodlust" : {
-						"val" : 6,
-						"type" : "PRIMARY_SKILL",
-						"subtype" : "attack",
-						"effectRange" : "ONLY_MELEE_FIGHT",
-						"duration" : "N_TURNS"
-					},
-					"lifeDrain" : {
-						"type" : "LIFE_DRAIN",
-						"val" : 10,
-						"duration" : "N_TURNS"
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"primaryBloodlust" : {
+								"val" : 6,
+								"type" : "PRIMARY_SKILL",
+								"subtype" : "attack",
+								"effectRange" : "ONLY_MELEE_FIGHT",
+								"duration" : "N_TURNS"
+							},
+							"lifeDrain" : {
+								"type" : "COMBAT_EVENT_TRIGGER",
+								"subtype" : "lifeDrain",
+								"val" : 10,
+								"duration" : "N_TURNS"
+							}
+						}
 					}
 				}
 			},
@@ -341,17 +357,22 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"stacksSpeed" : {
-						//						"addInfo" : 0,
-						"type" : "STACKS_SPEED",
-						"val" : 5,
-						"duration" : "N_TURNS"
-					},
-					"morale" : {
-						"type" : "MORALE",
-						"val" : 2,
-						"duration" : "N_TURNS"
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"stacksSpeed" : {
+								//						"addInfo" : 0,
+								"type" : "STACKS_SPEED",
+								"val" : 5,
+								"duration" : "N_TURNS"
+							},
+							"morale" : {
+								"type" : "MORALE",
+								"val" : 2,
+								"duration" : "N_TURNS"
+							}
+						}
 					}
 				}
 			},
@@ -412,20 +433,25 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"primaryBless" : {
-						"val" : 0,
-						"type" : "ALWAYS_MAXIMUM_DAMAGE",
-						"valueType" : "INDEPENDENT_MAX",
-						"duration" : "N_TURNS"
-					},
-					"shieldMelee" : {
-						"val" : 30,
-						"type" : "GENERAL_DAMAGE_REDUCTION",
-						"subtype" : "damageTypeMelee",
-						"duration" : "N_TURNS"
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"primaryBless" : {
+								"val" : 0,
+								"type" : "ALWAYS_MAXIMUM_DAMAGE",
+								"valueType" : "INDEPENDENT_MAX",
+								"duration" : "N_TURNS"
+							},
+							"shieldMelee" : {
+								"val" : 30,
+								"type" : "GENERAL_DAMAGE_REDUCTION",
+								"subtype" : "damageTypeMelee",
+								"duration" : "N_TURNS"
+							}
+							//"shieldRanged" : {"val" : 50,"type" : "GENERAL_DAMAGE_REDUCTION","subtype" : "damageTypeRanged","duration" : "N_TURNS"}
+						}
 					}
-					//"shieldRanged" : {"val" : 50,"type" : "GENERAL_DAMAGE_REDUCTION","subtype" : "damageTypeRanged","duration" : "N_TURNS"}
 				}
 			},
 			"none" : {},
@@ -565,18 +591,23 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"primaryPrec" : {
-						"type" : "PRIMARY_SKILL",
-						"subtype" : "attack",
-						"val" : 6,
-						"effectRange" : "ONLY_DISTANCE_FIGHT",
-						"duration" : "N_TURNS"
-					},
-					"luck" : {
-						"type" : "LUCK",
-						"val" : 3,
-						"duration" : "N_TURNS"
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"primaryPrec" : {
+								"type" : "PRIMARY_SKILL",
+								"subtype" : "attack",
+								"val" : 6,
+								"effectRange" : "ONLY_DISTANCE_FIGHT",
+								"duration" : "N_TURNS"
+							},
+							"luck" : {
+								"type" : "LUCK",
+								"val" : 3,
+								"duration" : "N_TURNS"
+							}
+						}
 					}
 				}
 			},
@@ -640,24 +671,29 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"attack" : {
-						"type" : "PRIMARY_SKILL",
-						"subtype" : "attack",
-						"val" : 2,
-						"duration" : "N_TURNS"
-					},
-					"defence" : {
-						"type" : "PRIMARY_SKILL",
-						"subtype" : "defence",
-						"val" : 2,
-						"duration" : "N_TURNS"
-					},
-					"stacksSpeed" : {
-						//						"addInfo" : 0,
-						"type" : "STACKS_SPEED",
-						"val" : 2,
-						"duration" : "N_TURNS"
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"attack" : {
+								"type" : "PRIMARY_SKILL",
+								"subtype" : "attack",
+								"val" : 2,
+								"duration" : "N_TURNS"
+							},
+							"defence" : {
+								"type" : "PRIMARY_SKILL",
+								"subtype" : "defence",
+								"val" : 2,
+								"duration" : "N_TURNS"
+							},
+							"stacksSpeed" : {
+								//						"addInfo" : 0,
+								"type" : "STACKS_SPEED",
+								"val" : 2,
+								"duration" : "N_TURNS"
+							}
+						}
 					}
 				}
 			},
@@ -721,29 +757,34 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"attack" : {
-						"type" : "PRIMARY_SKILL",
-						"subtype" : "attack",
-						"val" : 2,
-						"duration" : "N_TURNS"
-					},
-					"defence" : {
-						"type" : "PRIMARY_SKILL",
-						"subtype" : "defence",
-						"val" : 2,
-						"duration" : "N_TURNS"
-					},
-					"stacksSpeed" : {
-						//						"addInfo" : 0,
-						"type" : "STACKS_SPEED",
-						"val" : 2,
-						"duration" : "N_TURNS"
-					},
-					"regeneration" : {
-						"type" : "HP_REGENERATION",
-						"val" : 15,
-						"duration" : "N_TURNS"
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"attack" : {
+								"type" : "PRIMARY_SKILL",
+								"subtype" : "attack",
+								"val" : 2,
+								"duration" : "N_TURNS"
+							},
+							"defence" : {
+								"type" : "PRIMARY_SKILL",
+								"subtype" : "defence",
+								"val" : 2,
+								"duration" : "N_TURNS"
+							},
+							"stacksSpeed" : {
+								//						"addInfo" : 0,
+								"type" : "STACKS_SPEED",
+								"val" : 2,
+								"duration" : "N_TURNS"
+							},
+							"regeneration" : {
+								"type" : "HP_REGENERATION",
+								"val" : 15,
+								"duration" : "N_TURNS"
+							}
+						}
 					}
 				}
 			},
@@ -810,17 +851,14 @@
 						"healLevel" : "resurrect",
 						"healPower" : "permanent",
 						"minFullUnits" : 1,
-						"optional" : true,
-						"val" : 60,
-						"limiters" : [
-							"IS_UNDEAD"
-						]
+						"optional" : true
 					},
 					"otherEffects" : {
 						"type" : "core:timed",
 						"bonus" : {
 							"fireShield" : {
-								"type" : "FIRE_SHIELD",
+								"type" : "COMBAT_EVENT_TRIGGER",
+								"subtype" : "fireShield",
 								"val" : 25,
 								"duration" : "N_TURNS"
 							},

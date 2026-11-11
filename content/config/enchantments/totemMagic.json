@@ -35,33 +35,38 @@
 				"targetModifier" : {
 					"smart" : false
 				},
-				"effects" : {
-					"curseEffect" : {
-						//						"addInfo" : 0,
-						"val" : 0,
-						"type" : "ALWAYS_MINIMUM_DAMAGE",
-						"valueType" : "INDEPENDENT_MAX",
-						"propagator" : "BATTLE_WIDE",
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"curseEffect" : {
+								//						"addInfo" : 0,
+								"val" : 0,
+								"type" : "ALWAYS_MINIMUM_DAMAGE",
+								"valueType" : "INDEPENDENT_MAX",
+								"propagator" : "BATTLE_WIDE",
 
-						//klatwa powinna działać tylko wtedy, kiedy został nalozony bonus widoczny w limiterze
-						"limiters" : [
-							//"allOf",  rzekomo opcjonalny
-							[
-								{
-									"type" : "HAS_ANOTHER_BONUS_LIMITER",
-									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-									"bonusSubtype" : "totemsCurseTrigger"
-								}
-							],
-							[
-								"noneOf",
-								{
-									"type" : "CREATURE_TYPE_LIMITER",
-									"creature" : "gnollShaman",
-									"includeUpgrades" : true
-								}
-							]
-						]
+								//klatwa powinna działać tylko wtedy, kiedy został nalozony bonus widoczny w limiterze
+								"limiters" : [
+									//"allOf",  rzekomo opcjonalny
+									[
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "totemsCurseTrigger"
+										}
+									],
+									[
+										"noneOf",
+										{
+											"type" : "CREATURE_TYPE_LIMITER",
+											"creature" : "gnollShaman",
+											"includeUpgrades" : true
+										}
+									]
+								]
+							}
+						}
 					}
 				}
 			},

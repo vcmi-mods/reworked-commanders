@@ -105,9 +105,10 @@
 		},
 		"abilities" : {
 			"grantsFortune" : {
-				"type" : "ENCHANTED",
-				"subtype" : "fortune",
-				"val" : 6
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"val" : 3,
+				"subtype" : "enchanted",
+				"addInfo" : { "spell" : "fortune", "massive" : true }
 			},
 
 			"castsUnfortune" : {

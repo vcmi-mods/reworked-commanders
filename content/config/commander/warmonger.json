@@ -175,8 +175,9 @@
 			},
 
 			"firstTurnSummon" : {
-				"type" : "ENCHANTED",
-				"subtype" : "machinePriority",
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"subtype" : "enchanted",
+				"addInfo" : { "spell" : "machinePriority" },
 				//				"addInfo" : 0,
 				"limiters" : [
 					"noneOf",
@@ -244,8 +245,9 @@
 
 			//zeby zatrzymac wiezyczki/katapulte przed przyzwaniem duszka
 			"stopSiegeMachines" : {
-				"type" : "ENCHANTED",
-				"subtype" : "siegeLimiter1",
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"subtype" : "enchanted",
+				"addInfo" : { "spell" : "siegeLimiter1" },
 				"propagator" : "BATTLE_WIDE",
 				//					  "addInfo" : 0,
 				"limiters" : [

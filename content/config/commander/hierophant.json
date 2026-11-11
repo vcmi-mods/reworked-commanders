@@ -147,8 +147,9 @@
 
 			//zeby machina zostala przyzwana na samym poczatku walki - i, WAZNE, zeby bonus utrzymal sie do nastepnej tury, dlatego potrzebny jest inny limiter
 			"firstTurnSummon" : {
-				"type" : "ENCHANTED",
-				"subtype" : "machinePriority",
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"subtype" : "enchanted",
+				"addInfo" : { "spell" : "machinePriority" },
 				//				"addInfo" : 0,
 				"limiters" : [
 					"noneOf",
@@ -236,8 +237,9 @@
 				]
 			},
 			"aoeShots" : {
-				"type" : "ENCHANTED",
-				"subtype" : "naturesWrathEnchant",
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"subtype" : "enchanted",
+				"addInfo" : { "spell" : "naturesWrathEnchant" },
 				"limiters" : [
 					"allOf",
 					{
@@ -249,8 +251,9 @@
 			},
 			//zeby zatrzymac wiezyczki/katapulte przed przyzwaniem duszka
 			"stopSiegeMachines" : {
-				"type" : "ENCHANTED",
-				"subtype" : "siegeLimiter1",
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"subtype" : "enchanted",
+				"addInfo" : { "spell" : "siegeLimiter1" },
 				"propagator" : "BATTLE_WIDE",
 				//							"addInfo" : 0,
 				"limiters" : [

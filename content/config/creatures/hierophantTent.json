@@ -39,8 +39,9 @@
 			},
 
 			"noAttacking" : {
-				"type" : "ENCHANTED",
-				"subtype" : "machineNoAttack"
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"subtype" : "enchanted",
+				"addInfo" : { "spell" : "machineNoAttack" }
 			},
 
 			"castsAmount" : {
@@ -108,8 +109,9 @@
 			},
 
 			"noAttacking" : {
-				"type" : "ENCHANTED",
-				"subtype" : "machineNoAttack"
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"subtype" : "enchanted",
+				"addInfo" : { "spell" : "machineNoAttack" }
 			},
 
 			"castsAmount" : {

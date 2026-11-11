@@ -498,155 +498,162 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"stacksSpeed" : {
-						//						"addInfo" : 0,
-						"type" : "STACKS_SPEED",
-						"val" : 999,
-						"duration" : "STACK_GETS_TURN",
-						"limiters" : [
-							"noneOf",
-							{
-								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-								"bonusSubtype" : "machinePriority"
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"stacksSpeed" : {
+								//						"addInfo" : 0,
+								"type" : "STACKS_SPEED",
+								"val" : 999,
+								"duration" : "STACK_GETS_TURN",
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "machinePriority"
+									}
+								]
+							},
+
+							"speedRevert" : {
+								//						"addInfo" : 0,
+								"type" : "COMBAT_EVENT_TRIGGER",
+								"val" : 1,
+								"subtype" : "enchanted",
+								"addInfo" : { "spell" : "machineSummoned" },
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "machinePriority"
+									}
+								]
+							},
+
+							"shootingOff2" : {
+								"val" : 100,
+								"type" : "FORGETFULL",
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "machinePriority"
+									}
+								]
+							},
+
+							"shootingOff" : {
+								"type" : "SHOTS",
+								"val" : 0,
+								"valueType" : "INDEPENDENT_MIN",
+								"limiters" : [
+									[
+										"noneOf",
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "machinePriority"
+										}
+									],
+									[
+										"anyOf",
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "summonTent"
+										},
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "summonTotem"
+										},
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "summonBallista"
+										}
+									]
+								]
+							},
+
+							"movementOff" : {
+								"type" : "STACKS_SPEED",
+								"val" : 0,
+								"valueType" : "INDEPENDENT_MIN",
+								"limiters" : [
+									[
+										"noneOf",
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "machinePriority"
+										}
+									],
+									[
+										"anyOf",
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "summonTent"
+										},
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "summonTotem"
+										},
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "summonBallista"
+										}
+									]
+								]
+							},
+
+							"buffsOff" : {
+								"type" : "CASTS",
+								"val" : 0,
+								"valueType" : "INDEPENDENT_MIN",
+								"limiters" : [
+									[
+										"noneOf",
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "machinePriority"
+										}
+									],
+									[
+										"anyOf",
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "summonTent"
+										},
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "summonTotem"
+										},
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "summonBallista"
+										}
+									]
+								]
+
+								//"timestop" : {
+								//	"type" : "NOT_ACTIVE",
+								//	"duration" : "N_TURNS",
+								//	"turns" : 1
+								//}
 							}
-						]
-					},
-
-					"speedRevert" : {
-						//						"addInfo" : 0,
-						"type" : "ENCHANTED",
-						"subtype" : "machineSummoned",
-						"limiters" : [
-							"noneOf",
-							{
-								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-								"bonusSubtype" : "machinePriority"
-							}
-						]
-					},
-
-					"shootingOff2" : {
-						"val" : 3,
-						"type" : "FORGETFULL",
-						"limiters" : [
-							"noneOf",
-							{
-								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-								"bonusSubtype" : "machinePriority"
-							}
-						]
-					},
-
-					"shootingOff" : {
-						"type" : "SHOTS",
-						"val" : 0,
-						"valueType" : "INDEPENDENT_MIN",
-						"limiters" : [
-							[
-								"noneOf",
-								{
-									"type" : "HAS_ANOTHER_BONUS_LIMITER",
-									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-									"bonusSubtype" : "machinePriority"
-								}
-							],
-							[
-								"anyOf",
-								{
-									"type" : "HAS_ANOTHER_BONUS_LIMITER",
-									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-									"bonusSubtype" : "summonTent"
-								},
-								{
-									"type" : "HAS_ANOTHER_BONUS_LIMITER",
-									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-									"bonusSubtype" : "summonTotem"
-								},
-								{
-									"type" : "HAS_ANOTHER_BONUS_LIMITER",
-									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-									"bonusSubtype" : "summonBallista"
-								}
-							]
-						]
-					},
-
-					"movementOff" : {
-						"type" : "STACKS_SPEED",
-						"val" : 0,
-						"valueType" : "INDEPENDENT_MIN",
-						"limiters" : [
-							[
-								"noneOf",
-								{
-									"type" : "HAS_ANOTHER_BONUS_LIMITER",
-									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-									"bonusSubtype" : "machinePriority"
-								}
-							],
-							[
-								"anyOf",
-								{
-									"type" : "HAS_ANOTHER_BONUS_LIMITER",
-									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-									"bonusSubtype" : "summonTent"
-								},
-								{
-									"type" : "HAS_ANOTHER_BONUS_LIMITER",
-									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-									"bonusSubtype" : "summonTotem"
-								},
-								{
-									"type" : "HAS_ANOTHER_BONUS_LIMITER",
-									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-									"bonusSubtype" : "summonBallista"
-								}
-							]
-						]
-					},
-
-					"buffsOff" : {
-						"type" : "CASTS",
-						"val" : 0,
-						"valueType" : "INDEPENDENT_MIN",
-						"limiters" : [
-							[
-								"noneOf",
-								{
-									"type" : "HAS_ANOTHER_BONUS_LIMITER",
-									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-									"bonusSubtype" : "machinePriority"
-								}
-							],
-							[
-								"anyOf",
-								{
-									"type" : "HAS_ANOTHER_BONUS_LIMITER",
-									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-									"bonusSubtype" : "summonTent"
-								},
-								{
-									"type" : "HAS_ANOTHER_BONUS_LIMITER",
-									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-									"bonusSubtype" : "summonTotem"
-								},
-								{
-									"type" : "HAS_ANOTHER_BONUS_LIMITER",
-									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-									"bonusSubtype" : "summonBallista"
-								}
-							]
-						]
-
-						//"timestop" : {
-						//	"type" : "NOT_ACTIVE",
-						//	"duration" : "N_TURNS",
-						//	"turns" : 1
-						//}
+						}
 					}
 				}
 			},
@@ -700,11 +707,16 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"speedRevert" : {
-						"type" : "MORE_DAMAGE_FROM_SPELL",
-						"val" : 100,
-						"subtype" : "machinePriority"
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"speedRevert" : {
+								"type" : "MORE_DAMAGE_FROM_SPELL",
+								"val" : 100,
+								"subtype" : "machinePriority"
+							}
+						}
 					}
 				}
 			},
@@ -758,88 +770,95 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"siegetimestop" : {
-						"type" : "NOT_ACTIVE",
-						"propagator" : "BATTLE_WIDE",
-						"limiters" : [
-							"allOf",
-							[
-								{
-									"type" : "CREATURE_TYPE_LIMITER",
-									"creature" : "arrowTower",
-									"includeUpgrades" : true
-								},
-								{
-									"type" : "HAS_ANOTHER_BONUS_LIMITER",
-									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-									"bonusSubtype" : "siegeLimiter1"
-								}
-							],
-							[
-								"noneOf",
-								{
-									"type" : "HAS_ANOTHER_BONUS_LIMITER",
-									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-									"bonusSubtype" : "siegeLimiterOff"
-								}
-							]
-						]
-					},
-					"siegetimestop2" : {
-						"type" : "NOT_ACTIVE",
-						"propagator" : "BATTLE_WIDE",
-						"limiters" : [
-							"allOf",
-							[
-								{
-									"type" : "CREATURE_TYPE_LIMITER",
-									"creature" : "catapult",
-									"includeUpgrades" : true
-								},
-								{
-									"type" : "HAS_ANOTHER_BONUS_LIMITER",
-									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-									"bonusSubtype" : "siegeLimiter1"
-								}
-							],
-							[
-								"noneOf",
-								{
-									"type" : "HAS_ANOTHER_BONUS_LIMITER",
-									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-									"bonusSubtype" : "siegeLimiterOff"
-								}
-							]
-						]
-					},
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"siegetimestop" : {
+								"type" : "NOT_ACTIVE",
+								"propagator" : "BATTLE_WIDE",
+								"limiters" : [
+									"allOf",
+									[
+										{
+											"type" : "CREATURE_TYPE_LIMITER",
+											"creature" : "arrowTower",
+											"includeUpgrades" : true
+										},
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "siegeLimiter1"
+										}
+									],
+									[
+										"noneOf",
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "siegeLimiterOff"
+										}
+									]
+								]
+							},
+							"siegetimestop2" : {
+								"type" : "NOT_ACTIVE",
+								"propagator" : "BATTLE_WIDE",
+								"limiters" : [
+									"allOf",
+									[
+										{
+											"type" : "CREATURE_TYPE_LIMITER",
+											"creature" : "catapult",
+											"includeUpgrades" : true
+										},
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "siegeLimiter1"
+										}
+									],
+									[
+										"noneOf",
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "siegeLimiterOff"
+										}
+									]
+								]
+							},
 
-					"timeRevert" : {
-						"type" : "ENCHANTED",
-						"subtype" : "siegeLimiterOff",
-						"limiters" : [
-							"anyOf",
-							[
-								{
-									"type" : "CREATURE_TYPE_LIMITER",
-									"creature" : "catapult",
-									"includeUpgrades" : true
-								},
-								{
-									"type" : "CREATURE_TYPE_LIMITER",
-									"creature" : "arrowTower",
-									"includeUpgrades" : true
-								}
-							],
-							[
-								"noneOf",
-								{
-									"type" : "HAS_ANOTHER_BONUS_LIMITER",
-									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-									"bonusSubtype" : "siegeLimiterOff"
-								}
-							]
-						]
+							"timeRevert" : {
+								"type" : "COMBAT_EVENT_TRIGGER",
+								"val" : 1,
+								"subtype" : "enchanted",
+								"addInfo" : { "spell" : "siegeLimiterOff" },
+								"limiters" : [
+									"anyOf",
+									[
+										{
+											"type" : "CREATURE_TYPE_LIMITER",
+											"creature" : "catapult",
+											"includeUpgrades" : true
+										},
+										{
+											"type" : "CREATURE_TYPE_LIMITER",
+											"creature" : "arrowTower",
+											"includeUpgrades" : true
+										}
+									],
+									[
+										"noneOf",
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "siegeLimiterOff"
+										}
+									]
+								]
+							}
+						}
 					}
 				}
 			},
@@ -896,11 +915,16 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"siegeLimiter1" : {
-						"type" : "MORE_DAMAGE_FROM_SPELL",
-						"val" : 100,
-						"subtype" : "siegeLimiterOff"
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"siegeLimiter1" : {
+								"type" : "MORE_DAMAGE_FROM_SPELL",
+								"val" : 100,
+								"subtype" : "siegeLimiterOff"
+							}
+						}
 					}
 				}
 			},
@@ -954,98 +978,105 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"necroAmpcastsAmount" : {
-						"type" : "CASTS",
-						"val" : 1,
-						"limiters" : [
-							"noneOf",
-							{
-								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-								"bonusSubtype" : "soulExtracted"
-							}
-						]
-					},
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"necroAmpcastsAmount" : {
+								"type" : "CASTS",
+								"val" : 1,
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "soulExtracted"
+									}
+								]
+							},
 
-					"stacksSpeed" : {
-						"type" : "STACKS_SPEED",
-						"val" : 999,
-						"duration" : "STACK_GETS_TURN",
-						"limiters" : [
-							"noneOf",
-							{
-								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-								"bonusSubtype" : "soulExtracted"
-							}
-						]
-					},
-					"shootingOff2" : {
-						"val" : 3,
-						"type" : "FORGETFULL",
-						"limiters" : [
-							"noneOf",
-							{
-								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-								"bonusSubtype" : "soulExtracted"
-							}
-						]
-					},
+							"stacksSpeed" : {
+								"type" : "STACKS_SPEED",
+								"val" : 999,
+								"duration" : "STACK_GETS_TURN",
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "soulExtracted"
+									}
+								]
+							},
+							"shootingOff2" : {
+								"val" : 100,
+								"type" : "FORGETFULL",
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "soulExtracted"
+									}
+								]
+							},
 
-					"speedRevert" : {
-						"type" : "ENCHANTED",
-						"subtype" : "soulExtracted",
-						"limiters" : [
-							"noneOf",
-							{
-								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-								"bonusSubtype" : "soulExtracted"
-							}
-						]
-					},
+							"speedRevert" : {
+								"type" : "COMBAT_EVENT_TRIGGER",
+								"val" : 1,
+								"subtype" : "enchanted",
+								"addInfo" : { "spell" : "soulExtracted" },
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "soulExtracted"
+									}
+								]
+							},
 
-					"siegeMachinesTargets" : {
-						"type" : "MORE_DAMAGE_FROM_SPELL",
-						"subtype" : "siegeLimiter1",
-						"propagator" : "BATTLE_WIDE",
-						"val" : 100,
-						"limiters" : [
-							[
-								"noneOf",
-								{
-									"type" : "HAS_ANOTHER_BONUS_LIMITER",
-									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-									"bonusSubtype" : "siegeLimiterOff"
-								}
-							],
-							[
-								"anyOf",
-								{
-									"type" : "CREATURE_TYPE_LIMITER",
-									"creature" : "catapult",
-									"includeUpgrades" : true
-								},
-								{
-									"type" : "CREATURE_TYPE_LIMITER",
-									"creature" : "arrowTower",
-									"includeUpgrades" : true
-								}
-							]
-						]
+							"siegeMachinesTargets" : {
+								"type" : "MORE_DAMAGE_FROM_SPELL",
+								"subtype" : "siegeLimiter1",
+								"propagator" : "BATTLE_WIDE",
+								"val" : 100,
+								"limiters" : [
+									[
+										"noneOf",
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "siegeLimiterOff"
+										}
+									],
+									[
+										"anyOf",
+										{
+											"type" : "CREATURE_TYPE_LIMITER",
+											"creature" : "catapult",
+											"includeUpgrades" : true
+										},
+										{
+											"type" : "CREATURE_TYPE_LIMITER",
+											"creature" : "arrowTower",
+											"includeUpgrades" : true
+										}
+									]
+								]
+							}
+
+							//"morale-2" : {
+							//	"addInfo" : 0,
+							//	"type" : "ENCHANTED",
+							//	"subtype" : "soulExtracted",
+							//	"propagator" : "BATTLE_WIDE",
+							//	"limiters": [ "allOf",
+							//		{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : [ "MORE_DAMAGE_FROM_SPELL", "summonNecroSouls"]	}
+							//		 ]
+							//}
+						}
 					}
-
-					//"morale-2" : {
-					//	"addInfo" : 0,
-					//	"type" : "ENCHANTED",
-					//	"subtype" : "soulExtracted",
-					//	"propagator" : "BATTLE_WIDE",
-					//	"limiters": [ "allOf",
-					//		{"type" : "HAS_ANOTHER_BONUS_LIMITER", "bonusType" : [ "MORE_DAMAGE_FROM_SPELL", "summonNecroSouls"]	}
-					//		 ]
-					//}
 				}
 			},
 			"none" : {},
@@ -1156,8 +1187,9 @@
 							},
 
 							"-2morale" : {
-								"type" : "ENCHANTED",
-								"subtype" : "bannerOfDeath",
+								"type" : "COMBAT_EVENT_TRIGGER",
+								"subtype" : "enchanted",
+								"addInfo" : { "spell" : "bannerOfDeath" },
 								"limiters" : [
 									[
 										"noneOf",
@@ -1243,13 +1275,18 @@
 				"targetModifier" : {
 					"smart" : false
 				},
-				"effects" : {
-					"commsLimiter" : {
-						"type" : "MORE_DAMAGE_FROM_SPELL",
-						"val" : 100,
-						"subtype" : "soulExtracted"
-						//"duration" : "STACK_GETS_TURN"
-						//"propagator": "BATTLE_WIDE"
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"commsLimiter" : {
+								"type" : "MORE_DAMAGE_FROM_SPELL",
+								"val" : 100,
+								"subtype" : "soulExtracted"
+								//"duration" : "STACK_GETS_TURN"
+								//"propagator": "BATTLE_WIDE"
+							}
+						}
 					}
 				}
 			},
@@ -1302,19 +1339,24 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"+2morale" : {
-						"type" : "MORALE",
-						"val" : 2,
-						"stacking" : "Banner of Light",
-						"limiters" : [
-							"noneOf",
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "paladin",
-								"includeUpgrades" : true
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"+2morale" : {
+								"type" : "MORALE",
+								"val" : 2,
+								"stacking" : "Banner of Light",
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "paladin",
+										"includeUpgrades" : true
+									}
+								]
 							}
-						]
+						}
 					}
 				}
 			},
@@ -1368,33 +1410,38 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"commsLimiter" : {
-						"type" : "MORE_DAMAGE_FROM_SPELL",
-						"val" : 100,
-						"subtype" : "soulExtracted",
-						"limiters" : [
-							"allOf",
-							{
-								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-								"bonusSubtype" : "bannerOfDeath"
-							}
-						]
-					},
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"commsLimiter" : {
+								"type" : "MORE_DAMAGE_FROM_SPELL",
+								"val" : 100,
+								"subtype" : "soulExtracted",
+								"limiters" : [
+									"allOf",
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "bannerOfDeath"
+									}
+								]
+							},
 
-					"-2morale" : {
-						"type" : "MORALE",
-						"val" : -2,
-						//"stacking" : "Banner of Death",
-						"limiters" : [
-							"allOf",
-							{
-								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-								"bonusSubtype" : "bannerOfDeath"
+							"-2morale" : {
+								"type" : "MORALE",
+								"val" : -2,
+								//"stacking" : "Banner of Death",
+								"limiters" : [
+									"allOf",
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "bannerOfDeath"
+									}
+								]
 							}
-						]
+						}
 					}
 				}
 			},
@@ -1448,13 +1495,18 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"commsLimiter" : {
-						"type" : "MORE_DAMAGE_FROM_SPELL",
-						"val" : 100,
-						"subtype" : "expExtracted"
-						//"duration" : "STACK_GETS_TURN"
-						//"propagator": "BATTLE_WIDE"
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"commsLimiter" : {
+								"type" : "MORE_DAMAGE_FROM_SPELL",
+								"val" : 100,
+								"subtype" : "expExtracted"
+								//"duration" : "STACK_GETS_TURN"
+								//"propagator": "BATTLE_WIDE"
+							}
+						}
 					}
 				}
 			},
@@ -1679,88 +1731,95 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"necroAmpcastsAmount" : {
-						"type" : "CASTS",
-						"val" : 1,
-						"limiters" : [
-							"noneOf",
-							{
-								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-								"bonusSubtype" : "slavePriority"
-							}
-						]
-					},
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"necroAmpcastsAmount" : {
+								"type" : "CASTS",
+								"val" : 1,
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "slavePriority"
+									}
+								]
+							},
 
-					"stacksSpeed" : {
-						//						"addInfo" : 0,
-						"type" : "STACKS_SPEED",
-						"val" : 999,
-						"duration" : "STACK_GETS_TURN",
-						"limiters" : [
-							"noneOf",
-							{
-								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-								"bonusSubtype" : "slavePriority"
-							}
-						]
-					},
-					"shootingOff2" : {
-						"val" : 3,
-						"type" : "FORGETFULL",
-						"limiters" : [
-							"noneOf",
-							{
-								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-								"bonusSubtype" : "slavePriority"
-							}
-						]
-					},
+							"stacksSpeed" : {
+								//						"addInfo" : 0,
+								"type" : "STACKS_SPEED",
+								"val" : 999,
+								"duration" : "STACK_GETS_TURN",
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "slavePriority"
+									}
+								]
+							},
+							"shootingOff2" : {
+								"val" : 100,
+								"type" : "FORGETFULL",
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "slavePriority"
+									}
+								]
+							},
 
-					"speedRevert" : {
-						"type" : "ENCHANTED",
-						"subtype" : "slaveSummoned",
-						"limiters" : [
-							"noneOf",
-							{
-								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-								"bonusSubtype" : "slavePriority"
-							}
-						]
-					},
+							"speedRevert" : {
+								"type" : "COMBAT_EVENT_TRIGGER",
+								"val" : 1,
+								"subtype" : "enchanted",
+								"addInfo" : { "spell" : "slaveSummoned" },
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "slavePriority"
+									}
+								]
+							},
 
-					"siegeMachinesTargets" : {
-						"type" : "MORE_DAMAGE_FROM_SPELL",
-						"subtype" : "siegeLimiter1",
-						"propagator" : "BATTLE_WIDE",
-						"val" : 100,
-						"limiters" : [
-							[
-								"noneOf",
-								{
-									"type" : "HAS_ANOTHER_BONUS_LIMITER",
-									"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-									"bonusSubtype" : "siegeLimiterOff"
-								}
-							],
-							[
-								"anyOf",
-								{
-									"type" : "CREATURE_TYPE_LIMITER",
-									"creature" : "catapult",
-									"includeUpgrades" : true
-								},
-								{
-									"type" : "CREATURE_TYPE_LIMITER",
-									"creature" : "arrowTower",
-									"includeUpgrades" : true
-								}
-							]
-						]
+							"siegeMachinesTargets" : {
+								"type" : "MORE_DAMAGE_FROM_SPELL",
+								"subtype" : "siegeLimiter1",
+								"propagator" : "BATTLE_WIDE",
+								"val" : 100,
+								"limiters" : [
+									[
+										"noneOf",
+										{
+											"type" : "HAS_ANOTHER_BONUS_LIMITER",
+											"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+											"bonusSubtype" : "siegeLimiterOff"
+										}
+									],
+									[
+										"anyOf",
+										{
+											"type" : "CREATURE_TYPE_LIMITER",
+											"creature" : "catapult",
+											"includeUpgrades" : true
+										},
+										{
+											"type" : "CREATURE_TYPE_LIMITER",
+											"creature" : "arrowTower",
+											"includeUpgrades" : true
+										}
+									]
+								]
+							}
+						}
 					}
 				}
 			},
@@ -2016,11 +2075,16 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"speedRevert" : {
-						"type" : "MORE_DAMAGE_FROM_SPELL",
-						"val" : 100,
-						"subtype" : "slavePriority"
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"speedRevert" : {
+								"type" : "MORE_DAMAGE_FROM_SPELL",
+								"val" : 100,
+								"subtype" : "slavePriority"
+							}
+						}
 					}
 				}
 			},
@@ -2069,83 +2133,88 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"noAttack" : {
-						"type" : "ADDITIONAL_ATTACK",
-						"val" : -99,
-						"effectRange" : "ONLY_MELEE_FIGHT",
-						"limiters" : [
-							"anyOf",
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "shamanTotem1",
-								"includeUpgrades" : true
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"noAttack" : {
+								"type" : "ADDITIONAL_ATTACK",
+								"val" : -99,
+								"effectRange" : "ONLY_MELEE_FIGHT",
+								"limiters" : [
+									"anyOf",
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "shamanTotem1",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "shamanTotem2",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "hierophantTent1",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "hierophantTent2",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "ogreBallista1",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "ogreBallista2",
+										"includeUpgrades" : true
+									}
+								]
 							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "shamanTotem2",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "hierophantTent1",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "hierophantTent2",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "ogreBallista1",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "ogreBallista2",
-								"includeUpgrades" : true
-							}
-						]
-					},
 
-					"castsAmount" : {
-						"type" : "CASTS",
-						"val" : 99,
-						"valueType" : "INDEPENDENT_MAX",
-						"limiters" : [
-							"anyOf",
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "shamanTotem1",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "shamanTotem2",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "hierophantTent1",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "hierophantTent2",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "ogreBallista1",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "ogreBallista2",
-								"includeUpgrades" : true
+							"castsAmount" : {
+								"type" : "CASTS",
+								"val" : 99,
+								"valueType" : "INDEPENDENT_MAX",
+								"limiters" : [
+									"anyOf",
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "shamanTotem1",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "shamanTotem2",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "hierophantTent1",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "hierophantTent2",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "ogreBallista1",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "ogreBallista2",
+										"includeUpgrades" : true
+									}
+								]
 							}
-						]
+						}
 					}
 				}
 			},
@@ -2200,17 +2269,23 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"powerBoost" : {
-						"type" : "PRIMARY_SKILL",
-						"subtype" : "spellpower",
-						"updater" : {
-							"type" : "GROWS_WITH_LEVEL",
-							"valPer20" : 5,
-							"stepSize" : 1
-						},
-						"propagator" : "HERO",
-						"duration" : "COMMANDER_KILLED"
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"powerBoost" : {
+								"type" : "PRIMARY_SKILL",
+								"val" : 1,
+								"subtype" : "spellpower",
+								"updater" : {
+									"type" : "GROWS_WITH_LEVEL",
+									"valPer20" : 5,
+									"stepSize" : 1
+								},
+								"propagator" : "HERO",
+								"duration" : "COMMANDER_KILLED"
+							}
+						}
 					}
 				}
 			},

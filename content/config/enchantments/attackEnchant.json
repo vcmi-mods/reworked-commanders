@@ -29,75 +29,80 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"alwaysMaximumDamage" : {
-						"val" : 0,
-						"type" : "ALWAYS_MAXIMUM_DAMAGE",
-						"valueType" : "INDEPENDENT_MAX",
-						"limiters" : [
-							"noneOf",
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "gnollShaman",
-								"includeUpgrades" : true
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"alwaysMaximumDamage" : {
+								"val" : 0,
+								"type" : "ALWAYS_MAXIMUM_DAMAGE",
+								"valueType" : "INDEPENDENT_MAX",
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "gnollShaman",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "paladin",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "astralSpirit",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "soulEater",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "attackEnchant"
+									}
+								]
 							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "paladin",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "astralSpirit",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "soulEater",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-								"bonusSubtype" : "attackEnchant"
-							}
-						]
-					},
 
-					"dualBlade" : {
-						"type" : "ADDITIONAL_ATTACK",
-						"val" : 1,
-						"effectRange" : "ONLY_MELEE_FIGHT",
-						"limiters" : [
-							"allOf",
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "soulEater",
-								"includeUpgrades" : true
+							"dualBlade" : {
+								"type" : "ADDITIONAL_ATTACK",
+								"val" : 1,
+								"effectRange" : "ONLY_MELEE_FIGHT",
+								"limiters" : [
+									"allOf",
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "soulEater",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "paladin",
+										"includeUpgrades" : true
+									}
+								]
 							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "paladin",
-								"includeUpgrades" : true
-							}
-						]
-					},
 
-					"piercingStrike" : {
-						"type" : "TWO_HEX_ATTACK_BREATH",
-						"limiters" : [
-							"anyOf",
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "gnollShaman",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "astralSpirit",
-								"includeUpgrades" : true
+							"piercingStrike" : {
+								"type" : "TWO_HEX_ATTACK_BREATH",
+								"limiters" : [
+									"anyOf",
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "gnollShaman",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "astralSpirit",
+										"includeUpgrades" : true
+									}
+								]
 							}
-						]
+						}
 					}
 				}
 			},

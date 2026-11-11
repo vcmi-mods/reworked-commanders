@@ -29,93 +29,98 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"doubleShot" : {
-						"type" : "ADDITIONAL_ATTACK",
-						"val" : 1,
-						"effectRange" : "ONLY_DISTANCE_FIGHT",
-						"limiters" : [
-							"noneOf",
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "astralSpirit",
-								"includeUpgrades" : true
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"doubleShot" : {
+								"type" : "ADDITIONAL_ATTACK",
+								"val" : 1,
+								"effectRange" : "ONLY_DISTANCE_FIGHT",
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "astralSpirit",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "brutus",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "gnollShaman",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "hierophant",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "paladin",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "succub",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "templeGuard",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "warmonger",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+										"bonusSubtype" : "shootingEnchantEffect"
+									}
+								]
 							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "brutus",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "gnollShaman",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "hierophant",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "paladin",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "succub",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "templeGuard",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "warmonger",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-								"bonusSubtype" : "shootingEnchantEffect"
-							}
-						]
-					},
 
-					"generalBonus1" : {
-						"type" : "MORE_DAMAGE_FROM_SPELL",
-						"val" : 100,
-						"subtype" : "shootingEnchant",
-						"limiters" : [
-							"noneOf",
-							{
-								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"bonusType" : "ENCHANTED",
-								"bonusSubtype" : "lightningSpearEnchant"
+							"generalBonus1" : {
+								"type" : "MORE_DAMAGE_FROM_SPELL",
+								"val" : 100,
+								"subtype" : "shootingEnchant",
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "ENCHANTED",
+										"bonusSubtype" : "lightningSpearEnchant"
+									},
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "ENCHANTED",
+										"bonusSubtype" : "naturesWrathEnchant"
+									}
+								]
 							},
-							{
-								"type" : "HAS_ANOTHER_BONUS_LIMITER",
-								"bonusType" : "ENCHANTED",
-								"bonusSubtype" : "naturesWrathEnchant"
-							}
-						]
-					},
 
-					"chosenOfWar" : {
-						"type" : "ADDITIONAL_ATTACK",
-						"val" : 1,
-						"effectRange" : "ONLY_DISTANCE_FIGHT",
-						"propagator" : "HERO",
-						"limiters" : [
-							"allOf",
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "ogreBallista1",
-								"includeUpgrades" : true
+							"chosenOfWar" : {
+								"type" : "ADDITIONAL_ATTACK",
+								"val" : 1,
+								"effectRange" : "ONLY_DISTANCE_FIGHT",
+								"propagator" : "HERO",
+								"limiters" : [
+									"allOf",
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "ogreBallista1",
+										"includeUpgrades" : true
+									}
+								]
 							}
-						]
+						}
 					}
 				}
 			},
@@ -165,11 +170,16 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"lightningShots" : {
-						"type" : "SPELL_LIKE_ATTACK",
-						"val" : 1,
-						"subtype" : "lightningSpear"
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"lightningShots" : {
+								"type" : "SPELL_LIKE_ATTACK",
+								"val" : 1,
+								"subtype" : "lightningSpear"
+							}
+						}
 					}
 				}
 			},
@@ -301,7 +311,6 @@
 						"hidden" : false,
 						"passable" : true,
 						"trap" : false,
-						"trigger" : true,
 						"patchCount" : 1,
 						"turnsRemaining" : 2,
 						"attacker" : {
@@ -380,11 +389,16 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"aoeShots" : {
-						"type" : "SPELL_LIKE_ATTACK",
-						"val" : 1,
-						"subtype" : "naturesWrath"
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"aoeShots" : {
+								"type" : "SPELL_LIKE_ATTACK",
+								"val" : 1,
+								"subtype" : "naturesWrath"
+							}
+						}
 					}
 				}
 			},
@@ -498,12 +512,17 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					//"generalBonus" :{
-					//		"type" : "MORE_DAMAGE_FROM_SPELL",
-					//		"val" : 100,
-					//		"subtype": "shootingEnchantEffect"
-					//}
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							//"generalBonus" :{
+							//		"type" : "MORE_DAMAGE_FROM_SPELL",
+							//		"val" : 100,
+							//		"subtype": "shootingEnchantEffect"
+							//}
+						}
+					}
 				}
 			},
 			"none" : {},

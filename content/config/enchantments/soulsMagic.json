@@ -64,7 +64,9 @@
 						"type" : "core:timed",
 						"bonus" : {
 							"attackOff" : {
-								"type" : "TRANSMUTATION",
+								"type" : "COMBAT_EVENT_TRIGGER",
+								"subtype" : "transmutation",
+								"addInfo" : { "transmuteBy" : "count" },
 								"propagator" : "BATTLE_WIDE",
 								"val" : 0,
 								"valueType" : "INDEPENDENT_MIN",

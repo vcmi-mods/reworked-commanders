@@ -124,8 +124,9 @@
 			},
 
 			"powerUpgrade" : {
-				"type" : "ENCHANTED",
-				"subtype" : "powerSummoned",
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"subtype" : "enchanted",
+				"addInfo" : { "spell" : "powerSummoned" },
 				"limiters" : [
 					"allOf",
 					{
@@ -177,8 +178,9 @@
 			},
 
 			"lightningChain" : {
-				"type" : "ENCHANTED",
-				"subtype" : "lightningSpearEnchant",
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"subtype" : "enchanted",
+				"addInfo" : { "spell" : "lightningSpearEnchant" },
 				"limiters" : [
 					"allOf",
 					{

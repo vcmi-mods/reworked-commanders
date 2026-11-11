@@ -29,139 +29,144 @@
 				"targetModifier" : {
 					"smart" : true
 				},
-				"effects" : {
-					"unlimitedRiposte" : {
-						"type" : "UNLIMITED_RETALIATIONS",
-						"limiters" : [
-							"noneOf",
-							//{
-							//	"type" : "HAS_ANOTHER_BONUS_LIMITER",
-							//	"parameters": [ "MORE_DAMAGE_FROM_SPELL", "abilityEnchant" ]
-							//},	why?
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "astralSpirit",
-								"includeUpgrades" : true
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"unlimitedRiposte" : {
+								"type" : "UNLIMITED_RETALIATIONS",
+								"limiters" : [
+									"noneOf",
+									//{
+									//	"type" : "HAS_ANOTHER_BONUS_LIMITER",
+									//	"parameters": [ "MORE_DAMAGE_FROM_SPELL", "abilityEnchant" ]
+									//},	why?
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "astralSpirit",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "brutus",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "gnollShaman",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "hierophant",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "paladin",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "soulEater",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "succub",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "templeGuard",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "warmonger",
+										"includeUpgrades" : true
+									}
+								]
 							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "brutus",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "gnollShaman",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "hierophant",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "paladin",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "soulEater",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "succub",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "templeGuard",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "warmonger",
-								"includeUpgrades" : true
+							"rangedRiposte" : {
+								"type" : "RANGED_RETALIATION",
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "astralSpirit",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "brutus",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "gnollShaman",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "hierophant",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "paladin",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "soulEater",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "succub",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "templeGuard",
+										"includeUpgrades" : true
+									},
+									{
+										"type" : "CREATURE_TYPE_LIMITER",
+										"creature" : "warmonger",
+										"includeUpgrades" : true
+									}
+								]
 							}
-						]
-					},
-					"rangedRiposte" : {
-						"type" : "RANGED_RETALIATION",
-						"limiters" : [
-							"noneOf",
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "astralSpirit",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "brutus",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "gnollShaman",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "hierophant",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "paladin",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "soulEater",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "succub",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "templeGuard",
-								"includeUpgrades" : true
-							},
-							{
-								"type" : "CREATURE_TYPE_LIMITER",
-								"creature" : "warmonger",
-								"includeUpgrades" : true
-							}
-						]
+							//"chosenOfCosmos" :	{},
+							//spirit's ability is in his .json
+
+							//"chosenOfAbyss" : {},
+							//brute's ability is in his .json
+
+							//"chosenOfSpirits" :{},
+							//shamans's ability is in his .json
+
+							//"chosenOfNature" :{},
+							//hierophant's ability is in his .json
+
+							//"chosenOfSun" :	{},
+							//paladin's ability is in his .json
+
+							//"chosenOfDead" : {},
+							//souleater's ability is in her .json
+
+							//"chosenOfDamned" :{},
+							//succ's ability is in her .json
+
+							//"chosenOfWar" :{},
+							//warmong's ability is in his .json
+
+							//"chosenOfTemple" :{},
+							//pleiads's ability is in her .json
+						}
 					}
-					//"chosenOfCosmos" :	{},
-					//spirit's ability is in his .json
-
-					//"chosenOfAbyss" : {},
-					//brute's ability is in his .json
-
-					//"chosenOfSpirits" :{},
-					//shamans's ability is in his .json
-
-					//"chosenOfNature" :{},
-					//hierophant's ability is in his .json
-
-					//"chosenOfSun" :	{},
-					//paladin's ability is in his .json
-
-					//"chosenOfDead" : {},
-					//souleater's ability is in her .json
-
-					//"chosenOfDamned" :{},
-					//succ's ability is in her .json
-
-					//"chosenOfWar" :{},
-					//warmong's ability is in his .json
-
-					//"chosenOfTemple" :{},
-					//pleiads's ability is in her .json
 				}
 			},
 			"none" : {},
