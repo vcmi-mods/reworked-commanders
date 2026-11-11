@@ -2,7 +2,7 @@
 	"name" : "Reworked Commanders",
 	"description" : "Reworked commanders for original factions. Loosely based on abilities and design of WoG commanders.",
 
-	"version" : "1.28",
+	"version" : "1.29",
 	"author" : "Concept and most Commanders' graphics - WoG Team; New Commanders Mod - Avatar support and MinosKing; Werewolf def - MDT; Orange Orc def - HotA Team; Idea and implemetation - Andruids; Sunseeker def - Andruids, based on Kuririn's Crusader; Totem def - Andruids, based on Rettosukero's Wendigo.",
 	"contact" : "",
 	"modType" : "Creatures",
@@ -45,6 +45,9 @@
 		],
 		"1.28" : [
 			"More fixes for vcmi-1.7 format"
+		],
+		"1.29" : [
+			"Updated to VCMI 1.8 format"
 		]
 	},
 	"czech" : {
