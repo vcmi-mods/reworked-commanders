@@ -1,6 +1,6 @@
 {
-	// Resources paid to resurrect a commander in town
-	"resurrectionPrice" : { "gold" : 1500 },
+	// Commander is resurrected for free in town, as in previous versions of the mod
+	"resurrectionPrice" : { "gold" : 0 },
 	//Commander receives these bonuses on level-up
 	"bonusPerLevel" : [
 		{
