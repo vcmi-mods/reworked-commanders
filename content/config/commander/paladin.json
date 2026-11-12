@@ -79,6 +79,18 @@
 			"wince" : "PLDNWNCE.wav"
 		},
 		"abilities" : {
+			"noDefaultAbilityEnchant" : {
+				"type" : "NO_DEFAULT_ABILITY_ENCHANT"
+			},
+			"noDefaultSpellEnchant" : {
+				"type" : "NO_DEFAULT_SPELL_ENCHANT"
+			},
+			"noDefaultShootingEnchant" : {
+				"type" : "NO_DEFAULT_SHOOTING_ENCHANT"
+			},
+			"noDefaultAttackEnchant" : {
+				"type" : "NO_DEFAULT_ATTACK_ENCHANT"
+			},
 			"shooter" : {
 				"type" : "SHOOTER"
 			},

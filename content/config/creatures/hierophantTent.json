@@ -116,7 +116,7 @@
 
 			"castsAmount" : {
 				"type" : "CASTS",
-				"val" : 1,
+				"val" : 91,
 				"valueType" : "INDEPENDENT_MIN"
 			},
 			"warMachine" : {

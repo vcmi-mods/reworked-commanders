@@ -40,54 +40,8 @@
 								"limiters" : [
 									"noneOf",
 									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "astralSpirit",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "brutus",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "gnollShaman",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "hierophant",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "paladin",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "soulEater",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "succub",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "templeGuard",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "warmonger",
-										"includeUpgrades" : true
-									},
-									{
 										"type" : "HAS_ANOTHER_BONUS_LIMITER",
-										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-										"bonusSubtype" : "spellEnchant"
+										"bonusType" : "NO_DEFAULT_SPELL_ENCHANT"
 									}
 								]
 							},
@@ -98,54 +52,8 @@
 								"limiters" : [
 									"noneOf",
 									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "astralSpirit",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "brutus",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "gnollShaman",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "hierophant",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "paladin",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "soulEater",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "succub",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "templeGuard",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "warmonger",
-										"includeUpgrades" : true
-									},
-									{
 										"type" : "HAS_ANOTHER_BONUS_LIMITER",
-										"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-										"bonusSubtype" : "spellEnchant"
+										"bonusType" : "NO_DEFAULT_SPELL_ENCHANT"
 									}
 								]
 							}

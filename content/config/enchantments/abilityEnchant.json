@@ -37,54 +37,9 @@
 								"type" : "UNLIMITED_RETALIATIONS",
 								"limiters" : [
 									"noneOf",
-									//{
-									//	"type" : "HAS_ANOTHER_BONUS_LIMITER",
-									//	"parameters": [ "MORE_DAMAGE_FROM_SPELL", "abilityEnchant" ]
-									//},	why?
 									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "astralSpirit",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "brutus",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "gnollShaman",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "hierophant",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "paladin",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "soulEater",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "succub",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "templeGuard",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "warmonger",
-										"includeUpgrades" : true
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "NO_DEFAULT_ABILITY_ENCHANT"
 									}
 								]
 							},
@@ -93,49 +48,8 @@
 								"limiters" : [
 									"noneOf",
 									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "astralSpirit",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "brutus",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "gnollShaman",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "hierophant",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "paladin",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "soulEater",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "succub",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "templeGuard",
-										"includeUpgrades" : true
-									},
-									{
-										"type" : "CREATURE_TYPE_LIMITER",
-										"creature" : "warmonger",
-										"includeUpgrades" : true
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "NO_DEFAULT_ABILITY_ENCHANT"
 									}
 								]
 							}
