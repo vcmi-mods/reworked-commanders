@@ -1,0 +1,18 @@
+{
+	// Granted together with the commander enchantment of the same name, so abilities can check for it with HAS_ANOTHER_BONUS_LIMITER
+	"ABILITY_ENCHANT" : {
+		"hidden" : true
+	},
+	"SHOOTING_ENCHANT" : {
+		"hidden" : true
+	},
+	"SPELL_ENCHANT" : {
+		"hidden" : true
+	},
+	"LIGHTNING_SPEAR_ENCHANT" : {
+		"hidden" : true
+	},
+	"NATURES_WRATH_ENCHANT" : {
+		"hidden" : true
+	}
+}

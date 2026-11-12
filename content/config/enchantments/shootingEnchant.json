@@ -95,13 +95,11 @@
 									"noneOf",
 									{
 										"type" : "HAS_ANOTHER_BONUS_LIMITER",
-										"bonusType" : "ENCHANTED",
-										"bonusSubtype" : "lightningSpearEnchant"
+										"bonusType" : "LIGHTNING_SPEAR_ENCHANT"
 									},
 									{
 										"type" : "HAS_ANOTHER_BONUS_LIMITER",
-										"bonusType" : "ENCHANTED",
-										"bonusSubtype" : "naturesWrathEnchant"
+										"bonusType" : "NATURES_WRATH_ENCHANT"
 									}
 								]
 							},

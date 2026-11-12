@@ -80,8 +80,7 @@
 					"noneOf",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"bonusType" : "ENCHANTED",
-						"bonusSubtype" : "shootingEnchant"
+						"bonusType" : "SHOOTING_ENCHANT"
 					}
 				]
 			},
@@ -136,8 +135,7 @@
 				"subtype" : "machinePriority",
 				"limiters" : {
 					"type" : "HAS_ANOTHER_BONUS_LIMITER",
-					"bonusType" : "ENCHANTED",
-					"bonusSubtype" : "abilityEnchant"
+					"bonusType" : "ABILITY_ENCHANT"
 				}
 			},
 			"magicResistance" : {
@@ -164,8 +162,7 @@
 					"noneOf",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"bonusType" : "ENCHANTED",
-						"bonusSubtype" : "spellEnchant"
+						"bonusType" : "SPELL_ENCHANT"
 					}
 				]
 			},
@@ -177,8 +174,7 @@
 					"allOf",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"bonusType" : "ENCHANTED",
-						"bonusSubtype" : "spellEnchant"
+						"bonusType" : "SPELL_ENCHANT"
 					}
 				]
 			},
@@ -205,8 +201,7 @@
 						"allOf",
 						{
 							"type" : "HAS_ANOTHER_BONUS_LIMITER",
-							"bonusType" : "ENCHANTED",
-							"bonusSubtype" : "abilityEnchant"
+							"bonusType" : "ABILITY_ENCHANT"
 						}
 					]
 				]
@@ -263,8 +258,7 @@
 						"allOf",
 						{
 							"type" : "HAS_ANOTHER_BONUS_LIMITER",
-							"bonusType" : "ENCHANTED",
-							"bonusSubtype" : "abilityEnchant"
+							"bonusType" : "ABILITY_ENCHANT"
 						}
 					]
 				]
@@ -290,8 +284,7 @@
 						"allOf",
 						{
 							"type" : "HAS_ANOTHER_BONUS_LIMITER",
-							"bonusType" : "ENCHANTED",
-							"bonusSubtype" : "abilityEnchant"
+							"bonusType" : "ABILITY_ENCHANT"
 						}
 					]
 				]

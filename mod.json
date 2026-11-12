@@ -91,6 +91,9 @@
 		"config/creatures/hierophantTent.json",
 		"config/creatures/brutusThrall.json"
 	],
+	"bonuses" : [
+		"config/enchantments/enchantMarkers.json"
+	],
 	"heroClasses" : [
 		"config/heroclasses-texts.json"
 	],

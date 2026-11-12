@@ -90,8 +90,7 @@
 					"noneOf",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"bonusType" : "ENCHANTED",
-						"bonusSubtype" : "shootingEnchant"
+						"bonusType" : "SHOOTING_ENCHANT"
 					}
 				]
 			},
@@ -112,8 +111,7 @@
 					"allOf",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"bonusType" : "ENCHANTED",
-						"bonusSubtype" : "abilityEnchant"
+						"bonusType" : "ABILITY_ENCHANT"
 					}
 				]
 			},
@@ -127,8 +125,7 @@
 					"allOf",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"bonusType" : "ENCHANTED",
-						"bonusSubtype" : "abilityEnchant"
+						"bonusType" : "ABILITY_ENCHANT"
 					}
 				]
 			},
@@ -170,8 +167,7 @@
 					"noneOf",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"bonusType" : "ENCHANTED",
-						"bonusSubtype" : "spellEnchant"
+						"bonusType" : "SPELL_ENCHANT"
 					}
 				]
 			},
@@ -184,8 +180,7 @@
 					"allOf",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"bonusType" : "ENCHANTED",
-						"bonusSubtype" : "spellEnchant"
+						"bonusType" : "SPELL_ENCHANT"
 					}
 				]
 			},
@@ -200,8 +195,7 @@
 				"limiters" : [
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"bonusType" : "ENCHANTED",
-						"bonusSubtype" : "abilityEnchant"
+						"bonusType" : "ABILITY_ENCHANT"
 					}
 				]
 			},
@@ -214,8 +208,17 @@
 					"allOf",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"bonusType" : "ENCHANTED",
-						"bonusSubtype" : "shootingEnchant"
+						"bonusType" : "SHOOTING_ENCHANT"
+					}
+				]
+			},
+			"lightningChainMarker" : {
+				"type" : "LIGHTNING_SPEAR_ENCHANT",
+				"limiters" : [
+					"allOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "SHOOTING_ENCHANT"
 					}
 				]
 			}
