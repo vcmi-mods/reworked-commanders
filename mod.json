@@ -65,6 +65,14 @@
 	"settings" : {
 		"modules" : {
 			"commanders" : true
+		},
+		// Shaman's Totem curses enemies with Misfortune, which needs bad luck enabled
+		"combat" : {
+			"badLuckChance" : [
+				2,
+				4,
+				6
+			]
 		}
 	},
 	"creatures" : [
