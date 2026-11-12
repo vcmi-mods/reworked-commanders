@@ -1,0 +1,62 @@
+{
+	"ephemeralExtract" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
+		"name" : "Ephemeral",
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 0,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+
+		"graphics" : {
+			"iconEffect" : "spells/tempNoEffect"
+		},
+		"animation" : {
+			"affect" : [
+				"C04SPW"
+			]
+		},
+		"sounds" : {
+			"cast" : "CURSE"
+		},
+
+		"flags" : {
+			"damage" : true,
+			"negative" : true,
+			"special" : true
+		},
+
+		"levels" : {
+			"base" : {
+				"cost" : 0,
+				"range" : "0",
+				"power" : 100, //base dmg
+				//				"aiValue": 0,
+				"targetModifier" : {
+					"smart" : true
+				},
+				"description" : "IMMOLATION DAMAGE",
+
+				"battleEffects" : {
+					"directDamage" : {
+						"type" : "core:damage",
+						"killByCount" : true,
+						"killByPercentage" : true
+					}
+				}
+			},
+
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
+		}
+	}
+}

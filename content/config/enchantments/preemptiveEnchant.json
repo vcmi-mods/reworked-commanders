@@ -1,0 +1,59 @@
+{
+	"preemptiveEnchant" : {
+		"type" : "ability",
+		"targetType" : "CREATURE",
+		"name" : "First Strike Enchantment",
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 1,
+		"power" : 0,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconEffect" : "spells/firstStrikeEnchant"
+		},
+		"animation" : {},
+		"sounds" : {},
+		"levels" : {
+			"base" : {
+				"description" : "{First Strike Enchantment}\r\n\r\nCommander strikes before their opponent has a chance to attack.",
+				"cost" : 0,
+				"power" : 0,
+				//				"aiValue": 0,
+				"range" : "0",
+				"targetModifier" : {
+					"smart" : true
+				},
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"preemptiveRetal" : {
+								"type" : "FIRST_STRIKE",
+								"subtype" : "damageTypeAll"
+							}
+						}
+					}
+				}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
+		},
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
+		"flags" : {
+			"positive" : true,
+			"special" : true
+		}
+	}
+}

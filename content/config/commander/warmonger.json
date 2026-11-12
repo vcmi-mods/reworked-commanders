@@ -1,0 +1,269 @@
+{
+	"warmonger" : {
+		"name" : {
+			"plural" : "Warmongers",
+			"singular" : "Warmonger"
+		},
+		"faction" : "stronghold",
+		"level" : 0,
+		"aiValue" : 5931,
+		"special" : true,
+		"attack" : 5,
+		"defense" : 5,
+		"cost" : {
+			"gold" : 2000
+		},
+		"damage" : {
+			"min" : 8,
+			"max" : 16
+		},
+		"fightValue" : 5272,
+		"graphics" : {
+			"animation" : "battle/commander/Warmonger.def",
+			"iconSmall" : "iconsSmall/WarmongerS.bmp",
+			"iconLarge" : "iconsBig/WarmongerB.bmp",
+			"timeBetweenFidgets" : 1,
+			"animationTime" : {
+				"walk" : 1.0,
+				"idle" : 10.0,
+				"attack" : 1.0
+			},
+			"missile" : {
+				"projectile" : "battle/commander/projectile/WarmShot.def",
+				"attackClimaxFrame" : 4,
+				"offset" : {
+					"upperX" : 62,
+					"upperY" : -80,
+					"middleX" : 62,
+					"middleY" : -45,
+					"lowerX" : 62,
+					"lowerY" : 0
+				},
+				"frameAngles" : [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				]
+			}
+		},
+		"doubleWide" : false,
+		"growth" : 1,
+		"hitPoints" : 50,
+		"speed" : 5,
+		"shots" : 0,
+		"sound" : {
+			"attack" : "BTMGATTK.wav",
+			"defend" : "BTMGDFND.wav",
+			"killed" : "OORCKILL.wav",
+			"move" : "BTMGMOVE.wav",
+			"shoot" : "BTMGATTK.wav",
+			"wince" : "BTMGWNCE.wav"
+		},
+		"abilities" : {
+			"noDefaultAbilityEnchant" : {
+				"type" : "NO_DEFAULT_ABILITY_ENCHANT"
+			},
+			"noDefaultSpellEnchant" : {
+				"type" : "NO_DEFAULT_SPELL_ENCHANT"
+			},
+			"noDefaultShootingEnchant" : {
+				"type" : "NO_DEFAULT_SHOOTING_ENCHANT"
+			},
+			"controlsBallistas" : {
+				"type" : "MANUAL_CONTROL",
+				"propagator" : "HERO",
+				"subtype" : "core:creature.ballista", //check without core
+				"val" : 100
+			},
+			"ballistaProvider" : {
+				"type" : "ENCHANTER",
+				"val" : 1,
+				"subtype" : "summonBallista",
+				"addInfo" : 0,
+				"limiters" : [
+					[
+						"noneOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+							"bonusSubtype" : "machinePriority"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "ABILITY_ENCHANT"
+						}
+					]
+				]
+			},
+			"ballistaProvider2" : {
+				"type" : "ENCHANTER",
+				"val" : 3,
+				"subtype" : "summonBallista",
+				"addInfo" : 0,
+				"limiters" : [
+					[
+						"noneOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+							"bonusSubtype" : "machinePriority"
+						}
+					],
+					[
+						"allOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "ABILITY_ENCHANT"
+						}
+					]
+				]
+			},
+
+			//minimalna moc rzucania ograniczona do 1, zeby zaczal od jednej machiny
+			"spellpowerLimit" : {
+				"type" : "CREATURE_SPELL_POWER",
+				"val" : 100,
+				"propagator" : "HERO",
+				"valueType" : "INDEPENDENT_MAX",
+				"limiters" : [
+					"noneOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+						"bonusSubtype" : "machinePriority"
+					}
+				]
+			},
+
+			//moc rzucania = 1/4 poziomu bohatera, zeby przyzwac tyle machin
+			"spellpowerLimitQuarter" : {
+				"type" : "CREATURE_SPELL_POWER",
+				"val" : 25,
+				"propagator" : "HERO",
+				"updater" : "TIMES_HERO_LEVEL",
+				"valueType" : "ADDITIVE_VALUE",
+				"limiters" : [
+					"noneOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+						"bonusSubtype" : "machinePriority"
+					}
+				]
+			},
+
+			"firstTurnSummon" : {
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"subtype" : "enchanted",
+				"addInfo" : { "spell" : "machinePriority" },
+				//				"addInfo" : 0,
+				"limiters" : [
+					"noneOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+						"bonusSubtype" : "machinePriority"
+					}
+				]
+			},
+			"shooter" : {
+				"type" : "SHOOTER"
+			},
+			"halved shots" : {
+				"type" : "SHOTS",
+				"val" : -50,
+				"valueType" : "PERCENT_TO_ALL",
+				"limiters" : [
+					"noneOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "SHOOTING_ENCHANT"
+					}
+				]
+			},
+
+			"magicResistance" : {
+				"type" : "SPELL_DAMAGE_REDUCTION",
+				"subtype" : "any",
+				"val" : 5
+			},
+			"castsAmount" : {
+				"type" : "CASTS",
+				"val" : 2
+			},
+			//"enchant" :{"type" : "CREATURE_ENCHANT_POWER","val" : 2	}, //needless?
+			"spellpower" : {
+				"type" : "CREATURE_SPELL_POWER",
+				"val" : 100
+			},
+			"canCast" : {
+				"type" : "SPELLCASTER",
+				"subtype" : "stoneSkin",
+				"val" : 2,
+				"limiters" : [
+					"noneOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "SPELL_ENCHANT"
+					}
+				]
+			},
+			"canCast+" : {
+				"type" : "SPELLCASTER",
+				"subtype" : "dragonSkin",
+				"val" : 0,
+				"limiters" : {
+					"type" : "HAS_ANOTHER_BONUS_LIMITER",
+					"bonusType" : "SPELL_ENCHANT"
+				}
+			},
+
+			//zeby zatrzymac wiezyczki/katapulte przed przyzwaniem duszka
+			"stopSiegeMachines" : {
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"subtype" : "enchanted",
+				"addInfo" : { "spell" : "siegeLimiter1" },
+				"propagator" : "BATTLE_WIDE",
+				//					  "addInfo" : 0,
+				"limiters" : [
+					[
+						"noneOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+							"bonusSubtype" : "siegeLimiterOff"
+						}
+					],
+					[
+						"anyOf",
+						{
+							"type" : "CREATURE_TYPE_LIMITER",
+							"creature" : "catapult",
+							"includeUpgrades" : true
+						},
+						{
+							"type" : "CREATURE_TYPE_LIMITER",
+							"creature" : "arrowTower",
+							"includeUpgrades" : true
+						}
+					]
+				]
+			},
+			"siegeMachinesTargets" : {
+				"type" : "MORE_DAMAGE_FROM_SPELL",
+				"subtype" : "siegeLimiter1",
+				"propagator" : "BATTLE_WIDE",
+				"val" : 100
+			}
+		}
+	}
+}

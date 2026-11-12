@@ -1,0 +1,314 @@
+{
+	"gnollShaman" : {
+		"name" : {
+			"plural" : "Shamans",
+			"singular" : "Shaman"
+		},
+		"faction" : "fortress",
+		"level" : 0,
+		"aiValue" : 5931,
+		"special" : true,
+		"attack" : 5,
+		"defense" : 5,
+		"cost" : {
+			"gold" : 2000
+		},
+		"damage" : {
+			"min" : 8,
+			"max" : 16
+		},
+		"fightValue" : 5272,
+		"graphics" : {
+			"animation" : "battle/commander/GnollShaman.def",
+			"iconSmall" : "iconsSmall/GnollShamanS.bmp",
+			"iconLarge" : "iconsBig/GnollShamanB.bmp",
+			"timeBetweenFidgets" : 1,
+			"animationTime" : {
+				"walk" : 1.0,
+				"idle" : 10.0,
+				"attack" : 1.0
+			},
+			"missile" : {
+				"projectile" : "battle/commander/projectile/ShamShot.def",
+				"attackClimaxFrame" : 8,
+				"offset" : {
+					"upperX" : 48,
+					"upperY" : -93,
+					"middleX" : 64,
+					"middleY" : -78,
+					"lowerX" : 25,
+					"lowerY" : -93
+				},
+				"frameAngles" : [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				]
+			}
+		},
+		"doubleWide" : false,
+		"growth" : 1,
+		"hitPoints" : 50,
+		"speed" : 5,
+		"shots" : 0,
+		"sound" : {
+			"attack" : "AMAGATTK.wav",
+			"defend" : "GNOLDFND.wav",
+			"killed" : "AMAGKILL.wav",
+			"move" : "AMAGMOVE.wav",
+			"shoot" : "AMAGSHOT.wav",
+			"wince" : "GNOLWNCE.wav"
+		},
+		"abilities" : {
+			"noDefaultAbilityEnchant" : {
+				"type" : "NO_DEFAULT_ABILITY_ENCHANT"
+			},
+			"noDefaultSpellEnchant" : {
+				"type" : "NO_DEFAULT_SPELL_ENCHANT"
+			},
+			"noDefaultShootingEnchant" : {
+				"type" : "NO_DEFAULT_SHOOTING_ENCHANT"
+			},
+			"noDefaultAttackEnchant" : {
+				"type" : "NO_DEFAULT_ATTACK_ENCHANT"
+			},
+			"shooter" : {
+				"type" : "SHOOTER"
+			},
+			"halved shots" : {
+				"type" : "SHOTS",
+				"val" : -50,
+				"valueType" : "PERCENT_TO_ALL",
+				"limiters" : [
+					"noneOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "SHOOTING_ENCHANT"
+					}
+				]
+			},
+
+			//przyzwanie machiny
+			"totemSummoner" : {
+				"type" : "ENCHANTER",
+				"subtype" : "summonTotem",
+				"val" : 0,
+				"addInfo" : 0,
+				"limiters" : [
+					[
+						"noneOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+							"bonusSubtype" : "machinePriority"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "ABILITY_ENCHANT"
+						}
+					]
+				]
+			},
+
+			//silniejsze przyzwanie machiny
+			"totemSummoner2" : {
+				"type" : "ENCHANTER",
+				"subtype" : "summonTotem",
+				"val" : 3,
+				"addInfo" : 0,
+				"limiters" : [
+					[
+						"noneOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+							"bonusSubtype" : "machinePriority"
+						}
+					],
+					[
+						"allOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "ABILITY_ENCHANT"
+						}
+					]
+				]
+			},
+
+			//zeby machina zostala przyzwana na samym poczatku walki
+			"firstTurnSummon" : {
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"subtype" : "enchanted",
+				"addInfo" : { "spell" : "machinePriority" },
+				//				"addInfo" : 0,
+				"limiters" : [
+					"noneOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+						"bonusSubtype" : "machinePriority"
+					}
+				]
+			},
+
+			//moc rzucania ograniczona do 1, zeby przyzwac tylko jedna machine
+			"spellpowerLimit" : {
+				"type" : "CREATURE_SPELL_POWER",
+				"val" : 100,
+				"valueType" : "INDEPENDENT_MIN",
+				"limiters" : [
+					"noneOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+						"bonusSubtype" : "machinePriority"
+					}
+				]
+			},
+			"magicResistance" : {
+				"type" : "SPELL_DAMAGE_REDUCTION",
+				"subtype" : "any",
+				"val" : 5
+			},
+			"castsAmount" : {
+				"type" : "CASTS",
+				"val" : 1
+			},
+			//"enchant" :{"type" : "CREATURE_ENCHANT_POWER","val" : 2	}, //needless?
+			"spellpower" : {
+				"type" : "CREATURE_SPELL_POWER",
+				"val" : 100
+			},
+
+			//sprawia ze przeciwnik po zaatakowaniu totem, aktywuje na nim klatwe
+			"retaliativeCurse" : {
+				"type" : "SPELL_AFTER_ATTACK",
+				"subtype" : "totemsCurseTrigger",
+				"val" : 100,
+				"addInfo" : [
+					0,
+					2
+				],
+				"propagator" : "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : [
+					"OPPOSITE_SIDE"
+				]
+			},
+
+			//naklada efekt na jednostki wroga, ktory wskazuje jednostki bedace pod wplywem klatwy, kiedy zostanie "aktywowany" (zaatakowany) totem
+			"totemsCurseTargets" : {
+				"val" : 100,
+				"type" : "MORE_DAMAGE_FROM_SPELL",
+				"subtype" : "totemsCurseTrigger",
+				"propagator" : "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : [
+					"OPPOSITE_SIDE"
+				]
+			},
+
+			"noAttacking" : {
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"val" : 1,
+				"subtype" : "enchanted",
+				"addInfo" : { "spell" : "machineNoAttack", "massive" : true }
+			},
+
+			"canCast" : {
+				"type" : "SPELLCASTER",
+				"subtype" : "haste",
+				"val" : 3,
+				"limiters" : [
+					"noneOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "SPELL_ENCHANT"
+					}
+				]
+			},
+			"canCast+" : {
+				"type" : "SPELLCASTER",
+				"subtype" : "windOfAgitation",
+				"val" : 3,
+				"limiters" : [
+					"allOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "SPELL_ENCHANT"
+					}
+				]
+			},
+
+			//zeby zatrzymac wiezyczki/katapulte przed przyzwaniem duszka
+			"stopSiegeMachines" : {
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"subtype" : "enchanted",
+				"addInfo" : { "spell" : "siegeLimiter1" },
+				"propagator" : "BATTLE_WIDE",
+				//							"addInfo" : 0,
+				"limiters" : [
+					[
+						"noneOf",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
+							"bonusSubtype" : "siegeLimiterOff"
+						}
+					],
+					[
+						"anyOf",
+						{
+							"type" : "CREATURE_TYPE_LIMITER",
+							"creature" : "catapult",
+							"includeUpgrades" : true
+						},
+						{
+							"type" : "CREATURE_TYPE_LIMITER",
+							"creature" : "arrowTower",
+							"includeUpgrades" : true
+						}
+					]
+				]
+			},
+			"siegeMachinesTargets" : {
+				"type" : "MORE_DAMAGE_FROM_SPELL",
+				"subtype" : "siegeLimiter1",
+				"propagator" : "BATTLE_WIDE",
+				"val" : 100
+			},
+
+			"aoeShots" : {
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"subtype" : "enchanted",
+				"addInfo" : { "spell" : "naturesWrathEnchant" },
+				"limiters" : [
+					"allOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "SHOOTING_ENCHANT"
+					}
+				]
+			},
+			"aoeShotsMarker" : {
+				"type" : "NATURES_WRATH_ENCHANT",
+				"limiters" : [
+					"allOf",
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "SHOOTING_ENCHANT"
+					}
+				]
+			}
+		}
+	}
+}

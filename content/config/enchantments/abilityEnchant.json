@@ -1,0 +1,101 @@
+{
+	"abilityEnchant" : {
+		"type" : "combat",
+		"targetType" : "CREATURE",
+		"name" : "Ability Enchantment",
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 1,
+		"power" : 1,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"counters" : {},
+		"graphics" : {
+			"iconEffect" : "spells/abilityEnchant"
+		},
+		"animation" : {},
+		"sounds" : {},
+		"levels" : {
+			"base" : {
+				"description" : "{Ability Enchantment}\r\n\r\nCommander's unique ability is upgraded (default is unlimited retaliation).",
+				"cost" : 0,
+				"power" : 1,
+				//"aiValue": 0,
+				"range" : "0",
+				"targetModifier" : {
+					"smart" : true
+				},
+				"battleEffects" : {
+					"timed" : {
+						"type" : "core:timed",
+						"bonus" : {
+							"unlimitedRiposte" : {
+								"type" : "UNLIMITED_RETALIATIONS",
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "NO_DEFAULT_ABILITY_ENCHANT"
+									}
+								]
+							},
+							"rangedRiposte" : {
+								"type" : "RANGED_RETALIATION",
+								"limiters" : [
+									"noneOf",
+									{
+										"type" : "HAS_ANOTHER_BONUS_LIMITER",
+										"bonusType" : "NO_DEFAULT_ABILITY_ENCHANT"
+									}
+								]
+							}
+							//"chosenOfCosmos" :	{},
+							//spirit's ability is in his .json
+
+							//"chosenOfAbyss" : {},
+							//brute's ability is in his .json
+
+							//"chosenOfSpirits" :{},
+							//shamans's ability is in his .json
+
+							//"chosenOfNature" :{},
+							//hierophant's ability is in his .json
+
+							//"chosenOfSun" :	{},
+							//paladin's ability is in his .json
+
+							//"chosenOfDead" : {},
+							//souleater's ability is in her .json
+
+							//"chosenOfDamned" :{},
+							//succ's ability is in her .json
+
+							//"chosenOfWar" :{},
+							//warmong's ability is in his .json
+
+							//"chosenOfTemple" :{},
+							//pleiads's ability is in her .json
+						}
+					}
+				}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
+		},
+		"targetCondition" : {
+			"allOf" : {},
+			"noneOf" : {},
+			"anyOf" : {}
+		},
+		"flags" : {
+			"positive" : true,
+			"special" : true
+		}
+	}
+}

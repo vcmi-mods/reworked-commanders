@@ -1,0 +1,31 @@
+{
+	// Granted together with the commander enchantment of the same name, so abilities can check for it with HAS_ANOTHER_BONUS_LIMITER
+	"ABILITY_ENCHANT" : {
+		"hidden" : true
+	},
+	"SHOOTING_ENCHANT" : {
+		"hidden" : true
+	},
+	"SPELL_ENCHANT" : {
+		"hidden" : true
+	},
+	"LIGHTNING_SPEAR_ENCHANT" : {
+		"hidden" : true
+	},
+	"NATURES_WRATH_ENCHANT" : {
+		"hidden" : true
+	},
+	// Commander has its own version of the enchantment; its default effect is not applied. Commanders from other mods may grant these too
+	"NO_DEFAULT_ABILITY_ENCHANT" : {
+		"hidden" : true
+	},
+	"NO_DEFAULT_ATTACK_ENCHANT" : {
+		"hidden" : true
+	},
+	"NO_DEFAULT_SPELL_ENCHANT" : {
+		"hidden" : true
+	},
+	"NO_DEFAULT_SHOOTING_ENCHANT" : {
+		"hidden" : true
+	}
+}
