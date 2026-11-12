@@ -141,6 +141,7 @@
 			"spellpowerLimit" : {
 				"type" : "CREATURE_SPELL_POWER",
 				"val" : 400,
+				// propagated only so that TIMES_HERO_LEVEL sees the hero; the limiter keeps it on Brute alone
 				"propagator" : "HERO",
 				"updater" : "TIMES_HERO_LEVEL",
 				"valueType" : "INDEPENDENT_MAX",
@@ -158,6 +159,10 @@
 						{
 							"type" : "HAS_ANOTHER_BONUS_LIMITER",
 							"bonusType" : "ABILITY_ENCHANT"
+						},
+						{
+							"type" : "CREATURE_TYPE_LIMITER",
+							"creature" : "brutus"
 						}
 					]
 				]

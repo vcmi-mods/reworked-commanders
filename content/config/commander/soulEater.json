@@ -277,7 +277,6 @@
 			"spellpowerLimit2" : {
 				"type" : "CREATURE_SPELL_POWER",
 				"val" : 100,
-				"propagator" : "HERO",
 				//"updater" : "TIMES_HERO_LEVEL",
 				"valueType" : "INDEPENDENT_MAX",
 				"limiters" : [
