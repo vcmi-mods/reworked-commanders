@@ -55,25 +55,17 @@
 				"val" : 100
 			},
 
-			//lycantrophy wont work on tier7 units and commanders
-			"lycanthropeOff2" : {
-				"type" : "SPELL_BEFORE_ATTACK",
-				"val" : 100,
-				"subtype" : "lycanthropeOff"
+			// level 7 creatures are immune to lycanthropy; the transmutation script already spares commanders
+			"lycanthropyImmunity" : {
+				"type" : "TRANSMUTATION_IMMUNITY",
+				"propagator" : "BATTLE_WIDE",
+				"limiters" : [
+					{
+						"type" : "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType" : "KING"
+					}
+				]
 			},
-
-			//get dunked on lol
-			//"lycanthropeOff" :
-			//{
-			//	"type" : "FIRST_STRIKE",
-			//	"propagator": "BATTLE_WIDE",
-			//	"limiters": [
-			//		 "anyOf",
-			//		 {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "KING1"]	},
-			//		 {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "KING2"]	},
-			//		 {"type" : "HAS_ANOTHER_BONUS_LIMITER", "parameters" : [ "KING3"]	}
-			//				]
-			//},
 
 			"attackOff" : {
 				"type" : "ADDITIONAL_ATTACK",
