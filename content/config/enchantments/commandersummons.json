@@ -522,7 +522,9 @@
 								"type" : "COMBAT_EVENT_TRIGGER",
 								"val" : 1,
 								"subtype" : "enchanted",
-								"addInfo" : { "spell" : "machineSummoned" },
+								"addInfo" : {
+									"spell" : "machineSummoned"
+								},
 								"limiters" : [
 									"noneOf",
 									{
@@ -833,7 +835,9 @@
 								"type" : "COMBAT_EVENT_TRIGGER",
 								"val" : 1,
 								"subtype" : "enchanted",
-								"addInfo" : { "spell" : "siegeLimiterOff" },
+								"addInfo" : {
+									"spell" : "siegeLimiterOff"
+								},
 								"limiters" : [
 									"anyOf",
 									[
@@ -1025,7 +1029,9 @@
 								"type" : "COMBAT_EVENT_TRIGGER",
 								"val" : 1,
 								"subtype" : "enchanted",
-								"addInfo" : { "spell" : "soulExtracted" },
+								"addInfo" : {
+									"spell" : "soulExtracted"
+								},
 								"limiters" : [
 									"noneOf",
 									{
@@ -1189,7 +1195,9 @@
 							"-2morale" : {
 								"type" : "COMBAT_EVENT_TRIGGER",
 								"subtype" : "enchanted",
-								"addInfo" : { "spell" : "bannerOfDeath" },
+								"addInfo" : {
+									"spell" : "bannerOfDeath"
+								},
 								"limiters" : [
 									[
 										"noneOf",
@@ -1779,7 +1787,9 @@
 								"type" : "COMBAT_EVENT_TRIGGER",
 								"val" : 1,
 								"subtype" : "enchanted",
-								"addInfo" : { "spell" : "slaveSummoned" },
+								"addInfo" : {
+									"spell" : "slaveSummoned"
+								},
 								"limiters" : [
 									"noneOf",
 									{

@@ -29,7 +29,12 @@
 		"abilities" : {
 			"troglodyteKin" : {
 				"type" : "SPECIAL_UPGRADE",
-				"limiters" : [ { "type" : "CREATURE_TYPE_LIMITER", "creature" : "abyssalThrall1" } ],
+				"limiters" : [
+					{
+						"type" : "CREATURE_TYPE_LIMITER",
+						"creature" : "abyssalThrall1"
+					}
+				],
 				"addInfo" : "troglodyte",
 				"propagator" : "HERO"
 			},

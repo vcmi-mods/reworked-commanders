@@ -108,7 +108,10 @@
 				"type" : "COMBAT_EVENT_TRIGGER",
 				"val" : 3,
 				"subtype" : "enchanted",
-				"addInfo" : { "spell" : "fortune", "massive" : true }
+				"addInfo" : {
+					"spell" : "fortune",
+					"massive" : true
+				}
 			},
 
 			"castsUnfortune" : {

@@ -1,6 +1,8 @@
 {
 	// Commander is resurrected for free in town, as in previous versions of the mod
-	"resurrectionPrice" : { "gold" : 0 },
+	"resurrectionPrice" : {
+		"gold" : 0
+	},
 	//Commander receives these bonuses on level-up
 	"bonusPerLevel" : [
 		{
@@ -151,7 +153,9 @@
 				{
 					"type" : "COMBAT_EVENT_TRIGGER",
 					"subtype" : "enchanted",
-					"addInfo" : { "spell" : "reworked-commanders:attackEnchant" },
+					"addInfo" : {
+						"spell" : "reworked-commanders:attackEnchant"
+					},
 					"val" : 1
 				}
 			],
@@ -167,7 +171,9 @@
 				{
 					"type" : "COMBAT_EVENT_TRIGGER",
 					"subtype" : "enchanted",
-					"addInfo" : { "spell" : "reworked-commanders:preemptiveEnchant" },
+					"addInfo" : {
+						"spell" : "reworked-commanders:preemptiveEnchant"
+					},
 					"val" : 1
 				}
 			],
@@ -196,7 +202,9 @@
 				{
 					"type" : "COMBAT_EVENT_TRIGGER",
 					"subtype" : "enchanted",
-					"addInfo" : { "spell" : "reworked-commanders:abilityEnchant" },
+					"addInfo" : {
+						"spell" : "reworked-commanders:abilityEnchant"
+					},
 					"val" : 1
 				},
 				{
@@ -272,7 +280,9 @@
 				{
 					"type" : "COMBAT_EVENT_TRIGGER",
 					"subtype" : "deathStare",
-					"addInfo" : { "situation" : "commander" },
+					"addInfo" : {
+						"situation" : "commander"
+					},
 					"val" : 1
 				}
 			],
@@ -288,7 +298,9 @@
 				{
 					"type" : "COMBAT_EVENT_TRIGGER",
 					"subtype" : "enchanted",
-					"addInfo" : { "spell" : "reworked-commanders:shootingEnchant" },
+					"addInfo" : {
+						"spell" : "reworked-commanders:shootingEnchant"
+					},
 					"val" : 1
 				},
 				{
@@ -321,7 +333,9 @@
 				{
 					"type" : "COMBAT_EVENT_TRIGGER",
 					"subtype" : "enchanted",
-					"addInfo" : { "spell" : "reworked-commanders:speedEnchant" },
+					"addInfo" : {
+						"spell" : "reworked-commanders:speedEnchant"
+					},
 					"val" : 1
 				}
 			],
@@ -337,7 +351,9 @@
 				{
 					"type" : "COMBAT_EVENT_TRIGGER",
 					"subtype" : "enchanted",
-					"addInfo" : { "spell" : "reworked-commanders:spellEnchant" },
+					"addInfo" : {
+						"spell" : "reworked-commanders:spellEnchant"
+					},
 					"val" : 1
 				},
 				{

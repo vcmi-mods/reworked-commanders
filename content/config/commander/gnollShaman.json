@@ -148,7 +148,9 @@
 			"firstTurnSummon" : {
 				"type" : "COMBAT_EVENT_TRIGGER",
 				"subtype" : "enchanted",
-				"addInfo" : { "spell" : "machinePriority" },
+				"addInfo" : {
+					"spell" : "machinePriority"
+				},
 				//				"addInfo" : 0,
 				"limiters" : [
 					"noneOf",
@@ -221,7 +223,10 @@
 				"type" : "COMBAT_EVENT_TRIGGER",
 				"val" : 1,
 				"subtype" : "enchanted",
-				"addInfo" : { "spell" : "machineNoAttack", "massive" : true }
+				"addInfo" : {
+					"spell" : "machineNoAttack",
+					"massive" : true
+				}
 			},
 
 			"canCast" : {
@@ -253,7 +258,9 @@
 			"stopSiegeMachines" : {
 				"type" : "COMBAT_EVENT_TRIGGER",
 				"subtype" : "enchanted",
-				"addInfo" : { "spell" : "siegeLimiter1" },
+				"addInfo" : {
+					"spell" : "siegeLimiter1"
+				},
 				"propagator" : "BATTLE_WIDE",
 				//							"addInfo" : 0,
 				"limiters" : [
@@ -290,7 +297,9 @@
 			"aoeShots" : {
 				"type" : "COMBAT_EVENT_TRIGGER",
 				"subtype" : "enchanted",
-				"addInfo" : { "spell" : "naturesWrathEnchant" },
+				"addInfo" : {
+					"spell" : "naturesWrathEnchant"
+				},
 				"limiters" : [
 					"allOf",
 					{

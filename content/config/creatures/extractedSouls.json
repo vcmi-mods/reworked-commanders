@@ -30,7 +30,9 @@
 			"ephemeral" : {
 				"type" : "COMBAT_EVENT_TRIGGER",
 				"subtype" : "enchanted",
-				"addInfo" : { "spell" : "ephemeralExtract" },
+				"addInfo" : {
+					"spell" : "ephemeralExtract"
+				},
 				"val" : 3
 			},
 
@@ -51,7 +53,10 @@
 			"lycanthroper" : {
 				"type" : "COMBAT_EVENT_TRIGGER",
 				"subtype" : "transmutation",
-				"addInfo" : { "transmuteBy" : "count", "creature" : "lycanthrope" },
+				"addInfo" : {
+					"transmuteBy" : "count",
+					"creature" : "lycanthrope"
+				},
 				"val" : 100
 			},
 
@@ -229,7 +234,9 @@
 			"ephemeral" : {
 				"type" : "COMBAT_EVENT_TRIGGER",
 				"subtype" : "enchanted",
-				"addInfo" : { "spell" : "ephemeralExtract" },
+				"addInfo" : {
+					"spell" : "ephemeralExtract"
+				},
 				"val" : 3
 			},
 			"flier" : {
@@ -241,7 +248,9 @@
 			"stopSiegeMachines" : {
 				"type" : "COMBAT_EVENT_TRIGGER",
 				"subtype" : "enchanted",
-				"addInfo" : { "spell" : "siegeLimiter1" },
+				"addInfo" : {
+					"spell" : "siegeLimiter1"
+				},
 				"propagator" : "BATTLE_WIDE",
 				//					  "addInfo" : 0,
 				"limiters" : [

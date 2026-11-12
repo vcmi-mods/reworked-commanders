@@ -42,12 +42,18 @@
 			"warMachine" : {
 				"type" : "SIEGE_WEAPON"
 			},
-			"heroAttackDamage" : { "type" : "COMBAT_EVENT_TRIGGER", "subtype" : "ballistaDamage", "val" : 1 },
+			"heroAttackDamage" : {
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"subtype" : "ballistaDamage",
+				"val" : 1
+			},
 
 			"noAttacking" : {
 				"type" : "COMBAT_EVENT_TRIGGER",
 				"subtype" : "enchanted",
-				"addInfo" : { "spell" : "machineNoAttack" }
+				"addInfo" : {
+					"spell" : "machineNoAttack"
+				}
 			}
 		},
 		"graphics" : {
@@ -140,12 +146,18 @@
 			"warMachine" : {
 				"type" : "SIEGE_WEAPON"
 			},
-			"heroAttackDamage" : { "type" : "COMBAT_EVENT_TRIGGER", "subtype" : "ballistaDamage", "val" : 1 },
+			"heroAttackDamage" : {
+				"type" : "COMBAT_EVENT_TRIGGER",
+				"subtype" : "ballistaDamage",
+				"val" : 1
+			},
 
 			"noAttacking" : {
 				"type" : "COMBAT_EVENT_TRIGGER",
 				"subtype" : "enchanted",
-				"addInfo" : { "spell" : "machineNoAttack" }
+				"addInfo" : {
+					"spell" : "machineNoAttack"
+				}
 			}
 		},
 		"graphics" : {

@@ -131,7 +131,9 @@
 			"bannerOfLight3" : {
 				"type" : "COMBAT_EVENT_TRIGGER",
 				"subtype" : "enchanted",
-				"addInfo" : { "spell" : "bannerOfLight" },
+				"addInfo" : {
+					"spell" : "bannerOfLight"
+				},
 				"val" : 0,
 				"limiters" : [
 					"allOf",
@@ -201,7 +203,9 @@
 			"soulExtractorGuards" : {
 				"type" : "COMBAT_EVENT_TRIGGER",
 				"subtype" : "summonGuardians",
-				"addInfo" : { "creature" : "creature.expSoul1" },
+				"addInfo" : {
+					"creature" : "creature.expSoul1"
+				},
 				"val" : 100,
 				//					  "addInfo" : 0,
 				"limiters" : [
@@ -215,7 +219,9 @@
 			"lightningChain" : {
 				"type" : "COMBAT_EVENT_TRIGGER",
 				"subtype" : "enchanted",
-				"addInfo" : { "spell" : "lightningSpearEnchant" },
+				"addInfo" : {
+					"spell" : "lightningSpearEnchant"
+				},
 				"limiters" : [
 					"allOf",
 					{

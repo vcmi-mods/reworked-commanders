@@ -164,7 +164,9 @@
 			"firstTurnSummon" : {
 				"type" : "COMBAT_EVENT_TRIGGER",
 				"subtype" : "enchanted",
-				"addInfo" : { "spell" : "machinePriority" },
+				"addInfo" : {
+					"spell" : "machinePriority"
+				},
 				//				"addInfo" : 0,
 				"limiters" : [
 					"noneOf",
@@ -231,7 +233,9 @@
 			"stopSiegeMachines" : {
 				"type" : "COMBAT_EVENT_TRIGGER",
 				"subtype" : "enchanted",
-				"addInfo" : { "spell" : "siegeLimiter1" },
+				"addInfo" : {
+					"spell" : "siegeLimiter1"
+				},
 				"propagator" : "BATTLE_WIDE",
 				//					  "addInfo" : 0,
 				"limiters" : [
