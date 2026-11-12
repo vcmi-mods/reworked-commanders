@@ -97,11 +97,6 @@
 						{
 							"type" : "HAS_ANOTHER_BONUS_LIMITER",
 							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-							"bonusSubtype" : "machineSummoned"
-						},
-						{
-							"type" : "HAS_ANOTHER_BONUS_LIMITER",
-							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
 							"bonusSubtype" : "machinePriority"
 						},
 						{
@@ -121,11 +116,6 @@
 				"limiters" : [
 					[
 						"noneOf",
-						{
-							"type" : "HAS_ANOTHER_BONUS_LIMITER",
-							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-							"bonusSubtype" : "machineSummoned"
-						},
 						{
 							"type" : "HAS_ANOTHER_BONUS_LIMITER",
 							"bonusType" : "MORE_DAMAGE_FROM_SPELL",
@@ -165,11 +155,6 @@
 				"valueType" : "INDEPENDENT_MIN",
 				"limiters" : [
 					"noneOf",
-					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"bonusType" : "MORE_DAMAGE_FROM_SPELL",
-						"bonusSubtype" : "machineSummoned"
-					},
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
 						"bonusType" : "MORE_DAMAGE_FROM_SPELL",

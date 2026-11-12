@@ -190,7 +190,7 @@
 			},
 			"canCast+" : {
 				"type" : "SPELLCASTER",
-				"subtype" : "impBreeding+",
+				"subtype" : "gogBreeding",
 				"val" : 0,
 				"limiters" : [
 					"allOf",

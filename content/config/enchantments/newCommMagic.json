@@ -63,7 +63,7 @@
 		}
 	},
 
-	"impBreeding+" : {
+	"gogBreeding" : {
 		"type" : "ability",
 		"targetType" : "CREATURE",
 		"name" : "Imp Breeding",

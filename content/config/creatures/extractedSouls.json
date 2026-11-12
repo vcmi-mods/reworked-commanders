@@ -18,7 +18,7 @@
 		"faction" : "neutral",
 		"fightValue" : 0,
 		"growth" : 0,
-		"hitPoints" : 0,
+		"hitPoints" : 1,
 		"doubleWide" : false,
 		"level" : 0,
 		"speed" : 9999,
