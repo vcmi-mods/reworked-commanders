@@ -37,6 +37,10 @@
 	"creatures.reworked-commanders.templeGuard.name.singular" : "Pleiad",
 	"creatures.reworked-commanders.warmonger.name.plural" : "Warmongers",
 	"creatures.reworked-commanders.warmonger.name.singular" : "Warmonger",
+	"mod.description" : "Reworked commanders for original factions. Loosely based on abilities and design of WoG commanders.",
+	"mod.name" : "Reworked Commanders",
+	"mod.reworkedwindow.description" : "Commander Stack Window for reworked commanders.",
+	"mod.reworkedwindow.name" : "Commander Stack Window",
 	"spell.reworked-commanders.abilityEnchant.description.advanced" : "{Ability Enchantment}\r\n\r\nCommander's unique ability is upgraded (default is unlimited retaliation).",
 	"spell.reworked-commanders.abilityEnchant.description.basic" : "{Ability Enchantment}\r\n\r\nCommander's unique ability is upgraded (default is unlimited retaliation).",
 	"spell.reworked-commanders.abilityEnchant.description.expert" : "{Ability Enchantment}\r\n\r\nCommander's unique ability is upgraded (default is unlimited retaliation).",
@@ -317,9 +321,5 @@
 	"vcmi.commander.skill.speed.2" : "Advanced Speed Skill\n\nThis skill gives 6 Speed\n\nThe next levels of Speed Skill can give\nExpert: 7 Speed\nMaster: 8 Speed\nGrandmaster: 10 Speed\n\nWith Grandmaster Speed, your Commander learns to fly\nwith Grandmaster Attack skill: Preepmtive Retaliation\nwith Grandmaster Damage skill: Shooting Enchantment\nwith Grandmaster Magic Power skill:  Leading Initiative\n\n",
 	"vcmi.commander.skill.speed.3" : "Expert Speed Skill\n\nThis skill gives 7 Speed\n\nThe next levels of Speed Skill can give\nMaster: 8 Speed\nGrandmaster: 10 Speed\n\nWith Grandmaster Speed, your Commander learns to fly\nwith Grandmaster Attack skill: Preepmtive Retaliation\nwith Grandmaster Damage skill: Shooting Enchantment\nwith Grandmaster Magic Power skill:  Leading Initiative\n\n",
 	"vcmi.commander.skill.speed.4" : "Master Speed Skill\n\nThis skill gives 8 Speed\n\nThe next levels of Speed Skill can give\nGrandmaster: 10 Speed\n\nWith Grandmaster Speed, your Commander learns to fly\nwith Grandmaster Attack skill: Preepmtive Retaliation\nwith Grandmaster Damage skill: Shooting Enchantment\nwith Grandmaster Magic Power skill:  Leading Initiative\n\n",
-	"vcmi.commander.skill.speed.5" : "Grandmaster Speed Skill\n\nThis skill gives 10 Speed\n\nThis is the last level of Speed Skill\n\nWith Grandmaster Speed, your Commander learns to fly\nwith Grandmaster Attack skill: Preepmtive Retaliation\nwith Grandmaster Damage skill: Shooting Enchantment\nwith Grandmaster Magic Power skill:  Leading Initiative\n\n",
-	"mod.name" : "Reworked Commanders",
-	"mod.description" : "Reworked commanders for original factions. Loosely based on abilities and design of WoG commanders.",
-	"mod.reworkedwindow.name" : "Commander Stack Window",
-	"mod.reworkedwindow.description" : "Commander Stack Window for reworked commanders."
+	"vcmi.commander.skill.speed.5" : "Grandmaster Speed Skill\n\nThis skill gives 10 Speed\n\nThis is the last level of Speed Skill\n\nWith Grandmaster Speed, your Commander learns to fly\nwith Grandmaster Attack skill: Preepmtive Retaliation\nwith Grandmaster Damage skill: Shooting Enchantment\nwith Grandmaster Magic Power skill:  Leading Initiative\n\n"
 }
